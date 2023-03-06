@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation Button</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --font-size: 16px;
+        --font-size-h1: calc(3 * var(--font-size));
+        --gradient: linear-gradient(
+          45deg,
+          #845ec2,
+          #d65db1,
+          #ff6f91,
+          #ff9671,
+          #ffc75f,
+          #f9f871
+        );
+      }
+      body {
+        font-size: var(--font-size);
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        height: 100vh;
+        /* background-image: var(--gradient); */
+      }
+      .content {
+        width: 80%;
+        height: 50vh;
+        padding: 3rem;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      h1 {
+        font-size: var(--font-size-h1);
+        line-height: var(--font-size-h1);
+      }
+      button {
+        /* all: unset; */
+        border: 0;
+        width: 100%;
+        max-width: 300px;
+        padding: 0.5em 1.5em;
+        font-size: 2rem;
+        /* background-image: linear-gradient(red, blue);
+        background-image: linear-gradient(to right, red, blue); */
+        background-image: var(--gradient);
+        background-position: top left;
+        background-size: 300%;
+        transition: background-position 1s;
+        cursor: pointer;
+      }
+      button:hover {
+        background-position: top right;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="content">
+      <button>Click this button</button>
+    </section>
+  </body>
+</html>

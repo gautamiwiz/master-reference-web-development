@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+@font-face { 
+    font-family: "Ionicons"; 
+    src: url("../fonts/icons/ionicons.eot?v=2.0.0"); 
+    src: url("../fonts/icons/ionicons.eot?v=2.0.0#iefix") format("embedded-opentype"), 
+        url("../fonts/icons/ionicons.ttf?v=2.0.0") format("truetype"), 
+        url("../fonts/icons/ionicons.woff?v=2.0.0") format("woff"), 
+        url("../fonts/icons/ionicons.svg?v=2.0.0#Ionicons") format("svg"); 
+    font-weight: normal; 
+    font-style: normal;
+}
+.ion-ios-arrow-down:before { content: "\f3d0"; }
+        body {
+  font-size: 62.5%;
+  background: #dadada;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 2;
+  padding: 5em;
+}
+
+.accordion {
+  font-size: 1rem;
+  width: 40vw;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.accordion-header,
+.accordion-body {
+  background: white;
+}
+
+.accordion-header {
+  padding: 1.5em 1.5em;
+  background: #2E1312;
+  color: white;
+  cursor: pointer;
+  font-size: .7em;
+  letter-spacing: .1em;
+  transition: all .3s;
+  text-transform: uppercase;
+}
+
+.accordion__item {
+    border-bottom: 1px solid #fff;
+}
+
+.accordion__item .accordion__item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.accordion-header:hover {
+  background: #C21213;
+  position: relative;
+  z-index: 5;
+}
+
+.accordion-body {
+  background: #fcfcfc;
+  color: #353535;
+  display: none;
+}
+
+.accordion-body__contents {
+  padding: 1.5em 1.5em;
+  font-size: .85em;
+}
+
+.accordion__item.active:last-child .accordion-header {
+  border-radius: none;
+}
+
+.accordion:first-child > .accordion__item > .accordion-header {
+  border-bottom: 1px solid transparent;
+}
+
+.accordion__item > .accordion-header:after {
+  content: "\f3d0";
+  font-family: IonIcons;
+  font-size: 1.2em;
+  float: right;
+  position: relative;
+  top: -2px;
+  transition: .3s all;
+  transform: rotate(0deg);
+}
+
+.accordion__item.active > .accordion-header:after {
+  transform: rotate(-180deg);
+}
+
+.accordion__item.active .accordion-header {
+  background: #C21213;
+}
+
+.accordion__item .accordion__item .accordion-header {
+  background: #f1f1f1;
+  color: #353535;
+}
+.alignright {text-align: right;}
+@media screen and (max-width: 1000px) {
+  body {
+    padding: 1em;
+  }
+  
+  .accordion {
+    width: 100%;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="accordion js-accordion">
+      <P style="text-align: center; color: #000;">RESTAURANT MENU</P>
+        <div class="accordion__item js-accordion-item">
+          <div class="accordion-header js-accordion-header">EMBRACE THE NEW NORMAL</div> 
+        <div class="accordion-body js-accordion-body">
+            <div class="accordion js-accordion">
+              <div class="accordion__item js-accordion-item">
+                 <div class="accordion-header js-accordion-header">Classics @120</div>
+                 
+                 <div class="accordion-body js-accordion-body">
+                   <div class="accordion-body__contents">
+                    <table style="width: 100%;" class="align">
+                      <tbody>
+                        <tr>
+                          <td>Doppio / Cappuccino / Cafe Bistro / Cafe Mocha / Hot Chocolate</td>
+                 
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                   </div><!-- end of sub accordion item body contents -->
+                 </div><!-- end of sub accordion item body -->
+              </div><!-- end of sub accordion item -->
+              <div class="accordion__item js-accordion-item">
+                 <div class="accordion-header js-accordion-header">Cream Blended @180</div> 
+                 <div class="accordion-body js-accordion-body">
+                   <div class="accordion-body__contents">
+                    <table style="width: 100%;" class="align">
+                      <tbody>
+                        <tr>
+                          <td>My Cold Coffee / Mocha Frappe / Irish Frappe / Caramel Frappe / Peanut Cold Coffee</td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                   </div><!-- end of sub accordion item body contents -->
+                 </div><!-- end of sub accordion item body -->
+              </div><!-- end of sub accordion item -->
+
+              <div class="accordion__item js-accordion-item">
+                <div class="accordion-header js-accordion-header">Iced Coffees @120</div> 
+                <div class="accordion-body js-accordion-body">
+                  <div class="accordion-body__contents">
+                   <table style="width: 100%;" class="align">
+                     <tbody>
+                       <tr>
+                         <td>Iced Cappuccino & Vegan Shake</td>
+                       </tr>
+                       
+                     </tbody>
+                   </table>
+                  </div><!-- end of sub accordion item body contents -->
+                </div><!-- end of sub accordion item body -->
+             </div><!-- end of sub accordion item -->
+
+             <div class="accordion__item js-accordion-item">
+              <div class="accordion-header js-accordion-header">Smoothies @120</div> 
+              <div class="accordion-body js-accordion-body">
+                <div class="accordion-body__contents">
+                 <table style="width: 100%;" class="align">
+                   <tbody>
+                     <tr>
+                       <td>Mango, Banana, Strawberry, Apple & Guava</td>
+                     </tr>
+                     
+                   </tbody>
+                 </table>
+                </div><!-- end of sub accordion item body contents -->
+              </div><!-- end of sub accordion item body -->
+           </div><!-- end of sub accordion item -->
+
+           <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">Classic Teas @100</div> 
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+               <table style="width: 100%;" class="align">
+                 <tbody>
+                   <tr>
+                     <td>Classic Assam Tea / Lemon Tea / Green Tea</td>
+                   </tr>
+                   
+                 </tbody>
+               </table>
+              </div><!-- end of sub accordion item body contents -->
+            </div><!-- end of sub accordion item body -->
+         </div><!-- end of sub accordion item -->
+
+         <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">Mocktails @210</div> 
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+               <table style="width: 100%;" class="align">
+                 <tbody>
+                   <tr>
+                     <td>Virgin Mojito, Virgin Colada & Arabian Nights</td>
+                   </tr>
+                   
+                 </tbody>
+               </table>
+              </div><!-- end of sub accordion item body contents -->
+            </div><!-- end of sub accordion item body -->
+         </div><!-- end of sub accordion item -->
+
+         <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">Soft Drinks</div> 
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+               <table style="width: 100%;" class="align">
+                 <tbody>
+                    <tr>
+                        <td>Bottle Water</td>
+                        <td class="alignright">MRP</td>
+                      </tr>
+                      <tr>
+                        <td>Soft Drinks / Canned Juice</td>
+                        <td class="alignright">₹ 79 / ₹ 99</td>
+                      </tr>
+                      <tr>
+                        <td>Fresh Lime / Soda</td>
+                        <td class="alignright">₹ 79</td>
+                      </tr>
+                      <tr>
+                        <td>Energy Drink</td>
+                        <td class="alignright">₹ 249</td>
+                      </tr>
+                   
+                 </tbody>
+               </table>
+              </div><!-- end of sub accordion item body contents -->
+            </div><!-- end of sub accordion item body -->
+         </div><!-- end of sub accordion item -->
+
+            </div><!-- end of sub accordion -->
+          </div
+          </div><!-- end of accordion body -->
+        </div><!-- end of accordion item -->
+
+        <div class="accordion__item js-accordion-item active">
+          <div class="accordion-header js-accordion-header">APPETIZERS</div> 
+        <div class="accordion-body js-accordion-body">
+
+            <div class="accordion js-accordion">
+              <div class="accordion__item js-accordion-item">
+                 <div class="accordion-header js-accordion-header">Asian</div> 
+                 <div class="accordion-body js-accordion-body">
+                   <div class="accordion-body__contents">
+                    <table style="width: 100%;" class="align">
+                      <tbody>
+                        <tr>
+                          <td>Veg Manchurian / Asian Chilli Mushroom</td>
+                          <td class="alignright">₹ 310</td>
+                        </tr>
+                        <tr>
+                          <td>Asian Chilli Paneer / Peri Peri Garlic Corn</td>
+                          <td class="alignright">₹ 310</td>
+                        </tr>
+                        <tr>
+                          <td>Asian Chilli Egg</td>
+                          <td class="alignright">₹ 310</td>
+                        </tr>
+                        <tr>
+                          <td>Stir Fried Tofu Broccoli</td>
+                          <td class="alignright">₹ 310</td>
+                        </tr>
+                        <tr>
+                            <td>Asian Chilli Chicken / Teriyani Chicken</td>
+                            <td class="alignright">₹ 370</td>
+                          </tr>
+                        <tr>
+                          <td>Street Style Chicken Lollipop</td>
+                          <td class="alignright">₹ 370</td>
+                        </tr>
+                        <tr>
+                            <td>Gyoza Pan Fry (Veg / Non-Veg)</td>
+                            <td class="alignright">₹ 310 / ₹ 390</td>
+                          </tr>
+                        <tr>
+                          <td>Hong Kong Chilli Prawns</td>
+                          <td class="alignright">₹ 480</td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                   </div><!-- end of sub accordion item body contents -->
+                 </div><!-- end of sub accordion item body -->
+              </div><!-- end of sub accordion item -->
+              <div class="accordion__item js-accordion-item">
+                 <div class="accordion-header js-accordion-header">World Cuisine</div> 
+                 <div class="accordion-body js-accordion-body">
+                   <div class="accordion-body__contents">
+                    <table style="width: 100%;" class="align">
+                      <tbody>
+                        <tr>
+                          <td>Onion Rings / Garlic Bread</td>
+                          <td class="alignright">₹ 310</td>
+                        </tr>
+                        <tr>
+                          <td>Baked Nachos (Veg / Non-Veg)</td>
+                          <td class="alignright">₹ 310 / ₹ 370</td>
+                        </tr>
+                        <tr>
+                          <td>French Fries</td>
+                          <td class="alignright">₹ 310</td>
+                        </tr>
+                        <tr>
+                          <td>BBQ Chicken Wings</td>
+                          <td class="alignright">₹ 370</td>
+                        </tr>
+                        <tr>
+                            <td>Spicy Grill Chicken / Crispy Fried Chicken</td>
+                            <td class="alignright">₹ 370</td>
+                          </tr>
+                        <tr>
+                          <td>Grill Prawns / Fish Fingers</td>
+                          <td class="alignright">₹ 480</td>
+                        </tr>                     
+                      </tbody>
+                    </table>
+                   </div><!-- end of sub accordion item body contents -->
+                 </div><!-- end of sub accordion item body -->
+              </div><!-- end of sub accordion item -->
+
+              <div class="accordion__item js-accordion-item">
+                <div class="accordion-header js-accordion-header">Indian</div> 
+                <div class="accordion-body js-accordion-body">
+                  <div class="accordion-body__contents">
+                   <table style="width: 100%;" class="align">
+                     <tbody>
+                       <tr>
+                         <td>Aloo 65 / Paneer 65</td>
+                         <td class="alignright">₹ 310</td>
+                       </tr>
+                       <tr>
+                         <td>Malai Broccoli / Peshawari Paneer</td>
+                         <td class="alignright">₹ 310</td>
+                       </tr>
+                       <tr>
+                         <td>Chicken 65 / Chicken Angara</td>
+                         <td class="alignright">₹ 390</td>
+                       </tr>
+                       <tr>
+                         <td>Tandgi Kebab / Tandoori Chicken</td>
+                         <td class="alignright">₹ 390 / ₹ 510</td>
+                       </tr>
+                       <tr>
+                           <td>Murgh Malai Kebab / Chicken Lasooni Kebab</td>
+                           <td class="alignright">₹ 390</td>
+                         </tr>
+                       <tr>
+                         <td>Peshawari Fish / Tawa Fish / Tandoori Prawns</td>
+                         <td class="alignright">₹ 480</td>
+                       </tr>                     
+                     </tbody>
+                   </table>
+                  </div><!-- end of sub accordion item body contents -->
+                </div><!-- end of sub accordion item body -->
+             </div><!-- end of sub accordion item -->
+
+            </div><!-- end of sub accordion -->
+          </div><!-- end of accordion body -->
+        </div><!-- end of accordion item -->
+          <div class="accordion__item js-accordion-item">
+          <div class="accordion-header js-accordion-header">SIGNATURE MAINS</div> 
+        <div class="accordion-body js-accordion-body">
+
+            <div class="accordion js-accordion">
+              <div class="accordion__item js-accordion-item">
+                 <div class="accordion-header js-accordion-header">Oishii Sushi</div> 
+                 <div class="accordion-body js-accordion-body">
+                   <div class="accordion-body__contents">
+                    <table style="width: 100%;" class="align">
+                      <tbody>
+                        <tr>
+                          <td>Avocado Maki Roll / Veg Sushi Roll</td>
+                          <td class="alignright">₹ 399</td>
+                        </tr>
+                        <tr>
+                          <td>Rainbow Roll / California Roll</td>
+                          <td class="alignright">₹ 549</td>
+                        </tr>
+                        <tr>
+                          <td>Ceaser Salad (Veg / Non-Veg)</td>
+                          <td class="alignright">₹ 310 / ₹ 390</td>
+                        </tr>
+                        <tr>
+                            <td>Chicken Ham Pineapple Salad</td>
+                            <td class="alignright">₹ 390</td>
+                          </tr>
+                          <tr>
+                            <td>Pad Thai (Veg / Non-Veg)</td>
+                            <td class="alignright">₹ 310 / ₹ 410</td>
+                          </tr>
+                          <tr>
+                            <td>Omurice (Veg / Non-Veg)</td>
+                            <td class="alignright">₹ 310 / ₹ 410</td>
+                          </tr>
+                        
+                      </tbody>
+                    </table>
+                   </div><!-- end of sub accordion item body contents -->
+                 </div><!-- end of sub accordion item body -->
+              </div><!-- end of sub accordion item -->
+
+              <div class="accordion__item js-accordion-item">
+                <div class="accordion-header js-accordion-header">Pizza 12IN</div> 
+                <div class="accordion-body js-accordion-body">
+                  <div class="accordion-body__contents">
+                   <table style="width: 100%;" class="align">
+                     <tbody>
+                       <tr>
+                         <td>Two Cheese Margherita <p style="font-size: 12px;margin-top: -8px;">Mozerella, Cherry Tomato, Basil & Parmesan</p></td>
+                         <td class="alignright">₹ 549</td>
+                       </tr>
+                       <tr>
+                         <td>Garden Paradise <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Spinach, American Corn, Broccoli, Cherry Tomatoes & Aubergine</p></td>
+                         <td class="alignright">₹ 549</td>
+                       </tr>
+                       <tr>
+                         <td>Chicken Tikka <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Tandoori Chicken, Onion, Green Chilli & Mozzarella</p></td>
+                         <td class="alignright">₹ 599</td>
+                       </tr>
+                       <tr>
+                           <td>Pollo Fungi <p style="font-size: 12px;margin-top: -8px;">Pesto Chicken, Mushroom & Boiled Egg</p></td>
+                           <td class="alignright">₹ 599</td>
+                         </tr>
+                         <tr>
+                           <td>Prok Pepperoni <p style="font-size: 12px;margin-top: -8px;">Pepperoni, Jalapenos & Cheese</p></td>
+                           <td class="alignright">₹ 749</td>
+                         </tr>
+                       
+                     </tbody>
+                   </table>
+                  </div><!-- end of sub accordion item body contents -->
+                </div><!-- end of sub accordion item body -->
+             </div><!-- end of sub accordion item -->
+
+              <div class="accordion__item js-accordion-item">
+                 <div class="accordion-header js-accordion-header">Indian</div> 
+                 <div class="accordion-body js-accordion-body">
+                   <div class="accordion-body__contents">
+                    <table style="width: 100%;" class="align">
+                      <tbody>
+                        <tr>
+                            <td>Kadai Veg / Dal Fry / Dal Makhani</td>
+                            <td class="alignright">₹ 290</td>
+                          </tr>
+                        <tr>
+                          <td>Paneer Butter Masala</td>
+                          <td class="alignright">₹ 290</td>
+                        </tr>
+                        <tr>
+                          <td>Butter Chicken / Tikka Masala</td>
+                          <td class="alignright">₹ 390</td>
+                        </tr>
+                        <tr>
+                          <td>Mutton Roghan Josh</td>
+                          <td class="alignright">₹ 480</td>
+                        </tr>
+                        <tr>
+                            <td>Pulao (Veg/Chicken/Mutton)</td>
+                            <td class="alignright">₹ 310/₹ 480/₹ 530</td>
+                          </tr>
+                          <tr>
+                            <td>Roti, Naan & Rumali</td>
+                            <td class="alignright">₹ 45/₹ 55/₹ 65</td>
+                          </tr>
+                          <tr>
+                            <td>Lacha Parata & Garlic Naan</td>
+                            <td class="alignright">₹ 65/₹ 65</td>
+                          </tr>
+                        
+                      </tbody>
+                    </table>
+                   </div><!-- end of sub accordion item body contents -->
+                 </div><!-- end of sub accordion item body -->
+              </div><!-- end of sub accordion item -->
+
+              <div class="accordion__item js-accordion-item">
+                <div class="accordion-header js-accordion-header">Wester Main Course</div> 
+                <div class="accordion-body js-accordion-body">
+                  <div class="accordion-body__contents">
+                   <table style="width: 100%;" class="align">
+                     <tbody>
+                       <tr>
+                         <td>Stroganoff (Veg / Non-veg)</td>
+                         <td class="alignright">₹ 390 / ₹ 460</td>
+                       </tr>
+                       <tr>
+                         <td>French Farmer's Chicken</td>
+                         <td class="alignright">₹ 390</td>
+                       </tr>
+                       <tr>
+                         <td>Chicken Steak with Red Wine Sauce</td>
+                         <td class="alignright">₹ 460</td>
+                       </tr>
+                       
+                     </tbody>
+                   </table>
+                  </div><!-- end of sub accordion item body contents -->
+                </div><!-- end of sub accordion item body -->
+             </div><!-- end of sub accordion item -->
+
+             <div class="accordion__item js-accordion-item">
+                <div class="accordion-header js-accordion-header">Pasta</div> 
+                <div class="accordion-body js-accordion-body">
+                  <div class="accordion-body__contents">
+                   <table style="width: 100%;" class="align">
+                     <tbody>
+                       <tr>
+                         <td>Arrabiata / Creamy / Pesto Aglio'e' Olio Sauce <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Penne / Spaghetti</p></td>
+                         <td class="alignright">₹ 390 / ₹ 460</td>
+                       </tr>
+                       <tr>
+                         <td>Lasagne Verde (Veg/Non-Veg)</td>
+                         <td class="alignright">₹ 390 / ₹ 460</td>
+                       </tr>
+                       
+                     </tbody>
+                   </table>
+                  </div><!-- end of sub accordion item body contents -->
+                </div><!-- end of sub accordion item body -->
+             </div><!-- end of sub accordion item -->
+
+             <div class="accordion__item js-accordion-item">
+                <div class="accordion-header js-accordion-header">Asian</div> 
+                <div class="accordion-body js-accordion-body">
+                  <div class="accordion-body__contents">
+                   <table style="width: 100%;" class="align">
+                     <tbody>
+                       <tr>
+                         <td style="width: 50%;">Veg <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Tofu Clear Soup, Manchow Soup, Hot and Sour</p></td>
+                         <td class="alignright">₹ 180</td>
+                       </tr>
+                       <tr>
+                        <td>Non-Veg <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Chicken Clear Soup, Chicken Manchow & Chicken Hot & Sour</p></td>
+                        <td class="alignright">₹ 210</td>
+                      </tr>
+                      <tr>
+                        <td>Fried Rice <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Veg / Egg / Chicken / Seafood</p></td>
+                        <td class="alignright">₹ 230/₹ 250/₹ 270/₹ 310</td>
+                      </tr>
+                      <tr>
+                        <td>Noodles <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Veg / Egg / Chicken / Seafood</p></td>
+                        <td class="alignright">₹ 230/₹ 250/₹ 270/₹ 310</td>
+                      </tr> 
+                      <tr>
+                        <td>Veg / Non-Veg Gravy <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">(Schezwan, Hot Garlic & Chilli Soya)</p></td>
+                        <td class="alignright">₹ 290/₹ 390</td>
+                      </tr>                     
+                     </tbody>
+                   </table>
+                  </div><!-- end of sub accordion item body contents -->
+                </div><!-- end of sub accordion item body -->
+             </div><!-- end of sub accordion item -->
+
+             
+             <div class="accordion__item js-accordion-item">
+                <div class="accordion-header js-accordion-header">SANDWICHES</div> 
+                <div class="accordion-body js-accordion-body">
+                  <div class="accordion-body__contents">
+                   <table style="width: 100%;" class="align">
+                     <tbody>
+                       <tr>
+                         <td style="width: 70%;">Veg / Chicken <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">(Paneer & Grill Veg) / (Grill Chicken, Chicken Onion & Club Sandwich)</p></td>
+                         <td class="alignright">₹ 360/₹ 460</td>
+                       </tr>                   
+                     </tbody>
+                   </table>
+                  </div><!-- end of sub accordion item body contents -->
+                </div><!-- end of sub accordion item body -->
+             </div><!-- end of sub accordion item -->
+
+            </div><!-- end of sub accordion -->
+          </div><!-- end of accordion body -->
+        </div><!-- end of accordion item -->
+           <div class="accordion__item js-accordion-item">
+          <div class="accordion-header js-accordion-header">GOURMET GRILLED SAUSAGES</div> 
+        <div class="accordion-body js-accordion-body">
+
+            <div class="accordion js-accordion">
+              <div class="accordion__item js-accordion-item">
+                 <div class="accordion-header js-accordion-header">Pork @499</div> 
+                 <div class="accordion-body js-accordion-body">
+                   <div class="accordion-body__contents">
+                    <table style="width: 100%;" class="align">
+                      <tbody>
+                        <tr>
+                          <td>Curlies Sausage / Bratwurst Sausages <br>
+                          Spicy Sausage (Goan Sausage)</td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                   </div><!-- end of sub accordion item body contents -->
+                 </div><!-- end of sub accordion item body -->
+              </div><!-- end of sub accordion item -->
+              <div class="accordion__item js-accordion-item">
+                 <div class="accordion-header js-accordion-header">Chicken @349</div> 
+                 <div class="accordion-body js-accordion-body">
+                   <div class="accordion-body__contents">
+                    <table style="width: 100%;" class="align">
+                      <tbody>
+                        <tr>
+                          <td>Sage Onion Sausage / Bratwurst Sausage Hot Dog (Smoked)</td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                   </div><!-- end of sub accordion item body contents -->
+                 </div><!-- end of sub accordion item body -->
+              </div><!-- end of sub accordion item -->
+            </div><!-- end of sub accordion -->
+          </div><!-- end of accordion body -->
+        </div><!-- end of accordion item -->
+           <div class="accordion__item js-accordion-item">
+          <div class="accordion-header js-accordion-header">BEER 330ML</div> 
+        <div class="accordion-body js-accordion-body">
+          <div class="accordion-body__contents">
+            <table style="width: 100%;" class="align">
+              <tbody>
+                <tr>
+                  <td>Kingfisher Premium</td>
+                  <td class="alignright">₹ 249</td>
+                </tr>
+                <tr>
+                  <td>Kingfisher Ultra</td>
+                  <td class="alignright">₹ 299</td>
+                </tr>
+                <tr>
+                  <td>Budweiser</td>
+                  <td class="alignright">₹ 299</td>
+                </tr>
+                <tr>
+                    <td>Heineken</td>
+                    <td class="alignright">₹ 329</td>
+                  </tr>
+                <tr>
+                  <td>Bira Blonde</td>
+                  <td class="alignright">₹ 399</td>
+                </tr>
+                <tr>
+                    <td>Bira White</td>
+                    <td class="alignright">₹ 419</td>
+                  </tr>
+                <tr>
+                  <td>Corona</td>
+                  <td class="alignright">₹ 599</td>
+                </tr>
+                <tr>
+                    <td>Hoegaarden</td>
+                    <td class="alignright">₹ 599</td>
+                  </tr>
+                  <tr>
+                    <td>Bucket of 4 KF Premium</td>
+                    <td class="alignright">₹ 999</td>
+                  </tr>
+                <tr>
+                  <td>Bucket of 6 KF Premium</td>
+                  <td class="alignright">₹ 1499</td>
+                </tr>
+                <tr>
+                    <td>Bucket of 4 KF Ultra</td>
+                    <td class="alignright">₹ 1299</td>
+                  </tr>
+                  <tr>
+                    <td>Bucket of 6 KF Ultra</td>
+                    <td class="alignright">₹ 1699</td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+
+          </div><!-- end of accordion body -->
+        </div><!-- end of accordion item -->
+
+        <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">DRAUGHT BEER</div> 
+          <div class="accordion-body js-accordion-body">
+            <div class="accordion-body__contents">
+              <table style="width: 100%;" class="align">
+                <tbody>
+                  <tr>
+                    <td>Mug (330ml)</td>
+                    <td class="alignright">₹ 249</td>
+                  </tr>
+                  <tr>
+                    <td>Pitcher (1.5l)</td>
+                    <td class="alignright">₹ 849</td>
+                  </tr>
+                  <tr>
+                    <td>Dispenser (3.0l)</td>
+                    <td class="alignright">₹ 1799</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+  
+            </div><!-- end of accordion body -->
+          </div><!-- end of accordion item -->
+
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">BEERTAILS</div> 
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+               <table style="width: 100%;" class="align">
+                 <tbody>
+                   <tr>
+                     <td style="width: 70%;">Spicy and Tangy <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">A tangy combination of jalapenos and hint of orange served with chilled beer.</p></td>
+                     <td class="alignright">₹ 299</td>
+                   </tr>
+                   <tr>
+                     <td>Beer Tea <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">A refreshing combo of beer on mix of peach iced tea.</p></td>
+                     <td class="alignright">₹ 299</td>
+                   </tr>
+                   <tr>
+                     <td>Summer Sensation <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">A juicy mix of triple sec, lime juice, orange juice & beer.</p></td>
+                     <td class="alignright">₹ 299</td>
+                   </tr>
+                   <tr>
+                       <td>Knock Out <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">A deadly mix of vodka, rum, gin, blue curacao & beer.</p></td>
+                       <td class="alignright">₹ 299</td>
+                     </tr>
+                     <tr>
+                       <td>Legarita <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">A light beer combination with tequila and triple sec to get super refreshing margarita.</p></td>
+                       <td class="alignright">₹ 299</td>
+                     </tr>
+                     <tr>
+                        <td>Devil Touch <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">The devil touch of sambuca and lime served with chilled beer.</p></td>
+                        <td class="alignright">₹ 299</td>
+                      </tr>
+                   
+                 </tbody>
+               </table>
+              </div><!-- end of sub accordion item body contents -->
+            </div><!-- end of sub accordion item body -->
+         </div><!-- end of sub accordion item -->
+
+         <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">BREEZER</div> 
+          <div class="accordion-body js-accordion-body">
+            <div class="accordion-body__contents">
+              <table style="width: 100%;" class="align">
+                <tbody>
+                  <tr>
+                    <td>Bacardi Breezers (330ml) <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">(All Flavours)</p></td>
+                    <td class="alignright">₹ 269</td>
+                  </tr>
+
+                  
+                </tbody>
+              </table>
+            </div>
+  
+            </div><!-- end of accordion body -->
+          </div><!-- end of accordion item -->
+
+        <div class="accordion__item js-accordion-item">
+          <div class="accordion-header js-accordion-header">SINGLE MALT</div> 
+        <div class="accordion-body js-accordion-body">
+          <div class="accordion-body__contents">
+            <table style="width: 100%;" class="align">
+              <tbody>
+                <tr>
+                  <td>The Glenlivet 12Yo</td>
+                  <td class="alignright">₹ 539</td>
+                </tr>
+                <tr>
+                    <td>The Glenlivet Founder's Reserve</td>
+                    <td class="alignright">₹ 539</td>
+                  </tr>
+                <tr>
+                  <td>Aberfeldy 12Yo</td>
+                  <td class="alignright">₹ 599</td>
+                </tr>
+                <tr>
+                  <td>The Ardmore</td>
+                  <td class="alignright">₹ 599</td>
+                </tr>
+                <tr>
+                    <td>Aberlour 12Yo Double Cask</td>
+                    <td class="alignright">₹ 599</td>
+                  </tr>
+                  <tr>
+                    <td>The Glenlivet 15Yo</td>
+                    <td class="alignright">₹ 659</td>
+                  </tr>
+                <tr>
+                  <td>Bowmore Islay 12Yo</td>
+                  <td class="alignright">₹ 659</td>
+                </tr>
+                <tr>
+                    <td>Scapa The Orcadian Skiren</td>
+                    <td class="alignright">₹ 759</td>
+                  </tr>
+                  <tr>
+                    <td>Scapa The Orcadian Glanza</td>
+                    <td class="alignright">₹ 759</td>
+                  </tr>
+                <tr>
+                  <td>The Glenlivet 18Yo</td>
+                  <td class="alignright">₹ 799</td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+
+          </div><!-- end of accordion body -->
+        </div><!-- end of accordion item -->
+
+
+        <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">SCOTCH BLENDED ULTRA PREMIUM</div> 
+          <div class="accordion-body js-accordion-body">
+            <div class="accordion-body__contents">
+              <table style="width: 100%;" class="align">
+                <tbody>
+                  <tr>
+                    <td>Ballantine's Finest</td>
+                    <td class="alignright">₹ 299</td>
+                  </tr>
+                  <tr>
+                      <td>Dewar's 12 Yo</td>
+                      <td class="alignright">₹ 379</td>
+                    </tr>
+                  <tr>
+                    <td>Ballantine's 12 Yo</td>
+                    <td class="alignright">₹ 429</td>
+                  </tr>
+                  <tr>
+                    <td>Chivas Regal 12 Yo</td>
+                    <td class="alignright">₹ 499</td>
+                  </tr>
+                  <tr>
+                      <td>Dewar's 15 Yo</td>
+                      <td class="alignright">₹ 499</td>
+                    </tr>
+                    <tr>
+                      <td>J.W. Double Black</td>
+                      <td class="alignright">₹ 529</td>
+                    </tr>
+                  <tr>
+                    <td>Chivas Regal XVYo</td>
+                    <td class="alignright">₹ 559</td>
+                  </tr>
+                  <tr>
+                      <td>Ballantine's 17 Yo</td>
+                      <td class="alignright">₹ 759</td>
+                    </tr>
+                    <tr>
+                      <td>Chivas Regal 18 Yo</td>
+                      <td class="alignright">₹ 799</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+  
+            </div><!-- end of accordion body -->
+          </div><!-- end of accordion item -->
+
+
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">IRISH / TENNESSEE / BOURBON</div> 
+          <div class="accordion-body js-accordion-body">
+            <div class="accordion-body__contents">
+              <table style="width: 100%;" class="align">
+                <tbody>
+                  <tr>
+                    <td>Jim Beam</td>
+                    <td class="alignright">₹ 279</td>
+                  </tr>
+                  <tr>
+                      <td>Jameson Irish Whisky</td>
+                      <td class="alignright">₹ 299</td>
+                    </tr>
+                  <tr>
+                    <td>Jameson Caskmates</td>
+                    <td class="alignright">₹ 329</td>
+                  </tr>
+                  <tr>
+                    <td>Jack Daniel's Regular</td>
+                    <td class="alignright">₹ 399</td>
+                  </tr>
+                  <tr>
+                      <td>Maker's Mark</td>
+                      <td class="alignright">₹ 499</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+  
+            </div><!-- end of accordion body -->
+          </div><!-- end of accordion item -->
+
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">SCOTCH DOMESTIC</div> 
+          <div class="accordion-body js-accordion-body">
+            <div class="accordion-body__contents">
+              <table style="width: 100%;" class="align">
+                <tbody>
+                  <tr>
+                    <td>William Lawson's</td>
+                    <td class="alignright">₹ 249</td>
+                  </tr>
+                  <tr>
+                      <td>100 Pipers</td>
+                      <td class="alignright">₹ 249</td>
+                    </tr>
+                  <tr>
+                    <td>Dewar's White Label</td>
+                    <td class="alignright">₹ 259</td>
+                  </tr>
+                  <tr>
+                    <td>Something Special</td>
+                    <td class="alignright">₹ 269</td>
+                  </tr>
+                  <tr>
+                      <td>Teacher's Highland Cream</td>
+                      <td class="alignright">₹ 269</td>
+                    </tr>
+
+                    <tr>
+                        <td>100 Pipers 12 Yo</td>
+                        <td class="alignright">₹ 299</td>
+                      </tr>
+                      <tr>
+                        <td>Teacher's 50</td>
+                        <td class="alignright">₹ 329</td>
+                      </tr>
+                      <tr>
+                          <td>Teacher's Golden Thistle 12 Yo</td>
+                          <td class="alignright">₹ 359</td>
+                        </tr>                
+                </tbody>
+              </table>
+            </div>
+  
+            </div><!-- end of accordion body -->
+          </div><!-- end of accordion item -->
+
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">PREMIUM WHISKY</div> 
+          <div class="accordion-body js-accordion-body">
+            <div class="accordion-body__contents">
+              <table style="width: 100%;" class="align">
+                <tbody>
+                  <tr>
+                    <td>Royal Stag Barrel Select</td>
+                    <td class="alignright">₹ 199</td>
+                  </tr>
+                  <tr>
+                      <td>Blender's Pride</td>
+                      <td class="alignright">₹ 219</td>
+                    </tr>
+                  <tr>
+                    <td>lender's Pride Reserve Collection</td>
+                    <td class="alignright">₹ 229</td>
+                  </tr>
+               
+                </tbody>
+              </table>
+            </div>
+  
+            </div><!-- end of accordion body -->
+          </div><!-- end of accordion item -->
+
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">RUM</div> 
+          <div class="accordion-body js-accordion-body">
+            <div class="accordion-body__contents">
+              <table style="width: 100%;" class="align">
+                <tbody>
+                  <tr>
+                    <td>Bacardi ( White / Black / Gold )</td>
+                    <td class="alignright">₹ 199</td>
+                  </tr>
+                  <tr>
+                      <td>Captain Morgan Spiced Rum</td>
+                      <td class="alignright">₹ 199</td>
+                    </tr>
+                  <tr>
+                    <td>Bacardi Reserva Ocho</td>
+                    <td class="alignright">₹ 449</td>
+                  </tr>
+               
+                </tbody>
+              </table>
+            </div>
+  
+            </div><!-- end of accordion body -->
+          </div><!-- end of accordion item -->
+
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">VODKA</div> 
+          <div class="accordion-body js-accordion-body">
+            <div class="accordion-body__contents">
+              <table style="width: 100%;" class="align">
+                <tbody>
+                  <tr>
+                    <td>Smirnoff</td>
+                    <td class="alignright">₹ 229</td>
+                  </tr>
+                  <tr>
+                      <td>Absolut</td>
+                      <td class="alignright">₹ 289</td>
+                    </tr>
+                  <tr>
+                    <td>Absolut Flavours</td>
+                    <td class="alignright">₹ 289</td>
+                  </tr>
+                  <tr>
+                    <td>Absolut Elyx</td>
+                    <td class="alignright">₹ 349</td>
+                  </tr>
+                <tr>
+                  <td>Grey Goose</td>
+                  <td class="alignright">₹ 399</td>
+                </tr>
+                <tr>
+                    <td>Grey Goose VX</td>
+                    <td class="alignright">₹ 999</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+  
+            </div><!-- end of accordion body -->
+          </div><!-- end of accordion item -->
+
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">TEQUILA</div> 
+          <div class="accordion-body js-accordion-body">
+            <div class="accordion-body__contents">
+              <table style="width: 100%;" class="align">
+                <tbody>
+                  <tr>
+                    <td>Camino ( Blanco / Gold )</td>
+                    <td class="alignright">₹ 379/₹ 389</td>
+                  </tr>
+                  <tr>
+                      <td>Sauza ( Silver / Gold )</td>
+                      <td class="alignright">₹ 379/₹ 389</td>
+                    </tr>
+                  <tr>
+                    <td>Patron XO Café</td>
+                    <td class="alignright">₹ 649</td>
+                  </tr>
+                  <tr>
+                    <td>Patron Silver</td>
+                    <td class="alignright">₹ 999</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+  
+            </div><!-- end of accordion body -->
+          </div><!-- end of accordion item -->
+
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">GIN</div> 
+          <div class="accordion-body js-accordion-body">
+            <div class="accordion-body__contents">
+              <table style="width: 100%;" class="align">
+                <tbody>
+                  <tr>
+                    <td>Beefeater</td>
+                    <td class="alignright">₹ 299</td>
+                  </tr>
+                  <tr>
+                      <td>Bombay Sapphire</td>
+                      <td class="alignright">₹ 299</td>
+                    </tr>
+                  <tr>
+                    <td>Star of Bombay</td>
+                    <td class="alignright">₹ 499</td>
+                  </tr>
+                  <tr>
+                    <td>Monkey 47 Schwarzwald</td>
+                    <td class="alignright">₹ 649</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+  
+            </div><!-- end of accordion body -->
+          </div><!-- end of accordion item -->
+
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">BRANDY</div> 
+          <div class="accordion-body js-accordion-body">
+            <div class="accordion-body__contents">
+              <table style="width: 100%;" class="align">
+                <tbody>
+                  <tr>
+                    <td>Morpheus</td>
+                    <td class="alignright">₹ 199</td>
+                  </tr>
+                  <tr>
+                      <td>Mansion House</td>
+                      <td class="alignright">₹ 199</td>
+                    </tr>
+
+                </tbody>
+              </table>
+            </div>
+  
+            </div><!-- end of accordion body -->
+          </div><!-- end of accordion item -->
+
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">GOGNAC</div> 
+          <div class="accordion-body js-accordion-body">
+            <div class="accordion-body__contents">
+              <table style="width: 100%;" class="align">
+                <tbody>
+                  <tr>
+                    <td>St. Remy</td>
+                    <td class="alignright">₹ 299</td>
+                  </tr>
+                  <tr>
+                      <td>Martell</td>
+                      <td class="alignright">₹ 399</td>
+                    </tr>
+                    <tr>
+                        <td>Remy Martin</td>
+                        <td class="alignright">₹ 499</td>
+                      </tr>
+                </tbody>
+              </table>
+            </div>
+  
+            </div><!-- end of accordion body -->
+          </div><!-- end of accordion item -->
+
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">LIQUEUR / VERMOUTH</div> 
+          <div class="accordion-body js-accordion-body">
+            <div class="accordion-body__contents">
+              <table style="width: 100%;" class="align">
+                <tbody>
+                  <tr>
+                    <td>Martini ( Rosso / Blanco / Extra Dry )</td>
+                    <td class="alignright">₹ 249</td>
+                  </tr>
+                  <tr>
+                      <td>Malibu</td>
+                      <td class="alignright">₹ 299</td>
+                    </tr>
+                    <tr>
+                        <td>Kahlua</td>
+                        <td class="alignright">₹ 399</td>
+                      </tr>
+                      <tr>
+                        <td>Baileys</td>
+                        <td class="alignright">₹ 399</td>
+                      </tr>
+                      <tr>
+                          <td>Jagermeister</td>
+                          <td class="alignright">₹ 469</td>
+                        </tr>
+                </tbody>
+              </table>
+            </div>
+  
+            </div><!-- end of accordion body -->
+          </div><!-- end of accordion item -->
+
+          <div class="accordion__item js-accordion-item active">
+            <div class="accordion-header js-accordion-header">WINES</div> 
+          <div class="accordion-body js-accordion-body">
+  
+              <div class="accordion js-accordion">
+                <div class="accordion__item js-accordion-item">
+                   <div class="accordion-header js-accordion-header">WINES IMPORTED</div> 
+                   <div class="accordion-body js-accordion-body">
+                     <div class="accordion-body__contents">
+                      <table style="width: 100%;" class="align">
+                        <tbody>
+                          <tr>
+                            <td>Glass Bottle Jacobs Creek Classic Chardonnay</td>
+                            <td class="alignright">₹ 759</td>
+                          </tr>
+                          <tr>
+                            <td>Jacobs Creek Classic Shiraz</td>
+                            <td class="alignright">₹ 759</td>
+                          </tr>
+                          <tr>
+                            <td>Campo Viejo Rioja</td>
+                            <td class="alignright">₹ 4999</td>
+                          </tr>
+                          <tr>
+                            <td>Brancott Estate Sauvignon Blanc</td>
+                            <td class="alignright">₹ 5999</td>
+                          </tr>
+                          <tr>
+                              <td>Brancott Estate Pinot Noir 
+                            </td>
+                              <td class="alignright">₹ 6499</td>
+                            </tr>
+                        </tbody>
+                      </table>
+                     </div><!-- end of sub accordion item body contents -->
+                   </div><!-- end of sub accordion item body -->
+                </div><!-- end of sub accordion item -->
+                <div class="accordion__item js-accordion-item">
+                   <div class="accordion-header js-accordion-header">WINES DOMESTIC</div> 
+                   <div class="accordion-body js-accordion-body">
+                     <div class="accordion-body__contents">
+                      <table style="width: 100%;" class="align">
+                        <tbody>
+                          <tr>
+                            <td>Indiosa Shiraz</td>
+                            <td class="alignright">₹ 399</td>
+                          </tr>
+                          <tr>
+                            <td>Indiosa Chenin Blanc</td>
+                            <td class="alignright">₹ 310 / ₹ 399</td>
+                          </tr>
+                          <tr>
+                            <td>Sula Shiraz</td>
+                            <td class="alignright">₹ 449</td>
+                          </tr>
+                          <tr>
+                            <td>Sula Chenin Blanc</td>
+                            <td class="alignright">₹ 449</td>
+                          </tr>                     
+                        </tbody>
+                      </table>
+                     </div><!-- end of sub accordion item body contents -->
+                   </div><!-- end of sub accordion item body -->
+                </div><!-- end of sub accordion item -->
+  
+                <div class="accordion__item js-accordion-item">
+                  <div class="accordion-header js-accordion-header">WINES SPARKLING</div> 
+                  <div class="accordion-body js-accordion-body">
+                    <div class="accordion-body__contents">
+                     <table style="width: 100%;" class="align">
+                       <tbody>
+                         <tr>
+                           <td>Chandon Brut Rose</td>
+                           <td class="alignright">₹ 3499</td>
+                         </tr>
+                         <tr>
+                           <td>Martini Prosecco</td>
+                           <td class="alignright">₹ 3999</td>
+                         </tr>
+                         <tr>
+                           <td>Jacobs Creek Chardonnay Pinot Noir</td>
+                           <td class="alignright">₹ 4999</td>
+                         </tr>                     
+                       </tbody>
+                     </table>
+                    </div><!-- end of sub accordion item body contents -->
+                  </div><!-- end of sub accordion item body -->
+               </div><!-- end of sub accordion item -->
+
+               <div class="accordion__item js-accordion-item">
+                <div class="accordion-header js-accordion-header">SANGRIA</div> 
+                <div class="accordion-body js-accordion-body">
+                  <div class="accordion-body__contents">
+                   <table style="width: 100%;" class="align">
+                     <tbody>
+                       <tr>
+                         <td>Ruby Red</td>
+                         <td class="alignright">₹ 759 / ₹ 1999</td>
+                       </tr>
+                       <tr>
+                         <td>Blusg</td>
+                         <td class="alignright">₹ 759 / ₹ 1999</td>
+                       </tr>
+                       <tr>
+                         <td>White Sands</td>
+                         <td class="alignright">₹ 759 / ₹ 1999</td>
+                       </tr>
+                       <tr>
+                        <td>Hot as Hell</td>
+                        <td class="alignright">₹ 759 / ₹ 1999</td>
+                      </tr>                      
+                     </tbody>
+                   </table>
+                  </div><!-- end of sub accordion item body contents -->
+                </div><!-- end of sub accordion item body -->
+             </div><!-- end of sub accordion item -->
+
+             <div class="accordion__item js-accordion-item">
+                <div class="accordion-header js-accordion-header">HCC SIGNATURE COCKTAILS</div> 
+                <div class="accordion-body js-accordion-body">
+                  <div class="accordion-body__contents">
+                   <table style="width: 100%;" class="align">
+                     <tbody>
+                       <tr>
+                         <td style="width: 70%;">HCC Wisteria <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Hoc espresso shaken with whisky, milkmaid & ice cream.</p></td>
+                         <td class="alignright">₹ 499</td>
+                       </tr>
+                       <tr>
+                         <td>HCC Sunset <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">A tropical touch of orange, pineapple juice, passion fruit with blended scotch whisky.</p></td>
+                         <td class="alignright">₹ 499</td>
+                       </tr>
+                       <tr>
+                         <td>HCC Tangy Twist <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">A Mexican mix of fresh orange, lime juice, amaretto with tequila.</p></td>
+                         <td class="alignright">₹ 499</td>
+                       </tr>
+                       <tr>
+                           <td>HCC High Energy 7 Spirits <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Vodka, rum, gin„ tequila, malibu, triple sec & whisky.</p></td>
+                           <td class="alignright">₹ 599</td>
+                         </tr>
+                     </tbody>
+                   </table>
+                  </div><!-- end of sub accordion item body contents -->
+                </div><!-- end of sub accordion item body -->
+             </div><!-- end of sub accordion item -->
+
+             <div class="accordion__item js-accordion-item">
+                <div class="accordion-header js-accordion-header">HCC CLASSIC  COCKTAILS</div> 
+                <div class="accordion-body js-accordion-body">
+                  <div class="accordion-body__contents">
+                   <table style="width: 100%;" class="align">
+                     <tbody>
+                       <tr>
+                         <td style="width: 70%;">Daiquiri <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">The original daiquiri, which was one of ernest hemingway's favorite drinks, is a simple mix of rum, lime juice, and simple syrup, shaken & served neat. </p></td>
+                         <td class="alignright">₹ 499</td>
+                       </tr>
+                       <tr>
+                         <td>Mojito <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">A mesmerizing mix of light rum, mint, sugar & lime, served on a bed of crushed ice.</p></td>
+                         <td class="alignright">₹ 499</td>
+                       </tr>
+                       <tr>
+                         <td>Caipiroska <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">A refreshing cooler with vodka twist, served on crushed ice.</p></td>
+                         <td class="alignright">₹ 499</td>
+                       </tr>
+                       <tr>
+                           <td>Piña Colada <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">It is one of the most popular tropical cocktails for a very good reason: it is the perfect creamy mix of pineapple, coconut & rum.</p></td>
+                           <td class="alignright">₹ 499</td>
+                        </tr>
+                        <tr>
+                            <td>Margarita (The Mexican Thirst Quencher) <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Tequila, cointreau & fresh lime juice.</p></td>
+                            <td class="alignright">₹ 499</td>
+                          </tr>
+                          <tr>
+                            <td>Cosmopolitan <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">An intruding mix of vodka, triple sec, lime & cranberry juice.</p></td>
+                            <td class="alignright">₹ 499</td>
+                          </tr>
+                          <tr>
+                            <td>Mai Tai <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">An exotic blend of white and dark rum with orange, pineapple juice & almond flavor. </p></td>
+                            <td class="alignright">₹ 499</td>
+                          </tr>
+                          <tr>
+                              <td>Long Island Ice Tea <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Vodka, tequila, triple sec, white rum & gin.</p></td>
+                              <td class="alignright">₹ 569</td>
+                           </tr>
+                       
+                     </tbody>
+                   </table>
+                  </div><!-- end of sub accordion item body contents -->
+                </div><!-- end of sub accordion item body -->
+             </div><!-- end of sub accordion item -->
+
+
+             <div class="accordion__item js-accordion-item">
+                <div class="accordion-header js-accordion-header">HCC XOTIC</div> 
+                <div class="accordion-body js-accordion-body">
+                  <div class="accordion-body__contents">
+                   <table style="width: 100%;" class="align">
+                     <tbody>
+                       <tr>
+                         <td style="width: 70%;">Flirt <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Tequila, cream de casts, ginger ale & lime juice.</p></td>
+                         <td class="alignright">₹ 569</td>
+                       </tr>
+                       <tr>
+                         <td>Illusion <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Vodka, oreidari„ cointreau, lime juice & lemonade to top... hurricane glass.</p></td>
+                         <td class="alignright">₹ 569</td>
+                       </tr>
+                       <tr>
+                         <td>The London Iced Tea <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Gin, white rum, ameretto, sweet 'n' sour mix with splash of Pepsi.</p></td>
+                         <td class="alignright">₹ 569</td>
+                       </tr>
+                       <tr>
+                           <td>Peach Melba <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">It's a combination of white rum blends with black tea, cranberry juice & peach syrup. </p></td>
+                           <td class="alignright">₹ 569</td>
+                        </tr>
+                       
+                     </tbody>
+                   </table>
+                  </div><!-- end of sub accordion item body contents -->
+                </div><!-- end of sub accordion item body -->
+             </div><!-- end of sub accordion item -->
+
+             <div class="accordion__item js-accordion-item">
+                <div class="accordion-header js-accordion-header">MARTINIS/MOJITOS</div> 
+                <div class="accordion-body js-accordion-body">
+                  <div class="accordion-body__contents">
+                   <table style="width: 100%;" class="align">
+                     <tbody>
+                       <tr>
+                         <td style="width: 70%;">Granny Smith's Martini <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">A sharp combination of vodka and apple pucker.</p></td>
+                         <td class="alignright">₹ 559</td>
+                       </tr>
+                       <tr>
+                         <td>Dirty Martini <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">As dirty as it gets... with a touch of olive brine...</p></td>
+                         <td class="alignright">₹ 559</td>
+                       </tr>
+                       <tr>
+                         <td>Coco Light Martini <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Vodka, coconut water & pineapple juice, these combine to create a light refreshing drink. </p></td>
+                         <td class="alignright">₹ 559</td>
+                       </tr>
+                       <tr>
+                           <td>Mexi-Tini <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">The maxi-iini is the perfect spring citrus cocktail for any occasion that brings a little sunshine to the day. ifs a simple, flavored martini made of orange vodka, tequila & orange juice. </p></td>
+                           <td class="alignright">₹ 559</td>
+                        </tr>
+                        <tr>
+                            <td>Cinnamon Espresso Martini <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">The cinnamon espresso martini is a rich, creamy dessert martini.</p></td>
+                            <td class="alignright">₹ 559</td>
+                         </tr>
+                         <tr>
+                            <td>Watermelon And Cucumber Mojito <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Dive into the freshness of watermelon, cucumber, lime juice and vodka for the perfect cooler.</p></td>
+                            <td class="alignright">₹ 559</td>
+                         </tr>
+                         <tr>
+                             <td>Mixed Berry Mojito <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">The berrylicious mojito consists of fresh blackberry and raspberries Sprinkled with mint leaves, lime wedges and copious amount of white rum.</p></td>
+                             <td class="alignright">₹ 559</td>
+                          </tr>
+                         
+                     </tbody>
+                   </table>
+                  </div><!-- end of sub accordion item body contents -->
+                </div><!-- end of sub accordion item body -->
+             </div><!-- end of sub accordion item -->
+
+
+              </div><!-- end of sub accordion -->
+            </div><!-- end of accordion body -->
+          </div><!-- end of accordion item -->
+
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">COCKTAIL PITCHERS</div> 
+          <div class="accordion-body js-accordion-body">
+            <div class="accordion-body__contents">
+              <table style="width: 100%;" class="align">
+                <tbody>
+                  <tr>
+                    <td>Pitcher of Mojito</td>
+                    <td class="alignright">₹ 1999</td>
+                  </tr>
+                  <tr>
+                      <td>Pitcher of Cosmopolitan</td>
+                      <td class="alignright">₹ 1999</td>
+                    </tr>
+                    <tr>
+                        <td>Pitcher of Margarita</td>
+                        <td class="alignright">₹ 1999</td>
+                      </tr>
+                      <tr>
+                        <td>Pitcher of Long Island Iced Tea</td>
+                        <td class="alignright">₹ 1999</td>
+                      </tr>
+                      <tr>
+                          <td>Pitcher of Whisky Sour</td>
+                          <td class="alignright">₹ 1999</td>
+                        </tr>
+
+                </tbody>
+              </table>
+            </div>
+  
+            </div><!-- end of accordion body -->
+          </div><!-- end of accordion item -->
+
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">SHOTS HAVE BEEN FIRED!!!</div> 
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+               <table style="width: 100%;" class="align">
+                 <tbody>
+                   <tr>
+                     <td>Liquid Cocaine <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">White rum, dark rum, anis & bitters.</p></td>
+                     <td class="alignright">₹ 299</td>
+                   </tr>
+                   <tr>
+                     <td>Pain Killer <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Vodka, kalhua & tobasco sauce.</p></td>
+                     <td class="alignright">₹ 299</td>
+                   </tr>
+                   <tr>
+                     <td>Crazy Frog <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Vodka, peach, coca & pineapple juice.</p></td>
+                     <td class="alignright">₹ 299</td>
+                   </tr>
+                   <tr>
+                       <td>Belly Button <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Vodka, coca & orange juice.</p></td>
+                       <td class="alignright">₹ 299</td>
+                    </tr>
+                    <tr>
+                        <td>Kamakaze <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Vodka, triple sec & lime juice.</p></td>
+                        <td class="alignright">₹ 299</td>
+                     </tr>
+                     <tr>
+                        <td>Balance <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Vodka, white rum & grenadine.</p></td>
+                        <td class="alignright">₹ 299</td>
+                     </tr>
+                     <tr>
+                         <td>Lady & Lord <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Kalhua & dark rum.</p></td>
+                         <td class="alignright">₹ 349</td>
+                      </tr>
+                      <tr>
+                        <td>HCC Brain Shot <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Baileys, sambuce & grenadine.</p></td>
+                        <td class="alignright">₹ 499</td>
+                     </tr>
+                      <tr>
+                        <td>B-52 <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Kahfua, baileys & coirrtreau.</p></td>
+                        <td class="alignright">₹ 499</td>
+                     </tr>
+                     <tr>
+                         <td>Harley Davidson <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Vodka, blue curacoo, lime juice & pineapple juice.</p></td>
+                         <td class="alignright">₹ 499</td>
+                      </tr> 
+                      
+                      <tr>
+                        <td>Head Shake <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Vodka, white rum, gin & anis.</p></td>
+                        <td class="alignright">₹ 499</td>
+                     </tr>
+                     <tr>
+                       <td>Flaming Ferrari <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">White rum, dark rum, blue curacoo & peach syrup.</p></td>
+                       <td class="alignright">₹ 499</td>
+                    </tr>
+                    <tr>
+                        <td>Flaming Lamborghini <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Baileys, kahlua, vodka, blue curacoo & brandy.</p></td>
+                        <td class="alignright">₹ 499</td>
+                     </tr> 
+                 </tbody>
+               </table>
+              </div><!-- end of sub accordion item body contents -->
+            </div><!-- end of sub accordion item body -->
+         </div><!-- end of sub accordion item -->
+
+         <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">THE STOOGES (MOCKTAILS)</div> 
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+               <table style="width: 100%;" class="align">
+                 <tbody>
+                   <tr>
+                     <td style="width: 70%;">Virgin <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Mojito Colada / Mary</p></td>
+                     <td class="alignright">₹ 199</td>
+                   </tr>
+                   <tr>
+                     <td>Casanova</td>
+                     <td class="alignright">₹ 199</td>
+                   </tr>
+                   <tr>
+                     <td>Blue Shoe / Red Shoe</td>
+                     <td class="alignright">₹ 199</td>
+                   </tr>
+                    <tr>
+                        <td>Arabian Nights <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Spicy sip of chilled guava.</p></td>
+                        <td class="alignright">₹ 199</td>
+                     </tr>
+                     <tr>
+                        <td>Cyprus <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">It's a blend of mango, coconut, and vanilla ice cream with dash of strawberry.</p></td>
+                        <td class="alignright">₹ 199</td>
+                     </tr>
+                     <tr>
+                         <td>Harmony <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">The healthy blend of pineapple and orange juice with touch of kiwi.</p></td>
+                         <td class="alignright">₹ 199</td>
+                      </tr>
+                 </tbody>
+               </table>
+              </div><!-- end of sub accordion item body contents -->
+            </div><!-- end of sub accordion item body -->
+         </div><!-- end of sub accordion item -->
+
+      </div><!-- end of accordion -->
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>         
+    <script>
+        var accordion = (function(){
+  
+        var $accordion = $('.js-accordion');
+        var $accordion_header = $accordion.find('.js-accordion-header');
+        var $accordion_item = $('.js-accordion-item');
+        
+        // default settings 
+        var settings = {
+            // animation speed
+            speed: 400,
+            
+            // close all other accordion items if true
+            oneOpen: false
+        };
+            
+        return {
+            // pass configurable object literal
+            init: function($settings) {
+            $accordion_header.on('click', function() {
+                accordion.toggle($(this));
+            });
+            
+            $.extend(settings, $settings); 
+            
+            // ensure only one accordion is active if oneOpen is true
+            if(settings.oneOpen && $('.js-accordion-item.active').length > 1) {
+                $('.js-accordion-item.active:not(:first)').removeClass('active');
+            }
+            
+            // reveal the active accordion bodies
+            $('.js-accordion-item.active').find('> .js-accordion-body').show();
+            },
+            toggle: function($this) {
+                    
+            if(settings.oneOpen && $this[0] != $this.closest('.js-accordion').find('> .js-accordion-item.active > .js-accordion-header')[0]) {
+                $this.closest('.js-accordion')
+                    .find('> .js-accordion-item') 
+                    .removeClass('active')
+                    .find('.js-accordion-body')
+                    .slideUp()
+            }
+            
+            // show/hide the clicked accordion item
+            $this.closest('.js-accordion-item').toggleClass('active');
+            $this.next().stop().slideToggle(settings.speed);
+            }
+        }
+        })();
+
+        $(document).ready(function(){
+        accordion.init({ speed: 300, oneOpen: true });
+        });
+    </script>
+</body>
+</html>

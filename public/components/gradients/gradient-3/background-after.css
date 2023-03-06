@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+article {
+  background: repeating-radial-gradient(
+    circle at left,
+    rgb(128, 0, 64),
+    rgba(240, 0, 128) 10%
+  );
+}

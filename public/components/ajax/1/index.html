@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajax - simple text file</title>
+  </head>
+  <body>
+    <h1>Ajax - Simple text file</h1>
+    <button id="getFile">Get File 1</button>
+    <button id="getFile2">Get File 2</button>
+
+    <div id="content"></div>
+  </body>
+  <script>
+    document.getElementById("getFile").addEventListener("click", getFile);
+    document.getElementById("getFile2").addEventListener("click", getFile2);
+
+    let content = document.getElementById("content");
+
+    //HTTP Statuses
+    // 200 : "OK"
+    // 403 : "Forbidden"
+    // 404 : "Unavailable"
+
+    function getFile() {
+      console.log("Get File");
+
+      var xhr = new XMLHttpRequest();
+
+      xhr.open("GET", "sample.txt", true);
+
+      //optional for loaders
+      xhr.onprogress = function () {
+        console.log("Ready state", xhr.readyState);
+        let text = document.createElement("p");
+        text.innerHTML = "hello";
+        document.body.append(text);
+      };
+
+      xhr.onload = function () {
+        if (this.status == 200) {
+          //console.log("Response 200");
+          content.innerHTML = this.responseText;
+
+          let p = document.querySelector("p");
+          p.remove();
+        } else if (this.status == 404) {
+          content.innerHTML = "Not found";
+        }
+      };
+
+      xhr.onerror = function () {
+        console.log("Request Error");
+      };
+
+      xhr.send();
+    }
+
+    //Using onready state change
+
+    //Ready state values
+    // 0 : request not initialized
+    // 1 : server connnection established
+    // 2 : request received
+    // 3 : processing request
+    // 4 : request finished and response ready
+
+    function getFile2() {
+      //console.log("Get File");
+
+      var xhr = new XMLHttpRequest();
+
+      xhr.open("GET", "sample2.txt", true);
+      console.log("Ready State initial : ", xhr.readyState);
+
+      xhr.onreadystatechange = function () {
+        console.log("Ready State Loop : ", xhr.readyState);
+        if (this.readyState == 4 && this.status == 200) {
+          console.log("Ready Inner : ", xhr.readyState);
+          console.log("Responose Text : ", this.responseText);
+          console.log("Status Text : ", this.statusText);
+          console.log("Status Code : ", this.status);
+          content.innerHTML = this.responseText;
+        }
+      };
+
+      xhr.send();
+    }
+  </script>
+</html>

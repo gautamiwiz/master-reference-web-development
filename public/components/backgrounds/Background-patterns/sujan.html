@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backgrounds by iWiz</title>
+    <style>
+        img {
+            border: 1px solid #efefef;
+            border-radius: 5px 5px;
+            padding : 4px;
+            width: 100%;
+            max-width: 75px; min-width: 75px;
+            max-height: 75px; max-height: 75px;
+        }
+    </style>
+     
+    
+</head>
+<body style="background-image: url(./images/1.gif); background-repeat: repeat; background-attachment: fixed;">
+    <h1 style="text-align: center;">Background Image Selection</h1>
+    <div style="width: 80%; max-width: 800px; margin: 300px auto 300px; background-color: #fff; padding: 10px;">        
+        <img src="./images/1.gif" alt="Background 1" id="changeImage1" onclick="changeBackGround('changeImage1')" />
+        <img src="./images/2.png" alt="Background 2" id="changeImage2" onclick="changeBackGround('changeImage2')" />
+        <img src="./images/3.png" alt="Background 3" id="changeImage3" onclick="changeBackGround('changeImage3')" />
+        <img src="./images/4.gif" alt="Background 4"  id="changeImage4" onclick="changeBackGround('changeImage4')"/>
+        <img src="./images/5.png" alt="Background 5"  id="changeImage5" onclick="changeBackGround('changeImage5')"/>
+        <img src="./images/6.png" alt="Background 6" id="changeImage6" onclick="changeBackGround('changeImage6')"/>
+        <img src="./images/9.png" alt="Background 9" id="changeImage9" onclick="changeBackGround('changeImage9')"/>
+        <img src="./images/10.png" alt="Background 10" id="changeImage10" onclick="changeBackGround('changeImage10')" />
+        <img src="./images/11.png" alt="Background 11" id="changeImage11" onclick="changeBackGround('changeImage11')"/>
+    </div>
+    <script type="text/javascript"> 
+	  function changeBackGround(id){
+	  var body = document.getElementsByTagName("body");	 
+	  var changeImage = document.getElementById(id);
+	   var image = changeImage.getAttribute('src');
+	            
+        body[0].style.backgroundImage = `url(${image})`;
+            
+	  }
+    </script> 
+</body>
+</html>

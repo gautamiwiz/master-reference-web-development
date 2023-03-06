@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce Product Page</title>
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/product.css" />
+    <script src="js/nav.js" defer></script>
+    <script src="js/footer.js" defer></script>
+    <script src="js/home.js" defer></script>
+    <script src="js/product.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar"></nav>
+
+    <!-- Product Details -->
+    <section class="product-details">
+      <div class="image-slider">
+        <div class="product-images">
+          <img src="images/1.jpg" class="active" alt="" />
+          <img src="images/2.jpg" alt="" />
+          <img src="images/9.jpg" alt="" />
+          <img src="images/1.jpg" alt="" />
+        </div>
+      </div>
+      <div class="details">
+        <h1 class="product-brand">Product Name</h1>
+        <p class="product-short-des">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum
+          repellendus animi eius ut explicabo fugiat neque cumque eveniet
+          officiis laborum similique perspiciatis atque nemo excepturi, minus
+          omnis, adipisci possimus cum ullam iure tempora vel magni amet eos.
+          Iure, quibusdam minima. Assumenda repellat ipsa magni quia!
+        </p>
+        <span class="product-price">INR 99</span>
+        <span class="product-actual-price">INR 299</span>
+        <span class="product-discount">(50% off)</span>
+        <p class="product-sub-heading">Select Size</p>
+        <input type="radio" name="size" value="s" hidden id="s-size" />
+        <label for="s-size" class="size-radio-btn check">S</label>
+        <input type="radio" name="size" value="m" hidden id="m-size" />
+        <label for="m-size" class="size-radio-btn">M</label>
+        <input type="radio" name="size" value="l" hidden id="l-size" />
+        <label for="l-size" class="size-radio-btn">L</label>
+        <input type="radio" name="size" value="xl" hidden id="xl-size" />
+        <label for="xl-size" class="size-radio-btn">XL</label>
+
+        <button class="btn cart-btn">add to cart</button>
+        <button class="btn">add to wishlist</button>
+      </div>
+    </section>
+
+    <section class="detail-des">
+      <h2 class="heading">Description</h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+        non dolorem veniam maiores enim ea tempora neque necessitatibus, fugit
+        libero optio facere placeat sint. Distinctio magnam quam quisquam a
+        maxime cumque autem hic, obcaecati quae veniam inventore tenetur at. Sed
+        ea eius nobis magnam ipsa deserunt, maxime eveniet quasi quidem
+        necessitatibus quo in, accusantium minus veritatis quaerat? Fugit est
+        commodi quos tenetur. Molestias deserunt, tempora natus cum nulla illum
+        cumque, voluptatem iusto, sequi minus temporibus porro! Fugit ea numquam
+        maxime perspiciatis. Ullam similique enim pariatur rem vero, commodi,
+        iste culpa excepturi possimus officia totam nisi sunt neque, distinctio
+        error. Necessitatibus odit, est soluta nobis deserunt eaque possimus
+        quam exercitationem fuga, sed optio perspiciatis ipsa non cum quo ea
+        sapiente laborum sint at ab porro, labore delectus eos voluptates.
+        Voluptas minus, saepe hic aut nostrum corporis, non animi optio dolores
+        architecto aliquam soluta ipsam magni consequatur sint velit, mollitia
+        ad necessitatibus quis laborum voluptatum? Rerum tempora voluptates
+        voluptatum nulla dolorem aliquid omnis a ipsum ducimus pariatur fuga
+        veniam esse reprehenderit, eos laborum aspernatur aut ullam ut
+        distinctio voluptatibus odio incidunt? Nostrum tempore molestiae aliquid
+        quaerat cupiditate repellendus voluptatibus, incidunt enim laudantium
+        nam odit esse! Aliquid ex obcaecati deleniti dolorem possimus ad!
+      </p>
+    </section>
+
+    <!-- Products -->
+    <section class="product">
+      <h2 class="product-category">All Products</h2>
+      <button class="pre-btn"><img src="images/arrow.png" alt="" /></button>
+      <button class="nxt-btn"><img src="images/arrow.png" alt="" /></button>
+
+      <div class="product-container">
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="../CSS/gallery-images/1.jpg"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">Add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="brand-name">brand</h2>
+            <p class="product-short-desc">
+              Description about the product will come here... this is a very
+              good product
+            </p>
+            <span class="price">INR 20</span
+            ><span class="actual-price">INR 40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="../CSS/gallery-images/1.jpg"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">Add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="brand-name">brand</h2>
+            <p class="product-short-desc">
+              Description about the product will come here... this is a very
+              good product
+            </p>
+            <span class="price">INR 20</span
+            ><span class="actual-price">INR 40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="../CSS/gallery-images/1.jpg"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">Add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="brand-name">brand</h2>
+            <p class="product-short-desc">
+              Description about the product will come here... this is a very
+              good product
+            </p>
+            <span class="price">INR 20</span
+            ><span class="actual-price">INR 40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="../CSS/gallery-images/1.jpg"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">Add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="brand-name">brand</h2>
+            <p class="product-short-desc">
+              Description about the product will come here... this is a very
+              good product
+            </p>
+            <span class="price">INR 20</span
+            ><span class="actual-price">INR 40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="../CSS/gallery-images/1.jpg"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">Add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="brand-name">brand</h2>
+            <p class="product-short-desc">
+              Description about the product will come here... this is a very
+              good product
+            </p>
+            <span class="price">INR 20</span
+            ><span class="actual-price">INR 40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="../CSS/gallery-images/1.jpg"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">Add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="brand-name">brand</h2>
+            <p class="product-short-desc">
+              Description about the product will come here... this is a very
+              good product
+            </p>
+            <span class="price">INR 20</span
+            ><span class="actual-price">INR 40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="../CSS/gallery-images/1.jpg"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">Add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="brand-name">brand</h2>
+            <p class="product-short-desc">
+              Description about the product will come here... this is a very
+              good product
+            </p>
+            <span class="price">INR 20</span
+            ><span class="actual-price">INR 40</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="product">
+      <h2 class="product-category">All Products</h2>
+      <button class="pre-btn"><img src="images/arrow.png" alt="" /></button>
+      <button class="nxt-btn"><img src="images/arrow.png" alt="" /></button>
+
+      <div class="product-container">
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="../CSS/gallery-images/1.jpg"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">Add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="brand-name">brand</h2>
+            <p class="product-short-desc">
+              Description about the product will come here... this is a very
+              good product
+            </p>
+            <span class="price">INR 20</span
+            ><span class="actual-price">INR 40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="../CSS/gallery-images/1.jpg"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">Add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="brand-name">brand</h2>
+            <p class="product-short-desc">
+              Description about the product will come here... this is a very
+              good product
+            </p>
+            <span class="price">INR 20</span
+            ><span class="actual-price">INR 40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="../CSS/gallery-images/1.jpg"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">Add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="brand-name">brand</h2>
+            <p class="product-short-desc">
+              Description about the product will come here... this is a very
+              good product
+            </p>
+            <span class="price">INR 20</span
+            ><span class="actual-price">INR 40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="../CSS/gallery-images/1.jpg"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">Add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="brand-name">brand</h2>
+            <p class="product-short-desc">
+              Description about the product will come here... this is a very
+              good product
+            </p>
+            <span class="price">INR 20</span
+            ><span class="actual-price">INR 40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="../CSS/gallery-images/1.jpg"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">Add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="brand-name">brand</h2>
+            <p class="product-short-desc">
+              Description about the product will come here... this is a very
+              good product
+            </p>
+            <span class="price">INR 20</span
+            ><span class="actual-price">INR 40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="../CSS/gallery-images/1.jpg"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">Add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="brand-name">brand</h2>
+            <p class="product-short-desc">
+              Description about the product will come here... this is a very
+              good product
+            </p>
+            <span class="price">INR 20</span
+            ><span class="actual-price">INR 40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="../CSS/gallery-images/1.jpg"
+              class="product-thumb"
+              alt=""
+            />
+            <button class="card-btn">Add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="brand-name">brand</h2>
+            <p class="product-short-desc">
+              Description about the product will come here... this is a very
+              good product
+            </p>
+            <span class="price">INR 20</span
+            ><span class="actual-price">INR 40</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer></footer>
+  </body>
+</html>

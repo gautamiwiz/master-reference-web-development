@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web forms</title>
+    <link rel="stylesheet" href="../../CSS/base.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="gScript.js" defer></script>
+  </head>
+  <body>
+    <h1>Form labels and field relationships</h1>
+    <p>
+      Demonstrates how to relate labels to fields and add basic interactivity to
+      the form
+    </p>
+    <form action="" autocomplete="off" id="testform">
+      <fieldset>
+        <legend>Please enter your personal information:</legend>
+        <div>
+          <label for="field1" accesskey="F"
+            >First name:
+            <input type="text" id="field1" autofocus placeholder="Gautam" />
+          </label>
+          <label for="field2" accesskey="L"
+            >Last name:
+            <input type="text" id="field2" placeholder="Sharma" />
+          </label>
+        </div>
+        <div>
+          <label for="field3" accesskey="1"
+            >Address 1:
+            <input
+              type="text"
+              id="field3"
+              size="40"
+              placeholder="Plot 14, Jubilee Hills"
+            />
+          </label>
+        </div>
+        <div>
+          <label for="field4" accesskey="2"
+            >Address 2:
+            <input type="text" id="field4" size="40" placeholder="Road No 45" />
+          </label>
+        </div>
+        <div>
+          <label for="field5" accesskey="Z"
+            >ZIP Code:
+            <input type="text" id="field5" size="10" placeholder="500033" />
+          </label>
+        </div>
+        <div>
+          <label for="field6" accesskey="P"
+            >Phone:
+            <input type="text" id="field6" placeholder="9885478910" />
+          </label>
+        </div>
+        <div class="policytext">
+          <p>You can review our <a href="#" accesskey="v">privacy policy</a></p>
+        </div>
+        <div>
+          <label for="charcount">
+            Character count: <input type="text" value="" id="charcount" />
+          </label>
+          Count: <output name="count" id="count" for="charcount">0</output>
+        </div>
+        <div>
+          <label for="searchfld">
+            Search:<input type="search" id="searchfld" />
+          </label>
+        </div>
+        <div>
+          <label for="cb1"
+            >Checkbox:<input type="checkbox" name="cb1" id="cb1" value="X"
+          /></label>
+          <label for="rb1"
+            >Radiobutton 1:<input type="radio" name="rb1" id="rb1" value="A"
+          /></label>
+          <label for="rb2"
+            >Radiobutton 2:<input type="radio" name="rb1" id="rb2" value="B"
+          /></label>
+        </div>
+        <div>
+          <label for="numfld"
+            >Please enter a number:
+            <input
+              type="number"
+              name="numfld"
+              id="numfld"
+              min="0"
+              max="100"
+              step="1"
+            />
+          </label>
+        </div>
+      </fieldset>
+      <button id="btnsubmit" accesskey="S">Submit</button>
+      <button id="btnreset" accesskey="R">Reset</button>
+    </form>
+  </body>
+</html>

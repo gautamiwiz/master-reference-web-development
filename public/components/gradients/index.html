@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradients</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box1"></div>
+    <style>
+      #box1 {
+        width: 100%;
+        height: 300px;
+        background: linear-gradient(#000, #ed1c24);
+      }
+    </style>
+    <div id="box2"></div>
+    <style>
+      #box2 {
+        width: 100%;
+        height: 300px;
+        background: linear-gradient(to right, #000 30%, #ed1c24);
+      }
+    </style>
+    <div id="box3"></div>
+    <style>
+      #box3 {
+        width: 100%;
+        height: 300px;
+        background: linear-gradient(
+          to right,
+          violet,
+          indigo,
+          blue,
+          green,
+          yellow,
+          orange,
+          red
+        );
+      }
+    </style>
+
+    <div id="box4"></div>
+    <style>
+      #box4 {
+        width: 100%;
+        height: 300px;
+        background: linear-gradient(
+          to right,
+          hsla(360, 100%, 100%, 1),
+          #000,
+          hsla(360, 100%, 100%, 1)
+        );
+      }
+    </style>
+
+    <div id="box5"></div>
+    <style>
+      #box5 {
+        width: 500px;
+        height: 300px;
+        margin: 0 auto;
+        background: radial-gradient(red, yellow, blue);
+      }
+    </style>
+
+    <div id="box6"></div>
+    <style>
+      #box6 {
+        width: 100%;
+        height: 300px;
+        background: repeating-linear-gradient(#000, #ed1c24 10%);
+      }
+    </style>
+    <h2>As background image with width, repeating</h2>
+    <div id="box7"></div>
+    <style>
+      #box7 {
+        width: 100%;
+        height: 300px;
+        background-size: 10% 100%;
+        background-image: linear-gradient(210deg, #000, #ed1c24);
+      }
+    </style>
+    <h2>As background image with width and height repeating</h2>
+    <div id="box8"></div>
+    <style>
+      #box8 {
+        width: 100%;
+        height: 300px;
+        background-size: 20% 20%;
+        background-image: linear-gradient(210deg, #000, #ed1c24);
+      }
+    </style>
+    <h2>As background image with width and height repeating</h2>
+    <div id="box9"></div>
+    <style>
+      #box9 {
+        width: 300px;
+        height: 300px;
+        background-size: 25% 25%;
+        background-image: radial-gradient(
+          rgb(255, 255, 158),
+          rgb(255, 128, 0),
+          rgb(128, 0, 0) 75%
+        );
+      }
+    </style>
+  </body>
+</html>

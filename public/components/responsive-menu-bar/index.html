@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Menu and Navbar : Only CSS</title>
+    <style>
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg-color: rgba(0, 0, 255, 0.8);
+      }
+
+      header {
+        background-color: var(--bg-color);
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+      }
+      nav {
+        position: absolute;
+        background-color: var(--bg-color);
+        text-align: left;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        display: none;
+      }
+
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      nav li {
+        margin-bottom: 1em;
+        margin-left: 1em;
+        list-style: none;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+      }
+
+      nav a:hover {
+        color: red;
+      }
+
+      .navToggle:checked ~ nav {
+        display: block;
+      }
+      .navToggle {
+        display: none;
+      }
+
+      .menuBar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 1em;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      .menuBar span,
+      .menuBar span::before,
+      .menuBar span::after {
+        display: block;
+        background-color: #fff;
+        height: 2px;
+        width: 2em;
+        border-radius: 3px;
+        position: relative;
+      }
+
+      .menuBar span::before,
+      .menuBar span::after {
+        content: "";
+        position: absolute;
+      }
+
+      .menuBar span::before {
+        bottom: 7px;
+      }
+      .menuBar span::after {
+        top: 7px;
+      }
+
+      .content {
+        height: 200vh;
+        margin: 0;
+        padding: 100px 20px 50px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">Brand Name</h1>
+      <input type="checkbox" id="menu" class="navToggle" />
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Services</a></li>
+        </ul>
+      </nav>
+      <label for="menu" class="menuBar">
+        <span></span>
+      </label>
+    </header>
+    <div class="content">
+      <p>Content comes here</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Highlight</title>
+    <style>
+      ::selection {
+        background-color: yellow;
+        border-bottom: 5px solid black;
+        text-decoration: underline;
+        color: red;
+        position: relative;
+      }
+
+      ::selection::after {
+        content: "d";
+        position: absolute;
+        background-color: blue;
+        height: 5px;
+        width: 100%;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML CSS Highlight</h1>
+  </body>
+</html>

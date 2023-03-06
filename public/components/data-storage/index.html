@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Storage</title>
+  </head>
+  <body>
+    <h1>Javascript Data Storage</h1>
+    <p>Client side storage in storing data in the clients browser using Javascript API's.</p>
+    <p>
+      Because cookies had limitations... local storage was invented. Unless you want to support old browsers, dont use cookies anymore...
+    </p>
+    <h3>Web Storage Options (simple)</h3>
+    <ul>
+      <li><a href="local-storage.html">Local Storage</a></li>
+      <li><a href="session-storage.html">Session Storage</a></li>
+    </ul>
+
+    <p>
+      Local storage persists the data and session storage lasts only until the browser is closed.<br />
+      Both local and session storage use the same api.<br />
+      Both use key value pairs <br />
+      Object and Aray storage is now allowed<br />
+      Data is domain specific
+    </p>
+
+    <h3>IndexedDB (complex)</h3>
+    <ul>
+      <li><a href="indexeddb.html">Indexed DB</a></li>
+    </ul>
+    <p>
+      For indexed db keep in mind the storage size, especially on mobile. <br />
+      full database<br />
+      arrays, objects, and videos <br />
+      structured data with key<br />
+      async to allow application operation<br />
+      Cannot sync with server backend data<br />
+      no data in private mode<br />
+      also depends on browser quota limit
+    </p>
+
+    <h3>Other Options</h3>
+    <ul>
+      <li><a href="">Service Workers</a></li>
+      <li><a href="">Cache API (still experimental)</a></li>
+    </ul>
+  </body>
+</html>

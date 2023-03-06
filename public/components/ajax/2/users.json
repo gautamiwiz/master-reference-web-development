@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Gautam Sharma",
+    "email": "gautam@iwiz.in"
+  },
+  {
+    "id": 2,
+    "name": "Pari Sharma",
+    "email": "pari@pari.com"
+  },
+  {
+    "id": 3,
+    "name": "Tina Sharma",
+    "email": "tina@tina.com"
+  },
+  {
+    "id": 4,
+    "name": "Someone Name",
+    "email": "name@someone.com"
+  }
+]

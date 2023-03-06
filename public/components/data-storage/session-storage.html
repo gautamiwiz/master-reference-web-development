@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session Storage</title>
+  </head>
+  <body>
+    <h1></h1>
+    <form>
+      <label for="name">Enter your name</label>
+      <input type="text" id="name" required />
+      <input type="submit" id="submitName" value="Click here" />
+      <button id="removeName" type="submit">Remove</button>
+    </form>
+    <script>
+      console.log("gScript loaded!");
+      const input = document.querySelector("#name");
+      const form = document.querySelector("form");
+      const submit = document.querySelector("#submitName");
+      const remove = document.querySelector("#removeName");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+      });
+
+      submit.addEventListener("click", function () {
+        sessionStorage.setItem("name", input.value);
+      });
+
+      remove.addEventListener("click", function () {
+        sessionStorage.removeItem("name");
+      });
+
+      const name = sessionStorage.getItem("name");
+      const h1 = document.querySelector("h1");
+
+      name ? (h1.innerText = name) : (h1.innerText = "no seession cookie");
+    </script>
+  </body>
+</html>

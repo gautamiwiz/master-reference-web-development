@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Sets</h1>
+    <script>
+      console.log("gScript loaded");
+
+      const contactList = new Set();
+
+      contactList.add("gautam@iwiz.in");
+      contactList.add("gautam@iwiz.in");
+      contactList.add("gautam@iwiz.in");
+      contactList.add("gautam@iwiz.in");
+
+      console.log(contactList);
+
+      contactList.add("gautamsharma@iwiz.in");
+      contactList.add("testsharma@iwiz.in");
+      contactList.add("someone@iwiz.in");
+      contactList.add("manager@iwiz.in");
+
+      console.log(contactList);
+      console.log("Total list : ", contactList.size);
+
+      console.log("has() : ", contactList.has("test@iwiz.in"));
+      console.log("has() : ", contactList.has("test@iwiz.ind"));
+
+      let entries = contactList.entries();
+      firstEntry = entries.next().value;
+      console.log("first entry : ", firstEntry);
+
+      console.log("entries() : ", contactList.entries());
+
+      contactList.forEach((value) => console.log(value));
+      contactList.forEach((value) => {
+        if (value.startsWith("m")) {
+          console.log("Starts with m : ", value);
+        }
+      });
+      contactList.forEach((value) => {
+        if (value.length > 15) {
+          console.log("length > 15 : ", value);
+        }
+      });
+
+      let inviteValues = contactList.values();
+      console.log("First invite : ", inviteValues.next().value);
+      inviteValues.next();
+      inviteValues.next();
+      console.log("Fourth invite : ", inviteValues.next().value);
+
+      console.log("Delete", contactList.delete("gautam@iwiz.in"));
+      console.log("Total list : ", contactList.size);
+    </script>
+  </body>
+</html>

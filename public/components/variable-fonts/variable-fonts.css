@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "Roboto Mono", monospace;
+  src: url("font/RobotoMono-VariableFont_wght.ttf") format("truetype"),
+    url("font/RobotoMono-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 700;
+  font-display: swap;
+  /* font-stretch: 25% 151%; */
+}
+
+@font-face {
+  font-family: "robotoflexregular";
+  src: url("roboto-flex.ttf") format("truetype");
+  /* src: url("robotoflexgradxopqxtrayopqytasytdeytfiytlcytucopszslntwdthwght-webfont.woff2")
+      format("woff2"),
+    url("robotoflexgradxopqxtrayopqytasytdeytfiytlcytucopszslntwdthwght-webfont.woff")
+      format("woff"); */
+  font-weight: 100 1000;
+  font-stretch: 25% 151%;
+}
+
+:root {
+  --roboto-font-family: "robotoflexregular";
+  --roboto-weight: 400;
+}
+
+* {
+  font-family: var(--roboto-font-family);
+  font-variation-settings: "wght" var(--roboto-weight);
+}
+
+.weight1000 {
+  --roboto-weight: 1000;
+}
+.weight500 {
+  --roboto-weight: 500;
+}
+.weight100 {
+  --roboto-weight: 100;
+}
+
+/*
+font-variation-settings: 'ital' 1;
+font-variation-settings: 'slnt' 10;
+font-variation-settings: 'opsz' 8;
+font-variation-settings: `GRAD` -1;
+*/

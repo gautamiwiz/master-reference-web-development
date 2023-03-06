@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Classes</title>
+  </head>
+  <body>
+    <script>
+      console.log("gScript loaded!");
+      class Car {
+        constructor(doors, engine, color) {
+          this.doors = doors;
+          this.engine = engine;
+          this.color = color;
+        }
+
+        carStats() {
+          return `This car has ${this.doors} doors, ${this.engine} engine, color : ${this.color}`;
+        }
+
+        static totalDoors(car1, car2) {
+          const door1 = Number(car1.doors);
+          const door2 = Number(car2.doors);
+          return `Total Doors : ${door1 + door2}`;
+        }
+      }
+
+      let car1 = new Car("4", "Petrol", "red");
+      console.log(car1.carStats());
+
+      let car2 = new Car("5", "Diesel", "black");
+      console.log(car2.carStats());
+
+      console.log(Car.totalDoors(car1, car2));
+
+      console.log(car1);
+
+      //prototype
+      class SUV extends Car {
+        constructor(doors, engine, color, campingEnabled, carStats) {
+          super(doors, engine, color, carStats);
+          this.campingEnabled = campingEnabled;
+        }
+
+        whatIsThisCar() {
+          return console.log(
+            `This car is ${
+              this.campingEnabled ? "Camping Enabled" : "Not fit for camping"
+            }`
+          );
+        }
+      }
+
+      let suv1 = new SUV(5, "Any fuel", "Blue", false);
+      console.log(suv1.carStats());
+      suv1.whatIsThisCar();
+    </script>
+  </body>
+</html>

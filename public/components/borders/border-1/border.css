@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
+
+article {
+  border-width: 25px 20px;
+  border-color: hsl(0, 43%, 64%);
+  border-style: ridge double groove;
+}
+
+h2 {
+  border-bottom-color: hsl(0, 43%, 64%);
+  border-bottom-style: solid;
+}

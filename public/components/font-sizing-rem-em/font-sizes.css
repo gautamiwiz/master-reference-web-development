@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 50px 20px;
+  /* font-size: 16px; */
+  font-size: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+/*=============Responsive Text===================*/
+.responsiveText {
+  border: 1px solid #efefef;
+  padding: 20px 0;
+  margin-bottom: 2rem;
+}
+.responsiveText h1 {
+  font-size: clamp(1rem, 5vw + 2px, 4rem);
+}
+.responsiveText p {
+  font-size: clamp(0.8rem, 3vw + 2px, 1.5rem);
+}
+
+/*=============Responsive Text issue if vw only and no clamp===================*/
+.responsiveTextIssue {
+  border: 1px solid #efefef;
+  padding: 20px 0;
+  margin-bottom: 2rem;
+}
+.responsiveTextIssue h1 {
+  font-size: 5vw;
+}
+.responsiveTextIssue p {
+  font-size: 3vw;
+}
+
+/*=============em font units===================*/
+.emContainer {
+  font-size: 20px;
+}
+.emContainer p {
+  padding: 10px 0;
+}
+
+.emContainer p:first-child {
+  color: red;
+  font-size: 1em;
+}
+
+.emContainer p:nth-child(2) {
+  color: green;
+  font-size: 1.5em;
+}
+.emContainer p:nth-child(3) {
+  color: blue;
+  font-size: 2em;
+}
+
+/*=============rem font units===================*/
+.remContainer {
+}
+.remContainer p {
+  padding: 10px 0;
+}
+
+.remContainer p:first-child {
+  color: red;
+  font-size: 1rem;
+}
+
+.remContainer p:nth-child(2) {
+  color: green;
+  font-size: 1.5rem;
+}
+.remContainer p:nth-child(3) {
+  color: blue;
+  font-size: 2rem;
+}

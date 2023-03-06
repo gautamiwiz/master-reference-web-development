@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/*
+   LinkedIn Learning Video Tutorial
+   Enhancing Website Graphics
+   
+   Chapter 1:  Designing your Background
+   Exercise 1: Building a Background
+   
+   File: layout.css
+
+*/
+
+
+html {
+}
+
+body {
+}
+
+body > article {
+   width: 700px;
+   margin: 50px auto;
+   box-sizing: border-box;
+   font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";   
+   padding: 0 0 0 80px;
+   color: gray;
+}
+
+body > article > h1 {
+   margin: 0 0 0 40px;
+   font-size: 2.5em;
+}
+
+body > article > h2 {
+   margin: 0 0 20px 40px;
+   font-size: 1.5em;
+}
+
+body > article > p {
+   margin: 0 0 20px 40px;
+   font-size: 1.2em;
+}
+
+body > article > p:last-of-type {
+   padding-bottom: 30px;
+}

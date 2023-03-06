@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+p {
+	text-shadow: black 2px 2px 5px;
+}
+
+h1 {
+	text-shadow: white 0px 0px 5px,
+	             rgba(0, 0, 0, 0.4) 6px 0px 10px,
+				 rgba(0, 0, 0, 0.4) 0px 6px 10px;
+}
+
+

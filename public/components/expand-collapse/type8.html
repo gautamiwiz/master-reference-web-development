@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    box-sizing: border-box;
+}
+html,
+body {
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: 500;
+	font-size: 100%;
+	margin: 0;
+	padding:20px;
+}
+/* 
+*	Растягивает картинку на всю ширину блока в котором находится
+*/
+img {
+	width: 100%;
+}
+/* 
+*	Стили для всего меню 
+*/
+.navigation {
+	font-weight: 300;
+	font-size: 0.9375rem;
+	max-width: 460px;
+	min-width: 216px;
+	margin: 0 auto;
+	color: #fff;
+}
+/* 
+*	Стили для логотипа 
+*/
+.navigation__logo {
+	width: 100%;
+	margin: 0 auto;
+}
+/* 
+*	Стили для основного меню
+*	Очищение отступов и сброс стилей по умолчанию 
+*/
+.accordion,
+.sub-accordion {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.accordion__item {
+	background: #C21213;
+	border-radius: 20px;
+	margin-bottom: 5px;
+}
+/* 
+*	Стили для заголовка меню 
+*/
+.accordion__item:nth-child(odd) > :first-child:not(.accordion__link_active) {
+    color: #fff;
+
+}
+.accordion__link {
+	font-weight: 500;
+	font-size: 1rem;
+	position: relative;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 20px;
+	display: block;
+	padding: 12px 50px 12px 20px;
+}
+.accordion__link:not(.accordion__link_active):after {
+	position: absolute;
+	content: "";
+	border-top: 12px #fff solid;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	right: 22px;
+	top: 50%;
+	transform: translatey(-6px);
+}
+.accordion__link:not(.accordion__link_active):hover {
+    opacity: .8;
+    color: #fff;
+    background: #ccc3c3;
+}
+.accordion__link:not(.accordion__link_active):hover:after {
+	border-top: 12px #ffffff solid;
+}
+/* 
+*	Стили для подменю 
+*/
+.sub-accordion {
+	padding: 5px 20px;
+    display: none;
+    height: 0;
+    overflow: hidden;
+}
+.sub-accordion__item {
+	padding: 5px 0;
+}
+/* 
+*	Стили для октивного подменю 
+*/
+.accordion__link_active {
+    color: #ffffff;
+    background-color: #353535;   
+}
+.accordion__link_active:after {
+	position: absolute;
+	content: "";
+	border-bottom: 12px #fff solid;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	right: 22px;
+	top: 50%;
+	transform: translatey(-6px);
+}
+.accordion__link_active + ul{
+    display: block;
+    height: 100%;
+}
+.header {font-weight: bold;text-align: center;font-size: 20px; color: #000;}
+.align {line-height: 2.5;}
+            .alignright {text-align: right;}
+    </style>
+    
+</head>
+<body>
+    <nav class="navigation">
+      <article>
+        <p class="header">RESTAURANT MENU</p>
+		<header class="navigation__logo">
+			<p class="header">EMBRACE THE NEW NORMAL</p>
+    </header>
+ 
+		
+			<ul class="accordion">
+				<li class="accordion__item">
+						<a href="#" class="accordion__link">CLASSICS @120</a>
+					<ul class="sub-accordion">
+            
+            <table style="width: 100%; font-size: 14px;" class="align">
+              <tbody>
+              
+                <tr>
+                  <td>Doppio / Cappuccino / Cafe Bistro / Cafe Mocha / Hot Chocolate</td>
+                </tr>
+                
+                
+              </tbody>
+            </table>
+
+					</ul>
+				</li>
+				<li class="accordion__item">
+          <a href="#" class="accordion__link">CREAM BLENDED @180</a>
+        <ul class="sub-accordion">
+          
+          <table style="width: 100%; font-size: 14px;" class="align">
+            <tbody>
+              <tr>
+                <td>My Cold Coffee / Mocha Frappe / Irish Frappe / Caramel Frappe / Peanut Cold Coffee</td>
+              </tr>
+            </tbody>
+          </table>
+        </ul>
+      </li>
+				<li class="accordion__item">
+					<a href="#" class="accordion__link">ICED COFFEES @120</a>
+					<ul class="sub-accordion">
+            <table style="width: 100%; font-size: 14px;" class="align">
+              <tbody>
+                <tr>
+                  <td>Iced Cappuccino & Vegan Shake</td>
+                </tr>
+              </tbody>
+            </table>
+
+					</ul>
+				</li>
+				<li class="accordion__item">
+					<a href="#" class="accordion__link">SMOOTHIES @120</a>
+					<ul class="sub-accordion">
+            <table style="width: 100%; font-size: 14px;" class="align">
+              <tbody>
+                <tr>
+                  <td>Mango, Banana, Strawberry, Apple & Guava</td>
+                </tr>
+              </tbody>
+            </table>
+
+					</ul>
+				</li>
+				<li class="accordion__item">
+					<a href="#" class="accordion__link">CLASSIC TEAS @100</a>
+					<ul class="sub-accordion">
+            <table style="width: 100%; font-size: 14px;" class="align">
+              <tbody>
+                <tr>
+                  <td>Classic Assam Tea / Lemon Tea / Green Tea</td>
+                </tr>
+              </tbody>
+            </table>
+
+					</ul>
+				</li>
+        </li>
+        
+				<li class="accordion__item">
+					<a href="#" class="accordion__link">MOCKTAILS @210</a>
+					<ul class="sub-accordion">
+            <table style="width: 100%; font-size: 14px;" class="align">
+              <tbody>
+                <tr>
+                  <td>Virgin Mojito, Virgin Colada & Arabian Nights</td>
+                </tr>
+              </tbody>
+            </table>
+
+					</ul>
+				</li>
+        
+				<li class="accordion__item">
+					<a href="#" class="accordion__link">SOFT DRINKS</a>
+					<ul class="sub-accordion">
+            <table style="width: 100%; font-size: 14px;" class="align">
+              <tbody>
+                <tr>
+                    <td>Bottle Water</td>
+                    <td class="alignright">MRP</td>
+                  </tr>
+                  <tr>
+                    <td>Soft Drinks / Canned Juice</td>
+                    <td class="alignright">₹ 79 / ₹ 99</td>
+                  </tr>
+                  <tr>
+                    <td>Fresh Lime / Soda</td>
+                    <td class="alignright">₹ 79</td>
+                  </tr>
+                  <tr>
+                    <td>Energy Drink</td>
+                    <td class="alignright">₹ 249</td>
+                  </tr>
+               
+             </tbody>
+            </table>
+
+					</ul>
+				</li>
+
+
+
+      </ul>
+
+      <header class="navigation__logo">
+        <p class="header">APPETIZERS</p>
+      </header>
+      <ul class="accordion">
+				<li class="accordion__item">
+						<a href="#" class="accordion__link">ASIAN</a>
+					<ul class="sub-accordion">
+            <table style="width: 100%; font-size: 14px;" class="align">
+              <tbody>
+                <tr>
+                  <td>Veg Manchurian / Asian Chilli Mushroom</td>
+                  <td class="alignright">₹ 310</td>
+                </tr>
+                <tr>
+                  <td>Asian Chilli Paneer / Peri Peri Garlic Corn</td>
+                  <td class="alignright">₹ 310</td>
+                </tr>
+                <tr>
+                  <td>Asian Chilli Egg</td>
+                  <td class="alignright">₹ 310</td>
+                </tr>
+                <tr>
+                  <td>Stir Fried Tofu Broccoli</td>
+                  <td class="alignright">₹ 310</td>
+                </tr>
+                <tr>
+                    <td>Asian Chilli Chicken / Teriyani Chicken</td>
+                    <td class="alignright">₹ 370</td>
+                  </tr>
+                <tr>
+                  <td>Street Style Chicken Lollipop</td>
+                  <td class="alignright">₹ 370</td>
+                </tr>
+                <tr>
+                    <td>Gyoza Pan Fry (Veg / Non-Veg)</td>
+                    <td class="alignright">₹ 310 / ₹ 390</td>
+                  </tr>
+                <tr>
+                  <td>Hong Kong Chilli Prawns</td>
+                  <td class="alignright">₹ 480</td>
+                </tr>
+                
+              </tbody>
+            </table>
+
+					</ul>
+				</li>
+				<li class="accordion__item">
+          <a href="#" class="accordion__link">WORD CUISINE</a>
+        <ul class="sub-accordion">
+          
+          <table style="width: 100%; font-size: 14px;" class="align">
+            <tbody>
+              <tr>
+                <td>Onion Rings / Garlic Bread</td>
+                <td class="alignright">₹ 310</td>
+              </tr>
+              <tr>
+                <td>Baked Nachos (Veg / Non-Veg)</td>
+                <td class="alignright">₹ 310 / ₹ 370</td>
+              </tr>
+              <tr>
+                <td>French Fries</td>
+                <td class="alignright">₹ 310</td>
+              </tr>
+              <tr>
+                <td>BBQ Chicken Wings</td>
+                <td class="alignright">₹ 370</td>
+              </tr>
+              <tr>
+                  <td>Spicy Grill Chicken / Crispy Fried Chicken</td>
+                  <td class="alignright">₹ 370</td>
+                </tr>
+              <tr>
+                <td>Grill Prawns / Fish Fingers</td>
+                <td class="alignright">₹ 480</td>
+              </tr>                     
+            </tbody>
+          </table>
+
+
+        </ul>
+      </li>
+				<li class="accordion__item">
+					<a href="#" class="accordion__link">INDIAN</a>
+					<ul class="sub-accordion">
+            <table style="width: 100%; font-size: 14px;" class="align">
+              <tbody>
+                <tr>
+                  <td>Aloo 65 / Paneer 65</td>
+                  <td class="alignright">₹ 310</td>
+                </tr>
+                <tr>
+                  <td>Malai Broccoli / Peshawari Paneer</td>
+                  <td class="alignright">₹ 310</td>
+                </tr>
+                <tr>
+                  <td>Chicken 65 / Chicken Angara</td>
+                  <td class="alignright">₹ 390</td>
+                </tr>
+                <tr>
+                  <td>Tandgi Kebab / Tandoori Chicken</td>
+                  <td class="alignright">₹ 390 / ₹ 510</td>
+                </tr>
+                <tr>
+                    <td>Murgh Malai Kebab / Chicken Lasooni Kebab</td>
+                    <td class="alignright">₹ 390</td>
+                  </tr>
+                <tr>
+                  <td>Peshawari Fish / Tawa Fish / Tandoori Prawns</td>
+                  <td class="alignright">₹ 480</td>
+                </tr>                     
+              </tbody>
+            </table>
+
+					</ul>
+				</li>
+
+      </ul>
+      
+
+      <header class="navigation__logo">
+        <p class="header">SIGNATURE MAINS</p>
+      </header>
+      <ul class="accordion">
+				<li class="accordion__item">
+						<a href="#" class="accordion__link">OISHII SUSHI</a>
+					<ul class="sub-accordion">
+            <table style="width: 100%; font-size: 14px;" class="align">
+              <tbody>
+                <tr>
+                  <td>Avocado Maki Roll / Veg Sushi Roll</td>
+                  <td class="alignright">₹ 399</td>
+                </tr>
+                <tr>
+                  <td>Rainbow Roll / California Roll</td>
+                  <td class="alignright">₹ 549</td>
+                </tr>
+                <tr>
+                  <td>Ceaser Salad (Veg / Non-Veg)</td>
+                  <td class="alignright">₹ 310 / ₹ 390</td>
+                </tr>
+                <tr>
+                    <td>Chicken Ham Pineapple Salad</td>
+                    <td class="alignright">₹ 390</td>
+                  </tr>
+                  <tr>
+                    <td>Pad Thai (Veg / Non-Veg)</td>
+                    <td class="alignright">₹ 310 / ₹ 410</td>
+                  </tr>
+                  <tr>
+                    <td>Omurice (Veg / Non-Veg)</td>
+                    <td class="alignright">₹ 310 / ₹ 410</td>
+                  </tr>
+                
+              </tbody>
+            </table>
+
+					</ul>
+				</li>
+				<li class="accordion__item">
+          <a href="#" class="accordion__link">PIZZA 12IN</a>
+        <ul class="sub-accordion">
+          <table style="width: 100%; font-size: 14px;" class="align">
+            <tbody>
+              <tr>
+                <td style="width: 70%;">Two Cheese Margherita <p style="font-size: 12px;margin-top: -8px;">Mozerella, Cherry Tomato, Basil & Parmesan</p></td>
+                <td class="alignright">₹ 549</td>
+              </tr>
+              <tr>
+                <td>Garden Paradise <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Spinach, American Corn, Broccoli, Cherry Tomatoes & Aubergine</p></td>
+                <td class="alignright">₹ 549</td>
+              </tr>
+              <tr>
+                <td>Chicken Tikka <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Tandoori Chicken, Onion, Green Chilli & Mozzarella</p></td>
+                <td class="alignright">₹ 599</td>
+              </tr>
+              <tr>
+                  <td>Pollo Fungi <p style="font-size: 12px;margin-top: -8px;">Pesto Chicken, Mushroom & Boiled Egg</p></td>
+                  <td class="alignright">₹ 599</td>
+                </tr>
+                <tr>
+                  <td>Prok Pepperoni <p style="font-size: 12px;margin-top: -8px;">Pepperoni, Jalapenos & Cheese</p></td>
+                  <td class="alignright">₹ 749</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </ul>
+      </li>
+				<li class="accordion__item">
+					<a href="#" class="accordion__link">INDIAN</a>
+					<ul class="sub-accordion">
+            <table style="width: 100%; font-size: 14px;" class="align">
+              <tbody>
+                <tr>
+                    <td>Kadai Veg / Dal Fry / Dal Makhani</td>
+                    <td class="alignright">₹ 290</td>
+                  </tr>
+                <tr>
+                  <td>Paneer Butter Masala</td>
+                  <td class="alignright">₹ 290</td>
+                </tr>
+                <tr>
+                  <td>Butter Chicken / Tikka Masala</td>
+                  <td class="alignright">₹ 390</td>
+                </tr>
+                <tr>
+                  <td>Mutton Roghan Josh</td>
+                  <td class="alignright">₹ 480</td>
+                </tr>
+                <tr>
+                    <td>Pulao (Veg/Chicken/Mutton)</td>
+                    <td class="alignright">₹ 310/₹ 480/₹ 530</td>
+                  </tr>
+                  <tr>
+                    <td>Roti, Naan & Rumali</td>
+                    <td class="alignright">₹ 45/₹ 55/₹ 65</td>
+                  </tr>
+                  <tr>
+                    <td>Lacha Parata & Garlic Naan</td>
+                    <td class="alignright">₹ 65/₹ 65</td>
+                  </tr>
+                
+              </tbody>
+            </table>
+
+					</ul>
+				</li>
+
+        <li class="accordion__item">
+					<a href="#" class="accordion__link">WESTER MAIN COURSE</a>
+					<ul class="sub-accordion">
+            <table style="width: 100%; font-size: 14px;" class="align">
+              <tbody>
+                <tr>
+                  <td>Stroganoff (Veg / Non-veg)</td>
+                  <td class="alignright">₹ 390 / ₹ 460</td>
+                </tr>
+                <tr>
+                  <td>French Farmer's Chicken</td>
+                  <td class="alignright">₹ 390</td>
+                </tr>
+                <tr>
+                  <td>Chicken Steak with Red Wine Sauce</td>
+                  <td class="alignright">₹ 460</td>
+                </tr>
+                
+              </tbody>
+            </table>
+
+					</ul>
+        </li>
+        
+        <li class="accordion__item">
+					<a href="#" class="accordion__link">PASTA</a>
+					<ul class="sub-accordion">
+            <table style="width: 100%; font-size: 14px;" class="align">
+              <tbody>
+                <tr>
+                  <td style="width: 70%;">Arrabiata / Creamy / Pesto Aglio'e' Olio Sauce <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Penne / Spaghetti</p></td>
+                  <td class="alignright">₹ 390 / ₹ 460</td>
+                </tr>
+                <tr>
+                  <td>Lasagne Verde (Veg/Non-Veg)</td>
+                  <td class="alignright">₹ 390 / ₹ 460</td>
+                </tr>
+                
+              </tbody>
+            </table>
+					</ul>
+        </li>
+
+        <li class="accordion__item">
+					<a href="#" class="accordion__link">ASIAN</a>
+					<ul class="sub-accordion">
+            <table style="width: 100%; font-size: 14px;" class="align">
+              <tbody>
+                <tr>
+                  <td style="width: 50%;">Veg <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Tofu Clear Soup, Manchow Soup, Hot and Sour</p></td>
+                  <td class="alignright">₹ 180</td>
+                </tr>
+                <tr>
+                 <td>Non-Veg <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Chicken Clear Soup, Chicken Manchow & Chicken Hot & Sour</p></td>
+                 <td class="alignright">₹ 210</td>
+               </tr>
+               <tr>
+                 <td>Fried Rice <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Veg / Egg / Chicken / Seafood</p></td>
+                 <td class="alignright">₹ 230/₹ 250/₹ 270/₹ 310</td>
+               </tr>
+               <tr>
+                 <td>Noodles <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">Veg / Egg / Chicken / Seafood</p></td>
+                 <td class="alignright">₹ 230/₹ 250/₹ 270/₹ 310</td>
+               </tr> 
+               <tr>
+                 <td>Veg / Non-Veg Gravy <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">(Schezwan, Hot Garlic & Chilli Soya)</p></td>
+                 <td class="alignright">₹ 290/₹ 390</td>
+               </tr>                     
+              </tbody>
+            </table>
+					</ul>
+        </li>
+
+        <li class="accordion__item">
+					<a href="#" class="accordion__link">SANDWICHES</a>
+					<ul class="sub-accordion">
+            <table style="width: 100%; font-size: 14px;" class="align">
+              <tbody>
+                <tr>
+                  <td>Veg / Chicken <p style="font-size: 12px;margin-top: -2px; line-height: 1.2;">(Paneer & Grill Veg) / (Grill Chicken, Chicken Onion & Club Sandwich)</p></td>
+                  <td class="alignright">₹ 360/₹ 460</td>
+                </tr>                   
+              </tbody>
+            </table>
+					</ul>
+        </li>
+      </ul>
+
+
+		</article>
+    </nav>
+    <script>
+        function slide(link) {
+  
+  var down = function (callback, time) {
+    var subMenu = link.nextElementSibling;
+    var height = subMenu.clientHeight; 
+    var part = height / 100;
+    
+    var paddingTop = parseInt(window.getComputedStyle(subMenu, null).getPropertyValue('padding-top'));
+    var paddingBottom = parseInt(window.getComputedStyle(subMenu, null).getPropertyValue('padding-bottom'));
+    var paddingTopPart = parseInt(paddingTop) / 50;
+    var paddingBottomPart = parseInt(paddingBottom) / 30;
+    
+    (function innerFunc(i, t, b) {
+
+      subMenu.style.height = i + 'px';
+      
+      i += part;
+      
+      if(t < paddingTop) {
+      
+        t += paddingTopPart;
+        subMenu.style.paddingTop = t + 'px';
+          
+      } else if(b < paddingBottom) {
+
+        b += paddingBottomPart;
+        subMenu.style.paddingBottom = b + 'px';
+      }
+      
+      if(i < height) { 
+      
+        setTimeout(function() {
+            
+            innerFunc(i, t, b);
+            
+        }, time / 100);
+          
+      } else { 
+          
+        subMenu.removeAttribute('style');
+        callback();
+      }
+        
+    })(0, 0, 0);
+  },
+  
+  up = function (callback, time) {
+      
+    var subMenu = link.nextElementSibling;
+    var height = subMenu.clientHeight; 
+    var part = subMenu.clientHeight / 100;
+    var paddingTop = parseInt(window.getComputedStyle(subMenu).paddingTop);
+    var paddingBottom = parseInt(window.getComputedStyle(subMenu).paddingBottom);
+    var paddingTopPart = parseInt(paddingTop) / 30;
+    var paddingBottomPart = parseInt(paddingBottom) / 50;
+
+    (function innerFunc(i, t, b) {
+
+      subMenu.style.height = i + 'px';
+      
+      i -= part;
+      i = i.toFixed(2);
+
+      if(b > 0) {
+          
+        b -= paddingBottomPart;
+        b = b.toFixed(1);                
+        subMenu.style.paddingBottom = b + 'px';
+          
+      } else if(t > 0) {
+          
+        t -= paddingTopPart;
+        t = t.toFixed(1); 
+        subMenu.style.paddingTop = t + 'px';
+      }
+      
+      if(i > 0) { 
+      
+        setTimeout(function() {
+            
+            innerFunc(i, t, b);
+            
+        }, time / 100);
+          
+      } else {
+          
+        subMenu.removeAttribute('style');
+        callback(); 
+      }
+        
+    })(height, paddingTop, paddingBottom);
+  }
+      
+  return {
+    down: down,
+    up: up
+  }
+} 
+    
+var accordion = (function() {
+
+    var menu = document.querySelectorAll('.accordion');
+    var activeClass = 'accordion__link_active';
+    var arr = [];
+    var timer = 100;
+    
+    for(let i = 0; i < menu.length; i++) {
+
+        for(let p = 0; p < menu[i].children.length; p++) {
+
+            var link = menu[i].children[p].firstElementChild;
+            
+            if(link.classList.contains(activeClass)) {
+                arr[i] = link;
+            }
+        }
+    }
+       
+    function accordionInner(i) {
+            
+      var clicked = false;
+      
+      menu[i].addEventListener('click', function(e) {
+
+        if(e.target.tagName === 'A' && !clicked) {
+
+          clicked = true;
+
+          if(e.target.classList.contains(activeClass)) {
+              
+            slide(e.target).up(function() {
+                
+              clicked = false;
+              
+              e.target.classList.remove(activeClass);
+              
+              console.log('slide up of accordion ' + i + ' is done');
+            
+            }, timer);
+              
+          } else {
+
+            if(arr.length > 0) {
+                
+              slide(arr[i-1]).up(function() {
+                  
+                arr[i-1].classList.remove(activeClass);
+                
+                arr[i-1] = e.target;
+                
+                console.log('slide up of accordion ' + i + ' is done');
+
+              }, timer);
+            }
+
+            e.target.classList.add(activeClass);
+            
+            slide(e.target).down(function() {
+              
+              clicked = false;
+              
+              arr[i-1] = e.target;
+              
+              console.log('slide down of accordion ' + i + ' is done');
+            
+            }, timer);
+          }
+        }
+      });
+      
+      i++;
+      
+      if(i < menu.length) { accordionInner(i); }
+        
+    } accordionInner(0);
+})();
+    </script>
+</body>
+</html>

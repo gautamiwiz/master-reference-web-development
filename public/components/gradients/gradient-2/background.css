@@ -1,0 +1,5 @@
+@charset "utf-8";
+
+article {
+  background: url(body.png) no-repeat bottom right/ 75%, rgb(252, 250, 247);
+}

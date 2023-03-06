@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gap Explained</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      main {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+      article {
+        width: 60vw;
+        /* height: 60vh; */
+        border: 1px solid gray;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+      img.spaceFix {
+        display: block; /* This removes the 1px gap underline which is due to the font decendors(the y and g space below the line) and because image is an inline element*/
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <img src="hemp.jpg" alt="Hemp leaf image" width="1920" height="1280" />
+      </article>
+      <!-- 
+          The width and height on image are not in pixels
+          Its declared to show the proportions of the image.
+          The browser builds a box
+          loading = lazy, eager
+
+       -->
+      <article>
+        <img
+          src="hemp.jpg"
+          alt="Hemp leaf image"
+          width="1920"
+          height="1280"
+          loading="lazy"
+          class="spaceFix"
+        />
+      </article>
+    </main>
+  </body>
+</html>

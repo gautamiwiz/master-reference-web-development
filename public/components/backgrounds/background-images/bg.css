@@ -1,0 +1,19 @@
+html {
+  background-color: green;
+}
+
+body {
+  background-color: gold;
+}
+
+h2 {
+  text-align: center;
+}
+
+div {
+  background-color: red;
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  padding: 20px;
+}

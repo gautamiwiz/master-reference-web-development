@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript regex</title>
+  </head>
+  <body>
+    <h1>Javascript Regex</h1>
+    <p>Check console...</p>
+    <script>
+      //regex
+      let stringTest1 = "this is a string";
+      let stringTest2 = "This is a string";
+      let stringTest3 = "is this a string.";
+      let stringTest4 = "THIS is the best string ever";
+
+      let regex = /this/; //the word "this" in the same case
+      console.log(regex.test(stringTest1));
+      console.log(regex.test(stringTest2));
+      console.log(regex.test(stringTest3));
+      console.log(regex.test(stringTest4));
+      console.log("");
+
+      regex = /this/i; // the word "this" in any case
+      console.log(regex.test(stringTest1));
+      console.log(regex.test(stringTest2));
+      console.log(regex.test(stringTest3));
+      console.log(regex.test(stringTest4));
+      console.log("");
+
+      regex = /^this/i; // the word "this" in any case at start
+      console.log(regex.test(stringTest1));
+      console.log(regex.test(stringTest2));
+      console.log(regex.test(stringTest3));
+      console.log(regex.test(stringTest4));
+      console.log("");
+
+      regex = /string/i; // the word "string" in any case anywhere
+      console.log(regex.test(stringTest1));
+      console.log(regex.test(stringTest2));
+      console.log(regex.test(stringTest3));
+      console.log(regex.test(stringTest4));
+      console.log("");
+
+      regex = /string$/i; // the word "string" in any case at end
+      console.log(regex.test(stringTest1));
+      console.log(regex.test(stringTest2));
+      console.log(regex.test(stringTest3));
+      console.log(regex.test(stringTest4));
+      console.log("");
+
+      regex = /string.$/i; // the word "string" in any case at end
+      console.log(regex.test(stringTest1));
+      console.log(regex.test(stringTest2));
+      console.log(regex.test(stringTest3));
+      console.log(regex.test(stringTest4));
+      console.log("");
+
+      regex = /string\.$/i; // the word "string" in any case at end
+      console.log(regex.test(stringTest1));
+      console.log(regex.test(stringTest2));
+      console.log(regex.test(stringTest3));
+      console.log(regex.test(stringTest4));
+      console.log("");
+    </script>
+  </body>
+</html>

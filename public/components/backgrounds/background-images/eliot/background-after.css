@@ -1,0 +1,5 @@
+@charset "utf-8";
+
+article {
+  background: lightblue url(tseliot.png) bottom left / cover no-repeat;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation Body Bg</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --font-size: 16px;
+        --font-size-h1: calc(4 * var(--font-size));
+        --gradient: linear-gradient(
+          45deg,
+          #845ec2,
+          #d65db1,
+          #ff6f91,
+          #ff9671,
+          #ffc75f,
+          #f9f871
+        );
+        --gradient2: linear-gradient(45deg, #ed1c24, #6a579e, #000);
+      }
+      body {
+        font-size: var(--font-size);
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: var(--gradient);
+        background-size: 400%;
+        animation: bg-animation 5s infinite alternate;
+      }
+      @keyframes bg-animation {
+        0% {
+          background-position: left;
+        }
+        100% {
+          background-position: right;
+        }
+      }
+      .content {
+        width: 80%;
+        height: 50vh;
+        padding: 3rem;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+      }
+      h1 {
+        font-size: var(--font-size-h1);
+        line-height: var(--font-size-h1);
+        background-image: var(--gradient2);
+        background-size: 500%;
+        animation: bg-animation 5s infinite alternate;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        text-transform: uppercase;
+        align-self: center;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="content">
+      <h1>This is an animating heading</h1>
+    </section>
+  </body>
+</html>

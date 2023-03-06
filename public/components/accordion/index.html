@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: #16bbce;
+      }
+
+      .accordionWrapper {
+        padding: 30px;
+        background: #fff;
+        float: left;
+        width: 500px;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin: 10%;
+        box-shadow: 0 1.5em 85px 0 rgba(0, 0, 0, 0.2);
+      }
+      .accordionItem {
+        float: left;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: "Open-sans", Arial, sans-serif;
+      }
+      .accordionItemHeading {
+        cursor: pointer;
+        margin: 0px 0px 10px 0px;
+        padding: 10px;
+        font-size: 22px;
+        font-weight: 400;
+        background: #2980b9;
+        color: #fff;
+        width: 100%;
+        border-radius: 3px;
+        box-sizing: border-box;
+      }
+      .accordionItemHeading span {
+        float: right;
+        font-size: 25px;
+      }
+      .open .accordionItemContent {
+        padding: 20px;
+        background-color: #f0f1f1;
+        border: 1px solid #ddd;
+        width: 100%;
+        margin: 0px 0px 10px 0px;
+        display: block;
+        transform: scaleY(1);
+        transform-origin: top;
+        transition: transform 0.4s ease;
+        box-sizing: border-box;
+      }
+
+      .open .accordionItemHeading {
+        margin: 0px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        background-color: #073e63;
+        color: #cdd7d8;
+      }
+      .close .accordionItemContent {
+        height: 0px;
+        transition: height 1s ease-out;
+        transform: scaleY(0);
+        float: left;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="accordionWrapper">
+      <div class="accordionItem open">
+        <h2 class="accordionItemHeading">
+          Accordions Menu HTML CSS <span>+</span>
+        </h2>
+
+        <div class="accordionItemContent">
+          <p>
+            This simple accordion degrades gracefully in browsers that don't
+            support JavaScript or CSS.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordionItem close">
+        <h2 class="accordionItemHeading">
+          Accordion Menu Javascript <span>+</span>
+        </h2>
+
+        <div class="accordionItemContent">
+          <p>
+            A JavaScript accordion is made up of a number of
+            expandable/collapsible items. Only one item is ever shown at a time.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordionItem close">
+        <h2 class="accordionItemHeading">
+          Accordion Menu Jquery <span>+</span>
+        </h2>
+
+        <div class="accordionItemContent">
+          <p>
+            Click an accordion item's heading to expand it. To collapse the
+            item, click it again, or click another item heading.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      var accItem = document.getElementsByClassName("accordionItem");
+      var accHD = document.getElementsByClassName("accordionItemHeading");
+
+      for (i = 0; i < accHD.length; i++) {
+        accHD[i].addEventListener("click", toggleItem, false);
+      }
+      function toggleItem() {
+        var itemClass = this.parentNode.className;
+        for (i = 0; i < accItem.length; i++) {
+          accItem[i].className = "accordionItem close";
+        }
+        if (itemClass == "accordionItem close") {
+          this.parentNode.className = "accordionItem open";
+        }
+      }
+    </script>
+  </body>
+</html>

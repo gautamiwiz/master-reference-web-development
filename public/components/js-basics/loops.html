@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Loops</title>
+  </head>
+  <body>
+    <h1>Javascript Loops</h1>
+  </body>
+  <script>
+    console.log("gScript Loaded");
+    let fruits = ["apple", "watermelon", "banana"];
+
+    //for loop : sequential
+    console.log("For loop : sequential");
+    for (let i = 0; i < fruits.length; i++) {
+      console.log(fruits[i]);
+    }
+    console.log("");
+    console.log("for each");
+    fruits.forEach((x) => console.log(x));
+
+    console.log("");
+    console.log("for in : Enumerative : order is not guaranteed");
+    for (let x in fruits) {
+      console.log(fruits[x]);
+    }
+
+    console.log("");
+    let object1 = { name: "Gautam", age: 40 };
+    for (let x in object1) {
+      console.log(x);
+    }
+
+    //for in
+    console.log("");
+    for (let x in object1) {
+      console.log(object1[x]);
+    }
+
+    console.log("");
+    //while loop
+    let someNumber = 10;
+    while (someNumber >= 1) {
+      console.log(someNumber);
+      someNumber--;
+    }
+
+    console.log("");
+    //do while loop
+    let someNumber2 = 20;
+    do {
+      console.log("first line is executed");
+    } while (someNumber2 < 10);
+    {
+      someNumber2--;
+      console.log(someNumber2);
+    }
+    console.log("");
+
+    //for of loops
+    for (let letter of "Javascript") {
+      console.log(letter);
+    }
+
+    let sampleArray = [
+      "array item 1",
+      "array item 2",
+      "array item 3",
+      "array item 4",
+    ];
+
+    for (let item of sampleArray) {
+      console.log(item);
+    }
+
+    let topics = new Map(); //good for holding navigation like items.. like page name and link url
+    topics.set("html", "Best book of html");
+    topics.set("css", "Best book of css");
+    topics.set("javascript", "Best book of javascript");
+
+    for (let eacTopic of topics) {
+      console.log(topics);
+    }
+
+    for (let eachTopic of topics.keys()) {
+      console.log(eachTopic);
+    }
+
+    for (let eachTopic of topics.values()) {
+      console.log(eachTopic);
+    }
+
+    for (let eachTopic of topics.entries()) {
+      console.log(eachTopic);
+    }
+  </script>
+</html>

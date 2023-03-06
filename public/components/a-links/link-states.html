@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link States</title>
+    <link rel="stylesheet" href="../CSS/base-project-reset/reset.css" />
+    <style>
+      /* a {
+        color: red;
+      } */
+      a:link {
+        color: black;
+      }
+      a:visited {
+        color: blue; /* already clicked link*/
+      }
+      a:focus {
+        color: blueviolet; /* Hit tab to see -- for accessibility purpose*/
+        background-color: yellow;
+      }
+      a:hover {
+        color: green; /* On mouse hover*/
+        text-decoration: none;
+      }
+      a:focus:hover {
+        background-color: red;
+      }
+      a:active {
+        background-color: green;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Link States</h1>
+    <p><a href="https://iwiz.in/3333">Visit iWiz</a></p>
+    <p><a href="https://iwiz.in/">Visit iWiz</a></p>
+    <p><a href="https://iwiz.in/456">Visit iWiz</a></p>
+    <p><a href="https://iwiz.in/789">Visit iWiz</a></p>
+    <p><a href="https://iwiz.in/34">Visit iWiz</a></p>
+    <p><a href="https://iwiz.in/23324">Visit iWiz</a></p>
+  </body>
+</html>

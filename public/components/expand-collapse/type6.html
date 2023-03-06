@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        
+        @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,800);
+        * {
+        box-sizing: border-box;
+        }
+
+        body {
+        font-size: 1rem;
+        line-height: 1.5;
+        background-image: linear-gradient(-135deg, #379 0%, #245 100%);
+        font-family: "Roboto Condensed";
+        padding: 0 20px;
+        }
+
+        .accordion {
+        max-width: 800px;
+        margin: 40px auto;
+        background-color: #18202a;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.75);
+        }
+        .accordion__title {
+        padding: 35px 20px;
+        color: #fff;
+        font-size: 1.3rem;
+        text-align: center;
+        font-weight: bold;
+        background-color: #253141;
+        border-bottom: 3px solid #11161d;
+        letter-spacing: 0.25rem;
+        }
+        .accordion__items {
+        position: relative;
+        padding: 20px;
+        color: #fff;
+        font-weight: bold;
+        background-color: #18202a;
+        cursor: pointer;
+        border-bottom: 2px solid #090c10;
+        }
+        .accordion__items:nth-of-type(even) {
+        background-color: #0d1117;
+        }
+        .accordion__items:after {
+        content: '';
+        -webkit-transition: -webkit-transform 0.25s ease 0.1s;
+        transition: -webkit-transform 0.25s ease 0.1s;
+        transition: transform 0.25s ease 0.1s;
+        transition: transform 0.25s ease 0.1s, -webkit-transform 0.25s ease 0.1s;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        width: 10px;
+        height: 10px;
+        -webkit-transform: translateY(-50%) rotate(-45deg);
+                transform: translateY(-50%) rotate(-45deg);
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        }
+        .accordion__items:hover {
+        background-color: #000;
+        }
+        .accordion__items.active {
+        background-color: #000;
+        }
+        .accordion__items.active:after {
+        -webkit-transform: translateY(-50%) rotate(45deg);
+                transform: translateY(-50%) rotate(45deg);
+        }
+        .accordion__content {
+        -webkit-transition: opacity 1s ease 0.25s,  height 0.25s ease;
+        transition: opacity 1s ease 0.25s,  height 0.25s ease;
+        background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 75%), url(http://lorempixel.com/480/480/);
+        background-size: cover;
+        background-color: #18202a;
+        padding: 0 20px;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        }
+        .accordion__content__caption {
+        -webkit-transition: opacity 0.3s ease 0.3s,  -webkit-transform 0.3s ease 0.3s;
+        transition: opacity 0.3s ease 0.3s,  -webkit-transform 0.3s ease 0.3s;
+        transition: opacity 0.3s ease 0.3s,  transform 0.3s ease 0.3s;
+        transition: opacity 0.3s ease 0.3s,  transform 0.3s ease 0.3s,  -webkit-transform 0.3s ease 0.3s;
+        -webkit-transform: scaleY(0);
+                transform: scaleY(0);
+        color: #ffe;
+        opacity: 0;
+        margin: 20px 0;
+        line-height: 1.3;
+        font-size: 1.5rem;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
+        }
+        .accordion__content__txt {
+        -webkit-transition: opacity 0.3s ease 0.6s, -webkit-transform 0.3s ease 0.6s;
+        transition: opacity 0.3s ease 0.6s, -webkit-transform 0.3s ease 0.6s;
+        transition: opacity 0.3s ease 0.6s, transform 0.3s ease 0.6s;
+        transition: opacity 0.3s ease 0.6s, transform 0.3s ease 0.6s, -webkit-transform 0.3s ease 0.6s;
+        -webkit-transform: scaleY(0);
+                transform: scaleY(0);
+        margin-bottom: 30px;
+        color: #a99;
+        opacity: 0;
+        }
+        .accordion__content.open {
+        height: 100%;
+        overflow-y: scroll;
+        opacity: 1;
+        color: #fff;;
+        }
+        .accordion__content.open .accordion__content__caption {
+        opacity: 1;
+        -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+        }
+        .accordion__content.open .accordion__content__txt {
+        opacity: 1;
+        -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+        }
+        .align {line-height: 2.5;}
+            .alignright {text-align: right;}
+    </style>
+    
+</head>
+<body>
+    
+<div class="accordion">
+    <h1 class="accordion__title">RESTAURANT MENU</h1>
+    <h2 class="accordion__items">Starters</h2>
+    <div class="accordion__content">
+      <table style="width: 100%;" class="align">
+        <tbody>
+          <tr>
+            <td>Veg Manchurian</td>
+            <td class="alignright">₹ 260</td>
+          </tr>
+          <tr>
+            <td>Baby Corn Manchurian</td>
+            <td class="alignright">₹ 240</td>
+          </tr>
+          <tr>
+            <td>Gobie Manchurian</td>
+            <td class="alignright">₹ 220</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    <h2 class="accordion__items">Main Course</h2>
+    <div class="accordion__content">
+      <table style="width: 100%;" class="align">
+        <tbody>
+          <tr>
+            <td>Dal Fry</td>
+            <td class="alignright">₹ 260</td>
+          </tr>
+          <tr>
+            <td>Palak Paneer</td>
+            <td class="alignright">₹ 240</td>
+          </tr>
+          <tr>
+            <td>Chicken Curry</td>
+            <td class="alignright">₹ 220</td>
+          </tr>
+          <tr>
+            <td>Kadai Chicken</td>
+            <td class="alignright">₹ 240</td>
+          </tr>
+          <tr>
+            <td>Butter Chicken</td>
+            <td class="alignright">₹ 220</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2 class="accordion__items">Seafood Dishes</h2>
+    <div class="accordion__content">
+      <table class="table align" style="width: 100%;">
+        <tbody>
+          <tr>
+            <td>Fish Fry</td>
+            <td class="alignright">₹ 260</td>
+          </tr>
+          <tr>
+            <td>Fish Masala</td>
+            <td class="alignright">₹ 240</td>
+          </tr>
+          <tr>
+            <td>Apollo Fish</td>
+            <td class="alignright">₹ 220</td>
+          </tr>
+          <tr>
+            <td>Fish Manchurian</td>
+            <td class="alignright">₹ 240</td>
+          </tr>
+          <tr>
+            <td>Prawns Jhai Fry</td>
+            <td class="alignright">₹ 220</td>
+          </tr>
+          <tr>
+            <td>Pepper Prawns</td>
+            <td class="alignright">₹ 220</td>
+          </tr>
+          <tr>
+            <td>Loose Prawns</td>
+            <td class="alignright">₹ 240</td>
+          </tr>
+          <tr>
+            <td>Prawns 65</td>
+            <td class="alignright">₹ 220</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2 class="accordion__items">Rice and Biryanies</h2>
+    <div class="accordion__content">
+      <table class="table align" style="width: 100%;">
+        <tbody>
+          <tr>
+            <td>Chicken Dum Biryani</td>
+            <td class="alignright">₹ 260</td>
+          </tr>
+          <tr>
+            <td>Fry Piece Biryani</td>
+            <td class="alignright">₹ 240</td>
+          </tr>
+          <tr>
+            <td>Chicken Biryani</td>
+            <td class="alignright">₹ 220</td>
+          </tr>
+          <tr>
+            <td>Chicken Fried Rice</td>
+            <td class="alignright">₹ 240</td>
+          </tr>
+          <tr>
+            <td>Chicken Family Pack</td>
+            <td class="alignright">₹ 550</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2 class="accordion__items">Desserts</h2>
+    <div class="accordion__content">
+      <table class="table align" style="width: 100%;">
+        <tbody>
+          <tr>
+            <td>Double Ka Meetha</td>
+            <td class="alignright">₹ 80</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script>
+      $(function() {
+        var items = $(".accordion__items");
+
+        items.on("click",function(){
+            if($(this).hasClass("active")) {
+            $(this).removeClass("active");
+            $(this).next().removeClass("open");
+            } else {
+            $(this).siblings().removeClass("active");
+            $(this).next().siblings().removeClass("open");
+            $(this).toggleClass("active");
+            $(this).next().toggleClass("open");
+            }
+        });
+        });
+  </script>
+</body>
+</html>

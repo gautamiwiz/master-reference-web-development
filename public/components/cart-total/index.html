@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Cart</title>
+    <script src="js-cart-1.js" defer></script>
+    <style>
+      .flex {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cart</h1>
+    <form action="" id="cartForm">
+      <div class="flex">
+        <div>
+          <h2>H+ Basketball Sneakers</h2>
+          <p>Run faster, jump higher.</p>
+
+          <div class="info">
+            <span>Price: Rs. 100/pair</span>
+          </div>
+
+          <div class="order">
+            <label for="txt-q-bball">Quantity desired:</label>
+            <input
+              type="number"
+              min="0"
+              id="txt-q-bball"
+              size="3"
+              placeholder="0"
+            />
+          </div>
+        </div>
+        <div>
+          <h2>H+ ACTIVE Jersey</h2>
+          <p>Sweat harder, wick better.</p>
+
+          <div class="info">
+            <span>Price: Rs. 100/each</span>
+          </div>
+
+          <div class="order">
+            <label for="txt-q-jersey">Quantity desired:</label>
+            <input
+              type="number"
+              min="0"
+              id="txt-q-jersey"
+              size="3"
+              placeholder="0"
+            />
+          </div>
+        </div>
+        <div>
+          <h2>H+ Power Supplements</h2>
+          <p>Get healthier, get smarter.</p>
+
+          <div class="info">
+            <span>Price: Rs. 100/bottle</span>
+          </div>
+
+          <div class="order">
+            <label for="txt-q-power">Quantity desired:</label>
+            <input
+              type="number"
+              min="0"
+              id="txt-q-power"
+              size="3"
+              placeholder="0"
+            />
+          </div>
+        </div>
+      </div>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+      <div id="summary" class="flex">
+        <div class="group state">
+          <label for="s-state">State (required):</label> <br />
+          <select id="s-state">
+            <option value="">- select -</option>
+            <option value="ts">Telangana (10% tax)</option>
+            <option value="mh">Maharashtra (0% tax)</option>
+            <option value="dl">New Delhi (0% tax)</option>
+            <option value="ka">Karnataka (0% tax)</option>
+          </select>
+        </div>
+
+        <div class="group method">
+          <label for="r-method-pickup">Shipping and Handling:</label><br />
+          <input
+            type="radio"
+            value="pickup"
+            name="r_method"
+            id="r-method-pickup"
+            checked
+          />
+          <label for="r-method-pickup">Pickup (free)</label><br />
+
+          <input
+            type="radio"
+            value="express"
+            name="r_method"
+            id="r-method-usps"
+          />
+          <label for="r-method-usps">Express (Rs. 500)</label><br />
+
+          <input
+            type="radio"
+            value="economical"
+            name="r_method"
+            id="r-method-ups"
+          />
+          <label for="r-method-ups">Economical (Rs. 200)</label>
+        </div>
+
+        <div class="group special">
+          <label for="c-special-gift">Special:</label><br />
+          <input
+            type="checkbox"
+            value="YES"
+            name="c-special-gift"
+            id="c-special-gift"
+          />
+          <label for="c-special-gift">This is a gift (include a card)</label
+          ><br />
+
+          <input
+            type="checkbox"
+            value="YES"
+            name="c-special-email"
+            id="c-special-email"
+          />
+          <label for="c-special-email">Sign up for the H+ mailing list</label
+          ><br />
+
+          <input
+            type="checkbox"
+            value="YES"
+            name="c-special-recipes"
+            id="c-special-recipes"
+          />
+          <label for="c-special-recipes">Include H+ recipes (free!)</label>
+        </div>
+      </div>
+      <div class="group notes">
+        <label for="txt-notes">Other notes:</label><br />
+
+        <textarea
+          name="txt-notes"
+          id="txt-notes"
+          rows="2"
+          placeholder="Any other comments (does not affect estimate)"
+        ></textarea>
+      </div>
+
+      <div class="group calc">
+        <p>
+          <label for="btn-estimate">Click to estimate:</label><br />
+          <input type="submit" value="Estimate Total" id="btn-estimate" />
+          <input type="text" id="txt-estimate" placeholder="$0.00" />
+        </p>
+
+        <div id="results"></div>
+      </div>
+    </form>
+  </body>
+</html>

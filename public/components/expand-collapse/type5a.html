@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .screen .card .details-1, .screen .card .details-2 {
+            background-color: white;
+            position: relative;
+            height: 100%;
+            z-index: -10;
+            -webkit-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            display: -webkit-box;
+            display: flex;
+            padding: 20px;;
+            }
+
+            html {
+            background-color: #202B2E;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                    align-items: center;
+            height: 100vh;
+            font-family: "IM Fell French Canon";
+            }
+
+            body {
+            -webkit-perspective: 800px;
+                    perspective: 800px;
+            }
+
+            body * {
+            -webkit-transform-style: preserve-3d;
+                    transform-style: preserve-3d;
+            }
+
+            p, h1 {
+            margin: 0;
+            font-weight: 700;
+            }
+
+            .screen {
+            width: 400px;
+            margin: 50px;
+            padding-top: 120px;
+            background: transparent;
+            -webkit-transform: rotate3d(0, 1, 0, 0deg);
+                    transform: rotate3d(0, 1, 0, 0deg);
+            }
+            .screen .card {
+            margin: 0;
+            height: 200px;
+            -webkit-transition: height 0.5s ease-in-out;
+            transition: height 0.5s ease-in-out;
+            }
+            .screen .card:nth-of-type(1) .front-box {
+            background: url("images/riceandbiryani-01.jpg"); linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); 
+            background-size: cover;
+            }
+            .screen .card:nth-of-type(2) .front-box {
+          
+              background: url("images/pizza-01-01.jpg"); linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Kawase_Z%C3%B4j%C3%B4ji.jpg/398px-Kawase_Z%C3%B4j%C3%B4ji.jpg");
+            background-size: cover;
+            }
+            .screen .card:nth-of-type(3) .front-box {
+          
+              background: url("images/salads-01.jpg"); linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Albrecht_D%C3%BCrer_-_The_Large_Piece_of_Turf%2C_1503_-_Google_Art_Project.jpg/467px-Albrecht_D%C3%BCrer_-_The_Large_Piece_of_Turf%2C_1503_-_Google_Art_Project.jpg");
+            background-size: cover;
+            }
+            .screen .card:nth-of-type(4) .front-box {
+            background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("https://upload.wikimedia.org/wikipedia/commons/e/ed/Bellotto_Bridgettine_Church_and_Arsenal.jpg?1465410364618");
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://upload.wikimedia.org/wikipedia/commons/e/ed/Bellotto_Bridgettine_Church_and_Arsenal.jpg?1465410364618");
+            background-size: cover;
+            }
+            .screen .card .front-box {
+            height: 200px;
+            box-sizing: border-box;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                    align-items: center;
+            overflow: hidden;
+            }
+            .screen .card .front-box:hover {
+            cursor: pointer;
+            }
+            .screen .card .front-box:hover h1 {
+            border-bottom: 2px solid #D8303D;
+            }
+            .screen .card .front-box:hover p {
+            opacity: 1;
+            }
+            .screen .card .front-box h1 {
+            border-bottom: 2px solid transparent;
+            padding-bottom: 5px;
+            top: 55px;
+            left: 20px;
+            color: white;
+            z-index: 20;
+            -webkit-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
+            }
+            .screen .card .front-box p {
+            color: white;
+            font-style: italic;
+            padding-top: 10px;
+            font-weight: 400;
+            opacity: 0;
+            -webkit-transition: all 0.5s ease-in-out 0.2s;
+            transition: all 0.5s ease-in-out 0.2s;
+            }
+            .screen .card .front-box .img-wrapper {
+            height: 200px;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            }
+            .screen .card .details-1 {
+            -webkit-transform: rotate3d(1, 0, 0, -90deg);
+                    transform: rotate3d(1, 0, 0, -90deg);
+            -webkit-transform-origin: top;
+                    transform-origin: top;
+            box-shadow: inset 0px -45px 52px 0px rgba(0, 0, 0, 0.75);
+            }
+            .screen .card .details-1 p {
+            margin: auto;
+            }
+            .screen .card .details-2 {
+            -webkit-transform: translate3d(0, -140px, 0px) rotate3d(1, 0, 0, 90deg);
+                    transform: translate3d(0, -140px, 0px) rotate3d(1, 0, 0, 90deg);
+            -webkit-transform-origin: bottom;
+                    transform-origin: bottom;
+            box-shadow: inset 0px 0px 100px 30px rgba(0, 0, 0, 0.75);
+            }
+            .screen .card .details-2 p {
+            margin: auto;
+            }
+
+            .unfold {
+            height: 70px;
+            -webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg) !important;
+                    transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg) !important;
+            box-shadow: inset 0px -45px 52px -70px rgba(0, 0, 0, 0.75) !important;
+            }
+
+            .span {
+            height: 100% !important;
+            }
+
+            .align {line-height: 2;}
+            .alignright {text-align: right;}
+
+    </style>
+</head>
+<body>
+
+    <div class='screen'>
+        <div class='card'>
+          <div class='front-box'>
+            <h1>Rice and Biryanies</h1>
+            <p>Cooking Options</p>
+          </div>
+          <div class='details-1'>
+            <table style="width: 100%;" class="align">
+              <tbody>
+                <tr>
+                  <td>Garden Paradise</td>
+                  <td class="alignright">₹ 260</td>
+                </tr>
+                <tr>
+                  <td>Chicken Tikka</td>
+                  <td class="alignright">₹ 240</td>
+                </tr>
+                <tr>
+                  <td>Pork Pepperoni</td>
+                  <td class="alignright">₹ 220</td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+        <div class='card'>
+          <div class='front-box'>
+            <h1>Pizzas</h1>
+            <p>Eat more pizzas</p>
+          </div>
+          <div class='details-1'>
+            <table style="width: 100%;" class="align">
+              <tbody>
+                <tr>
+                  <td>Garden Paradise</td>
+                  <td class="alignright">₹ 260</td>
+                </tr>
+                <tr>
+                  <td>Chicken Tikka</td>
+                  <td class="alignright">₹ 240</td>
+                </tr>
+                <tr>
+                  <td>Pork Pepperoni</td>
+                  <td class="alignright">₹ 220</td>
+                </tr>
+                
+              </tbody>
+            </table>
+            
+          </div>
+
+        </div>
+        <div class='card'>
+          <div class='front-box'>
+            <h1>Salads</h1>
+            <p>For good health</p>
+          </div>
+          <div class='details-1'>
+            <table style="width: 100%;" class="align">
+              <tbody>
+                <tr>
+                  <td>Garden Paradise</td>
+                  <td class="alignright">₹ 260</td>
+                </tr>
+                <tr>
+                  <td>Chicken Tikka</td>
+                  <td class="alignright">₹ 240</td>
+                </tr>
+                <tr>
+                  <td>Pork Pepperoni</td>
+                  <td class="alignright">₹ 220</td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+      </div>
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>         
+      <script>
+          $(document).ready(function(){
+        $('.card').click(function(){
+                    $(this).find('.details-1, .details-2').toggleClass('unfold').parents('.card').siblings().children('.details-1, .details-2').removeClass('unfold');
+                    $(this).toggleClass('span').siblings('.card').removeClass('span');
+        });
+    });
+      </script>
+</body>
+</html>

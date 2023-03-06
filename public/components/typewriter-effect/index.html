@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typewriter effect</title>
+    <style>
+      @keyframes grow {
+        0% {
+          max-height: var(--lineHeight);
+        }
+        100% {
+          max-height: calc(var(--lineHeight) * var(--lines));
+        }
+      }
+
+      @keyframes carriageReturn {
+        0% {
+          top: 0;
+        }
+        100% {
+          top: calc(var(--lineHeight) * var(--lines));
+        }
+      }
+
+      @keyframes type {
+        0% {
+          width: 100%;
+        }
+        100% {
+          width: 0%;
+        }
+      }
+
+      @keyframes caret {
+        0% {
+          color: var(--bgColor);
+        }
+        100% {
+          color: black;
+        }
+      }
+
+      .typewriter {
+        --bgColor: white;
+        --lines: 500;
+        --lineHeight: 1.5rem;
+        --timePerLine: 4s;
+        --widthCh: 40;
+        --width: calc(var(--widthCh) * 1ch);
+        /* do not touch the time property!!! */
+        --time: calc(var(--lines) * var(--timePerLine));
+        animation: grow var(--time) steps(var(--lines));
+        animation-fill-mode: forwards;
+        background: var(--bgColor);
+        line-height: var(--lineHeight);
+        max-height: var(--lineHeight);
+        overflow: hidden;
+        position: relative;
+        width: var(--width);
+        /* word-break: break-all; */
+      }
+
+      .typewriter::before {
+        content: "";
+        animation: type var(--timePerLine) linear infinite,
+          carriageReturn var(--time) steps(var(--lines)) var(--lines),
+          caret 0.5s steps(2) infinite;
+        background: var(--bgColor);
+        border-left: 2px solid;
+        bottom: 0;
+        height: 2rem;
+        position: absolute;
+        right: 0;
+        width: 100%;
+      }
+
+      .typewriter.no-caret::before {
+        border-left-width: 0;
+      }
+
+      .typewriter.big-caret::before {
+        border-left-width: 1ch;
+      }
+
+      .typewriter.monospace {
+        font-family: monospace, monospace;
+      }
+
+      .typewriter.monospace::before {
+        animation: type var(--timePerLine) steps(var(--widthCh)) infinite,
+          carriageReturn var(--time) steps(var(--lines)) var(--lines),
+          caret 0.5s steps(2) infinite;
+      }
+
+      /* DEMO */
+      section {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        left: 0;
+        padding: 1rem;
+        position: absolute;
+        top: 1rem;
+        width: 100%;
+      }
+
+      section:nth-child(2) {
+        top: 10rem;
+      }
+      section:nth-child(3) {
+        top: 20rem;
+      }
+
+      .lorem {
+        --widthCh: 60;
+        --timePerLine: 5s;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- https://dev.to/alvaromontoro/multiline-css-only-typewriter-effect-18p4 -->
+    <section>
+      <div class="typewriter">
+        Hello world, this is a test. And this is one more test.
+      </div>
+
+      <div class="typewriter no-caret">
+        Hello world, this is a test. And this is one more test.
+      </div>
+
+      <div class="typewriter big-caret">
+        Hello world, this is a test. And this is one more test.
+      </div>
+    </section>
+
+    <section>
+      <div class="typewriter monospace">
+        Hello world, this is a test. And this is one more test.
+      </div>
+
+      <div class="typewriter monospace no-caret">
+        Hello world, this is a test. And this is one more test.
+      </div>
+
+      <div class="typewriter monospace big-caret">
+        Hello world, this is a test. And this is one more test.
+      </div>
+    </section>
+
+    <section>
+      <div class="typewriter monospace big-caret lorem">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id tortor
+        massa. Quisque fermentum nibh non lacus suscipit, et laoreet elit
+        sollicitudin.
+      </div>
+    </section>
+  </body>
+</html>
+<!-- 
+    Property	Type	Default	Description
+--bgColor	Color	White	Defines the background color of the element and the animation
+--lines	Number	500	Maximum number of lines to animate
+--lineHeight	Length	1.5rem	The line-height which will determine the size of the container height increase
+--timePerLine	Duration	4s	The time that it will take for a line to be revealed
+--widthCh	Number	22	The width of the element in ch units (useful when used with monospace)
+--width	Length	--widthCh * 1ch	Optional. If you use --widthCh, there's no need to define this variable. But it is convenient to provide relative values.
+ -->

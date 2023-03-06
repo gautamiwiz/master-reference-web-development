@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Arrays</title>
+  </head>
+  <body>
+    <h1>Array Basics</h1>
+    <p>Check console....</p>
+    <ul>
+      <li>length</li>
+      <li>forEach()</li>
+      <li>sort()</li>
+      <li>reverse()</li>
+      <li>find() and findIndex()</li>
+      <li>includes()</li>
+      <li>every() and some()</li>
+      <li>push() and pop()</li>
+      <li>shift() and unshift()</li>
+      <li>Join, concat</li>
+      <li>duplicate and array</li>
+      <li>slice()</li>
+    </ul>
+    <script>
+      /*
+      ============Array Methods ==================
+      length
+      push() and pop()
+      shift() and unshift()
+      forEach()
+      sort()
+      reverse()
+      find() and findIndex()
+      includes()
+      every() and some()
+      splice()
+
+      */
+
+      let fruits = ["apple", "banana", "guava"];
+
+      /* ================================
+       length
+      ==================================== */
+      console.log("");
+      console.log("=== length ===");
+      console.log("Length of fruits array = ", fruits.length);
+
+      //Join arrays
+      let joinedFruits = fruits.join();
+      console.log("Joined Fruits : ", joinedFruits);
+      console.log("Type of joinedFruits = ", typeof joinedFruits);
+
+      let joinedFruitsWithHiphen = fruits.join("-");
+      console.log("Joined fruits with - ", joinedFruitsWithHiphen);
+
+      /* ================================
+       push pop shift unshift
+      ==================================== */
+      console.log("");
+      console.log("=== push pop shift unshift ===");
+      let arrayTest1 = [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday",
+      ];
+      console.log(arrayTest1);
+      console.log(arrayTest1.length);
+
+      arrayTest1.push("a day in the end");
+      console.log(arrayTest1);
+      arrayTest1.unshift("a day in the start");
+      console.log(arrayTest1);
+      arrayTest1.pop();
+      console.log(arrayTest1);
+      arrayTest1.shift();
+      console.log(arrayTest1);
+
+      console.log(arrayTest1[0]);
+      console.log(arrayTest1[1]);
+      //get the last item
+      console.log(arrayTest1[arrayTest1.length - 1]);
+
+      delete arrayTest1[2];
+      console.log(arrayTest1);
+
+      /* ================================
+       splice()
+      ==================================== */
+      console.log("");
+      console.log("=== splice() ===");
+      let array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      //remove item 6 to 10;
+      console.log(array1);
+      //splice returns the removed items and alters the original array
+      console.log("Splice : ", array1.splice(5, 5));
+      console.log(array1);
+
+      /* ================================
+       write and array to dom
+      ==================================== */
+      console.log("");
+      console.log("=== write an array to dom ===");
+      let title = document.createElement("h1");
+      title.innerText = "JS Arrays list";
+
+      let links = ["link1", "link2", "link3", "link4"];
+      let listHolder = document.createElement("ul");
+
+      links.forEach((link) => (listHolder.innerHTML += `<li>${link}</li>`));
+
+      document.body.append(listHolder);
+
+      //spread operator : Make an array copy
+      let cats = ["cat 1", "cat 2", "cat 3"];
+      let dogs = ["dog 1", "dog 2", "dog 3"];
+
+      //this makes it a string
+      let catsAndDogs = cats + " " + dogs;
+      console.log(catsAndDogs);
+      console.log(typeof catsAndDogs);
+
+      /* ================================
+       forEach()
+      ==================================== */
+      console.log("");
+      console.log("=== forEach() ===");
+      let fruits1 = ["banana", "orange", "guava", "grapes", "watermelon"];
+      fruits1.forEach((fruit) => console.log(fruit));
+
+      //you can also pass the index and the whole array
+      //   fruits1.forEach((fruit, index, fruits1) => {
+      //     console.log(fruit, index, fruits1);
+      //   });
+
+      /* ================================
+       sort() -- Changes the orignial array
+      ==================================== */
+      console.log("");
+      console.log("=== sort() ===");
+      let fruits2 = ["banana", "orange", "guava", "grapes", "watermelon"];
+      let sortedFruits2 = fruits2.sort();
+      console.log(sortedFruits2);
+
+      let scores = [99, 10, 13, 2, 4, 123];
+      console.log("scores : ", scores);
+      let sortedScores = scores.sort((a, b) => a - b); // ascending
+      console.log("Sorted Scores : ", sortedScores);
+      console.log("Scores : ", scores); // sort, sorts the original array
+
+      let scores2 = [
+        { name: "Gautam", marks: 50 },
+        { name: "Pari", marks: 35 },
+        { name: "Rahul", marks: 80 },
+        { name: "Sahil", marks: 98 },
+      ];
+
+      console.log("Scores 2 = ", scores2);
+      let sortedScores2 = scores2.sort((a, b) => b.marks - a.marks);
+      console.log("Sorted Scores 2 = ", sortedScores2);
+      console.log("");
+      /* ================================
+       reverse() -- Changes the orignial array
+      ==================================== */
+      console.log("");
+      console.log("=== reverse() ===");
+
+      let alphabets = ["a", "c", "x", "b", "g", "k"];
+      console.log("alphabets array", alphabets);
+      console.log("alphabets array reversed", alphabets.reverse());
+      console.log("");
+
+      /* ================================
+       find() and findIndex()... finds the first element.. if you need to find out all the items in an array
+       use filter()
+      ==================================== */
+      // find returns the first element if match found
+      //if nothing found, find returns undefined
+      console.log("");
+      console.log("=== find() ===");
+      let catNames = ["mia", "bia", "pacho", "lewis", "chunkis"];
+      console.log("cat names : ", catNames);
+      console.log(
+        "Find 'pacho' in catnames",
+        catNames.find((name) => name === "pacho")
+      );
+
+      //findIndex returns -1 if no found match
+      //findIndex returns the index if match found
+      console.log("");
+      console.log("=== findIndex() ===");
+      console.log(
+        "find index of 'pacho'",
+        catNames.findIndex((name) => name === "pacho")
+      );
+      console.log(
+        "find index of 'pacho'",
+        catNames.findIndex((name) => name === "pacho2")
+      );
+
+      /* ================================
+       includes() .. returns boolean, value is case sensitive.. 
+       optional value to add "fromIndex" i.e the index to start searching from
+      ==================================== */
+      console.log("");
+      console.log("=== includes() ===");
+      let fruits3 = ["apple", "watermelon", "banana", "grapes"];
+      console.log("Fruits 3 : ", fruits3);
+      console.log("Fruits3 includes 'banana'", fruits3.includes("banana"));
+
+      /* ================================
+       some() and every()
+      ==================================== */
+      console.log("");
+      console.log("=== some() and every() ===");
+
+      let namesOfExecutives = [
+        "gautam",
+        "shravan",
+        "srinivas",
+        "mahesh",
+        "rajesh",
+        "rishik",
+      ];
+      console.log("Names of executives : ", namesOfExecutives);
+      console.log(
+        "Do some names have letter 'a'?",
+        namesOfExecutives.some((executive) => executive.includes("a"))
+      );
+      console.log(
+        "Do all names have letter 'a'?",
+        namesOfExecutives.every((executive) => executive.includes("a"))
+      );
+
+      /* ================================
+      map() -> Returns a new array
+      ==================================== */
+      console.log("");
+      console.log("=== map() ===");
+
+      let someValues = [1, 2, 3, 4, 5, 6];
+      console.log("Initial Values : ", someValues);
+      let someValuesSquared = someValues.map((eachValue) => eachValue * 2);
+      console.log("Some Values squared : ", someValuesSquared);
+
+      let friendNames = [
+        { firstName: "Gautam", lastName: "Sharma" },
+        { firstName: "Karan", lastName: "Sharma" },
+        { firstName: "Tina", lastName: "Sharma" },
+      ];
+      console.log("Friend names : ", friendNames);
+      let fullNames = friendNames.map((eachFriend) => {
+        return eachFriend.firstName + " " + eachFriend.lastName;
+      });
+      console.log("Full Names : ", fullNames);
+
+      /* ================================
+      filter() -> Returns a new array
+      ==================================== */
+      console.log("");
+      console.log("=== filter() ===");
+      let animals = [
+        { name: "Animal 1", type: "cat" },
+        { name: "Animal 2", type: "dog" },
+        { name: "Animal 3", type: "cat" },
+        { name: "Animal 4", type: "dog" },
+        { name: "Animal 5", type: "dog" },
+        { name: "Animal 6", type: "cat" },
+        { name: "Animal 7", type: "dog" },
+        { name: "Animal 8", type: "cat" },
+      ];
+      console.log("Animals : ", animals);
+      let onlyCats = animals.filter((animal) => {
+        return animal.type === "cat";
+      });
+      console.log("Only cats :", onlyCats);
+
+      /* ================================
+      reduce()
+      ==================================== */
+      console.log("");
+      console.log("=== reduce() ===");
+      let amountReceived = [100, 200, 400, 400, 500, 600, 800];
+      console.log("Amounts : ", amountReceived);
+      let sumOfAmounts = amountReceived.reduce((total, theElement) => {
+        return (total += theElement);
+      }, 1);
+      console.log("Total of amounts : ", sumOfAmounts);
+
+      /* ================================
+      flatmap() -> returns a new array.. first map is applied then flat 
+      ==================================== */
+      console.log("");
+      console.log("=== flatMap() ===");
+
+      let snakes = ["snake 1", "snake 2", "snake 3"];
+      console.log("snakes : ", snakes);
+      let splitSnakes = snakes.flatMap((eachSnake) => eachSnake.split(""));
+      console.log(splitSnakes);
+
+      console.log("hello-gautam-this".split("-"));
+
+      /* ================================
+       copy an array
+      ==================================== */
+      console.log("");
+      console.log("=== copy an array ===");
+
+      //spread operator : Make an array copy
+      //copy an array method 1
+      console.log("");
+      console.log("method 1 : spread ... operator");
+      //using ... spread operator
+      let cats1 = ["cat 1", "cat 2", "cat 3"];
+      let dogs1 = ["dog 1", "dog 2", "dog 3"];
+      let copyOfCatsAndDogs = [...cats1, ...dogs1];
+      console.log("Copy of cats and dogs : ", copyOfCatsAndDogs);
+      console.log("Copy of cats and dogs length : ", copyOfCatsAndDogs.length);
+
+      //copy an array method 2 (unique values only)
+      console.log("");
+      console.log("method 2 : using set : without duplicates");
+      //using .. set
+      let numberList = [1, 1, 2, 2, 3, 4, 5, 5, 6, 6, 6, 7, 8, 8, 8, 8];
+      let numberListWithoutDuplicate = [...new Set(numberList)];
+      console.log("original number list : ", numberList);
+      console.log(
+        "Numbers array without duplicates using set : ",
+        numberListWithoutDuplicate
+      );
+
+      //copy an array using for loop
+      console.log("");
+      console.log("method 3 using forloop");
+      let numberList2 = [1, 1, 2, 2, 3, 4, 5, 5, 6, 6, 6, 7, 8, 8, 8, 8];
+      let numberListDuplicate2 = [];
+      for (var i = 0; i < numberList2.length; i++) {
+        numberListDuplicate2.push(numberList2[i]);
+      }
+      console.log("Numbers array copy using for loop : ", numberListDuplicate2);
+
+      //copy and array using for loop
+      //remove duplicated using findindex
+      console.log("");
+      console.log(
+        "method 4 using forloop and remove duplicates using find index"
+      );
+      let numberList3 = [1, 1, 2, 2, 3, 4, 5, 5, 6, 6, 6, 7, 8, 8, 8, 8];
+      let numberListDuplicate3 = [];
+      for (var i = 0; i < numberList3.length; i++) {
+        if (numberListDuplicate3.indexOf(numberList3[i]) === -1) {
+          numberListDuplicate3.push(numberList3[i]);
+        }
+      }
+      console.log(
+        "Number array copy no duplicates using for loop : ",
+        numberListDuplicate3
+      );
+
+      //copy an array using for loop and temp variable
+      //first you need to sort the array
+      console.log("");
+      console.log("method 5 copy an array using for loop and temp variable");
+      let x = [1, 1, 1, 3, 3, 2, 2, 4, 5, 9, 8];
+      let y = [];
+      x.sort();
+      console.log(x);
+      let temp;
+      for (var i = 0; i < x.length; i++) {
+        if (x[i] !== temp) {
+          y.push(x[i]);
+          temp = x[i];
+        }
+      }
+      console.log("Unique array with temp : ", y);
+
+      //using object method
+      console.log("");
+      console.log("using object method");
+      let c = [1, 2, 3, 4, 5, 6, 7, 8, 8, 8, 8];
+      let d = new Object(c);
+      console.log("using object method", d);
+
+      //using object method
+      obj = {};
+      for (let i of c) {
+        obj[i] = true;
+      }
+
+      console.log("using object method", Object.keys(obj));
+
+      /* ================================
+      to check if something is an array
+      ==================================== */
+      console.log("");
+      console.log("=== check if something is an array ===");
+      let isArray =
+        typeof copyOfCatsAndDogs && copyOfCatsAndDogs.hasOwnProperty("length")
+          ? "Its an array"
+          : "Not an array";
+      console.log("type of Copy of cats and dogs : ", isArray);
+
+      /* ================================
+      for loop :: foreach :: for let
+      ==================================== */
+      console.log("");
+      console.log("=== for loop :: foreach :: for let ===");
+
+      let xx = ["Value 1", "Value 2", "Value 3"];
+
+      console.warn("----For loop----");
+      for (var i = 0; i < xx.length; i++) console.log(xx[i]);
+
+      console.warn("----For each----");
+      xx.forEach((x) => console.log(x));
+
+      console.warn("----For let----");
+      for (let x of xx) {
+        console.log(x);
+      }
+
+      /* ================================
+       Join arrays
+      ==================================== */
+      console.log("");
+      console.log("=== Join arrays ===");
+      let firstArray = ["A1", "A2", "A3"];
+      let secondArray = ["B1", "B2", "B3"];
+
+      console.log("Array 1 : ", firstArray);
+      console.log("Array 2 : ", secondArray);
+      console.warn("converts to string");
+      console.log("Joining Array 2 with space : ", secondArray.join(" "));
+      console.log("Joining Array 2 with comma , ", secondArray.join(","));
+      console.log("Joining Array 2 with dash - ", secondArray.join("-"));
+
+      /* ================================
+       concat()
+      ==================================== */
+      console.log("");
+      console.log("=== concat() ===");
+      let firstArray1 = ["A1", "A2", "A3"];
+      let secondArray2 = ["B1", "B2", "B3"];
+      let joinedArray = firstArray1.concat(secondArray2);
+      console.log("Concat 2 arrays : ", joinedArray);
+      console.log(`Concat arraylength : ${joinedArray.length}`);
+
+      /* ================================
+       slice()
+      ==================================== */
+      console.log("");
+      console.log("=== slice() ===");
+
+      let abc = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+      console.log("array = ", abc);
+      console.log("Sliced from 0 - 3 ", abc.slice(0, 3));
+      console.log(
+        "Sliced from middle to end ",
+        abc.slice(Math.floor(abc.length / 2), abc.length)
+      );
+
+      /* ================================
+       compare 2 arrays and for a new array with common values only()
+      ==================================== */
+      console.log("");
+      console.log(
+        "=== compare 2 arrays and for a new array with common values only() ==="
+      );
+
+      /*-----------
+Quiz 1
+
+//compare two arrays and create a new array with the common items
+//   var listOne = ["Item One", "Item Two", "Item Three", "Item Four"];
+//   var listTwo = ["Item One", "Item Two"];
+
+//   var listThree = listOne.filter((val) => listTwo.includes(val));
+
+//   console.log(listThree);
+------------*/
+
+      var shippingMethods = [
+        "Method 1",
+        "Method 2",
+        "Method 3",
+        "Method 4",
+        "Method 5",
+        "Method 6",
+      ];
+
+      var products = [
+        {
+          name: "Testing Product 1",
+          tags: ["Method 1", "Method 5"],
+        },
+        {
+          name: "Testing Product 2",
+          tags: ["Method 2"],
+        },
+      ];
+
+      var masterTagList = [];
+      //first push all the elements from object to master tag list
+      products.forEach((product) => {
+        product.tags.forEach((tag) => masterTagList.push(tag));
+      });
+
+      console.log("Tags in all the products", masterTagList);
+      console.log(`Master shipping list: ${shippingMethods}`);
+
+      shippingMethods = shippingMethods.filter((val) =>
+        masterTagList.includes(val)
+      );
+
+      console.log(`Master shipping list filtered: ${shippingMethods}`);
+
+      /* ================================
+       xxx()
+      ==================================== */
+      console.log("");
+      console.log("=== xxx() ===");
+    </script>
+  </body>
+</html>

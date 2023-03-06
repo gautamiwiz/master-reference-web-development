@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asset&display=swap"
+      rel="stylesheet"
+    />
+    <title>Text background clip</title>
+    <style>
+      h1.bg1 {
+        font-family: "Asset", cursive;
+        font-size: 5em;
+        background-image: url("../../images/gallery-images/atrangi-checkout-banner-Hemp.png");
+        background-size: contain;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      h1.bg2 span {
+        font-family: "Asset", cursive;
+        font-size: 5em;
+        background-image: url("../../images/gallery-images/atrangi-checkout-banner-Hemp.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="bg1">This is text with background image</h1>
+    <h1 class="bg2"><span>A</span><span>T</span><span>R</span></h1>
+  </body>
+</html>

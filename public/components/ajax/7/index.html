@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch with form data</title>
+  </head>
+  <body>
+    <script>
+      const urlRoot = "https://jsonplaceholder.typicode.com";
+      let url = urlRoot + "/posts";
+
+      let formData = new FormData();
+      formData.append("userId", 1);
+      formData.append("title", "Some title");
+      formData.append("body", "more data for body");
+
+      let options = {
+        method: "POST",
+        mode: "cors",
+        body: formData,
+      };
+      let request = new Request(url, options);
+
+      fetch(request)
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          } else {
+            throw new Error("bad url");
+          }
+        })
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((err) => console.log("Error : ", err.message));
+      //*****************
+      //get
+      const urlRoot2 = "https://jsonplaceholder.typicode.com";
+      let url2 = urlRoot2 + "/posts?userId=1";
+      let options2 = {
+        method: "GET",
+      };
+      let request2 = new Request(url2, options2);
+
+      fetch(request2)
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          } else {
+            throw new Error("bad url");
+          }
+        })
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((err) => console.log("Error : ", err.message));
+    </script>
+  </body>
+</html>

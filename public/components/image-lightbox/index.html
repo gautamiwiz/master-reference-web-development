@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript for Web Designers - Simple image lightbox demo</title>
+
+    <link rel="stylesheet" href="gStyle.css" />
+  </head>
+  <body>
+    <div class="gallery-container">
+      <ul class="gallery">
+        <li>
+          <a href="#" alt="Gallery image"><img src="thumbs/1.jpg" data-lightbox="image-source/1.jpg" alt="Gallery image" /></a>
+        </li>
+        <li>
+          <a href="#" alt="Gallery image"><img src="thumbs/2.jpg" data-lightbox="image-source/2.jpg" alt="Gallery image" /></a>
+        </li>
+        <li>
+          <a href="#" alt="Gallery image"><img src="thumbs/3.jpg" data-lightbox="image-source/3.jpg" alt="Gallery image" /></a>
+        </li>
+        <li>
+          <a href="#" alt="Gallery image"><img src="thumbs/4.jpg" data-lightbox="image-source/4.jpg" alt="Gallery image" /></a>
+        </li>
+      </ul>
+    </div>
+    <!-- end gallery-container -->
+
+    <div id="lightbox-overlay">
+      <img src="" alt="Lightbox image" title="Click anywhere to close" id="lightbox-image" />
+    </div>
+    <!-- end lightbox-overlay -->
+
+    <script src="gScript.js"></script>
+  </body>
+</html>

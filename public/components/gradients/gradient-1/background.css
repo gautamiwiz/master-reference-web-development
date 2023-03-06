@@ -1,0 +1,5 @@
+@charset "utf-8";
+
+article {
+  background: url(landscape.png) no-repeat bottom/100%, blue;
+}

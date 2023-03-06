@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Menu and Navbar : Only CSS</title>
+    <style>
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg-color: rgba(0, 0, 255, 0.8);
+      }
+
+      header {
+        background-color: var(--bg-color);
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+      }
+      nav {
+        position: absolute;
+        background-color: var(--bg-color);
+        text-align: left;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        transform: scale(1, 0);
+        transition: transform 400ms ease-in-out;
+        transform-origin: top;
+      }
+
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      nav li {
+        margin-bottom: 1em;
+        margin-left: 1em;
+        list-style: none;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        opacity: 0;
+        transition: opacity 150ms ease-in-out;
+      }
+
+      nav a:hover {
+        color: black;
+      }
+
+      /* .navToggle {
+  display: none;
+} */
+
+      /* changed this from the tutorial video to
+   allow it to gain focus, making it tabbable */
+      .navToggle {
+        position: absolute !important;
+        top: -9999px !important;
+        left: -9999px !important;
+      }
+
+      .navToggle:focus ~ .menuBar {
+        outline: 3px solid rgba(red, 0.75);
+      }
+
+      .menuBar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 1em;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      .menuBar span,
+      .menuBar span::before,
+      .menuBar span::after {
+        display: block;
+        background-color: #fff;
+        height: 2px;
+        width: 2em;
+        border-radius: 3px;
+        position: relative;
+      }
+
+      .menuBar span::before,
+      .menuBar span::after {
+        content: "";
+        position: absolute;
+      }
+
+      .menuBar span::before {
+        bottom: 7px;
+      }
+      .menuBar span::after {
+        top: 7px;
+      }
+
+      .navToggle:checked ~ nav {
+        transform: scale(1, 1);
+      }
+
+      .navToggle:checked ~ nav a {
+        opacity: 1;
+        transition: opacity 250ms ease-in-out 250ms;
+      }
+
+      .content {
+        background-image: url("1.gif");
+        background-repeat: repeat;
+        background-position: center center;
+        height: 200vh;
+        margin: 0;
+        padding: 100px 20px 50px 20px;
+      }
+
+      @media screen and (min-width: 750px) {
+        .menuBar {
+          display: none;
+        }
+        header {
+          display: grid;
+          grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+        }
+
+        .logo {
+          grid-column: 2 / span 1;
+        }
+
+        nav {
+          all: unset;
+          grid-column: 3 / 4;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+        }
+        nav ul {
+          display: flex;
+        }
+
+        nav li {
+          margin-left: 3em;
+          margin-bottom: 0;
+        }
+        nav a {
+          opacity: 1;
+          position: relative;
+        }
+        nav a::before {
+          content: "";
+          display: block;
+          height: 5px;
+          background-color: #000;
+          position: absolute;
+          top: -0.75em;
+          left: 0;
+          right: 0;
+          transform: scale(0, 1);
+          transform-origin: left;
+          transition: transform ease-in-out 250ms;
+        }
+
+        nav a:hover::before {
+          transform: scale(1, 1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">Brand Name</h1>
+      <input type="checkbox" id="menu" class="navToggle" />
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Services</a></li>
+        </ul>
+      </nav>
+      <label for="menu" class="menuBar">
+        <span></span>
+      </label>
+    </header>
+    <div class="content">
+      <p>Content comes here</p>
+    </div>
+  </body>
+</html>

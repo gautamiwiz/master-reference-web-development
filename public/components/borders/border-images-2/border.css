@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/*
+   LinkedIn Learning Video Tutorial
+   Enhancing Website Graphics
+   
+   Chapter 2:  Creating Borders
+   Exercise 2: Element Borders with Flair
+   
+   File: border.css
+
+*/
+
+article {
+  border: 50px solid transparent;
+  border-image: url(frame.png) 129 164 /200px /20px round;
+}
+
+article header {
+  border: 8px gray ridge;
+  border-radius: 35px;
+}

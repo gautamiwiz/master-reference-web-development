@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backgrounds by iWiz</title>
+    <style>
+        img {
+            border: 1px solid #efefef;
+            border-radius: 5px 5px;
+            padding : 4px;
+            width: 100%;
+            max-width: 75px; min-width: 75px;
+            max-height: 75px; max-height: 75px;
+            cursor: pointer;
+        }
+    </style>
+     
+    
+</head>
+<body style="background-image: url(images/1.gif); background-repeat: repeat; background-attachment: fixed;">
+    
+    <div style="width: 80%; max-width: 800px; margin: 200px auto 300px; background-color: #fff; padding: 10px;">        
+        <h1 style="text-align: center;">Select Background Pattern</h1>
+        <img src="images/1.gif" alt="Background Image" id="changeImage1" class="changeImage" />
+        <img src="images/2.png" alt="Background Image" class="changeImage" />
+        <img src="images/3.png" alt="Background Image" class="changeImage" />
+        <img src="images/4.gif" alt="Background Image" class="changeImage" />
+        <img src="images/5.png" alt="Background Image" class="changeImage" />
+        <img src="images/6.png" alt="Background Image" class="changeImage" />
+        <img src="images/7.png" alt="Background Image" class="changeImage" />
+        <img src="images/8.png" alt="Background Image" class="changeImage" />
+        <img src="images/9.png" alt="Background Image" class="changeImage" />
+        <img src="images/10.png" alt="Background Image" class="changeImage" />
+        <img src="images/11.png" alt="Background Image" class="changeImage" />
+        <img src="images/12.png" alt="Background Image" class="changeImage" />
+        <img src="images/13.png" alt="Background Image" class="changeImage" />
+        <img src="images/14.png" alt="Background Image" class="changeImage" />
+        <img src="images/15.png" alt="Background Image" class="changeImage" />
+        <img src="images/16.png" alt="Background Image" class="changeImage" />
+        <img src="images/17.png" alt="Background Image" class="changeImage" />
+        <img src="images/18.png" alt="Background Image" class="changeImage" />
+        <img src="images/19.png" alt="Background Image" class="changeImage" />
+        <img src="images/20.png" alt="Background Image" class="changeImage" />
+        <img src="images/21.png" alt="Background Image" class="changeImage" />
+        <img src="images/22.png" alt="Background Image" class="changeImage" />
+        <img src="images/23.png" alt="Background Image" class="changeImage" />
+        <img src="images/24.png" alt="Background Image" class="changeImage" />
+        <img src="images/25.png" alt="Background Image" class="changeImage" />
+        <img src="images/26.png" alt="Background Image" class="changeImage" />
+        <img src="images/27.png" alt="Background Image" class="changeImage" />
+        <img src="images/28.png" alt="Background Image" class="changeImage" />
+        <img src="images/29.png" alt="Background Image" class="changeImage" />
+        <img src="images/30.png" alt="Background Image" class="changeImage" />
+        <img src="images/31.png" alt="Background Image" class="changeImage" />
+        <img src="images/32.png" alt="Background Image" class="changeImage" />
+        <img src="images/33.png" alt="Background Image" class="changeImage" />
+        <img src="images/34.png" alt="Background Image" class="changeImage" />
+        <img src="images/35.png" alt="Background Image" class="changeImage" />
+        <img src="images/36.png" alt="Background Image" class="changeImage" />
+        <img src="images/37.png" alt="Background Image" class="changeImage" />
+        <img src="images/38.png" alt="Background Image" class="changeImage" />
+        <img src="images/39.png" alt="Background Image" class="changeImage" />
+        
+    </div>
+    <script type="text/javascript"> 
+        var body = document.getElementsByTagName("body");	 
+        
+        document.querySelectorAll('.changeImage').forEach(item => {
+            item.addEventListener('click', event => {
+                //alert(item.getAttribute('src'));
+                var x = "url(" + item.getAttribute('src') + ")";
+                body[0].style.backgroundImage = x;
+            })
+        })
+    </script> 
+</body>
+</html>

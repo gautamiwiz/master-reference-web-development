@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex</title>
+    <link rel="stylesheet" href="flex.css" />
+    <style>
+      .orange {
+        background-color: orange;
+      }
+      .red {
+        background-color: red;
+      }
+      .pink {
+        background-color: pink;
+      }
+      .grey {
+        background-color: gray;
+      }
+      img {
+        width: 100%;
+        max-width: 800px;
+        display: block;
+        padding: 20px;
+        margin: auto;
+      }
+      h3 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Flex Space around</h3>
+    <div class="wrapper">
+      <div class="row">
+        <div class="col-1 orange">One Column</div>
+        <div class="col-1 orange">One Column</div>
+        <div class="col-1 orange">One Column</div>
+        <div class="col-1 orange">One Column</div>
+      </div>
+      <div class="row">
+        <div class="col-2 red">Two Columns</div>
+        <div class="col-2 red">Two Columns</div>
+      </div>
+      <div class="row">
+        <div class="col-1 orange">One Column</div>
+        <div class="col-3 pink">Three Column</div>
+      </div>
+      <div class="row">
+        <div class="col-4 grey">Four Column</div>
+      </div>
+    </div>
+    <div>
+      <img src="flex.png" alt="Flex Calculation" />
+    </div>
+
+    <div class="wrapper3">
+      <h3>
+        height 50px | Justify-content: space-between | align-items: stretch
+        (default)
+      </h3>
+      <div class="flex row1">
+        <div class="orange">One Column</div>
+        <div class="red">One Column</div>
+        <div class="pink">One Column</div>
+        <div class="grey">One Column</div>
+      </div>
+      <h3>
+        height 50px | Justify-content: space-around | align-items: stretch
+        (default)
+      </h3>
+      <div class="flex row2">
+        <div class="orange">One Column</div>
+        <div class="red">One Column</div>
+        <div class="pink">One Column</div>
+        <div class="grey">One Column</div>
+      </div>
+      <h3>
+        height 50px | Justify-content: space-evenly | align-items: stretch
+        (default)
+      </h3>
+      <div class="flex row3">
+        <div class="orange">One Column</div>
+        <div class="red">One Column</div>
+        <div class="pink">One Column</div>
+        <div class="grey">One Column</div>
+      </div>
+      <h3>
+        height 100px | Justify-content: flex-start | align-items: stretch
+        (default)
+      </h3>
+      <div class="flex row4">
+        <div class="orange">1</div>
+        <div class="red">2</div>
+        <div class="pink">3</div>
+        <div class="grey">4</div>
+      </div>
+      <h3>
+        height 200px | Justify-content: flex-end | align-items: stretch
+        (default)
+      </h3>
+      <div class="flex row5">
+        <div class="orange">1</div>
+        <div class="red">2</div>
+        <div class="pink">3</div>
+        <div class="grey">4</div>
+      </div>
+
+      <h3>
+        height 200px | Justify-content: center | align-items: stretch (default)
+      </h3>
+      <div class="flex row6">
+        <div class="orange">1</div>
+        <div class="red">2</div>
+        <div class="pink">3</div>
+        <div class="grey">4</div>
+      </div>
+
+      <h3>
+        height 80px | Justify-content: space-between | align-items: center
+      </h3>
+      <div class="flex row7">
+        <div class="orange">1</div>
+        <div class="red">2</div>
+        <div class="pink">3</div>
+        <div class="grey">4</div>
+      </div>
+
+      <h3>
+        height 80px | Justify-content: space-between | align-items: flex-start
+      </h3>
+      <div class="flex row8">
+        <div class="orange">1</div>
+        <div class="red">2</div>
+        <div class="pink">3</div>
+        <div class="grey">4</div>
+      </div>
+
+      <h3>
+        height 80px | Justify-content: space-between | align-items: flex-start
+      </h3>
+      <div class="flex row8">
+        <div class="orange">1</div>
+        <div class="red">2</div>
+      </div>
+
+      <h3>
+        height 80px | Justify-content: space-between | align-items: flex-start
+      </h3>
+      <div class="flex row8">
+        <div class="orange">1</div>
+        <div class="red">2</div>
+        <div class="pink">3</div>
+      </div>
+
+      <h3>
+        height 200px | Justify-content: space-between | align-items: flex-start
+      </h3>
+      <div class="flex row9">
+        <div class="orange">some content comes</div>
+        <div class="red">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+          dolorum adipisci delectus voluptate facere fugit eligendi temporibus
+          quis soluta! Voluptatum iste ipsum tempore voluptas reiciendis sunt
+          unde officia dolores blanditiis?
+        </div>
+        <div class="pink">3</div>
+        <div class="grey">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nihil
+          odio, ducimus officia nulla libero dolorem harum cumque delectus
+          sapiente quae perferendis, esse molestiae. Totam adipisci autem vitae
+          consequatur dolorem? Sunt nulla recusandae aut molestias incidunt,
+          officia vero temporibus, atque doloribus veniam, quos at sed illo modi
+          laboriosam tempora! Eius voluptates inventore natus fugit voluptatem
+          rerum laboriosam itaque sunt optio.
+        </div>
+      </div>
+
+      <h3>
+        height 400px | Justify-content: space-between | align-items: center |
+        flex-grow: 1 | flex-basis: 25%
+      </h3>
+      <div class="flex row10">
+        <div class="orange">some content comes</div>
+        <div class="red">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+          dolorum adipisci delectus voluptate facere fugit eligendi temporibus
+          quis soluta! Voluptatum iste ipsum tempore voluptas reiciendis sunt
+          unde officia dolores blanditiis?
+        </div>
+        <div class="pink">3</div>
+        <div class="grey">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nihil
+          odio, ducimus officia nulla libero dolorem harum cumque delectus
+          sapiente quae perferendis, esse molestiae. Totam adipisci autem vitae
+          consequatur dolorem? Sunt nulla recusandae aut molestias incidunt,
+          officia vero temporibus, atque doloribus veniam, quos at sed illo modi
+          laboriosam tempora! Eius voluptates inventore natus fugit voluptatem
+          rerum laboriosam itaque sunt optio.
+        </div>
+      </div>
+
+      <h3>
+        height 80px | Justify-content: space-between | align-items: flex-start
+      </h3>
+      <div class="flex row11">
+        <div class="orange" style="flex-grow: 1">flex-grow: 1</div>
+        <div class="red">2</div>
+        <div class="pink">3</div>
+        <div class="grey">4</div>
+      </div>
+
+      <h3>
+        height 80px | Justify-content: space-between | align-items: flex-start
+      </h3>
+      <div class="flex row11">
+        <div class="orange" style="flex-grow: 1">flex-grow: 1</div>
+        <div class="red" style="flex-grow: 1">flex-grow: 1</div>
+        <div class="pink">3</div>
+        <div class="grey">4</div>
+      </div>
+
+      <h3>
+        height 80px | Justify-content: space-between | align-items: flex-start
+      </h3>
+      <div class="flex row11">
+        <div class="orange" style="flex-grow: 1">flex-grow: 1</div>
+        <div class="red" style="flex-grow: 1">flex-grow: 1</div>
+        <div class="pink" style="flex-grow: 1">flex-grow: 1</div>
+        <div class="grey" style="flex-grow: 1">flex-grow: 1</div>
+      </div>
+
+      <h3>
+        height 80px | Justify-content: space-between | align-items: flex-start
+      </h3>
+      <div class="flex row11">
+        <div class="orange" style="flex-grow: 2">flex-grow: 2</div>
+        <div class="red" style="flex-grow: 1">flex-grow: 1</div>
+        <div class="pink" style="flex-grow: 1">flex-grow: 1</div>
+        <div class="grey" style="flex-grow: 1">flex-grow: 1</div>
+      </div>
+      <h3>
+        height 80px | Justify-content: space-between | align-items: flex-start
+      </h3>
+      <div class="flex row11">
+        <div class="orange" style="flex-grow: 4">flex-grow: 4</div>
+        <div class="red" style="flex-grow: 1">flex-grow: 1</div>
+        <div class="pink" style="flex-grow: 1">flex-grow: 1</div>
+        <div class="grey" style="flex-grow: 1">flex-grow: 1</div>
+      </div>
+      <div class="flex row11">
+        <div class="orange" style="flex-grow: 4">flex-grow: 4</div>
+        <div class="red" style="flex-grow: 1">1</div>
+        <div class="pink" style="flex-grow: 1">1</div>
+        <div class="grey" style="flex-grow: 1">1</div>
+      </div>
+
+      <h3>
+        height 80px | Justify-content: space-between | align-items: flex-start
+      </h3>
+      <div class="flex row11">
+        <div class="orange" style="flex-grow: 2">flex-grow: 2</div>
+        <div class="red" style="flex-grow: 2">flex-grow: 2</div>
+        <div class="pink" style="flex-grow: 1">flex-grow: 1</div>
+        <div class="grey" style="flex-grow: 1">flex-grow: 1</div>
+      </div>
+
+      <h3>
+        height 80px | Justify-content: space-between | align-items: stretch
+      </h3>
+      <div class="flex row12">
+        <div class="orange" style="flex-grow: 2">flex-grow: 2</div>
+        <div class="red" style="flex-grow: 2">flex-grow: 2</div>
+        <div class="pink" style="flex-grow: 1">flex-grow: 1</div>
+        <div class="grey" style="flex-grow: 1">flex-grow: 1</div>
+      </div>
+
+      <h3>
+        height 150px | Justify-content: space-between | align-items: stretch |
+        gap : 10px | overflow: auto
+      </h3>
+      <div class="flex row13">
+        <div class="orange">min-height: 50px | padding: 10px</div>
+        <div class="red">min-height: 50px | padding: 10px</div>
+        <div class="pink">min-height: 50px | padding: 10px</div>
+        <div class="grey">min-height: 50px | padding: 10px</div>
+        <div class="orange">min-height: 50px | padding: 10px</div>
+        <div class="red">min-height: 50px | padding: 10px</div>
+        <div class="pink">min-height: 50px | padding: 10px</div>
+        <div class="grey">min-height: 50px | padding: 10px</div>
+      </div>
+
+      <h3>
+        height 150px | Justify-content: flex-start | align-items: center | gap :
+        10px | flex-wrap: wrap
+      </h3>
+      <div class="flex row14">
+        <div class="orange" style="align-self: flex-start">
+          align-self: flex-start
+        </div>
+        <div class="red">min-height: 50px | padding: 10px</div>
+        <div class="pink">3</div>
+        <div class="grey">4</div>
+        <div class="orange" style="min-height: 80px">
+          min-height: 80px | padding: 10px
+        </div>
+        <div class="red">6</div>
+        <div class="pink">7</div>
+        <div class="grey" style="align-self: flex-end">
+          align-self: flex-end
+        </div>
+      </div>
+
+      <h3>
+        height 150px | Justify-content: flex-start | align-items: stretch | gap
+        : 10px | overflow: auto
+      </h3>
+      <div class="flex row15">
+        <div class="orange">xxx</div>
+        <div class="red" style="flex-grow: 1">flex-grow: 1</div>
+        <div class="pink">xxx</div>
+        <div class="grey">xxx</div>
+      </div>
+
+      <h3>
+        height 150px | Justify-content: flex-start | align-items: stretch | gap
+        : 10px | overflow: auto
+      </h3>
+      <div class="flex row15">
+        <div class="orange">xxx</div>
+        <div class="red">xxx</div>
+        <div class="pink">xxx</div>
+        <div class="grey">xxx</div>
+      </div>
+
+      <h3>
+        height 150px | Justify-content: flex-start | align-items: stretch | gap
+        : 10px | overflow: auto
+      </h3>
+      <div class="flex row15">
+        <div class="orange">xxx</div>
+        <div class="red" style="display: flex; align-items: center">
+          display: flex; align-items: center
+        </div>
+        <div class="pink">xxx</div>
+        <div class="grey">xxx</div>
+      </div>
+    </div>
+  </body>
+</html>

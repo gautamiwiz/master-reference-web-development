@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+body > article { 
+   background: url(england.png) no-repeat bottom/100% border-box , 
+               rgb(211, 176, 143) border-box;
+}
+

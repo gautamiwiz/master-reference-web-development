@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch headers</title>
+  </head>
+  <body>
+    <script>
+      const url = "https://jsonplaceholder.typicode.com/users";
+      //new Request(url)
+      //new Request(url, options)
+      //options : method, headers, body, mode
+      //methods: GET, POST, PUT, DELETE, OPTIONS
+
+      //new Header()
+      //headers.append(name, value)
+      //Content-Type, Content-Length, Accept, Accept-language
+
+      let h = new Headers();
+      h.append("Accept", "application/json"); //or use header.set() to update an existing header
+
+      let request = new Request(url, {
+        method: "GET",
+        headers: h,
+        mode: "cors",
+        //cross origin resourse sharing : policy that allows resource sharing across domains
+      });
+
+      fetch(request)
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          } else {
+            throw new Error("bad url");
+          }
+        })
+        .then((data) => {
+          console.log(data);
+          data.forEach((data, i) => {
+            console.log(`${i + 1}. ${data.name}`);
+          });
+        })
+        .catch((err) => {
+          console.log("Error : ", err.message);
+        });
+    </script>
+  </body>
+</html>

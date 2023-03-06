@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML 5 Semantics | All HTML 5 Tags, uses and explaination</title>
+    <meta
+      name="description"
+      content="This is a page that explain most useful tag in HTML 5 with some example and usage cases."
+    />
+    <link rel="stylesheet" href="gStyle.css" type="text/css" />
+    <script src="gScript.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>HTML 5 : Semantics, uses, tags</h1>
+      </header>
+
+      <section class="htmlTopic" aria-label="HTML Paragraphs">
+        <div class="wrapper">
+          <h2 class="htmlTopicHeading">
+            <span class="htmlTagToAdd tagInsideHeading">p</span>Paragraphs
+            tag<span class="htmlTagToAdd tagInsideHeading">p</span>
+          </h2>
+          <p>
+            You can use paragraphs for any type of text other than heading. Body
+            font size is set to 16px
+          </p>
+          <code>
+            <span class="htmlTagToAdd">p</span>
+            This is a paragraph text @ 16px size.
+            <span class="htmlTagToAdd">p</span>
+          </code>
+          <samp><p>This is a paragraph text @ 16px size.</p></samp>
+        </div>
+      </section>
+
+      <section class="htmlTopic" aria-label="HTML Headings">
+        <div class="wrapper">
+          <h2 class="htmlTopicHeading">
+            <span class="htmlTagToAdd tagInsideHeading">h1</span>Headings<span
+              class="htmlTagToAdd tagInsideHeading"
+              >h6</span
+            >
+          </h2>
+          <p>
+            Headings tell what the page is about. Dont use it unintentionally.
+            Make proper use of heading tags marking clearly what the different
+            areas on the website are about. Do not pick a heading level type
+            based on how it is supposed to look, choose a heading tag based on
+            what it is supposed to mean to the user.
+          </p>
+
+          <code>
+            <span class="htmlTagToAdd">h1</span>
+            This is h1 heading @ 2rem i.e 32px size
+            <span class="htmlTagToAdd">h1</span>
+          </code>
+          <samp><h1>This is h1 heading @ 2rem i.e 32px size</h1></samp>
+
+          <code>
+            <span class="htmlTagToAdd">h2</span>
+            This is h2 heading @ 1.8rem i.e 28px size
+            <span class="htmlTagToAdd">h2</span>
+          </code>
+          <samp><h2>This is h2 heading @ 1.8rem i.e 28px size</h2></samp>
+
+          <code>
+            <span class="htmlTagToAdd">h3</span>
+            This is h3 heading @ 1.6rem i.e 26px size
+            <span class="htmlTagToAdd">h3</span>
+          </code>
+          <samp><h3>This is h3 heading @ 1.6rem i.e 26px size</h3></samp>
+
+          <code>
+            <span class="htmlTagToAdd">h4</span>
+            This is h4 heading @ 1.5rem i.e 24px size
+            <span class="htmlTagToAdd">h4</span>
+          </code>
+          <samp><h4>This is h4 heading @ 1.5rem i.e 24px size</h4></samp>
+
+          <code>
+            <span class="htmlTagToAdd">h5</span>
+            This is h5 heading @ 1.4rem i.e 22px size
+            <span class="htmlTagToAdd">h5</span>
+          </code>
+          <samp><h5>This is h5 heading @ 1.4rem i.e 22px size</h5></samp>
+
+          <code>
+            <span class="htmlTagToAdd">h6</span>
+            This is h6 heading @ 1.2rem i.e 19px size
+            <span class="htmlTagToAdd">h6</span>
+          </code>
+          <samp><h6>This is h6 heading @ 1.2rem i.e 19px size</h6></samp>
+        </div>
+      </section>
+
+      <section class="htmlTopic" aria-label="HTML Inline and block elements">
+        <div class="wrapper">
+          <h2 class="htmlTopicHeading">
+            &lt;Block&gt; &amp; &lt;inline elements /&gt;
+          </h2>
+          <p>A list of block and inline elements</p>
+          <pre>
+<code><span class="htmlTagToAddType2">p</span>
+<span class="htmlTagToAddType2">h1</span>
+<span class="htmlTagToAddType2">section</span>
+<span class="htmlTagToAddType2">article</span>
+<span class="htmlTagToAddType2">header</span>
+<span class="htmlTagToAddType2">footer</span>
+<span class="htmlTagToAddType2">div</span>
+</code>
+</pre>
+        </div>
+      </section>
+
+      <section class="htmlTopic" aria-label="HTML Italics and emphasis">
+        <div class="wrapper">
+          <h2 class="htmlTopicHeading">
+            <span class="htmlTagToAddType2 tagInsideHeading">em</span
+            >Italics<span class="htmlTagToAddType2 tagInsideHeading">i</span>
+          </h2>
+          <p>
+            Verbal emphasis vs visually distinguished. Use
+            <span class="htmlTagToAddType2">em</span> for words that needs to be
+            emphasised verbally and use
+            <span class="htmlTagToAddType2">i</span> for decorative purpose.
+            <br /><br />
+            <span class="htmlTagToAddType2">em</span> : Emplasis Italics <br />
+            <span class="htmlTagToAddType2">i</span> : Visual-only italics
+          </p>
+
+          <code>
+            <span class="htmlTagToAddType2">p</span>
+            My
+            <span class="htmlTagToAddType2">em</span>
+            favourite
+            <span class="htmlTagToAddType2">/em</span>
+            character from
+            <span class="htmlTagToAddType2">i</span>
+            Marvels avengers
+            <span class="htmlTagToAddType2">/i</span>
+            is Iron Man.
+            <span class="htmlTagToAddType2">/p</span>
+          </code>
+          <samp>
+            <p>
+              My <em>favourite</em> character from <i>Marvels avengers</i> is
+              Iron Man.
+            </p>
+          </samp>
+        </div>
+      </section>
+
+      <section class="htmlTopic" aria-label="HTML Bold and Strong">
+        <div class="wrapper">
+          <h2 class="htmlTopicHeading">
+            <span class="htmlTagToAddType2 tagInsideHeading">strong</span
+            >Bold<span class="htmlTagToAddType2 tagInsideHeading">b</span>
+          </h2>
+          <p>
+            Usage of bold tags strong and b <br /><br />
+            <span class="htmlTagToAddType2">strong</span> : Importance,
+            seriousness, urgency <br />
+            <span class="htmlTagToAddType2">b</span> : just bold, dont want to
+            convery any meaning to screen readers.. instead use css with span.
+          </p>
+
+          <code>
+            <span class="htmlTagToAddType2">p</span>
+            <span class="htmlTagToAddType2">strong</span>
+            Warning!
+            <span class="htmlTagToAddType2">/strong</span>
+            Do not be late.
+            <span class="htmlTagToAddType2">/p</span>
+          </code>
+
+          <samp>
+            <p><strong>Warning!</strong> Do not be late.</p>
+          </samp>
+
+          <code>
+            <span class="htmlTagToAddType2">p</span>
+            <span class="htmlTagToAddType2">strong</span>
+            Chocolate and coffee
+            <span class="htmlTagToAddType2">/strong</span>
+            and other things I crave.
+            <span class="htmlTagToAddType2">/p</span>
+          </code>
+          <samp>
+            <p>
+              <strong>Chocolate and coffee</strong> and other things I crave.
+            </p>
+          </samp>
+
+          <code>
+            <span class="htmlTagToAddType2">p</span>
+            This is some paragraph and we want to
+            <span class="htmlTagToAddType2">b</span>
+            make some things bold
+            <span class="htmlTagToAddType2">/b</span>
+            just to show the use of b tags.
+            <span class="htmlTagToAddType2">/p</span>
+          </code>
+          <samp>
+            <p>
+              This is some paragraph and we want to
+              <b>make some things bold</b> just to show the use of b tags.
+            </p>
+          </samp>
+        </div>
+      </section>
+
+      <section class="htmlTopic" aria-label="HTML Lists">
+        <div class="wrapper">
+          <h2 class="htmlTopicHeading">
+            <span class="htmlTagToAddType2 tagInsideHeading">ul</span>Lists<span
+              class="htmlTagToAddType2 tagInsideHeading"
+              >li</span
+            >
+          </h2>
+          <p>Ordered List, Unordered list and definition list</p>
+
+          <pre><code><span class="htmlTagToAddType2">ul</span>
+<span class="htmlTagToAddType2">li</span>Ingredient 1<span class="htmlTagToAddType2">/li</span>
+<span class="htmlTagToAddType2">li</span>Ingredient 2<span class="htmlTagToAddType2">/li</span>
+<span class="htmlTagToAddType2">li</span>Ingredient 3<span class="htmlTagToAddType2">/li</span>
+<span class="htmlTagToAddType2">/ul</span>
+</code>
+    </pre>
+          <samp>
+            <ul>
+              <li>Menu item 1</li>
+              <li>Menu item 2</li>
+              <li>Menu item 3</li>
+            </ul>
+          </samp>
+
+          <pre><code><span class="htmlTagToAddType2">ol</span>
+<span class="htmlTagToAddType2">li</span>First do step 1<span class="htmlTagToAddType2">/li</span>
+<span class="htmlTagToAddType2">li</span>Then follow step 2<span class="htmlTagToAddType2">/li</span>
+<span class="htmlTagToAddType2">li</span>After step 2 do step 3<span class="htmlTagToAddType2">/li</span>
+<span class="htmlTagToAddType2">/ol</span>
+</code>
+</pre>
+
+          <samp>
+            <ol>
+              <li>First do step 1</li>
+              <li>Then follow step 2</li>
+              <li>After step 2 do step 3</li>
+            </ol>
+          </samp>
+
+          <pre>
+<code><span class="htmlTagToAddType2">dl</span>
+  <span class="htmlTagToAddType2">dt</span>Definition Term<span class="htmlTagToAddType2">/dt</span>
+    <span class="htmlTagToAddType2">dd</span>Definition description comes here.<span class="htmlTagToAddType2">dd</span>
+    <span class="htmlTagToAddType2">dd</span>There can be a second or upto n description too for each dt.<span class="htmlTagToAddType2">/dd</span>
+  <span class="htmlTagToAddType2">dt</span>Another heading<span class="htmlTagToAddType2">/dt</span>
+    <span class="htmlTagToAddType2">dd</span>Description for another heading comes here.<span class="htmlTagToAddType2">/dd</span>
+<span class="htmlTagToAddType2">/dl</span>
+</code>
+</pre>
+
+          <samp>
+            <dl>
+              <dt>Definition Term</dt>
+              <dd>Definition description comes here.</dd>
+              <dd>
+                There can be a second or upto n description too for each dt.
+              </dd>
+
+              <dt>Another heading</dt>
+              <dd>Description for another heading comes here.</dd>
+            </dl>
+          </samp>
+        </div>
+      </section>
+
+      <section class="htmlTopic" aria-label="HTML Quotes">
+        <div class="wrapper">
+          <h2 class="htmlTopicHeading">
+            <span class="htmlTagToAddType2 tagInsideHeading"
+              >blockquote<wbr /></span
+            >Quote<span class="htmlTagToAddType2 tagInsideHeading">q</span>
+          </h2>
+          <p>Blockquote and inline quote.</p>
+          <pre><code><span class="htmlTagToAddType2">p</span>This is an inline quote,<span class="htmlTagToAddType2">br /</span> Albert einstein once said <span class="htmlTagToAddType2">q cite="https://linkto&shy;thequote"</span>The best design is the simplest one that works.<span class="htmlTagToAddType2">/q</span><span class="htmlTagToAddType2">/p</span></code>
+</pre>
+
+          <samp>
+            <p>
+              This is an inline quote,<br /><br />
+              Albert einstein once said
+              <q cite="https://linktothequote"
+                >The best design is the simplest onethat works.</q
+              >
+            </p>
+          </samp>
+          <pre>
+<code><span class="htmlTagToAddType2">blockquote cite="https://linkto&shy;thequote"</span>
+<span class="htmlTagToAddType2">p</span>The best design is the simplest one that works<span class="htmlTagToAddType2">/p</span>
+<span class="htmlTagToAddType2">cite</span>Albert Einstein<span class="htmlTagToAddType2">/cite</span>
+<span class="htmlTagToAddType2">blockquote</span>
+</code>
+</pre>
+
+          <samp>
+            <p>This is a block quote</p>
+            <br />
+            <blockquote cite="https://linktothequote">
+              <p>The best design is the simplest one that works</p>
+              <cite>- Albert Einstein</cite>
+            </blockquote>
+          </samp>
+        </div>
+      </section>
+
+      <section class="htmlTopic" aria-label="HTML Date and Time">
+        <div class="wrapper">
+          <h2 class="htmlTopicHeading">
+            <span class="htmlTagToAddType2 tagInsideHeading">time</span>Date
+            &amp; Time<span class="htmlTagToAddType2 tagInsideHeading"
+              >/time</span
+            >
+          </h2>
+          <p>Add an attribute called YYYY-MM-DD and hh-mm-ss.ddd+-hh:mm</p>
+
+          <code>
+            <span class="htmlTagToAddType2">time datetime="2025-05-08"</span>May
+            8, 2025<span class="htmlTagToAddType2">/time</span>
+          </code>
+          <samp><time datetime="2025-05-08">May 8, 2025</time></samp>
+
+          <code>
+            <span class="htmlTagToAddType2">time datetime="15:45-05:00"</span
+            >3:45pm in Newyork<span class="htmlTagToAddType2">/time</span>
+          </code>
+
+          <code>
+            <span class="htmlTagToAddType2"
+              >time datetime="2020-11-04T19:00"</span
+            >Wednesday, Nov 4th at 7pm<span class="htmlTagToAddType2"
+              >/time</span
+            >
+          </code>
+
+          <code>
+            <span class="htmlTagToAddType2"
+              >time datetime="2020-11-04 19:00-05:00"</span
+            >Wednesday, Nov 4th at 7pm<span class="htmlTagToAddType2"
+              >/time</span
+            >
+          </code>
+        </div>
+      </section>
+
+      <section class="htmlTopic" aria-label="HTML code, pre, br">
+        <div class="wrapper">
+          <h2 class="htmlTopicHeading">
+            <span class="htmlTagToAddType2 tagInsideHeading">code</span> Code
+            <span class="htmlTagToAddType2 tagInsideHeading">pre</span> line
+            breaks
+            <span class="htmlTagToAddType2 tagInsideHeading">br /</span>
+          </h2>
+          <p>
+            br is to give a line break. <br />
+            code tags are used to show a piece of code on the webpage<br />
+            pre tags are used to retain format, spacing etc, example show some
+            poem in format that has multiple line breaks, or show code line by
+            line.
+          </p>
+          <code>
+            This is a single line
+            <span class="htmlTagToAddType2">br /</span> broken into secong line
+            and <span class="htmlTagToAddType2">br /</span> then the third line.
+          </code>
+          <samp
+            >This is a single line<br />
+            broken into secong line and <br />
+            then the third line.</samp
+          >
+        </div>
+      </section>
+
+      <section class="htmlTopic" aria-label="XXX">
+        <div class="wrapper">
+          <h2 class="htmlTopicHeading">
+            <span class="htmlTagToAddType2 tagInsideHeading">sup</span>Sup, Sub,
+            Small<span class="htmlTagToAddType2 tagInsideHeading">small</span>
+          </h2>
+          <p>
+            Subscript, superscript and small text(text of low prominance,
+            copyright info etc).
+          </p>
+
+          <code>
+            h<span class="htmlTagToAddType2">sub</span>2<span
+              class="htmlTagToAddType2"
+              >sub</span
+            >o
+          </code>
+          <samp>h<sub>2</sub>o</samp>
+
+          <code>
+            10<span class="htmlTagToAddType2">sup</span>th<span
+              class="htmlTagToAddType2"
+              >sup</span
+            >, condition<span class="htmlTagToAddType2">sup</span>1<span
+              class="htmlTagToAddType2"
+              >sup</span
+            >
+          </code>
+          <samp>
+            10<sup>th</sup>, condition<sup>1</sup>, condition<sup>2</sup>
+          </samp>
+
+          <code>
+            <span class="htmlTagToAddType2">small</span>
+            This is low importance text.
+            <span class="htmlTagToAddType2">/small</span>
+          </code>
+          <samp><small>This is low importance text.</small></samp>
+        </div>
+      </section>
+
+      <section class="htmlTopic" aria-label="HTML Images">
+        <div class="wrapper">
+          <h2 class="htmlTopicHeading">Images</h2>
+          <p>
+            alt attribute: descriptive.. avoid image name or irrelavant text.<br />
+            current image is showing at this size because of a class called
+            "img{width: 100%}. You can specify width and height on image via
+            class or as attribute"
+          </p>
+          <code>
+            <span class="htmlTagToAddType2"
+              >img src="images/zebra.jpg" alt="Zebra in a Jungle" /</span
+            >
+          </code>
+          <samp><img src="images/zebra.jpg" alt="Zebra in a Jungle" /></samp>
+
+          <p>
+            Image with dimensions. The image zebra is 1280x853 pixels. If we try
+            1/4 of it, ie. width = 1280/4
+          </p>
+          <code>
+            <span class="htmlTagToAddType2"
+              >img src="images/zebra.jpg" alt="Zebra in a Jungle" width="320"
+              /</span
+            >
+          </code>
+          <samp
+            ><img src="images/zebra.jpg" alt="Zebra in a Jungle" width="320"
+          /></samp>
+
+          <p>
+            Size : 500 X 500, 70Kb <br />
+            <img src="images/island-500.jpg" alt="Island at size 500" />
+          </p>
+          <p>
+            Size : 1500 x 1500, 547Kb<br />
+            <img src="images/island-1500.jpg" alt="Island at size 1500" />
+          </p>
+          <p>
+            Size 3000 x 3000, 1.8Mb<br />
+            <img src="images/island-3000.jpg" alt="Island at size 3000" />
+          </p>
+
+          <p>
+            Responsive Images<br />
+            <img
+              src="images/island-500.jpg"
+              alt="Island"
+              width="100%"
+              srcset="
+                images/island-500.jpg  1x,
+                images/island-1500.jpg 2x,
+                images/island-3000.jpg 4x
+              "
+            />
+          </p>
+          <p>
+            Responsive Images<br />
+            <img
+              src="images/island-500.jpg"
+              alt="Island"
+              width="100%"
+              srcset="
+                images/island-500.jpg   500w,
+                images/island-1500.jpg 1500w,
+                images/island-3000.jpg 3000w
+              "
+            />
+          </p>
+          <p>
+            Picture elements
+            <picture>
+              <source
+                media="(min-width: 1000px)"
+                srcset="images/island-3000.jpg"
+              />
+              <source
+                media="(min-width: 500px) and (max-width: 999px)"
+                srcset="images/scene-4477x6715-min.jpg"
+              />
+              <img src="images/island-500.jpg" alt="Island" width="100%" />
+            </picture>
+          </p>
+
+          <p>
+            Figure and figcaption<br />
+            <figure>
+              <img src="images/zebra.jpg" alt="Zebra" width="100" />
+              <figcaption>
+                This is the picture of a zebra in a junle. Use descriptive text.
+                Concept etc
+              </figcaption>
+            </figure>
+          </p>
+        </div>
+      </section>
+
+      <section class="htmlTopic" aria-label="XXX">
+        <div class="wrapper">
+          <h2 class="htmlTopicHeading">heading</h2>
+          <p>Description</p>
+          <code>Code comes here</code>
+          <samp>Output comes here</samp>
+        </div>
+      </section>
+
+      <section class="htmlTopic" aria-label="XXX">
+        <div class="wrapper">
+          <h2 class="htmlTopicHeading">heading</h2>
+          <p>Description</p>
+          <code>Code comes here</code>
+          <samp>Output comes here</samp>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

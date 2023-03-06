@@ -1,0 +1,18 @@
+:root {
+  --bg: white;
+  --text: red;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+[data-theme="dark"] {
+  --bg: black;
+  --text: white;
+}
+
+button {
+  cursor: pointer;
+}

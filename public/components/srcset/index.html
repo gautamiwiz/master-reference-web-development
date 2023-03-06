@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image SRC Test</title>
+    <style>
+        body{
+            margin:0; padding:0;
+        }
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    <h1>Image test for multiple browsers</h1>
+    <figure>
+        <img 
+        src="extra-large-6000.jpg"
+        srcset="small-500.jpg 500w, 
+                medium-1000.jpg 1000w, 
+                large-2000.jpg 2000w, 
+                extra-large-6000.jpg 6000w"
+         alt="Scenic Image" />
+        <figcaption>Scenery test by Gautam Sharma</figcaption>
+    </figure>
+    <figure>
+        <img 
+        src="extra-large-6000.jpg"
+        srcset="small-500.jpg, 
+                medium-1000.jpg 2x, 
+                large-2000.jpg 3x, 
+                extra-large-6000.jpg 4x"
+         alt="Scenic Image" />
+        <figcaption>Scenery test by Gautam Sharma</figcaption>
+    </figure>
+
+</body>
+</html>

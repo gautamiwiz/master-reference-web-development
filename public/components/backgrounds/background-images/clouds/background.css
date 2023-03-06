@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/*
+   LinkedIn Learning Video Tutorial
+   Enhancing Website Graphics
+   
+   Chapter 1:  Designing your Background
+   Exercise 1: Building a Background
+   
+   File: background.css
+
+
+*/
+article {
+  background: url(wordsworth.png) no-repeat bottom right / 40% border-box,
+    url(daffodil.png) repeat-y top left / 80px,
+    url(clouds.jpg) no-repeat top left / cover content-box, skyblue;
+  background-blend-mode: screen, normal;
+}

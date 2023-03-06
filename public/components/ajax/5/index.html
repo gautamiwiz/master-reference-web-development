@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let p1 = new Promise((resolve, reject) => {
+        //write any code you want
+        let x = 5;
+        resolve(x); //calling resolve will call then()
+        //reject(x);
+      });
+
+      //call the promise.. the then below is called when the resolve is called above
+      p1.then((ex) => {
+        console.log(ex * 2);
+        return ex * 2;
+      })
+        .then((a) => {
+          console.log(a + 1);
+        })
+        .catch((err) => {
+          console.log("error : ", err);
+        });
+
+      //**********************************
+      //another type
+      const rand = () => Math.floor(Math.random() * 100) + 1;
+
+      let p2 = new Promise((resolve, reject) => {
+        setTimeout(resolve, 1500, rand());
+      });
+
+      p2.then((x) => {
+        console.log(x);
+      });
+    </script>
+  </body>
+</html>

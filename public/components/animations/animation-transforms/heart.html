@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --heart-size: 200px;
+        --heart-size-offset: calc(var(--heart-size) / 2);
+        /*this second variable is just to calculate the offset */
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      #heart {
+        width: var(--heart-size);
+        height: var(--heart-size);
+        background-color: pink;
+        position: relative;
+        /* transform: rotate(-45deg); */
+        transform: rotate(45deg);
+      }
+
+      #heart::after {
+        content: "";
+        width: var(--heart-size);
+        height: var(--heart-size);
+        border-radius: 50%;
+        background-color: pink;
+        position: absolute;
+        top: 0;
+        right: var(--heart-size-offset);
+        /* right: calc(-1 * var(--heart-size-offset)); */
+        /*use the above to create a after circle either on right or left*/
+      }
+      #heart::before {
+        content: "";
+        width: var(--heart-size);
+        height: var(--heart-size);
+        border-radius: 50%;
+        background-color: pink;
+        position: absolute;
+        top: -100px;
+
+        left: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="heart"></div>
+  </body>
+</html>

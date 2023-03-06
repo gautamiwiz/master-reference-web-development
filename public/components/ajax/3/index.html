@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        border-radius: 5px;
+      }
+      section {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-flow: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="getData">Get Github Users</button>
+    <script>
+      document.getElementById("getData").addEventListener("click", getData);
+      function getData() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://api.github.com/users", true);
+
+        xhr.onload = function () {
+          if (xhr.status == 200) {
+            //console.log("File found");
+            let gitHubUsers = JSON.parse(xhr.responseText);
+            let sectionUsers = document.createElement("section");
+            for (let image in gitHubUsers) {
+              let eachUserImageContainer = document.createElement("div");
+              let eachUserImageFile = document.createElement("img");
+              eachUserImageFile.setAttribute("src", gitHubUsers[image].avatar_url);
+              eachUserImageFile.setAttribute("width", 100);
+
+              eachUserImageContainer.append(eachUserImageFile);
+              sectionUsers.append(eachUserImageContainer);
+              console.log(gitHubUsers[image].avatar_url);
+            }
+
+            document.body.append(sectionUsers);
+          } else {
+            //console.log("file not found");
+          }
+        };
+
+        xhr.send();
+      }
+    </script>
+  </body>
+</html>

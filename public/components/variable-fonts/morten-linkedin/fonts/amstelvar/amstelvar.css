@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Amstelvar";
+  font-weight: 100 900;
+  font-style: normal;
+  font-stretch: 25% 140%;
+  src: url("Amstelvar-Roman-VF.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Amstelvar";
+  font-weight: 100 900;
+  font-style: italic;
+  font-stretch: 25% 140%;
+  src: url("Amstelvar-Italic-VF.ttf") format("truetype");
+  font-display: swap;
+}

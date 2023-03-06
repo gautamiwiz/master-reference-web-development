@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+/* Variables */
+/* Styles */
+body {
+  background: #86bb89;
+  font-family: "Oswald", sans-serif;
+}
+body .title {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+body .title h1, body .title h2 {
+  color: white;
+  font-weight: normal;
+  margin: 0;
+  text-shadow: 0px 2px rgba(0, 0, 0, 0.18);
+}
+body .title h1 {
+  font-size: 30px;
+  margin-top: 40px;
+}
+body .title h2 {
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+body .wrapper {
+  width: 400px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0px 2px rgba(0, 0, 0, 0.12);
+}
+body .wrapper label {
+  display: block;
+  position: relative;
+  color: #b5abab;
+  overflow: hidden;
+  cursor: pointer;
+  height: 56px;
+  -webkit-transition: text-indent 0.2s;
+  text-indent: 20px;
+  padding-top: 1px;
+}
+body .wrapper ul {
+  margin: 0;
+  padding: 0;
+}
+body .wrapper li {
+  color: white;
+  list-style-type: none;
+}
+body .wrapper li a {
+  display: block;
+  width: 100%;
+  padding: 15px 0px;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+body .wrapper li a:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+body .wrapper label:hover {
+  background: rgba(203, 228, 205, 0.6) !important;
+  color: #4f7351;
+  text-indent: 30px;
+  -webkit-transition: text-indent 0.2s;
+  transition: text-indent 0.2s;
+}
+body .wrapper input[type="checkbox"] {
+  display: none;
+}
+body .wrapper span {
+  height: 3px;
+  position: absolute;
+  width: 0px;
+  display: block;
+  top: 58px;
+  background: #38B087;
+}
+body .wrapper .content {
+  height: 0;
+  background: rgba(92, 127, 94, 0.72);
+  height: 100%;
+  position: relative;
+  border-top: 2px solid rgba(0, 0, 0, 0.12);
+  top: 4px;
+}
+body .wrapper .lil_arrow {
+  width: 5px;
+  height: 5px;
+  -webkit-transition: transform 0.8s;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border-top: 2px solid rgba(0, 0, 0, 0.33);
+  border-right: 2px solid rgba(0, 0, 0, 0.33);
+  float: right;
+  position: relative;
+  top: -30px;
+  right: 27px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+body .wrapper input[type="checkbox"]:checked + label > .content {
+  display: block;
+  color: #fff;
+}
+body .wrapper input[type="checkbox"]:checked + label > span {
+  display: none;
+}
+body .wrapper input[type="checkbox"]:checked + label > .lil_arrow {
+  -webkit-transition: transform 0.8s;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+body .wrapper input[type="checkbox"]:checked + label {
+  display: block;
+  background: rgba(203, 228, 205, 0.6) !important;
+  color: #4f7351;
+  text-indent: 30px;
+  height: 100%;
+  -webkit-transition: height 0.8s;
+  transition: height 0.8s;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+body .wrapper label:hover > span {
+  width: 100%;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: width 0.4s;
+  transition: width 0.4s;
+}
+body .wrapper input[type='checkbox']:not(:checked) + label {
+  display: block;
+  -webkit-transition: height 0.8s;
+  transition: height 0.8s;
+  height: 60px;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.align {line-height: 2.5;}
+.alignright {text-align: left;}
+
+
+    </style>
+    
+</head>
+<body>
+    <div class='title'>
+        <h1>
+          Restaurant Menu
+        </h1>
+      </div>
+      <div class='wrapper'>
+        <input id='pictures' type='checkbox'>
+        <label for='pictures'>
+          <p>Starters</p>
+          <div class='lil_arrow'></div>
+          <div class='content'>
+            <table style="width: 100%;" class="align">
+              <tbody>
+                <tr>
+                  <td>Veg Manchurian</td>
+                  <td class="alignright">₹ 260</td>
+                </tr>
+                <tr>
+                  <td>Baby Corn Manchurian</td>
+                  <td class="alignright">₹ 240</td>
+                </tr>
+                <tr>
+                  <td>Gobie Manchurian</td>
+                  <td class="alignright">₹ 220</td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+          <span></span>
+        </label>
+        <input id='jobs' type='checkbox'>
+        <label for='jobs'>
+          <p>Main Course</p>
+          <div class='lil_arrow'></div>
+          <div class='content'>
+            <table style="width: 100%;" class="align">
+              <tbody>
+                <tr>
+                  <td>Dal Fry</td>
+                  <td class="alignright">₹ 260</td>
+                </tr>
+                <tr>
+                  <td>Palak Paneer</td>
+                  <td class="alignright">₹ 240</td>
+                </tr>
+                <tr>
+                  <td>Chicken Curry</td>
+                  <td class="alignright">₹ 220</td>
+                </tr>
+                <tr>
+                  <td>Kadai Chicken</td>
+                  <td class="alignright">₹ 240</td>
+                </tr>
+                <tr>
+                  <td>Butter Chicken</td>
+                  <td class="alignright">₹ 220</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <span></span>
+        </label>
+        <input id='events' type='checkbox'>
+        <label for='events'>
+          <p>Seafood Dishes</p>
+          <div class='lil_arrow'></div>
+          <div class='content'>
+            <table class="table align" style="width: 100%;">
+              <tbody>
+                <tr>
+                  <td>Fish Fry</td>
+                  <td class="alignright">₹ 260</td>
+                </tr>
+                <tr>
+                  <td>Fish Masala</td>
+                  <td class="alignright">₹ 240</td>
+                </tr>
+                <tr>
+                  <td>Apollo Fish</td>
+                  <td class="alignright">₹ 220</td>
+                </tr>
+                <tr>
+                  <td>Fish Manchurian</td>
+                  <td class="alignright">₹ 240</td>
+                </tr>
+                <tr>
+                  <td>Prawns Jhai Fry</td>
+                  <td class="alignright">₹ 220</td>
+                </tr>
+                <tr>
+                  <td>Pepper Prawns</td>
+                  <td class="alignright">₹ 220</td>
+                </tr>
+                <tr>
+                  <td>Loose Prawns</td>
+                  <td class="alignright">₹ 240</td>
+                </tr>
+                <tr>
+                  <td>Prawns 65</td>
+                  <td class="alignright">₹ 220</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <span></span>
+        </label>
+        <input id='financial' type='checkbox'>
+        <label for='financial'>
+          <p>Rice and Biryanies</p>
+          <div class='lil_arrow'></div>
+          <div class='content'>
+            <table class="table align" style="width: 100%;">
+              <tbody>
+                <tr>
+                  <td>Chicken Dum Biryani</td>
+                  <td class="alignright">₹ 260</td>
+                </tr>
+                <tr>
+                  <td>Fry Piece Biryani</td>
+                  <td class="alignright">₹ 240</td>
+                </tr>
+                <tr>
+                  <td>Chicken Biryani</td>
+                  <td class="alignright">₹ 220</td>
+                </tr>
+                <tr>
+                  <td>Chicken Fried Rice</td>
+                  <td class="alignright">₹ 240</td>
+                </tr>
+                <tr>
+                  <td>Chicken Family Pack</td>
+                  <td class="alignright">₹ 550</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <span></span>
+        </label>
+        <input id='settings' type='checkbox'>
+        <label for='settings'>
+          <p>Desserts</p>
+          <div class='lil_arrow'></div>
+          <div class='content'>
+            <table class="table align" style="width: 100%;">
+              <tbody>
+                <tr>
+                  <td>Double Ka Meetha</td>
+                  <td class="alignright">₹ 80</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <span></span>
+        </label>
+      </div>
+      
+</body>
+</html>

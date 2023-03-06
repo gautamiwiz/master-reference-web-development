@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "iwiz-hosting"
+  },
+  "targets": {
+    "iwiz-hosting": {
+      "hosting": {
+        "master-reference-website": [
+          "master-reference"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

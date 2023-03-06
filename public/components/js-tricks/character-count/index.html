@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Count</title>
+    <style>
+      *,
+      *:before,
+      *:after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #a9d1ea;
+      }
+      .container {
+        background-color: #ffffff;
+        width: 450px;
+        min-height: 250px;
+        padding: 30px 20px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 8px;
+        box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
+      }
+      .container * {
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+      }
+      textarea {
+        display: block;
+        width: 100%;
+        min-height: 230px;
+        resize: none;
+        padding: 20px;
+        color: #202020;
+        border: 2px solid #3ba51f;
+        border-radius: 5px;
+        outline: none;
+      }
+      p {
+        width: 100%;
+        text-align: right;
+        margin-top: -30px;
+        padding-right: 10px;
+        color: #737373;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <textarea
+        id="my-text"
+        rows="5"
+        placeholder="Type something here.."
+      ></textarea>
+      <p id="result"></p>
+    </div>
+    <script>
+      var myText = document.getElementById("my-text");
+      var result = document.getElementById("result");
+      var limit = 20;
+      result.textContent = 0 + "/" + limit;
+      myText.addEventListener("input", function () {
+        let inputLength = myText.value.length;
+        result.textContent = inputLength + "/" + limit;
+
+        if (inputLength > limit) {
+          myText.style.borderColor = "#ff2851";
+          result.style.color = "#ff2851";
+        } else {
+          myText.style.borderColor = "#31821b";
+          result.style.color = "#31821b";
+        }
+      });
+    </script>
+  </body>
+</html>

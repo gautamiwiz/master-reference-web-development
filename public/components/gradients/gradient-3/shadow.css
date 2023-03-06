@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+body > article {    
+   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.7) inset,
+               -20px -20px 30px rgba(0, 0, 0, 0.7) inset;
+}
+
+body > article > h1 {
+   text-shadow: rgb(40, 0, 20) 4px 0px 1px;
+}
+
+body > article > h2 {
+   text-shadow: rgb(40, 0, 20) 2px 0px 0px;
+}
+
+body > article > p {
+   text-shadow: rgb(40, 0, 20) 2px 0px 0px;
+}

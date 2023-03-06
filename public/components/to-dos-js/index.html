@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todos App</title>
+    <script src="gScript.js" defer></script>
+    <link rel="stylesheet" href="gStyle.css" />
+  </head>
+  <body>
+    <header class="text-center">
+      <h1>Todo's App</h1>
+    </header>
+
+    <main>
+      <section class="addToDoHolder">
+        <label for="todo">
+          <input type="text" name="todo" id="todo" value="" placeholder="Enter your to do" />
+        </label>
+        <label for="date">
+          <input type="date" id="date-picker" />
+        </label>
+        <button type="submit" id="addTodo">Add Todo</button>
+      </section>
+
+      <section id="toDosHolder"></section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Basics</title>
+  </head>
+  <body>
+    <h1>Javascript</h1>
+  </body>
+  <script>
+    let heading = document.querySelector("h1");
+    heading.style.color = "red";
+
+    console.log("");
+    console.log("True : ", true);
+    console.log("!True : ", !true);
+    console.log("!!True : ", !!true);
+
+    console.log("False : ", false);
+    console.log("!False : ", !false);
+    console.log("!!False : ", !!false);
+    console.log("");
+
+    let object1 = {};
+    object1.name = "Gautam Sharma";
+    object1["main job"] = "Microsoft";
+    object1.age = 40;
+    console.log(object1);
+    console.log(object1.age);
+    delete object1["main job"];
+    console.log(object1);
+
+    let object2 = object1;
+    console.log(object2);
+    object1.age = 55;
+
+    console.log(object1);
+    console.log(object2);
+
+    object2.age = 100;
+    console.log(object1);
+    console.log(object2);
+
+    let object3 = JSON.parse(JSON.stringify(object1));
+    console.log(object3);
+
+    object3.age = 99;
+    console.log(object3);
+    console.log(object2);
+    console.log(object1);
+
+    console.log("");
+  </script>
+</html>

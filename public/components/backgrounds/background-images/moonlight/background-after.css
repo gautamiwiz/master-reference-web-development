@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+article {
+  background: url(mountain.png) no-repeat bottom / 100%,
+    url("moon.png") no-repeat 90% 15% /100px 100px,
+    url("sunrise.png") repeat-x bottom / 10px 100%, url("stars.png"), black;
+  background-blend-mode: hard-light;
+}

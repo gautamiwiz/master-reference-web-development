@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indexed DB</title>
+  </head>
+  <body>
+    <h1>Indexed DB</h1>
+    <form action="" class="newContact">
+      <div>
+        <label for="firstName">Enter your first name</label>
+        <input type="text" id="firstName" required />
+      </div>
+      <div>
+        <label for="lastName">Enter your last name</label>
+        <input type="text" id="lastName" required />
+      </div>
+      <button id="addName">New Contact</button>
+    </form>
+    <section>
+      <ul></ul>
+    </section>
+    <script>
+      let db;
+      let firstNameInput = document.querySelector("#firstName");
+      let lastNameInput = document.querySelector("#lastName");
+      let form = document.querySelector("form");
+
+      window.onload = function () {
+        let request = window.indexedDB.open("contacts", 1);
+        request.onerror = function () {
+          console.log("Database failed to open");
+        };
+        request.onsuccess = function () {
+          console.log("database opened");
+          db = request.result;
+        };
+
+        request.onupgradeneeded = function (event) {
+          let db = event.target.result;
+          let objectStore = db.createObjectStore("contacts", { keyPath: "id", autoIncrement: true });
+          objectStore.createIndex("firstName", "firstName", { unique: false });
+          objectStore.createIndex("lastName", "lastName", { unique: false });
+
+          console.log("database setup complete");
+        };
+      };
+
+      form.addEventListener("submit", addData);
+
+      function addData(event) {
+        event.preventDefault();
+        let newItem = { firstName: firstNameInput.value, lastName: lastNameInput.value };
+        let transaction = db.transaction(["contacts"], "readwrite");
+        let objectStore = transaction.objectStore("contacts");
+        let request = objectStore.add(newItem);
+        request.onsuccess = function () {
+          firstNameInput.value = "";
+          lastNameInput.value = "";
+        };
+
+        transaction.oncomplete = function () {
+          console.log("contact added via transaction");
+        };
+
+        transaction.onerror = function () {
+          console.log("failed to add contact");
+        };
+      }
+    </script>
+  </body>
+</html>

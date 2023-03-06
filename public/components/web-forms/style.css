@@ -1,0 +1,81 @@
+fieldset {
+  border-color: lightgray;
+  border-style: solid;
+  padding: 15pt;
+  margin-bottom: 1em;
+}
+
+#btnsubmit,
+#btnreset {
+  border-radius: 6px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+legend {
+  padding-right: 0.3em;
+}
+
+fieldset div {
+  padding-bottom: 0.6em;
+}
+
+input[type] {
+  margin-left: 0.5em;
+}
+input:focus {
+  outline: none;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="search"] {
+  box-sizing: border-box;
+  display: inline-block;
+  border-width: 1px;
+  border-color: lightgray;
+}
+
+input[type="number"] {
+  width: 3em;
+  height: 2em;
+}
+
+.policytext p {
+  font-size: 8pt;
+  padding: 0;
+  margin: 0;
+}
+
+.policytext a {
+  text-decoration: none;
+}
+
+.ordertotal {
+  font-weight: bold;
+}
+
+label {
+  cursor: pointer;
+}
+
+/*This adds a border to the field*/
+input[type="text"]:hover {
+  border-color: red;
+  border-width: 1px;
+}
+
+/*add color to the label of the field in focus*/
+label:focus-within {
+  color: blue;
+}
+input[type="text"]:focus {
+  border: 1px solid green;
+}
+
+.accesskey {
+  text-decoration: underline;
+}

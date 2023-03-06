@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+  border: 1px solid red;
+  gap: 10px;
+  flex-wrap: wrap;
+  min-height: 200px;
+}
+
+.flex .child {
+  background-color: #efefef;
+  width: 100px;
+  padding: 10px;
+}
+
+.flex1 {
+  /*aligns content on horizontal/main axis*/
+  justify-content: space-between;
+
+  /*default is stretch.. flex start will not expand height... stretch will fill upto the tallest element*/
+  /* align-items: stretch; */
+
+  /*aligns content on vertical/cross axis*/
+  align-content: flex-start;
+}
+
+.flex1 .child1,
+.flex2 .child1,
+.flex3 .child1 {
+  min-height: 50px;
+}
+.flex1 .child2,
+.flex2 .child2,
+.flex3 .child2 {
+  min-height: 70px;
+}
+.flex1 .child3,
+.flex2 .child3,
+.flex3 .child3 {
+  min-height: 100px;
+}
+
+.flex2 {
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.flex3 {
+  justify-content: space-evenly;
+  align-items: flex-end;
+  align-content: flex-end;
+}

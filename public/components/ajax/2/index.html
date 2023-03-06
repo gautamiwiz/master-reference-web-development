@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajax - JSON</title>
+  </head>
+  <body>
+    <h1>Ajax - Local JSON</h1>
+    <button id="button1">Get User</button>
+    <button id="button2">Get Users</button>
+    <div id="user"></div>
+    <div id="users"></div>
+  </body>
+  <script>
+    document.getElementById("button1").addEventListener("click", getUser);
+    document.getElementById("button2").addEventListener("click", getUsers);
+
+    let userContent = document.getElementById("user");
+    let usersContent = document.getElementById("users");
+
+    function getUser() {
+      console.log("get User clicked");
+      let xhr = new XMLHttpRequest();
+      xhr.open("GET", "user.json", true);
+
+      xhr.onload = function () {
+        if (this.status == 200) {
+          //console.log(this.responseText);
+          let user = JSON.parse(this.responseText);
+          let content = `
+          <h2>User Name</h2>
+          <p>${user.name}</p>
+          <h2>User Email</h2>
+          <p>${user.email}</p>
+          `;
+          userContent.innerHTML = content;
+        }
+      };
+
+      xhr.send();
+    }
+    function getUsers() {
+      console.log("get Users clicked");
+      let xhr = new XMLHttpRequest();
+      xhr.open("GET", "users.json", true);
+
+      xhr.onload = function () {
+        if (this.status == 200) {
+          //console.log(this.responseText);
+          let users = JSON.parse(this.responseText);
+          let content = "";
+          for (let i in users) {
+            content += `
+                <p>Name : <b>${users[i].name}</b>, Email ID : <b>${users[i].email}</b></p>
+            `;
+          }
+
+          usersContent.innerHTML = content;
+        }
+      };
+
+      xhr.send();
+    }
+  </script>
+</html>

@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+article {
+  background: radial-gradient(
+      circle at 20% 15%,
+      white 5%,
+      rgba(255, 255, 128, 0.8) 10%,
+      rgba(80, 20, 0, 0.8) 75%,
+      rgba(128, 0, 0, 0.8)
+    ),
+    url(body.png) no-repeat bottom right/ 75%, rgb(252, 250, 247);
+  border: 20px solid transparent;
+  border-image: radial-gradient(yellow, brown) 35%;
+}

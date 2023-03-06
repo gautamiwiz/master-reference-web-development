@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container5 {
+        height: 100%;
+        display: grid;
+        height: 100vh;
+        grid-gap: 3px;
+        grid-template: 80px auto 80px / repeat(12, 1fr);
+        font-size: 1em;
+        grid-template-areas:
+          "h h h h h h h h h h h h"
+          "m m c c c c c c c c c c"
+          "f f f f f f f f f f f f";
+        /* Try this*/
+        grid-template-areas:
+          "m h h h h h h h h h h ."
+          "m c c c c c c c c c2 c2 c2"
+          "f f f f f f f f f f f .";
+      }
+
+      .container5 .header {
+        background-color: skyblue;
+        grid-area: h;
+      }
+      .container5 .menu {
+        background-color: slateblue;
+        grid-area: m;
+      }
+      .container5 .content {
+        background-color: springgreen;
+        grid-area: c;
+      }
+      .container5 .content2 {
+        background-color: darkorange;
+        grid-area: c2;
+      }
+
+      .container5 .footer {
+        background-color: violet;
+        grid-area: f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container5">
+      <div class="header">Header</div>
+      <div class="menu">Menu</div>
+      <div class="content">Content</div>
+      <div class="content2">Content</div>
+      <div class="footer">Footer</div>
+    </div>
+  </body>
+</html>

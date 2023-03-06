@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Images</title>
+    <link rel="stylesheet" href="bg.css" />
+  </head>
+  <body>
+    <h2>background-clip: border-box;background-origin: border-box;</h2>
+    <div id="first"></div>
+    <style>
+      div#first {
+        border: 50px solid rgba(0, 0, 255, 0.5);
+        background-image: url(iwiz-logo.png);
+        background-clip: border-box;
+        /*space distributed the image evenly with space in between exposing the bg color or behind color.
+        round repeats the image equal number of times across the given width of the div... it may change the image size*/
+        /* background-repeat: space; */
+        /* background-repeat: round; */
+        background-origin: border-box;
+        background-position: center center;
+        background-size: 50px;
+        /*=====================
+        background: color url(url) position /size repeat-style attach origin clip
+        background: transparent none 0% 0% /auto auto repeat scroll padding-box border-box
+
+        background: #fff url(penguin.png) 50% 50% /100px repeat scroll padding-box border-box
+        size value must always start with /
+        size must always be parired wit position
+        ==============*/
+      }
+    </style>
+
+    <h2>background-repeat: space;background-clip: content-box;</h2>
+    <div id="second"></div>
+    <style>
+      div#second {
+        border: 50px solid rgba(0, 0, 255, 0.5);
+        background-image: url(iwiz-logo.png);
+        background-clip: content-box;
+        background-repeat: space;
+        background-origin: content-box;
+        background-position: center center;
+        background-size: 70px;
+      }
+    </style>
+
+    <h2>background-repeat: round;background-clip: padding-box;</h2>
+    <div id="third"></div>
+    <style>
+      div#third {
+        border: 50px solid rgba(0, 0, 255, 0.5);
+        background-image: url(iwiz-logo.png);
+        background-clip: padding-box;
+        background-repeat: round;
+        background-origin: padding-box;
+        background-position: top center;
+      }
+    </style>
+
+    <h2>Penguin</h2>
+    <div id="fourth"></div>
+    <style>
+      div#fourth {
+        border: 50px solid rgba(0, 0, 255, 0.5);
+        background-image: url(penguin.png);
+        background-clip: padding-box;
+        background-repeat: round;
+        background-origin: padding-box;
+        background-position: top left;
+        background-size: 70px;
+      }
+    </style>
+
+    <h2>Penguin</h2>
+    <div id="fifth"></div>
+    <style>
+      div#fifth {
+        border: 50px solid rgba(0, 0, 255, 0.5);
+        background-image: url(penguin.png);
+        background-clip: border-box;
+        background-repeat: round;
+        background-origin: border-box;
+        background-position: top center;
+        background-size: 70px;
+      }
+    </style>
+
+    <h2>Penguin</h2>
+    <div id="sixth"></div>
+    <style>
+      div#sixth {
+        border: 50px solid rgba(0, 0, 255, 0.5);
+        background-image: url(penguin.png);
+        background-clip: padding-box;
+        background-repeat: round;
+        background-origin: padding-box;
+        background-position: top left;
+        background-size: 70px;
+      }
+    </style>
+
+    <h2>Penguin</h2>
+    <div id="seventh"></div>
+    <style>
+      div#seventh {
+        border: 50px solid rgba(0, 0, 255, 0.5);
+        background-image: url(penguin.png);
+        background-clip: padding-box;
+        background-origin: padding-box;
+        background-position: top left;
+        background-size: 70px;
+      }
+    </style>
+
+    <h2>Penguin</h2>
+    <div id="eighth"></div>
+    <style>
+      div#eighth {
+        border: 50px solid rgba(0, 0, 255, 1);
+
+        background: rgba(255, 255, 255, 1) url(penguin.png) 100% 100% /50px no-repeat;
+      }
+    </style>
+  </body>
+</html>

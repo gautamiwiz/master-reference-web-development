@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+}
+
+img {
+  width: 100%;
+  display: block;
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+div.card {
+  width: 300px;
+  max-width: 300px;
+
+  margin: 0 auto;
+  border: 2px solid black;
+  border-radius: 5px 5px;
+  overflow: hidden;
+}
+div.card2 {
+  height: 450px;
+}
+
+.the-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  position: absolute;
+  top: 0;
+}
+
+.ratio-box {
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  /*to make the iamge 16/9 proportion*/
+  /* padding-top: calc(100% * (9 / 16)); */
+  position: relative;
+}

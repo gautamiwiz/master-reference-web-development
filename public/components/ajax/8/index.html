@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More Promises</title>
+    <script>
+      let myPromise = new Promise((resolve, reject) => {
+        if (true) {
+          resolve("p1 resolved");
+        } else {
+          reject("p1 rejected");
+        }
+      });
+
+      let p2 = Promise.resolve("p2 resolved"); //this is same as above
+
+      let p3 = () => Promise.resolve(null); //null is still a resolved promise
+
+      myPromise.then((result) => {
+        console.log("P1 : ", result);
+      });
+
+      p2.then((result) => {
+        console.log("P2 : ", result);
+      });
+
+      p3().then((result) => {
+        console.log("P3 : ", result);
+      });
+
+      //promise race method
+      let prom1 = Promise.reject(111);
+      let prom2 = Promise.resolve(222);
+      let prom3 = new Promise((resolve, reject) => {
+        setTimeout(resolve, 1000, 333);
+      });
+      Promise.race([prom1, prom2, prom3])
+        .then((result) => {
+          console.log("Winning : ", result);
+        })
+        .catch((result) => {
+          console.log("Failed: ", result);
+        });
+    </script>
+  </head>
+  <body>
+    <h1>More about promises</h1>
+  </body>
+</html>

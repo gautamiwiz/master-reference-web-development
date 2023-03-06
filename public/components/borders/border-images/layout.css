@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 70px auto;
+  width: 90%;
+}
+/*
+article {
+  background: url(mountain.png) no-repeat bottom / 100%,
+    url("moon.png") no-repeat 90% 15% /100px 100px,
+    url("sunrise.png") repeat-x bottom / 10px 100%, url("stars.png"), black;
+  background-blend-mode: hard-light;
+}
+
+background: color url(url) position /size repeat-style attach origin clip
+background: transparent none 0% 0% /auto auto repeat scroll padding-box border-box
+*/
+body > article {
+  width: 500px;
+  font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+  background: url(keats.png) bottom right/ 70% no-repeat padding-box,
+    url(blend1.png) center / contain border-box,
+    hsla(33, 55%, 52%, 0.3) border-box;
+
+  background-blend-mode: multiply;
+}
+
+body > article p {
+  margin: 20px 40px;
+  font-size: 1.3em;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+body > article h1 {
+  font-size: 2.3em;
+  margin: 30px 20px 0px;
+  font-weight: normal;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+body > article h2 {
+  font-size: 1.3em;
+  font-weight: normal;
+  margin: 0px 20px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+body > article > p:last-of-type {
+  text-align: center;
+}
+
+cite {
+  font-size: 0.8em;
+}

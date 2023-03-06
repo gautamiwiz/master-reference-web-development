@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link css file to style -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* Putting font poppins it is a very beautiful font also if you dont have installed it on your system it might not show so you need to import it from *google fonts* */
+        font-family: "Poppins";
+      }
+
+      /* Now here we are just styling the background and centering it to the middle */
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        background: #f1f1f1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      p {
+        font-size: 4rem;
+        text-shadow: 0 0 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Confetti Js Effect 🎇</p>
+    <!-- Here link the script file which you downloaded from the above link -->
+    <script src="confetti.js"></script>
+    <!-- Our javascript code comes here -->
+    <script>
+      // for starting the confetti
+
+      const start = () => {
+        setTimeout(function () {
+          confetti.start();
+        }, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+      };
+
+      //  for stopping the confetti
+
+      const stop = () => {
+        setTimeout(function () {
+          confetti.stop();
+        }, 5000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+      };
+      // after this here we are calling both the function so it works
+      start();
+      stop();
+
+      // if you dont want to make it stop and make it infinite you can just remove the stop function 😊
+    </script>
+  </body>
+</html>

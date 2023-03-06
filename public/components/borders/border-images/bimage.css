@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+/*
+border-image: url(url) slice
+border-image: url(url) top right bottom left
+border-image: url(url) slices /widths /outsets repeats
+
+
+
+*/
+
+article {
+  border: 10px solid transparent;
+  border-image: url(elegant.png) 143 155 / 120px /40px round;
+}

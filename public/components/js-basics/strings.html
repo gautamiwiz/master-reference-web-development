@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Strings</title>
+  </head>
+  <body>
+    <h1>Javascript Strings</h1>
+    <p>Check console...</p>
+  </body>
+  <script>
+    console.log("gScript Loaded!");
+    let string1 = "Hello welcome to my world. I am Gautam Sharma";
+    console.log("String 1 : ", string1);
+    console.log("");
+    console.log("String 1 length : ", string1.length);
+
+    /* ================================
+       startsWith()
+      ==================================== */
+    console.log("");
+    console.log("=== startsWith() ===");
+    console.log("String 1 starts with 'hello' : ", string1.startsWith("Hello"));
+
+    /* ================================
+       endsWith()
+      ==================================== */
+    console.log("");
+    console.log("=== endsWith() ===");
+    console.log("String 1 ends with 'Sharma' : ", string1.endsWith("Sharma"));
+
+    /* ================================
+       includes()
+      ==================================== */
+    console.log("");
+    console.log("=== includes() ===");
+    console.log("String 1 includes 'to' : ", string1.includes("to"));
+
+    /* ================================
+       search()
+      ==================================== */
+    console.log("");
+    console.log("=== search() ===");
+    console.log("String 1 search 'world' at index : ", string1.search("world"));
+
+    /* ================================
+       repeat()
+      ==================================== */
+    let text = "hello";
+    console.log(text.repeat(20));
+
+    /* ================================
+       upperCase and lowerCase()
+      ==================================== */
+    let string12 = "this IS a string";
+    console.log("string 12 : ", string12);
+    console.log("string 12 length : ", string12.length);
+    console.log("string 12 to upper case : ", string12.toUpperCase());
+    console.log("string 12 to lower case : ", string12.toLowerCase());
+
+    let string2 = "this is a \
+    multiline \
+    string";
+
+    /* ================================
+       charAt()
+      ==================================== */
+    console.log("");
+    console.log("=== charAt() ===");
+    let sampleString = "This is a sample string";
+    console.log("The first character charAt(0) = ", sampleString.charAt(0));
+    console.log("The second character charAt(1) = ", sampleString.charAt(1));
+    console.log(
+      "The last character charAt(length-1) = ",
+      sampleString.charAt(sampleString.length - 1)
+    );
+
+    /* ================================
+       concat()
+      ==================================== */
+    console.log("");
+    console.log("=== concat() ===");
+
+    console.log(
+      "concat text method = ",
+      sampleString.concat(" - with more text added.")
+    );
+
+    /* ================================
+       replace()
+      ==================================== */
+    console.log("");
+    console.log("=== replace() ===");
+    let testString = "suck the duck";
+    console.log("original sentance : ", testString);
+    console.log(
+      'replace(suck) in the original sentance with "duck" = ',
+      testString.replace("suck", "duck")
+    );
+
+    /* ================================
+       indexOf() and lastIndexOf()
+      ==================================== */
+    console.log("");
+    console.log("=== indexOf() lastIndexOf() ===");
+    let someSentance =
+      "Hello welcome to the metaverse. The ultimate experience!";
+    console.log("Sample Sentance : ", someSentance);
+    console.log("index of - metaverse", someSentance.indexOf("metaverse"));
+    console.log("lastIndexOf - the", someSentance.lastIndexOf("e"));
+
+    /* ================================
+       match
+      ==================================== */
+    console.log("");
+    console.log("=== match() ===");
+    let someSentance2 = "hello this is gautam";
+    console.log(someSentance2.match(/gautam/));
+
+    /* ================================
+       search
+      ==================================== */
+    console.log("");
+    console.log("=== search() ===");
+    let someSentance3 = "hello this is gautam";
+    console.log(someSentance3);
+    console.log(someSentance3.search("gautam"));
+
+    /* ================================
+       slice
+      ==================================== */
+    console.log("");
+    console.log("=== slice() ===");
+    let someSentance4 = "hello this is gautam";
+    console.log(someSentance4);
+    console.log(
+      "get characters starting form 10 to string - 2 = ",
+      someSentance4.slice(10, someSentance4.length - 2)
+    );
+
+    /* ================================
+       split
+      ==================================== */
+    console.log("");
+    console.log("=== split() ===");
+    let someSentance5 = "hello this is gautam";
+    console.log(someSentance5);
+    console.log(someSentance5.split(" "));
+    console.log(someSentance5.split(""));
+    console.log(someSentance5.split("i"));
+
+    /* ================================
+       reverse
+      ==================================== */
+    console.log("");
+    console.log("=== reverse() ===");
+    let someSentance6 = "hello this is gautam";
+    console.log(someSentance6);
+    console.log(someSentance6.split(" ").reverse());
+
+    /* ================================
+       substring() and substr
+      ==================================== */
+    console.log("");
+    console.log("=== substring() and substr() ===");
+    let someSentance7 = "hello this is gautam";
+    console.log("Substring = ", someSentance7.substring(0, 5)); //starting and ending indexes
+    console.log("substr = ", someSentance7.substr(1, 10)); //starting index and the number of characters to include in the returned string.
+  </script>
+</html>

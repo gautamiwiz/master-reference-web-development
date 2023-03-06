@@ -1,0 +1,86 @@
+:root {
+  --body-font-family: "Amstelvar", "Times New Roman", Times, serif;
+  --amstel-wght: 370;
+  --amstel-wdth: 100;
+  --amstel-opsz: 14;
+  --amstel-YOPQ: 110;
+}
+
+* {
+  font-variation-settings: "wght" var(--amstel-wght), "wdth" var(--amstel-wdth), "opsz" var(--amstel-opsz), "YOPQ" var(--amstel-YOPQ);
+}
+
+body {
+  max-width: 75rem;
+  margin: 1rem auto;
+  padding: 2rem;
+  font-family: "Times New Roman", Times, serif;
+  font-family: var(--body-font-family);
+  font-size: 100%;
+  font-size: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  font-optical-sizing: auto;
+}
+
+.masthead {
+  margin-top: 2rem;
+  grid-column: 1/3;
+}
+
+.eyebrow {
+  font-size: 4rem;
+  font-style: italic;
+  margin-bottom: -1rem;
+  padding-left: 8.9rem;
+  --amstel-wdth: 80;
+  --amstel-opsz: 144;
+}
+
+.masthead__title {
+  margin: 0.5rem 0 -1rem;
+  font-size: 14rem;
+  line-height: 90%;
+  font-style: italic;
+  --amstel-wdth: 75;
+  --amstel-opsz: 144;
+  --amstel-YOPQ: 61;
+}
+
+.content {
+  grid-column: 2/3;
+}
+
+.content p {
+  line-height: 1.4;
+}
+
+.content p:first-of-type {
+  font-size: 2rem;
+  line-height: 1.3;
+  --amstel-wght: 420;
+  --amstel-opsz: 30;
+}
+
+.content blockquote {
+  position: relative;
+  float: left;
+  width: 60%;
+  margin-left: -20%;
+  margin-bottom: 4rem;
+  font-size: 3rem;
+  font-style: italic;
+  --amstel-opsz: 144;
+}
+
+.content blockquote::before {
+  content: "“";
+  position: absolute;
+  top: -9rem;
+  left: -7rem;
+  font-size: 30rem;
+  color: hsla(0, 0%, 0%, 0.1);
+  --amstel-opsz: 144;
+  --amstel-YOPQ: 60;
+  font-variation-settings: "wght" var(--amstel-wght), "wdth" var(--amstel-wdth), "opsz" var(--amstel-opsz), "YOPQ" var(--amstel-YOPQ);
+}

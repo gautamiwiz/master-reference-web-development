@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onload Vs DomContentLoaded</title>
+    <style>
+      img {
+        width: 100%;
+      }
+    </style>
+    <script>
+      let startTime = performance.now();
+    </script>
+  </head>
+  <body>
+    <h1>onLoad Vs domContentLoaded</h1>
+    <img src="https://picsum.photos/400/600" alt="" style="float: left; margin-right: 10px; display: block; max-width: 400px" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <img src="https://picsum.photos/400/600" alt="" style="float: right; margin-left: 10px; display: block; max-width: 400px" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+
+    <img src="https://picsum.photos/400/600" alt="" style="float: left; margin-right: 10px; display: block; max-width: 400px" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <img src="https://picsum.photos/400/600" alt="" style="float: left; margin-right: 10px; display: block; max-width: 400px" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <img src="https://picsum.photos/400/600" alt="" style="float: right; margin-left: 10px; display: block; max-width: 400px" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+
+    <img src="https://picsum.photos/400/600" alt="" style="float: left; margin-right: 10px; display: block; max-width: 400px" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <img src="https://picsum.photos/400/600" alt="" style="float: left; margin-right: 10px; display: block; max-width: 400px" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <img src="https://picsum.photos/400/600" alt="" style="float: right; margin-left: 10px; display: block; max-width: 400px" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+
+    <img src="https://picsum.photos/400/600" alt="" style="float: left; margin-right: 10px; display: block; max-width: 400px" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <img src="https://picsum.photos/400/600" alt="" style="float: left; margin-right: 10px; display: block; max-width: 400px" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <img src="https://picsum.photos/400/600" alt="" style="float: right; margin-left: 10px; display: block; max-width: 400px" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+
+    <img src="https://picsum.photos/400/600" alt="" style="float: left; margin-right: 10px; display: block; max-width: 400px" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius molestiae, quam consequuntur deleniti illo tempore natus enim
+      officiis labore tenetur beatae, aliquam assumenda consequatur atque. Quisquam debitis itaque maxime? Iste in soluta aspernatur sunt
+      omnis totam consequatur saepe odit quia consequuntur porro officia dolores alias voluptate, doloribus dicta! Veritatis laborum neque
+      esse culpa doloremque, ea eligendi quasi dignissimos molestiae. Voluptatem totam expedita libero quas fuga earum? Illo incidunt fugiat
+      ipsa magni esse accusantium, quod consequuntur possimus eius dicta libero vitae doloribus sit? Optio doloribus ipsa ex molestias et
+      natus! Quas voluptatibus dolore autem veniam molestiae optio et distinctio temporibus cupiditate incidunt, reprehenderit dignissimos
+      architecto iusto vitae suscipit vel cum in, quae non pariatur esse obcaecati perspiciatis? Alias, eaque totam! A repellat dolor
+      voluptatem, illo porro adipisci aliquid animi, ut aliquam ducimus, architecto nam molestiae debitis sint. Aspernatur, repudiandae
+      tenetur error animi, adipisci sit delectus et minus quas nemo mollitia!
+    </p>
+    <script>
+      //domContentLoaded waits for just the html
+      //this is good if you want the form elements events to get activated immediately
+      //else the page is loaded and the browser waits for all the assets like images and css to load and then events are binded
+      //basically the page form becomes unresponsive until everyhing is downloaded
+
+      window.addEventListener("load", (ev) => {
+        console.log(ev.type);
+        let endTime = performance.now();
+        let diff = endTime - startTime;
+        console.log(ev.type, diff);
+      });
+
+      document.addEventListener("DOMContentLoaded", (ev) => {
+        console.log(ev.type);
+        let endTime = performance.now();
+        let diff = endTime - startTime;
+        console.log(ev.type, diff);
+      });
+    </script>
+  </body>
+</html>

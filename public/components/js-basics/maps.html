@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maps</title>
+  </head>
+  <body>
+    <h1>Maps</h1>
+    <script>
+      console.log("gScript loaded");
+
+      const fruitMaps = new Map();
+
+      fruitMaps.set(1, "Apple");
+      fruitMaps.set(2, "Water Melon");
+      fruitMaps.set(3, "Banana");
+      fruitMaps.set(4, "Guava");
+      fruitMaps.set(5, "Papaya");
+      fruitMaps.set(6, "Musk Melon");
+
+      console.log(fruitMaps);
+
+      console.log("get() : ", fruitMaps.get(3));
+      console.log("set() ", fruitMaps.set(7, "Sapota"));
+      console.log(fruitMaps);
+      console.log("size ", fruitMaps.size);
+      console.log("has 8", fruitMaps.has(8));
+      console.log("has 1", fruitMaps.has(1));
+
+      let fruitKeys = fruitMaps.keys();
+      console.log("keys()", fruitKeys.next().value);
+      fruitKeys.next();
+      let thirdFruitKey = fruitKeys.next().value;
+      console.log("3rd key : ", thirdFruitKey);
+
+      let fruitValues = fruitMaps.values();
+      console.log("values()", fruitValues.next().value);
+      fruitValues.next();
+      let thirdFruitValue = fruitValues.next().value;
+      console.log("3rd value : ", thirdFruitValue);
+
+      const fruitEntries = fruitMaps.entries();
+      fruitEntries.next();
+      fruitEntries.next();
+      console.log("entries()", fruitEntries.next().value);
+
+      fruitMaps.forEach((v, k) => {
+        console.log("Key : ", k, "Value : ", v);
+      });
+      fruitMaps.forEach((v, k) => {
+        if (v === "apple" || v === "Apple") {
+          console.log("Yes, the map has Apple");
+        }
+      });
+
+      console.log("delete() ", fruitMaps.delete(1));
+      console.log(fruitMaps);
+      console.log("clear() ", fruitMaps.clear());
+    </script>
+  </body>
+</html>

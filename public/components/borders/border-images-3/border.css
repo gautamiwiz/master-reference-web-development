@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+body > article {
+   border-style: solid;
+   border-color: transparent;
+   border-width: 1px;
+   border-image: url(frame.png) 120 140 /150px /40px;
+}
+
+body > article > h2 {
+   border-bottom: 4px ridge rgb(238, 114, 108);
+}
+
+
+
+

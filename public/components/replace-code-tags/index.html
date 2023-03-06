@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JS Replace Code Tags</h1>
+    <p>The most important <code>html</code> tags</p>
+    <p>The <code>body</code> body tag</p>
+    <p>the <code>p</code> paragraph tag</p>
+  </body>
+  <script>
+    let allCodeTags = document.querySelectorAll("code");
+    console.log(allCodeTags);
+
+    for (let eachTag of allCodeTags) {
+      eachTag.innerHTML = `<span class="red">&lt;${eachTag.innerHTML}&gt;</span>`;
+    }
+  </script>
+</html>

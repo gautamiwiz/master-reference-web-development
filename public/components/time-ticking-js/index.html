@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Time</title>
+    <style>
+      .transparent {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Time</h1>
+    <h2 id="time"></h2>
+  </body>
+  <script>
+    (function () {
+      console.log("gScript loaded");
+
+      document.addEventListener("DOMContentLoaded", function () {
+        let time = document.getElementById("time");
+
+        setInterval(updateTime, 1000);
+
+        function updateTime() {
+          let d = new Date();
+          let hours = d.getHours();
+          let minutes = d.getMinutes();
+
+          //to test
+          //(hours = 23), (minutes = 9);
+
+          let separatorClass = "";
+          let amPm = " AM";
+
+          //to flash the seconds... check if even or odd
+          //add a transparent class
+          if (d.getSeconds() % 2 === 0) separatorClass = "transparent";
+
+          let separator = `<span class="${separatorClass}">:</span>`;
+
+          if (hours > 12) {
+            hours -= 12;
+            amPm = " PM";
+          } else if (hours === 0) {
+            hours = "12";
+          } else if (hours < 10) {
+            hours = "0" + hours;
+          }
+
+          if (minutes < 10) minutes = "0" + minutes;
+
+          time.innerHTML = hours + separator + minutes + amPm;
+          //console.log("Time updated");
+        }
+      });
+    })();
+  </script>
+</html>

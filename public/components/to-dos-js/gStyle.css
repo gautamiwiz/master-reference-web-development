@@ -1,0 +1,62 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: peachpuff;
+  --txt-color: brown;
+  --border-color: #efefef;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  display: flex;
+  color: var(--txt-color);
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  font-family: var(--font);
+}
+
+.addToDoHolder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+main {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+#toDosHolder {
+  padding: 20px;
+}
+
+#toDosHolder div {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#toDosHolder img {
+  width: 15px;
+}
+
+.deleteIcon {
+  fill: red;
+  border: 1px solid red;
+}

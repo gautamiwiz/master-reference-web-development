@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fetch api</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <script>
+      //fetch api
+      // let uri = "https://jsonplaceholder.typicode.com/users/7";
+      // fetch(uri)
+      //   .then((response) => response.json())
+      //   .then((json) => {
+      //     //console.log(json);
+      //   })
+      //   .catch(function (err) {});
+
+      //*****************************************
+      //old version AJAX
+      //let uri2 = "https://api.github.com/users";
+      //   var xhr = new XMLHttpRequest();
+      //   xhr.open("GET", uri, true);
+      //   xhr.onload = function () {
+      //     if (xhr.status == 200 && xhr.readyState == 4) {
+      //       let response = xhr.responseText;
+      //       console.log("Data : ", JSON.parse(response));
+      //     } else {
+      //       console.log("some error");
+      //     }
+      //   };
+      //   xhr.send(null);
+
+      //fetch 2
+      const root = "https://jsonplaceholder.typicode.com";
+      let id = Math.floor(Math.random() * 20) + 1;
+      let url = root + "/users/" + id;
+
+      //any id > 10 will get 404 error
+      fetch(url)
+        .then((response) => {
+          //or
+          // if (response.status == 200) {
+          if (response.ok) {
+            let data = response.json();
+
+            return data;
+          } else {
+            document.write("No user exists at the URL");
+            throw new Error("No user exists at the URL");
+          }
+        })
+        .then((data) => {
+          console.log("Data : ", data);
+          //let x = JSON.stringify(data);
+          //console.log("Data : ", x.name);
+          document.write(data.name);
+        })
+        .catch((err) => {
+          console.log("Error : ", err.message);
+        });
+    </script>
+  </body>
+</html>

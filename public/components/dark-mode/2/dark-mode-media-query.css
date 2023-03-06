@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+:root {
+  --base-font-size: 1.6rem;
+  --font-scale: 1.2;
+  --h6-size: calc(var(--base-font-size) * var(--font-scale));
+  --h5-size: calc(var(--h6-size) * var(--font-scale));
+  --h4-size: calc(var(--h5-size) * var(--font-scale));
+  --h3-size: calc(var(--h4-size) * var(--font-scale));
+  --h2-size: calc(var(--h3-size) * var(--font-scale));
+  --h1-size: calc(var(--h2-size) * var(--font-scale));
+  --h0-size: calc(var(--h1-size) * var(--font-scale));
+
+  --mobile-device: 750px;
+  --text-color-primary: #000;
+  --bg-color-primary: #fff;
+}
+
+@media screen and (min-width: var(--mobile-device)) {
+  :root {
+    --font-scale: 1.25;
+  }
+}
+
+.darkModdeIndicator {
+  display: none;
+}
+/*==============================
+    Dark Mode Colors
+  ================================*/
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color-primary: #000;
+
+    --text-color-primary: #6e6e6e;
+  }
+  .darkModdeIndicator {
+    display: block;
+  }
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  font-size: var(--base-font-size);
+  line-height: 1.6;
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-primary);
+  padding: 0 10px;
+}

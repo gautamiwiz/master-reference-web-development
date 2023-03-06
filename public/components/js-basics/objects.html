@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript objects</title>
+  </head>
+  <body>
+    <script>
+      function bestMan(name, tagLine) {
+        return {
+          name: name,
+          tagLine: tagLine,
+          fullSound: function () {
+            let yell = this.tagLine.toUpperCase();
+            console.log(`${yell}! ${yell}! ${yell}!`);
+          },
+        };
+      }
+
+      bestMan("Gautam", "I like learning").fullSound();
+
+      //object literal enhancement
+      function bestMan2(name, tagLine) {
+        return {
+          name,
+          tagLine,
+          fullSound: function () {
+            let yell = this.tagLine.toUpperCase();
+            console.log(`${yell}! ${yell}! ${yell}!`);
+          },
+        };
+      }
+
+      bestMan2("Gautam", "I like learning2").fullSound();
+
+      //object copy
+      let object1 = { name: "gautam", age: 40 };
+      let object2 = { name: "pari", age: 36 };
+      console.log("object 1 : ", object1);
+      console.log("object 2 : ", object2);
+
+      let object3 = {
+        ...object1,
+      };
+      console.log("object 3 : ", object3);
+      object3.age = 100;
+      console.log("object 3 : ", object3);
+      console.log("object 1 : ", object1);
+
+      //destructuring objects
+      let menuItems = {
+        item1: "Paneer",
+        item2: "chicken",
+        extras: ["extra 1", "extra 2", "extra 3"],
+      };
+      console.log(menuItems);
+      console.log(menuItems.extras[1]);
+
+      //destructuring
+      //destructuring objects
+      let { item2, extras } = {
+        item1: "Paneer",
+        item2: "chicken",
+        extras: ["extra 1", "extra 2", "extra 3"],
+      };
+      console.log("item2 and x => ", item2, extras[1]);
+
+      //this is a sample of getter and setter in an object.. the same can be applied in a class
+      let attendance = {
+        _list: [],
+        set addName(name) {
+          this._list.push(name);
+        },
+        get list() {
+          return this._list.join(",");
+        },
+      };
+
+      attendance.addName = "gautam";
+      attendance.addName = "pari";
+
+      console.log(attendance);
+      console.log(attendance.list);
+    </script>
+  </body>
+</html>

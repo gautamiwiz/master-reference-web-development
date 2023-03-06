@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 80%;
+        margin: 0 auto;
+      }
+      div.dummy {
+        height: 20px;
+      }
+      .square {
+        height: 100px;
+        width: 100px;
+        background-color: #d1bb03;
+      }
+      .rectangle {
+        height: 100px;
+        width: 150px;
+        background-color: #d11bbb;
+      }
+      .rounded-rectangle {
+        height: 100px;
+        width: 150px;
+        border-radius: 25px;
+        background-color: #0fbd9c;
+      }
+      .circle {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: #00a913;
+      }
+      .oval {
+        height: 100px;
+        width: 150px;
+        border-radius: 50%;
+        background-color: #f95670;
+      }
+      .half-circle {
+        height: 75px;
+        width: 150px;
+        background-color: #cdef00;
+        border-radius: 50% /100% 100% 0 0;
+      }
+      .triangle {
+        height: 0;
+        width: 0;
+        border: 50px solid transparent;
+        border-bottom: 100px solid #252aff;
+      }
+      .cone {
+        height: 0;
+        width: 0;
+        border: 50px solid transparent;
+        border-bottom: 100px solid #27aaff;
+        border-radius: 50%;
+      }
+      .heart {
+        height: 60px;
+        width: 60px;
+        background-color: #c51a08;
+        transform: rotate(45deg);
+        position: relative;
+      }
+      .heart::before,
+      .heart::after {
+        content: "";
+        background-color: inherit;
+        height: inherit;
+        width: inherit;
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+      }
+
+      .heart::before {
+        bottom: 30px;
+      }
+      .heart::after {
+        right: 30px;
+      }
+      .callout {
+        height: 80px;
+        width: 150px;
+        background-color: #660077;
+        border-radius: 10px;
+        position: relative;
+      }
+      .callout::after {
+        content: "";
+        border: 15px solid transparent;
+        border-top: 30px solid #660077;
+        position: absolute;
+        bottom: -30px;
+        right: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="square"></div>
+    <div class="dummy"></div>
+
+    <div class="rectangle"></div>
+    <div class="dummy"></div>
+
+    <div class="rounded-rectangle"></div>
+    <div class="dummy"></div>
+
+    <div class="circle"></div>
+    <div class="dummy"></div>
+
+    <div class="oval"></div>
+    <div class="dummy"></div>
+
+    <div class="half-circle"></div>
+    <div class="dummy"></div>
+
+    <div class="triangle"></div>
+    <div class="dummy"></div>
+
+    <div class="cone"></div>
+    <div class="dummy"></div>
+    <div class="dummy"></div>
+
+    <div class="heart"></div>
+    <div class="dummy"></div>
+
+    <div class="callout"></div>
+  </body>
+</html>

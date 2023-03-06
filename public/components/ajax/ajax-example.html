@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      console.log("gScript Loaded");
+      const xhr = new XMLHttpRequest();
+
+      xhr.open("GET", "https://api.github.com/users", true);
+      xhr.onload = function (data) {
+        if (xhr.status == 200) {
+          let userData = JSON.parse(xhr.responseText);
+          let heading = document.createElement("h1");
+          heading.innerHTML = "Git Hub Users";
+          document.body.append(heading);
+
+          for (let user of userData) {
+            console.log("User Id : ", user.id, " - Login : ", user.login);
+            let userInfoElement = document.createElement("p");
+            userInfoElement.innerHTML = `User Id ${user.id} - Login : ${user.login}`;
+
+            document.body.append(userInfoElement);
+          }
+        }
+      };
+      xhr.send();
+    </script>
+  </head>
+  <body></body>
+</html>

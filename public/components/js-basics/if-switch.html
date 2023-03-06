@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript if and switch statement</title>
+  </head>
+  <body>
+    <h1>If and Switch statement</h1>
+  </body>
+  <script>
+    let userInput = window.confirm("Are you sure?");
+
+    /*
+    if (userInput) {
+      console.log("Ok, confirmed");
+    } else {
+      console.log("ohh.");
+    }*/
+
+    //above can be written as
+    userInput ? console.log("ok, confirmed") : console.log("Ohh");
+
+    let userInput2 = window.prompt("Enter your response, yes, no or maybe?");
+    userInput2 = userInput2.toLowerCase();
+    console.log(userInput2);
+
+    if (userInput2 == "yes") {
+      console.log("You selected yes");
+    } else if (userInput2 == "no") {
+      console.log("You selected no");
+    } else if (userInput2 == "maybe" || userInput2 == "may be") {
+      console.log("You selected may be");
+    } else {
+      console.log("no input");
+    }
+
+    let userInput3 = window.prompt("Enter a number between 0 - 3");
+    userInput3 = Number(userInput3);
+    switch (userInput3) {
+      case 0:
+        console.log("You selected 0");
+        break;
+
+      case 1:
+        console.log("You selected 1");
+        break;
+
+      case 2:
+        console.log("You selected 2");
+        break;
+
+      case 3:
+        console.log("You selected 3");
+        break;
+
+      default:
+        console.log("You selected nothing");
+    }
+  </script>
+</html>

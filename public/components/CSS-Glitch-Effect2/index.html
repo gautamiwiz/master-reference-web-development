@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glitch 2</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        background: #000;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      /*____________________________________________________________
+# SVG
+____________________________________________________________*/
+      .svgWrap {
+        position: relative;
+        margin-bottom: 20px;
+        width: 270px;
+        height: 76px;
+      }
+
+      .svgWrap__text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        fill: #fff;
+        background: #000;
+        width: 270px;
+        height: 76px;
+      }
+      .svgWrap__text:nth-child(2),
+      .svgWrap__text:nth-child(3) {
+        clip: rect(0, 0, 0, 0);
+      }
+      .svgWrap__text:nth-child(2) {
+        fill: #fffafa;
+        left: -2px;
+        animation: svg-glitch-effect 2s infinite linear alternate-reverse;
+      }
+      .svgWrap__text:nth-child(3) {
+        fill: #f5f5f5;
+        left: 2px;
+        animation: svg-glitch-effect 3s infinite linear alternate-reverse;
+      }
+
+      @keyframes svg-glitch-effect {
+        0% {
+          clip: rect(1px, 270px, 14px, 0);
+        }
+        5% {
+          clip: rect(40px, 270px, 23px, 0);
+        }
+        10% {
+          clip: rect(23px, 270px, 6px, 0);
+        }
+        15% {
+          clip: rect(34px, 270px, 11px, 0);
+        }
+        20% {
+          clip: rect(61px, 270px, 24px, 0);
+        }
+        25% {
+          clip: rect(50px, 270px, 70px, 0);
+        }
+        30% {
+          clip: rect(42px, 270px, 32px, 0);
+        }
+        35% {
+          clip: rect(20px, 270px, 2px, 0);
+        }
+        40% {
+          clip: rect(29px, 270px, 56px, 0);
+        }
+        45% {
+          clip: rect(38px, 270px, 51px, 0);
+        }
+        50% {
+          clip: rect(24px, 270px, 15px, 0);
+        }
+        55% {
+          clip: rect(60px, 270px, 6px, 0);
+        }
+        60% {
+          clip: rect(56px, 270px, 18px, 0);
+        }
+        65% {
+          clip: rect(14px, 270px, 69px, 0);
+        }
+        70% {
+          clip: rect(28px, 270px, 71px, 0);
+        }
+        75% {
+          clip: rect(41px, 270px, 26px, 0);
+        }
+        80% {
+          clip: rect(37px, 270px, 10px, 0);
+        }
+        85% {
+          clip: rect(41px, 270px, 20px, 0);
+        }
+        90% {
+          clip: rect(54px, 270px, 29px, 0);
+        }
+        95% {
+          clip: rect(23px, 270px, 18px, 0);
+        }
+        100% {
+          clip: rect(23px, 270px, 37px, 0);
+        }
+      }
+      /*____________________________________________________________
+# Image
+____________________________________________________________*/
+      .img {
+        position: relative;
+        width: 400px;
+        height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(vanille.png);
+      }
+      .img::before,
+      .img::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 400px;
+        height: 300px;
+        clip: rect(0, 0, 0, 0);
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .img::before {
+        left: -6px;
+        animation: glitch-effect 2s infinite linear alternate-reverse;
+        background-image: url(red.jpg);
+      }
+      .img::after {
+        left: 6px;
+        animation: glitch-effect 3s infinite linear alternate-reverse;
+        background-image: url(blue.jpg);
+      }
+
+      @keyframes glitch-effect {
+        0% {
+          clip: rect(38px, 400px, 184px, 0);
+        }
+        5.8823529412% {
+          clip: rect(85px, 400px, 201px, 0);
+        }
+        11.7647058824% {
+          clip: rect(235px, 400px, 102px, 0);
+        }
+        17.6470588235% {
+          clip: rect(70px, 400px, 86px, 0);
+        }
+        23.5294117647% {
+          clip: rect(281px, 400px, 170px, 0);
+        }
+        29.4117647059% {
+          clip: rect(201px, 400px, 105px, 0);
+        }
+        35.2941176471% {
+          clip: rect(92px, 400px, 80px, 0);
+        }
+        41.1764705882% {
+          clip: rect(205px, 400px, 80px, 0);
+        }
+        47.0588235294% {
+          clip: rect(170px, 400px, 271px, 0);
+        }
+        52.9411764706% {
+          clip: rect(300px, 400px, 263px, 0);
+        }
+        58.8235294118% {
+          clip: rect(153px, 400px, 93px, 0);
+        }
+        64.7058823529% {
+          clip: rect(209px, 400px, 16px, 0);
+        }
+        70.5882352941% {
+          clip: rect(72px, 400px, 8px, 0);
+        }
+        76.4705882353% {
+          clip: rect(266px, 400px, 11px, 0);
+        }
+        82.3529411765% {
+          clip: rect(294px, 400px, 205px, 0);
+        }
+        88.2352941176% {
+          clip: rect(288px, 400px, 260px, 0);
+        }
+        94.1176470588% {
+          clip: rect(18px, 400px, 220px, 0);
+        }
+        100% {
+          clip: rect(140px, 400px, 168px, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- https://dev.to/kerthin/how-to-create-pure-css-glitch-animation-for-images-and-svg-ojl -->
+    <!-- SVG -->
+    <div class="svgWrap">
+      <svg class="svgWrap__text">
+        <use xlink:href="#svgGlitch"></use>
+      </svg>
+      <svg class="svgWrap__text">
+        <use xlink:href="#svgGlitch"></use>
+      </svg>
+      <svg class="svgWrap__text">
+        <use xlink:href="#svgGlitch"></use>
+      </svg>
+    </div>
+
+    <!-- IMG -->
+    <div class="img"></div>
+
+    <!-- SVG Template -->
+    <div class="hide">
+      <svg
+        id="svgGlitch"
+        class="none"
+        width="270"
+        height="76"
+        viewBox="0 0 270 76"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0.84 38.288C0.84 49.488 4.376 58.48 11.448 65.264C18.52 72.048 27.64 75.44 38.808 75.44C45.048 75.44 50.536 74.224 55.272 71.792C60.04 69.328 63.64 66.56 66.072 63.488L61.176 59.552C58.936 62.624 55.944 65.04 52.2 66.8C48.488 68.56 44.28 69.44 39.576 69.44C30.392 69.44 23.176 66.4 17.928 60.32C12.712 54.24 10.072 46.512 10.008 37.136C9.944 27.888 12.408 20.656 17.4 15.44C22.392 10.192 29.256 7.568 37.992 7.568C41.288 7.568 44.584 8.032 47.88 8.96C51.208 9.888 53.976 11.232 56.184 12.992L61.032 7.376C58.088 5.328 54.584 3.76 50.52 2.672C46.456 1.584 42.248 1.04 37.896 1.04C27.112 1.04 18.232 4.656 11.256 11.888C4.312 19.12 0.84 27.92 0.84 38.288ZM48.312 47.216L57.864 48.896V65.648L66.072 63.488V48.896L72.36 47.216V42.416H48.312V47.216ZM53.016 10.4L55.896 24.032H61.368V2.62399H56.376L53.016 10.4ZM76.5855 74H100.106V70.16L92.5215 68.48L92.4255 48.704L92.5215 1.952L91.4175 0.463997L89.6415 0.367998L75.4335 1.99999V6.512L84.3615 7.952L84.4575 48.704L84.3615 68.48L76.5855 70.16V74ZM107.009 74H130.817V70.16L123.233 68.48L123.137 48.704L123.473 27.872L122.369 26H120.113L106.769 27.632V32.144L114.833 33.584L115.169 48.704L115.073 68.48L107.009 70.16V74ZM112.865 9.824C112.865 11.584 113.409 13.008 114.497 14.096C115.617 15.184 117.089 15.728 118.913 15.728C120.865 15.728 122.353 15.216 123.377 14.192C124.433 13.168 124.961 11.712 124.961 9.824C124.961 8.064 124.401 6.64 123.281 5.55199C122.193 4.464 120.737 3.92 118.913 3.92C116.961 3.92 115.457 4.432 114.401 5.456C113.377 6.48 112.865 7.936 112.865 9.824ZM134.737 32.144L142.561 32.72V48.704L142.225 66.176C142.225 69.056 142.737 71.152 143.761 72.464C144.817 73.744 146.577 74.384 149.041 74.384L160.225 72.608V68.768H153.409L151.057 66.032L150.625 48.704L151.441 19.28L149.857 17.36H147.601C146.545 19.344 145.073 21.488 143.185 23.792C141.329 26.096 138.513 27.696 134.737 28.592V32.144ZM148.801 32.144H161.329V27.248H148.993L148.801 32.144ZM166.385 51.2C166.385 58.304 168.577 64.064 172.961 68.48C177.377 72.864 182.913 75.056 189.569 75.056C195.265 75.056 199.665 74.048 202.769 72.032C205.873 69.984 208.177 67.952 209.681 65.936L207.233 63.056C205.473 64.688 203.457 66.064 201.185 67.184C198.913 68.272 196.113 68.816 192.785 68.816C187.793 68.816 183.585 67.136 180.161 63.776C176.769 60.384 175.057 55.872 175.025 50.24C174.993 43.68 176.385 38.72 179.201 35.36C182.017 31.968 185.377 30.272 189.281 30.272C192.193 30.272 194.657 30.944 196.673 32.288C198.689 33.6 199.841 35.2 200.129 37.088L205.937 31.184C204.177 29.168 201.921 27.632 199.169 26.576C196.417 25.488 193.121 24.944 189.281 24.944C183.137 24.944 177.777 27.472 173.201 32.528C168.657 37.584 166.385 43.808 166.385 51.2ZM199.313 33.2L201.377 42.944H206.129V25.904H201.761L199.313 33.2ZM215.617 74H237.217V70.16L230.593 68.48L230.497 48.704L230.593 1.904L229.249 0.367998H227.713L214.465 1.99999V6.512L222.433 7.952L222.529 48.704L222.433 68.48L215.617 70.16V74ZM230.353 39.44C231.985 36.912 234.113 35.024 236.737 33.776C239.393 32.496 242.001 31.856 244.561 31.856C247.601 31.856 249.937 32.736 251.569 34.496C253.201 36.224 254.017 38.144 254.017 40.256V48.704L253.921 68.48L246.337 70.16V74H269.185V70.16L262.081 68.48L261.841 48.704C261.841 48.704 261.873 47.568 261.937 45.296C262.033 43.024 262.081 40.704 262.081 38.336C262.081 34.176 260.833 30.912 258.337 28.544C255.873 26.144 252.177 24.944 247.249 24.944C243.345 24.944 239.633 26 236.113 28.112C232.625 30.224 230.161 32.864 228.721 36.032L230.353 39.44Z"
+        />
+      </svg>
+    </div>
+  </body>
+</html>
+
+<!-- 
+
+    $steps: 20;
+
+@keyframes svg-glitch-effect{
+    @for $i from 0 through $steps{
+        #{percentage($i*(1/$steps))}{
+            clip: rect(random(75) + px, 270px, random(75) + px, 0);
+        }
+    }
+}
+
+&:nth-child(2),
+  &:nth-child(3) {
+    clip: rect(0, 0, 0, 0); 
+  }
+  &:nth-child(2) {
+    fill: #fffafa;
+    left: -2px;
+    animation: svg-glitch-effect 2s infinite linear alternate-reverse;
+  }
+  &:nth-child(3) {
+    fill: #f5f5f5;
+    left: 2px;
+    animation: svg-glitch-effect 3s infinite linear alternate-reverse;
+  }
+
+  $steps: 17;
+
+@keyframes glitch-effect{
+    @for $i from 0 through $steps{
+        #{percentage($i*(1/$steps))}{
+            clip: rect(random(300) + px, 400px, random(300) + px, 0);
+        }
+    }
+}&::before {
+      left: -6px;
+      animation: glitch-effect 2s infinite linear alternate-reverse;
+      background-image: url(https://rawcdn.githack.com/Kerthin/links/247cc9065bac7d5c23b45ff677bf1d2bceeb4324/img/glitch/imgTV/red.jpg);
+    }
+    &::after {
+      left: 6px;
+      animation: glitch-effect 3s infinite linear alternate-reverse;
+      background-image: url(https://rawcdn.githack.com/Kerthin/links/247cc9065bac7d5c23b45ff677bf1d2bceeb4324/img/glitch/imgTV/blue.jpg);
+    }
+ -->

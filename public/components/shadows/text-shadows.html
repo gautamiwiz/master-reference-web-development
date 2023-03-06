@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>text Shadows</title>
+    <style>
+      /*
+        text-shadow: color offsetX offsetY blur
+
+        */
+      * {
+        text-align: center;
+        box-sizing: border-box;
+      }
+      h1 {
+        font-size: 5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="shadow1">Heading with shadow</h1>
+    <style>
+      #shadow1 {
+        text-shadow: grey 5px 5px 10px;
+      }
+    </style>
+
+    <h1 id="shadow2">Heading with glow type shadow</h1>
+    <style>
+      #shadow2 {
+        color: #fff;
+        text-shadow: magenta 0px 0px 10px;
+      }
+    </style>
+
+    <h1 id="shadow2a">Heading with glow type shadow</h1>
+    <style>
+      #shadow2a {
+        color: red;
+        text-shadow: yellow 5px 5px 50px;
+      }
+    </style>
+    <h1 id="shadow3">Heading with shadow up</h1>
+    <style>
+      #shadow3 {
+        text-shadow: grey -0px -15px 5px;
+      }
+    </style>
+
+    <h1 id="shadow4">Heading with shadow left</h1>
+    <style>
+      #shadow4 {
+        color: #000;
+        text-shadow: #babbbb -50px 0px 5px;
+      }
+    </style>
+
+    <h1 id="shadow5">Heading with shadow down</h1>
+    <style>
+      #shadow5 {
+        color: #000;
+        text-shadow: #babbbb 20px 30px 0px;
+      }
+    </style>
+
+    <h1 id="shadow6">Heading with multiple shadows</h1>
+    <style>
+      #shadow6 {
+        color: #000;
+        margin-top: 200px;
+        text-shadow: #babbbb 20px 30px 0px, blue -20px -50px 10px;
+      }
+    </style>
+
+    <h1 id="shadow7">Heading with multiple shadows</h1>
+    <style>
+      #shadow7 {
+        color: rgb(0, 128, 64);
+        background-color: rgb(0, 128, 64);
+        margin-top: 200px;
+        text-shadow: rgb(255, 255, 255) 2px 2px 0px,
+          rgba(0, 0, 0, 0.5) 5px 5px 0px, rgb(0, 0, 0) 0px 0px 15px;
+      }
+    </style>
+
+    <h1
+      style="
+        font-size: 10rem;
+        color: #fff;
+        background-color: fff;
+        padding: 50px;
+      "
+    >
+      <span style="text-shadow: #ed1c24 0px 0px 20px">A</span>
+      <span style="text-shadow: #f58220 0px 0px 20px">t</span>
+      <span style="text-shadow: #fdb813 0px 0px 20px">r</span>
+      <span style="text-shadow: #00a651 0px 0px 20px">a</span>
+      <span style="text-shadow: #0071bc 0px 0px 20px">n</span>
+      <span style="text-shadow: #a54686 0px 0px 20px">g</span>
+      <span style="text-shadow: #6a579e 0px 0px 20px">i</span>
+    </h1>
+  </body>
+</html>

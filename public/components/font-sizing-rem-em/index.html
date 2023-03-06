@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font Sizes</title>
+    <link rel="stylesheet" href="font-sizes.css" />
+  </head>
+  <body>
+    <div class="responsiveText">
+      <h1>Font size shrink and grow</h1>
+      <p>
+        This is a paragraph and the above heading grow and shrink based on
+        viewport width.
+      </p>
+    </div>
+    <div class="responsiveTextIssue">
+      <h1>Responsive font size without clamp</h1>
+      <p>
+        This is a paragraph and the above heading grow and shrink based on
+        viewport width, but without the clamp property. This keeps growing.
+      </p>
+    </div>
+    <p>This is font size in em size 16px based on default body</p>
+
+    <div class="emContainer">
+      <p>
+        This p is inside a div with font size as 20px and this p element size is
+        set to 1em results in 20px
+      </p>
+      <p>
+        This p is inside a div with font size as 20px and this p element size is
+        set to 1.5em results in 30px
+      </p>
+      <p>
+        This p is inside a div with font size as 20px and this p element size is
+        set to 2em results in 40px
+      </p>
+    </div>
+
+    <div class="remContainer">
+      <p>This p is font size 1rem: body font size = 16px. So this p is 16px.</p>
+      <p>
+        This p is font size 1.5rem: body font size = 16px. So this p is 24px.
+      </p>
+      <p>This p is font size 2rem: body font size = 16px. So this p is 32px.</p>
+    </div>
+  </body>
+</html>

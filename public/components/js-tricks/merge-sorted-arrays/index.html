@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Check console</h1>
+    <script>
+      //https://wsvincent.com/javascript-merge-two-sorted-arrays/
+
+      let array1 = [1, 6, 9, 10];
+      let array2 = [2, 4];
+
+      //method1
+      function mergeArray(array1, array2) {
+        let arr3 = [...array1, ...array2];
+        return arr3.sort((a, b) => a - b);
+      }
+      console.log(mergeArray(array1, array2));
+
+      //method2
+      function mergeArrayGreedy(array1, array2) {
+        let count = 0;
+        let index1 = 0;
+        let index2 = 0;
+        let array4 = [];
+
+        while (count < array1.length + array2.length) {
+          //flaw in the below model
+          //   let unmerged1 = array1[index1];
+          //   let unmerged2 = array2[index2];
+
+          //   if (unmerged1 < unmerged2) {
+          //     array4[count] = unmerged1;
+          //     index1++;
+          //   } else {
+          //     array4[count] = unmerged2;
+          //     index2++;
+          //   }
+
+          let isArr1Depleted = index1 >= array1.length;
+          let isArr2Depleted = index2 >= array2.length;
+
+          if (
+            !isArr1Depleted &&
+            (isArr2Depleted || array1[index1] < array2[index2])
+          ) {
+            array4[count] = array1[index1];
+            index1++;
+          } else {
+            array4[count] = array2[index2];
+            index2++;
+          }
+
+          count++;
+        }
+
+        return array4;
+      }
+      console.log(mergeArrayGreedy(array1, array2));
+    </script>
+  </body>
+</html>

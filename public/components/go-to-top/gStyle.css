@@ -1,0 +1,40 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 20px;
+  padding: 20px;
+}
+
+footer a {
+  position: fixed;
+  bottom: 3em;
+  right: 3em;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #313943;
+  border: none;
+  border-radius: 5px;
+  padding: 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.75em;
+  opacity: 0;
+}
+
+footer a:hover {
+  background-color: #fff;
+  padding: 1em 3em;
+}
+
+footer a.visible {
+  opacity: 1;
+}
