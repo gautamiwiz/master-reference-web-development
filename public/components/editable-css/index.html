@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editable Style sheet</title>
+  </head>
+  <body contenteditable="true">
+    <code>
+      <pre>
+      <style style="display: block; padding: 10px; border: 1px solid #efefef;">
+    body {
+        background-color: #fff;
+    }
+    button {
+        cursor: pointer;
+        padding: 20px;
+        border: 1px solid red;
+    }
+    button:hover {
+        background-color: yellow;
+        border: 1px solid blue;
+    }
+    button:focus {
+        background-color: peachpuff;
+        border: 1px solid green;
+    }
+    button:disabled {
+        background-color: #efefef;
+        border: 1px solid #6e6e6e;
+    }
+    h2 {
+        color: blueviolet;
+    }
+      </style>
+      </pre>
+    </code>
+    <div>
+      <button>Click Me!</button>
+      <button disabled>I am disabled!</button>
+    </div>
+    <h2>This is an editable h2. Change my color in the css above.</h2>
+  </body>
+</html>
