@@ -7,7 +7,6 @@ body {
   padding: 50px 20px;
   /* font-size: 16px; */
   font-size: 100%;
-  max-width: 800px;
   margin: 0 auto;
 }
 /*=============Responsive Text===================*/
@@ -59,8 +58,7 @@ body {
 }
 
 /*=============rem font units===================*/
-.remContainer {
-}
+
 .remContainer p {
   padding: 10px 0;
 }
@@ -77,4 +75,51 @@ body {
 .remContainer p:nth-child(3) {
   color: blue;
   font-size: 2rem;
+}
+
+/*=============buttons em vs rem ===================*/
+
+.buttonContainer {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.button-em {
+  padding: 1em;
+}
+
+.button1-em {
+  font-size: 10px;
+}
+.button2-em {
+  font-size: 15px;
+}
+.button3-em {
+  font-size: 25px;
+}
+.button4-em {
+  font-size: 35px;
+}
+
+.button-rem {
+  padding: 1rem;
+}
+
+.button1-rem {
+  font-size: 10px;
+}
+.button2-rem {
+  font-size: 15px;
+}
+.button3-rem {
+  font-size: 25px;
+}
+.button4-rem {
+  font-size: 35px;
 }
