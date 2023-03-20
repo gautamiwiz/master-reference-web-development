@@ -1,0 +1,86 @@
+section div {
+  background-color: peachpuff;
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+/*=============Grid 1=========*/
+.grid1 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+}
+
+.grid1 .item1 {
+  grid-column: span 2;
+}
+
+.grid1 .item3 {
+  grid-column: span 3;
+}
+
+/*=============Grid 2=========*/
+.grid2 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  margin-top: 20px;
+}
+
+.grid2 .item1 {
+  grid-row: span 3;
+}
+
+/*=============Grid 3=========*/
+.grid3 {
+  margin-top: 20px;
+  display: grid;
+  height: 500px;
+  /* grid-template: 100px auto 100px / repeat(12, 1fr); */
+  grid-template-columns: [main-start] 1fr [content-start] 5fr [content-end main-end];
+  grid-template-rows: 50px auto 50px;
+  gap: 5px;
+}
+.grid3 div {
+  border: none;
+}
+.grid3 .header {
+  background-color: darkorange;
+  grid-column: 1/-1;
+  grid-column: main-start / main-end;
+}
+.grid3 .menu {
+  background-color: blue;
+}
+.grid3 .content {
+  background-color: yellow;
+  /* grid-column: 2/-1; */
+  grid-column: content-start / content-end;
+}
+.grid3 .footer {
+  background-color: green;
+  /* grid-column: 1/-1; */
+  grid-column: main-start / main-end;
+}
+
+/*=============Grid 4=========*/
+.grid4 {
+  margin-top: 20px;
+  background-color: red;
+  width: 100%;
+  height: 700px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 20px;
+  column-gap: 20px;
+}
+
+.grid4 .item {
+  background-color: aqua;
+}
+
+.grid4 .firstItem {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}

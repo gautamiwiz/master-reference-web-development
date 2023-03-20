@@ -1,0 +1,91 @@
+section div {
+  background-color: peachpuff;
+  padding: 10px;
+  border: 1px solid #000;
+}
+/* section {
+  gap: 10px;
+} */
+
+/*grid 1 template area*/
+.grid1 {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 100px 500px 100px;
+  grid-template-areas:
+    "header header header"
+    "sidebar content content"
+    "footer footer footer";
+}
+
+.grid1 .item1 {
+  grid-area: header;
+}
+.grid1 .item2 {
+  grid-area: sidebar;
+}
+.grid1 .item3 {
+  grid-area: content;
+  background-color: aliceblue;
+}
+.grid1 .item4 {
+  grid-area: footer;
+}
+
+/*grid 2 template area*/
+.grid2 {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 100px 500px;
+  grid-template-areas:
+    "header header header"
+    "sidebar content ."
+    "footer footer footer";
+}
+
+.grid2 .item1 {
+  grid-area: header;
+}
+.grid2 .item2 {
+  grid-area: sidebar;
+}
+.grid2 .item3 {
+  grid-area: content;
+  background-color: aliceblue;
+}
+.grid2 .item4 {
+  grid-area: footer;
+}
+
+/*grid 3 template area*/
+
+.grid3 {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 100px 500px;
+  grid-template-areas:
+    "header header header"
+    "sidebar content ."
+    "sidebar footer footer"
+    "footer2 footer2 footer2";
+}
+
+.grid3 .item1 {
+  grid-area: header;
+}
+.grid3 .item2 {
+  grid-area: sidebar;
+}
+.grid3 .item3 {
+  grid-area: content;
+  background-color: aliceblue;
+}
+.grid3 .item4 {
+  grid-area: footer;
+}
+
+.grid3 .item6 {
+  grid-area: footer2;
+}
