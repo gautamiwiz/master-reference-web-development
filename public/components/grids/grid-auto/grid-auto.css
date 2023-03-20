@@ -46,3 +46,20 @@ section div {
   grid-auto-columns: 200px 500px;
   grid-auto-flow: column;
 }
+
+.grid6 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+
+  /* dens accomodates the empty space by filling item 3 */
+  grid-auto-flow: row dense;
+}
+
+.grid6 .item1 {
+  grid-column: span 2;
+}
+
+.grid6 .item2 {
+  grid-column: span 2;
+}

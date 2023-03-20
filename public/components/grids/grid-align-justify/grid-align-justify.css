@@ -1,0 +1,75 @@
+section div {
+  background-color: antiquewhite;
+}
+
+section {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  height: 500px;
+  border: 1px solid red;
+}
+
+section.grid1 {
+  /* Placed the grid itsels across the width and height (has to be specified) */
+  align-content: center;
+  justify-content: center;
+
+  /* default is stretch */
+  align-items: center;
+  justify-items: center;
+}
+
+section.grid2 {
+  align-content: center;
+  justify-content: center;
+
+  /* default is stretch */
+  align-items: stretch;
+  justify-items: stretch;
+}
+
+section.grid3 {
+  align-content: end;
+  justify-content: end;
+
+  /* default is stretch */
+  align-items: end;
+  justify-items: end;
+}
+
+section.grid4 {
+  align-content: start;
+  justify-content: center;
+
+  /* default is stretch */
+  align-items: center;
+  justify-items: center;
+}
+
+section.grid4 .item1 {
+  align-self: end;
+}
+section.grid4 .item3 {
+  align-self: start;
+}
+
+section.grid4 .item4 {
+  align-self: start;
+}
+section.grid4 .item5 {
+  align-self: stretch;
+  justify-self: stretch;
+}
+
+section.grid4 .item6 {
+  align-self: end;
+}
+section.grid4 .item7 {
+  align-self: end;
+}
+
+section.grid4 .item9 {
+  align-self: start;
+}
