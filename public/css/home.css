@@ -1,23 +1,18 @@
 h1,
 .h1 {
   color: #0095da;
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw + 2px, 6rem);
+  text-align: center;
+  padding: 10px 0 0px 0;
 }
 .homeH2 {
-  color: #6e6e6e;
-  border-bottom: 1px solid #000;
+  color: #000;
+  border-bottom: 1px solid #babbbb;
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-size: clamp(1rem, 5vw + 2px, 2.5rem);
   padding-bottom: 10px;
-  width: 90%;
 }
-
-ul {
-  margin-left: 30px;
-  list-style-type: disc;
-  list-style-type: square;
-}
-
 a,
 a:hover,
 a:focus {
@@ -26,4 +21,24 @@ a:focus {
 
 .container {
   padding: 10px;
+}
+
+ul.flex {
+  margin-left: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 10px;
+}
+
+ul.flex li a {
+  display: block;
+  background-color: peachpuff;
+  padding: 5px 8px;
+  text-decoration: none;
+}
+ul.flex li a:hover {
+  display: block;
+  background-color: darkorange;
+  padding: 5px 8px;
 }

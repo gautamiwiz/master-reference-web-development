@@ -75,7 +75,7 @@ button {
   --text-color-primary: #000;
 
   /*Background Colors*/
-  --bg-color-primary: #efefef;
+  --bg-color-primary: #fff;
 }
 
 @media screen and (min-width: var(--mobile-device)) {

@@ -6,7 +6,7 @@
 body {
   padding: 50px 20px;
   /* font-size: 16px; */
-  font-size: 100%;
+  /* font-size: 100%; */
   margin: 0 auto;
 }
 /*=============Responsive Text===================*/
@@ -91,20 +91,32 @@ button {
 }
 
 .button-em {
-  padding: 1em;
+  font-size: 40px;
 }
 
 .button1-em {
   font-size: 10px;
+  padding: 1em;
+}
+.button1-2em {
+  font-size: 10px;
+  padding: 2em;
 }
 .button2-em {
   font-size: 15px;
+  padding: 1em;
 }
 .button3-em {
   font-size: 25px;
+  padding: 1em;
+}
+.button3-2em {
+  font-size: 25px;
+  padding: 2em;
 }
 .button4-em {
   font-size: 35px;
+  padding: 1em;
 }
 
 .button-rem {
