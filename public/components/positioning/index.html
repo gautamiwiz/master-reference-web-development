@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning</title>
+    <style>
+        /* Every element has a default position i.e static : go with the normal document flow */
+        /*
+
+        */
+        .parent {
+            padding: 1rem;
+            background-color: antiquewhite;
+            margin-top: 20px;
+            margin-bottom: 100px;
+        }
+
+        .parent>div {
+            padding: 1rem;
+        }
+
+        .box1 {
+            background-color: aqua;
+        }
+
+        .box2 {
+            background-color: blueviolet;
+        }
+
+        .box3 {
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body style="overflow-x: hidden;">
+    <!--Start-->
+    <div class="parent">
+        <p>Parent div</p>
+        <div class="box1" style="position: relative; left: 10px;">Box 1</div>
+        <div class="box2">Box 2</div>
+        <div class="box3">Box 3</div>
+    </div><!--End-->
+
+    <!--Start-->
+    <div class="parent">
+        <p>Parent div</p>
+        <div class="box1">Box 1</div>
+        <div class="box2" style="position: relative; left: 30px;">Box 2</div>
+        <div class="box3">Box 3</div>
+    </div><!--End-->
+
+    <!--Start-->
+    <div class="parent">
+        <p>Parent div</p>
+        <div class="box1" style="position: relative; left: 80px;">Box 1</div>
+        <div class="box2">Box 2</div>
+        <div class="box3">Box 3</div>
+    </div><!--End-->
+
+    <!--Start-->
+    <div class="parent">
+        <p>Parent div</p>
+        <div class="box1" style="position: relative; top: 30px; right: 10px;">Box 1</div>
+        <div class="box2">Box 2</div>
+        <div class="box3">Box 3</div>
+    </div><!--End-->
+
+    <!--Start-->
+    <div class="parent">
+        <p>Parent div</p>
+        <div class="box1" style="position: relative; top: 30px;right: 10px;">Box 1</div>
+        <div class="box2">Box 2</div>
+        <div class="box3">Box 3</div>
+    </div><!--End-->
+
+    <!--Start-->
+    <div class="parent">
+        <p>Parent div</p>
+        <div class="box1" style="position: relative; top: -20px;">Box 1</div>
+        <div class="box2">Box 2</div>
+        <div class="box3">Box 3</div>
+    </div><!--End-->
+    <!--Start-->
+    <div class="parent">
+        <p>Parent div</p>
+        <div class="box1" style="position: relative; top: 180px;">Box 1</div>
+        <div class="box2">Box 2</div>
+        <div class="box3">Box 3</div>
+    </div><!--End-->
+
+    <!--Start-->
+    <div class="parent">
+        <p>Parent div</p>
+        <div class="box1" style="position: relative;">Box 1</div>
+        <div class="box2">Box 2</div>
+        <div class="box3">Box 3</div>
+    </div><!--End-->
+
+    <!--Start-->
+    <div class="parent">
+        <p>Parent div</p>
+        <div class="box1" style="position: relative; width: 200px; left: 50%; transform: translateX(-50%);">Box 1</div>
+        <div class="box2" style="position: relative; width: 200px; left: 10%;">Box 2</div>
+        <div class="box3" style="position: relative; width: 200px;">Box 3</div>
+    </div><!--End-->
+
+    <!--Start-->
+    <div class="parent" style="position: relative;">
+        <p>Parent div</p>
+        <div class="box1" style="position: absolute; width: 50px; z-index: 1; top: 0; right: 0; ">Box 1</div>
+        <div class="box2" style="position: relative; ">Box 2</div>
+        <div class="box3" style="position: relative;">Box 3</div>
+    </div><!--End-->
+
+    <!--Start-->
+    <div class="parent" style="position: relative;">
+        <p>Parent div</p>
+        <div class="box1" style="position: absolute; width: 50px; z-index: 1; bottom: 0; right: 0;">Box 1</div>
+        <div class="box2" style="position: relative; ">Box 2</div>
+        <div class="box3" style="position: relative;">Box 3</div>
+    </div><!--End-->
+
+    <!--Start-->
+    <div class="parent" style="position: relative;">
+        <p>Parent div</p>
+        <div class="box1" style="position: absolute; z-index: 1; bottom: 0; right: 0; left: 0;">Box 1</div>
+        <div class="box2" style="position: relative; ">Box 2</div>
+        <div class="box3" style="position: relative;">Box 3</div>
+    </div><!--End-->
+
+    <!--Start-->
+    <div class="parent" style="position: relative;">
+        <p>Parent div</p>
+        <div class="box1" style="position: absolute; z-index: 1; bottom: 0; right: 0; left: 0; top:0; opacity: 0.9;">Box
+            1</div>
+        <div class="box2" style="position: relative; ">Box 2</div>
+        <div class="box3" style="position: relative;">Box 3</div>
+    </div><!--End-->
+
+    <!--Start-->
+    <div class="parent" style="position: relative; height: 200px;">
+        <p>Parent div</p>
+        <div class="box1" style="position: absolute; z-index: 1; top:0; left:0">Box
+            1</div>
+        <div class="box2" style="position: absolute; top:0; right:0; ">Box 2</div>
+        <div class="box3" style="position: absolute; bottom:0; left:0;">Box 3</div>
+    </div><!--End-->
+
+    <!--Start-->
+    <div class="parent">
+        <p>Parent div</p>
+        <!--This moves with document.. is relative to the screen-->
+        <div class="box1" style=" background-color: yellow; position: absolute; bottom: 0; right: 0; width: 100px;">Box
+            1</div>
+        <div class="box2">Box 2</div>
+        <div class="box3">Box 3</div>
+    </div><!--End-->
+
+    <!--Start-->
+    <div class="parent">
+        <p>Parent div</p>
+        <!--This doesnt with document.. is relative to the document-->
+        <!-- element with fixed position is removed from the document flow-->
+        <div class="box1" style=" background-color: red; position: fixed; bottom: 100px; right: 0; width: 100px;">Box
+            1</div>
+        <div class="box2">Box 2</div>
+        <div class="box3">Box 3</div>
+    </div><!--End-->
+
+
+    <!--Start-->
+    <div class="parent">
+        <p>Parent div</p>
+        <div class="box1" style="position: sticky; top: 0px;">Box 1</div>
+        <div class="box2">Box 2</div>
+        <div class="box3">Box 3</div>
+    </div><!--End-->
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+</body>
+
+</html>

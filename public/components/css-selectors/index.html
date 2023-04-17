@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <style>
+        code {
+            background-color: #efefef;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        p {
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML General Selectors</h1>
+    <p><a href="selectors-examples/">Check the selectors here</a></p>
+
+    <h3>Descendent Selector</h3>
+    <p>Selects all the spans that are directly inside div. It will not select a span inside a span.</p>
+    <code>
+        div>span{
+           ...
+        }
+    </code>
+
+    <h3>Sibling Selector</h3>
+    <p>Selects all the p's that are directly after the h2. It will not select any p before h2.</p>
+    <code>
+        h2 ~ p{
+           ...
+        }
+    </code>
+
+    <h3>Adjascent sibling selector</h3>
+    <p>Selects only the p's that are directly after the h2. It will not select any p that comes after the p that is next
+        to h2.</p>
+    <code>
+        h2 + p{
+           ...
+        }
+    </code>
+
+    <p>Select all input type = text</p>
+    <code>
+        input[type="text"]{
+           ...
+        }
+    </code>
+    <h3>based on input type</h3>
+    <p>Select all input type = radio</p>
+    <code>
+        input[type="radio"]{
+           ...
+        }
+    </code>
+    <p>Select all input type = checkbox</p>
+    <code>
+        input[type="checkbox"]{
+           ...
+        }
+    </code>
+
+    <p>Selects any unordered list that has a class on it</p>
+    <code>
+        ol[class]{
+           ...
+        }
+    </code>
+
+    <p>Selects any unordered list that has data attribute on it</p>
+    <code>
+        ol[role="list"]{
+           ...
+        }
+    </code>
+
+    <p>Selects any button that has a class called "button" or "button-primary</p>
+    <code>
+        [class|="button"]{
+           ...
+        }
+    </code>
+</body>
+
+</html>

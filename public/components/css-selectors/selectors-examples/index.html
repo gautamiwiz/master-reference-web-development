@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+</head>
+
+<body>
+    <h1>CSS Selectors</h1>
+    <p>Check view source/inspect element</p>
+    <style>
+        /*Direct descendend selector*/
+        /*any span that is direct descendent of div*/
+        #section1 div>span {
+            background-color: red;
+        }
+    </style>
+    <section id="section1">
+        <h2>Heading</h2>
+        <p>Paragraph 1 comes here</p>
+        <p>Paragraph 2</p>
+        <div>
+            <span>Outer span <span>Inner span</span></span>
+            <span>one more span</span>
+            <p><span>Span in paragraph</span></p>
+        </div>
+        <p>Paragraph 3</p>
+        <p>Paragraph 4</p>
+        <div>Another Div</div>
+        <p> Paragraph 5</p>
+    </section>
+
+    <!-- End -->
+    <hr>
+
+    <style>
+        /*Sibling Selector*/
+        /*select all the sibling p that come after h2 */
+        #section2 h2~p {
+            background-color: red;
+        }
+    </style>
+    <section id="section2">
+        <h2>Heading</h2>
+        <p>Paragraph 1 comes here</p>
+        <p>Paragraph 2</p>
+        <div>
+            <span>Outer span <span>Inner span</span></span>
+            <span>one more span</span>
+            <p><span>Span in paragraph</span></p>
+        </div>
+        <p>Paragraph 3</p>
+        <p>Paragraph 4</p>
+        <div>Another Div</div>
+        <p> Paragraph 5</p>
+    </section>
+
+    <!-- End -->
+    <hr>
+
+    <style>
+        /*Sibling Selector*/
+        /*select all the sibling p that come after div */
+        #section3 div~p {
+            background-color: red;
+        }
+    </style>
+    <section id="section3">
+        <h2>Heading</h2>
+        <p>Paragraph 1 comes here</p>
+        <p>Paragraph 2</p>
+        <div>
+            <span>Outer span <span>Inner span</span></span>
+            <span>one more span</span>
+            <p><span>Span in paragraph</span></p>
+        </div>
+        <p>Paragraph 3</p>
+        <p>Paragraph 4</p>
+        <div>Another Div</div>
+        <p> Paragraph 5</p>
+    </section>
+
+    <!-- End -->
+    <hr>
+
+    <style>
+        /*very first/next/adjacent Sibling Selector*/
+        /*select only the sibling p that come after div */
+        #section4 div+p {
+            background-color: red;
+        }
+    </style>
+    <section id="section4">
+        <h2>Heading</h2>
+        <p>Paragraph 1 comes here</p>
+        <p>Paragraph 2</p>
+        <div>
+            <span>Outer span <span>Inner span</span></span>
+            <span>one more span</span>
+            <p><span>Span in paragraph</span></p>
+        </div>
+        <p>Paragraph 3</p>
+        <p>Paragraph 4</p>
+        <div>Another Div</div>
+        <p> Paragraph 5</p>
+    </section>
+
+
+    <!-- End -->
+    <hr>
+
+    <style>
+        /*Select every p tag that does not have class green*/
+        #section5 p:not(.green) {
+            background-color: yellow;
+        }
+    </style>
+    <section id="section5">
+        <h2>Heading</h2>
+        <p class="red">Paragraph 1 comes here</p>
+        <p class="green">Paragraph 2</p>
+        <div>
+            <span>Outer span <span>Inner span</span></span>
+            <span>one more span</span>
+            <p><span>Span in paragraph</span></p>
+        </div>
+        <p class="green">Paragraph 3</p>
+        <p class="red">Paragraph 4</p>
+        <div>Another Div</div>
+        <p class="red"> Paragraph 5</p>
+    </section>
+
+    <!-- End -->
+    <hr>
+
+    <style>
+        /*Select every p tag that does not have class green*/
+        #section6 p:not(.green):not(.red) {
+            background-color: green;
+        }
+    </style>
+    <section id="section6">
+
+
+        <h2>Heading</h2>
+        <p class="red">Paragraph 1 comes here</p>
+        <p class="green">Paragraph 2</p>
+        <div>
+            <span>Outer span <span>Inner span</span></span>
+            <span>one more span</span>
+            <p><span>Span in paragraph</span></p>
+        </div>
+        <p class="green">Paragraph 3</p>
+        <p class="red">Paragraph 4</p>
+        <div>Another Div</div>
+        <p class="red"> Paragraph 5</p>
+    </section>
+
+
+    <!-- End -->
+    <hr>
+    <style>
+        /*xxx*/
+        #section7 input {
+            margin: 50px;
+        }
+    </style>
+    <section id="section7">
+        <h2>Heading</h2>
+        <input type="text"><br>
+        <label for="">
+            <input type="checkbox"> hello</label>
+    </section>
+
+    <!-- End -->
+    <hr>
+    <style>
+        /*xxx*/
+        #section8 input[data-something] {
+            background: yellow;
+        }
+    </style>
+    <section id="section8">
+        <h2>Heading</h2>
+        <input type="text" data-something="text"><br />
+        <input type="text" data-something="text"><br />
+        <input type="text">
+    </section>
+
+    <!-- End -->
+    <hr>
+    <style>
+        /*xxx*/
+        #section9 input[data-something*="tex"] {
+            background: yellow;
+        }
+
+        /* you can also do starts with or ends with*/
+        /* #section9 input[data-something^="tex"] {
+            background: yellow;
+        } */
+    </style>
+    <section id="section9">
+        <h2>Heading</h2>
+        <input type="text" data-something="text"><br />
+        <input type="text" data-something="test"><br />
+        <input type="text">
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+div {
+  background-color: green;
+}
+
+/*you can also chain "and" statements*/
+@supports (background-color: revert) {
+  .div {
+    background-color: blue;
+  }
+}
+@supports not (background-color: revert) {
+  .div {
+    background-color: red;
+  }
+}

@@ -11,60 +11,56 @@
 
 */
 
-
-
 body {
-	display: flex;
+  /* display: flex;
 	align-items: center;
-	justify-content: center;
-	margin: 70px auto;
-	width: 90%;
+	justify-content: center; */
+  margin: 70px auto;
+  width: 90%;
 }
 
 body > article {
-   width: 500px;
-   font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif"; 
-   background-color: tan;
+  width: 500px;
+  font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+  background-color: tan;
 }
 
 body > article > header {
-   display: block;
-   width: 80%;
-   margin: 0 auto;
-   padding: 0 0 10px 0;
-   background-color: rgba(255, 255, 255, 0.3);
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 0 10px 0;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 body > article > header > h1 {
-   font-size: 2.3em;
-   font-weight: normal;
-   text-align: center;
-   color: rgba(0, 0, 0, 0.9);  
-   margin: 0;
+  font-size: 2.3em;
+  font-weight: normal;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.9);
+  margin: 0;
 }
 
 body > article > header > h2 {
-   font-size: 1.3em;
-   font-weight: normal;
-   text-align: center;
-   color: rgba(0, 0, 0, 0.9); 
-   margin: 0;
+  font-size: 1.3em;
+  font-weight: normal;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.9);
+  margin: 0;
 }
 
 body > article p {
-   margin: 20px 40px;
-   font-size: 1.3em;
-   color: rgba(0, 0, 0, 0.7);
-   text-align: center;
+  margin: 20px 40px;
+  font-size: 1.3em;
+  color: rgba(0, 0, 0, 0.7);
+  text-align: center;
 }
 
-
-
 body > article > p:last-of-type {
-   text-align: center;
-   margin-bottom: 0;
+  text-align: center;
+  margin-bottom: 0;
 }
 
 cite {
-   font-size: 0.8em;
+  font-size: 0.8em;
 }

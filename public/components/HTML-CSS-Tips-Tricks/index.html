@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CSS Tips and Tricks</title>
+    <style>
+        code {
+            color: #0067b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML CSS Best Practises ~ Do's Dont's ~ Tips &amp; Tricks</h1>
+    <ul>
+        <li>Never use fixed width in terms of px, unless desperately required. Try giving widths in %.</li>
+        <li>Try not using height as much unless required</li>
+        <li>Use responsive units em and rem over px</li>
+        <li>When using css variables, always mention defaults "margin: var(--margin, 10px);""
+        </li>
+        <li>Save code repeat for flex and grid by targeting in the below way <br />
+            <code>
+<pre>
+[class*="grid-"]{
+    display: grid;
+    gap: 1rem;
+}
+</pre>
+</code>
+        </li>
+        <li>Disable right clicking <br />
+            <code>
+<pre>
+&lt;body oncontextmenu="return false"&gt;
+</pre>
+        </code>
+
+            <code>
+<pre>
+&lt;section oncontextmenu="return false"&gt;Not allowed&lt;/section&gt;
+</pre>
+        </code>
+        </li>
+        <li>Prevent image loading until the user scrolls to the section <br />
+            <code>
+<pre>
+&lt;img src="pepercry.png" loading="lazy" alt="A crying frog" /&gt;
+</pre>
+        </code>
+        </li>
+        <li>Open back facing camera <br />
+            <code>
+    <pre>
+&lt;input type="file" capture="environment" accept="video/*"&gt;
+    </pre>
+</code>
+        </li>
+        <li>Open front facing camera <br />
+            <code>
+    <pre>
+&lt;input type="file" capture="user" accept="video/*"&gt;
+    </pre>
+</code>
+
+        </li>
+        <li>Refresh a page every 30 seconds
+            <code>
+    <pre>
+&lt;meta http-equiv="refresh" content="30"&gt;
+    </pre>
+</code>
+            redirect after 30 seconds
+            <code>
+    <pre>
+&lt;meta http-equiv="refresh" content="30;https://iwiz.in"&gt;
+    </pre>
+</code>
+        </li>
+        <li>CSS : Check if a class has <br />
+            <code>
+    <pre>
+.post:has(h2, 1){
+    Background: white;
+}
+    </pre>
+</code>
+        </li>
+        <li>
+            Media Queries <br />
+            <code>
+<pre>
+@media screen and (min-width: 768px){...}
+</pre>
+</code>
+            <code>
+    <pre>@media print (min-width: 768px){...}</pre>
+</code>
+            <code>
+        <pre>@media all (min-width: 768px){...}</pre>
+</code>
+
+            <code>
+    <pre>@media (min-width: 768px){...}</pre>
+</code>
+            <code>
+    <pre>@media print (orientation: landscape){...}</pre>
+    </code>
+            <code>
+        <pre>@media (min-width: 768px){...}</pre>
+</code>
+            <code>
+<pre>@media print (min-width: 768px), (orientation: landscape){...}</pre>
+</code>
+            <code>
+<pre>@media print (min-width: 768px) and (max-width: 1440px){...}</pre>
+</code>
+        </li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html>

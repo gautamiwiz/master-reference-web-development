@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Types</title>
+    <style>
+        .inputWrap {
+            margin: 20px 0;
+        }
+
+        label {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Input Types</h1>
+    <div class="inputWrap">
+        <label for="input1">Text</label>
+        <input type="text" id="input1">
+    </div>
+    <div class="inputWrap">
+        <input type="password">
+    </div>
+    <div class="inputWrap">
+        <input type="number" name="" id="">
+    </div>
+    <div class="inputWrap">
+        <input type="number" inputmode="numeric">
+    </div>
+    <div class="inputWrap">
+        <input type="number" name="" id="numeric1">
+    </div>
+    <style>
+        /*Remove the numeric stepper from chrom and firefox*/
+        #numeric1::-webkit-inner-spin-button {
+            display: none;
+        }
+
+        #numeric1 {
+            -moz-appearance: textfield;
+        }
+    </style>
+
+    <!--
+        /*chrome and safari*/
+        input[type="number"]::webkit-inner-spin-button{ display :none}
+
+        /*firefox*/
+        input[type=number]{-moz-appearance: textfield}
+    -->
+</body>
+
+</html>

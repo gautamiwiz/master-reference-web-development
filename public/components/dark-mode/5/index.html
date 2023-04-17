@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ~ JS Custom Properties</title>
+    <style>
+        :root {
+            --background: #fff;
+            --text: #000;
+            --theme: pink;
+        }
+
+        body {
+            background-color: var(--background);
+        }
+
+        h2 {
+            color: var(--theme);
+        }
+
+        p {
+            color: var(--text);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>This is heading</h2>
+    <p>This is line 1</p>
+    <p>This is line 2</p>
+    <button>
+        Dark Mode
+    </button>
+    <script>
+        document.querySelector('button').style.cursor = "pointer";
+
+        const button = document.querySelector("button").addEventListener('click', () => {
+
+            let bg = getComputedStyle(document.documentElement).getPropertyValue('--background');
+            console.log(bg)
+            if (bg == "#000") {
+                document.documentElement.style.setProperty('--text', "#000");
+                document.documentElement.style.setProperty('--background', "#fff");
+                document.documentElement.style.setProperty('--theme', "pink");
+                console.log(getComputedStyle(document.documentElement).getPropertyValue('--text'));
+                console.log(getComputedStyle(document.documentElement).getPropertyValue('--background'));
+                console.log(getComputedStyle(document.documentElement).getPropertyValue('--theme'));
+            }
+            else {
+                document.documentElement.style.setProperty('--text', "#fff");
+                document.documentElement.style.setProperty('--background', "#000");
+                document.documentElement.style.setProperty('--theme', "grey");
+            }
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Underline</title>
+</head>
+
+<body>
+    <p style="line-height: 1.5;">Lorem ipsum, dolor sit amet consectetur <a href="https://iwiz.in/"
+            id="fancyLink">adipisicing elit. Tenetur sit,
+            atque laborum, quod consequuntur dolores incidunt, repellat et sunt quam eius aliquam. Eos, possimus.
+            Explicabo</a>, dolores temporibus. Repellat, similique voluptatem.</p>
+    <style>
+        #fancyLink {
+            background-image: linear-gradient(90deg, red, blue);
+            background-size: 0 3px;
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            transition: background-size 300ms ease;
+            padding-bottom: 5px;
+            text-decoration: none;
+            font-weight: 900;
+        }
+
+        #fancyLink:hover {
+            background-size: 100% 3px;
+        }
+    </style>
+</body>
+
+</html>

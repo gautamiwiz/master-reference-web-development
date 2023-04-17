@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements</title>
+    <link rel="stylesheet" href="../../css/base.css">
+</head>
+
+<body>
+    <h1>Pseudo Elements</h1>
+    <!-- Section -->
+    <style>
+        #section1 .box {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+
+        #section1 p::first-letter {
+            font-size: 200%;
+        }
+    </style>
+    <section id="section1">
+        <h3>p::first-letter</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nisi dicta ullam quo neque excepturi,
+            repellat autem doloremque quos repudiandae quasi nobis impedit magnam quam odio consectetur, corporis
+            laborum illo!</p>
+        <div class="box"></div>
+    </section>
+
+    <!-- Section -->
+    <style>
+        #section2 .box {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+
+        #section2 p::first-line {
+            font-style: italic;
+            color: blue;
+        }
+    </style>
+    <section id="section2">
+        <h3>p::first-line</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nisi dicta ullam quo neque excepturi,
+            repellat autem doloremque quos repudiandae quasi nobis impedit magnam quam odio consectetur, corporis
+            laborum illo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nisi dicta ullam quo neque
+            excepturi,
+            repellat autem doloremque quos repudiandae quasi nobis impedit magnam quam odio consectetur, corporis
+            laborum illo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nisi dicta ullam quo neque
+            excepturi,
+            repellat autem doloremque quos repudiandae quasi nobis impedit magnam quam odio consectetur, corporis
+            laborum illo!</p>
+        <div class="box"></div>
+    </section>
+
+    <!-- Section -->
+    <style>
+        #section3 .box {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+
+        #section3 .box::before {
+            content: "hi";
+        }
+    </style>
+    <section id="section3">
+        <h3>::before</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nisi dicta ullam quo neque excepturi,
+            repellat autem doloremque quos repudiandae quasi nobis impedit magnam quam odio consectetur, corporis
+            laborum illo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nisi dicta ullam quo neque
+            excepturi,
+            repellat autem doloremque quos repudiandae quasi nobis impedit magnam quam odio consectetur, corporis
+            laborum illo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nisi dicta ullam quo neque
+            excepturi,
+            repellat autem doloremque quos repudiandae quasi nobis impedit magnam quam odio consectetur, corporis
+            laborum illo!</p>
+        <div class="box"></div>
+    </section>
+
+    <!-- Section -->
+    <style>
+        #section4 .box {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+
+        #section4 .box::after {
+            content: "Bye";
+        }
+    </style>
+    <section id="section4">
+        <h3>::after</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nisi dicta ullam quo neque excepturi,
+            repellat autem doloremque quos repudiandae quasi nobis impedit magnam quam odio consectetur, corporis
+            laborum illo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nisi dicta ullam quo neque
+            excepturi,
+            repellat autem doloremque quos repudiandae quasi nobis impedit magnam quam odio consectetur, corporis
+            laborum illo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nisi dicta ullam quo neque
+            excepturi,
+            repellat autem doloremque quos repudiandae quasi nobis impedit magnam quam odio consectetur, corporis
+            laborum illo!</p>
+        <div class="box">Hi</div>
+    </section>
+
+
+    <!-- Section -->
+    <style>
+        #section5 .box {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+
+        #section5 .box::before {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: green;
+        }
+    </style>
+    <section id="section5">
+        <h3>::before</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nisi dicta ullam quo neque excepturi,
+            repellat autem doloremque quos repudiandae quasi nobis impedit magnam quam odio consectetur, corporis
+            laborum illo! </p>
+        <div class="box">Hi</div>
+    </section>
+
+    <!-- Section -->
+    <style>
+        #section6 .box {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+
+        #section6 p::before {
+            content: attr(data-gautam);
+
+            width: 20px;
+            height: 20px;
+            background-color: green;
+        }
+    </style>
+    <section id="section6">
+        <h3>::before - content : attr()</h3>
+        <p data-gautam="Gautam">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nisi dicta ullam quo
+            neque excepturi,
+            repellat autem doloremque quos repudiandae quasi nobis impedit magnam quam odio consectetur, corporis
+            laborum illo! </p>
+    </section>
+</body>
+
+</html>

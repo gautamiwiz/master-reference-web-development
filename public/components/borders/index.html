@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic borders</title>
-    <style>
-      /*
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic borders</title>
+  <style>
+    /*
         border: width style color
         border: 3px solid red.
         or
@@ -37,39 +38,44 @@
         ridge
         none
         */
-      div {
-        width: 50%;
-        height: 300px;
-        margin-bottom: 30px;
-      }
-    </style>
-  </head>
-  <body>
-    <div
-      style="
+    div {
+      width: 50%;
+      height: 300px;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="
         border-width: 20px;
         border-style: solid;
         border-color: red green blue orange;
-      "
-    >
-      solid, border-color: red green blue orange;
-    </div>
-    <div
-      style="
+      ">
+    solid, border-color: red green blue orange;
+  </div>
+  <div style="
         border-width: 20px;
         border-style: ridge;
         border-color: red green blue orange;
-      "
-    >
-      solid, border-color: red green blue orange;
-    </div>
-    <div style="border: 20px solid red">solid</div>
-    <div style="border: 20px dashed red">dashed</div>
-    <div style="border: 20px dotted red">dotted</div>
-    <div style="border: 20px double red">double</div>
-    <div style="border: 20px groove red">groove</div>
-    <div style="border: 20px inset red">inset</div>
-    <div style="border: 20px outset red">outset</div>
-    <div style="border: 20px ridge red">ridge</div>
-  </body>
+      ">
+    ridge, border-color: red green blue orange;
+  </div>
+  <div style="border: 20px solid red">solid</div>
+  <div style="border: 20px dashed red">dashed</div>
+  <div style="border: 20px dotted red">dotted</div>
+  <div style="border: 20px double red">double</div>
+  <div style="border: 20px groove red">groove</div>
+  <div style="border: 20px inset red">inset</div>
+  <div style="border: 20px outset red">outset</div>
+  <div style="border: 20px ridge red">ridge</div>
+
+  <div style="border-width: 25px 20px;
+  border-color: hsl(0, 43%, 64%);
+  border-style: ridge double groove;">ridge double groove</div>
+
+  <div style="border: 20px solid transparent;
+border-image: radial-gradient(yellow, brown) 35%;">Radial gradient</div>
+</body>
+
 </html>

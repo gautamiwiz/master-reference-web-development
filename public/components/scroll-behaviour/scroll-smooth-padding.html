@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Smooth with padding</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding: var(--scroll-padding, 5rem);
+        }
+
+        .section {
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav style="height: 100px; background-color: grey;">
+        Nav comes here
+    </nav>
+    <h1>Scroll Smooth with padding</h1>
+    <p>you can also add the padding via JS based on nav height <a href="scroll-smooth-padding-solution.html">JS
+            padding</a></p>
+    <h2>Title for section 1</h2>
+    <div style="background-color: antiquewhite;" id="1" class="section">
+        <a href="#4">Go to 4</a>
+    </div>
+    <h2>Title for section 2</h2>
+    <div style="background-color: peachpuff; height: 600px;" id="2">
+        <a href="#3">Go to 3</a>
+    </div>
+    <h2>Title for section 3</h2>
+    <div style="background-color: peachpuff; height: 600px;" id="3">
+        <a href="#2">Go to 2</a>
+    </div>
+    <h2>Title for section 4</h2>
+    <div style="background-color: peachpuff; height: 600px;" id="4">
+        <a href="#1">Go to 1</a>
+    </div>
+
+</body>
+
+</html>

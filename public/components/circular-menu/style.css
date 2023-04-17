@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.cell {
+  width: 150px;
+  height: 150px;
+  font: bold 20px roboto;
+  box-sizing: border-box;
+  padding: 25px;
+  color: #000;
+  background-color: #ffcccc;
+  transition: background-color 250ms linear;
+}
+
+.cell:hover {
+  background-color: #ff6666;
+  cursor: pointer;
+}
+
+.c1 {
+  border-radius: 180% 0 0 0;
+  vertical-align: bottom;
+  text-align: right;
+}
+.c2 {
+  border-radius: 0 180% 0 0;
+  vertical-align: bottom;
+}
+.c3 {
+  border-radius: 0 0 0 180%;
+  vertical-align: top;
+  text-align: right;
+}
+.c4 {
+  border-radius: 0 0 180% 0;
+  vertical-align: top;
+}

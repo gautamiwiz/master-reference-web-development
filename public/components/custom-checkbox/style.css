@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 2rem;
+}
+
+label {
+  cursor: pointer;
+}
+
+.customCheckbox {
+  /*We do opacity of 0 instead of display none, for accessibility purpose*/
+  opacity: 1;
+  position: absolute;
+  left: -9999px;
+}
+
+.customCheckbox + label {
+  display: flex; /*this is to make the before and the label in the same line*/
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+}
+/*to test*/
+/* .customCheckbox:hover + label {
+  color: red;
+}
+.customCheckbox:focus + label {
+  color: blue;
+} */
+
+/*notice how everything below is defined in em, try changing the font size for the label above and notice how the checkbox scales*/
+.customCheckbox + label::before {
+  content: "";
+  width: 1.1em;
+  height: 1.1em;
+  /* background-color: red; */
+  border-radius: 0.15em;
+  border: 0.05em solid #000;
+  margin-right: 0.5em;
+}
+
+/*Hover state*/
+.customCheckbox + label:hover::before {
+  background-color: #0067b3;
+}
+
+/*focus state*/
+
+.customCheckbox:focus + label::before {
+  box-shadow: 0 0 20px 0 black;
+}
+
+/*disabled state*/
+.customCheckbox:disabled + label {
+  color: #aaa;
+  cursor: not-allowed;
+}
+.customCheckbox:disabled + label::before {
+  background-color: #ccc;
+  border-color: #999;
+}
+
+/*Checked state*/
+.customCheckbox:checked + label::before {
+  content: "\2714";
+  background-color: #069;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

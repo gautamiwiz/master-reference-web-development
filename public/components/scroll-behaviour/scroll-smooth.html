@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Smooth</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Below is default behaviour</h1>
+    <p><a href="index.html">Back</a>.</p>
+    <div style="background-color: antiquewhite; height: 600px;" id="1">
+        <a href="#2">Go to 2</a>
+    </div>
+    <div style="background-color: peachpuff; height: 600px;" id="2">
+        <a href="#1">Go to 1</a>
+    </div>
+
+</body>
+
+</html>
