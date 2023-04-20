@@ -1,0 +1,44 @@
+body {
+  margin-top: 100px;
+  font-size: 1.6rem;
+}
+
+h1 {
+  margin-bottom: 5rem;
+}
+
+[data-tooltip] {
+  text-decoration: underline;
+  position: relative;
+  cursor: pointer;
+}
+
+[data-tooltip]:hover::before,
+[data-tooltip]:hover::after {
+  --tooltip-color: #ed1c24;
+  position: absolute;
+  left: 50%;
+}
+
+[data-tooltip]:hover::before {
+  content: attr(data-tooltip);
+
+  transform: translate(-50%, calc(-100% - 10px));
+  background-color: var(--tooltip-color);
+  color: #fff;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  width: max-content;
+  /* max-width: 100%; */
+  text-align: center;
+}
+
+[data-tooltip]:hover::after {
+  content: "";
+  border: 10px solid var(--tooltip-color);
+
+  transform: translate(-50%, -11px);
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}

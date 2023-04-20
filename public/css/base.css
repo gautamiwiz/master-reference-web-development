@@ -140,6 +140,7 @@ body {
   min-height: 100%;
   /*body min height 100% vs 100vh??*/
   /* min-height: 100vh; */
+  line-height: 1.6;
   margin: 0;
   font-size: var(--base-font-size);
   background-color: var(--bg-color-primary);
