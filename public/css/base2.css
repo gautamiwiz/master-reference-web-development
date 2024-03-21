@@ -1,0 +1,48 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+}
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h2,
+h3,
+h4 {
+  font-weight: inherit;
+}
+
+ul[class] {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*This*/
+.flow-content > * {
+  margin-bottom: 1rem;
+}
+.flow-content > *:last-child {
+  margin-bottom: 0;
+}
+
+/*or this*/
+.flow-content > * + * {
+  margin-top: 1rem;
+}

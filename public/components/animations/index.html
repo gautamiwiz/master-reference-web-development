@@ -1,96 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      body {
-        animation: 5s infinite alternate colorShift;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .div1 {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+
+    .div1:hover {
+      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+      animation: bgChange 1s linear .5s;
+
+
+      /*
+      animation-name:;
+      animation-duration:;
+      animating-timing-function:;
+      animation-delay:;
+      animation-fill-mode:;
+      animaition-direction : alternate;
+      animation-play-state: to play or pause your animation
+      animation-iteration-count: 
+      */
+
+    }
+
+    @keyframes bgChange {
+      100% {
+        background-color: green;
+      }
+    }
+
+    .div2 {
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+    }
+
+    .div2:hover {
+      animation: bgChange2 1s linear .5s forwards;
+    }
+
+    @keyframes bgChange2 {
+      100% {
+        background-color: blue;
       }
 
-      @keyframes colorShift {
-        0% {
-          background-color: #22dcdf;
-        }
-        50% {
-          background-color: #2ed82e;
-        }
-        100% {
-          background-color: #e95a5a;
-        }
-      }
-      @keyframes fadeIn {
-        0% {
-          /* Style when animation is 0% done (At start)*/
-          color: transparent;
-        }
-        30% {
-          /* Style when animation is 0% done (At start)*/
-          color: #ed1c24;
-        }
-        60% {
-          /* Style when animation is 0% done (At start)*/
-          color: #6a579e;
-        }
-        100% {
-          /* Style when animation is 100% done (At Finish)*/
-          color: yellow;
-        }
-      }
-      p {
-        animation-duration: 5s;
-        animation-name: fadeIn;
-        animation-iteration-count: infinite;
-        font-size: 3em;
-      }
-      .loadingIcon {
-        width: 150px;
-        height: 150px;
-        border: 4px solid rgb(23, 125, 179);
-        border-bottom: 4px solid transparent;
-        border-radius: 100%;
-        animation: 2s infinite linear spin;
-      }
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-      button:hover {
-        animation: 0.5s forwards niceBtn;
+    }
+
+
+    .div3 {
+      width: 100px;
+      height: 100px;
+      background-color: black;
+      color: red;
+    }
+
+    .div3:hover {
+      animation: bgChange3 1s linear .5s 3 forwards;
+    }
+
+    @keyframes bgChange3 {
+      100% {
+        background-color: peachpuff;
       }
 
-      @keyframes niceBtn {
-        0% {
-          padding: 0px;
-          border: 1px solid black;
-          transform: rotate(0deg);
-          font-size: 12px;
-        }
-        100% {
-          padding: 10px;
-          border: 10px solid black;
-          transform: rotate(360deg);
-          font-size: 24px;
-        }
+    }
+
+    .div4 {
+      width: 100px;
+      height: 100px;
+      color: red;
+      background-color: black;
+    }
+
+    .div4:hover {
+      animation: bgChange4 1s linear .5s 3 forwards alternate;
+    }
+
+    @keyframes bgChange4 {
+      100% {
+        background-color: peachpuff;
       }
-    </style>
-  </head>
-  <body>
-    <p>Testing content</p>
-    <!-- https://dev.to/codesphere/getting-started-with-css-animations-402h -->
-    <div class="loadingIcon"></div>
-    <button>Press Me!!</button>
-  </body>
+
+    }
+
+
+    .div5 {
+      width: 100px;
+      height: 100px;
+      color: black;
+      background-color: lightgreen;
+      animation: colorChange 5s linear 0s 1 forwards, sizeChange 1s linear 5s forwards;
+    }
+
+    @keyframes colorChange {
+      50% {
+        background-color: blue;
+      }
+
+      100% {
+        background-color: red;
+      }
+    }
+
+    @keyframes sizeChange {
+      100% {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="div1">
+    This is div 1
+  </div>
+  <p>Notice above... Div1 animates but sets back to original state. This is handled by "animation fill mode"</p><br><br>
+  <div class="div2">
+    This is div 2
+  </div><br>
+  <div class="div3">
+    This is div 3
+  </div>
+  <p>Notice above... the color goes from black to being.. then again starts from black... This is handled by alternating
+    the animation</p><br><br>
+  <div class="div4">
+    This is div 4
+  </div>
+  <br><br>
+  <div class="div5">
+    This is div 5
+  </div>
+</body>
+
 </html>
 
 <!-- 

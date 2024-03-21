@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../../css/base.css">
+  <title>Animation Body Bg</title>
+  <style>
+    body {
+      font-size: var(--font-size);
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    h1 {
+      font-size: 4rem;
+      background-image: linear-gradient(45deg,
+          #845ec2,
+          #d65db1,
+          #ff6f91,
+          #ff9671,
+          #ffc75f,
+          #f9f871);
+      background-size: 500%;
+      animation: bg-animation 5s infinite alternate;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      text-transform: uppercase;
+      align-self: center;
+    }
+
+    @keyframes bg-animation {
+      0% {
+        background-position: left;
+      }
+
+      100% {
+        background-position: right;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>This is an animating heading</h1>
+
+</body>
+
+</html>
