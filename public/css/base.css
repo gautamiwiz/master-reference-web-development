@@ -48,7 +48,7 @@ select {
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; /* HTML font size to 10px (62.5% of 16px). */
+  font-size: 1rem; /* HTML font size to 10px (62.5% of 16px). */
   /*
   This is done to calculate other font sizes easily. 
   Ex: for font size 18px, you will write 1.8rem. 
@@ -61,7 +61,8 @@ html {
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-  line-height: 1.15; /* 1 */
+  /* line-height: 1.15; */
+  /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
@@ -87,7 +88,7 @@ button {
   Root
 ================================*/
 :root {
-  --base-font-size: 1.6rem;
+  --base-font-size: 1rem;
   --font-scale: 1.2;
   /*h1-h6 font sizes*/
   --h6-size: calc(var(--base-font-size) * var(--font-scale));
@@ -146,8 +147,8 @@ body {
   background-color: var(--bg-color-primary);
   color: var(--text-color-primary);
   padding: 0 10px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -162,6 +163,7 @@ h1,
 .h1 {
   font-size: var(--h1-size);
   line-height: 1.1;
+  margin: 0;
 }
 h2,
 .h2 {
@@ -295,16 +297,16 @@ legend {
 }
 
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
   outline: 1px dotted ButtonText;
 }

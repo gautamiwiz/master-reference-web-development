@@ -1,0 +1,11 @@
+h1 {
+  text-align: center;
+}
+h1::after {
+  content: ' ';
+  display: block;
+  height: 1px;
+  background-color: red;
+  width: 50%;
+  margin: 1em auto;
+}

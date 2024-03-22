@@ -1,87 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Font Sizes</title>
-    <link rel="stylesheet" href="font-sizes.css" />
-  </head>
-  <body>
-    <div class="responsiveText">
-      <h1>Font size shrink and grow</h1>
-      <p>
-        This is a paragraph and the above heading grow and shrink based on
-        viewport width.
-      </p>
-    </div>
-    <div class="responsiveTextIssue">
-      <h1>Responsive font size without clamp</h1>
-      <p>
-        This is a paragraph and the above heading grow and shrink based on
-        viewport width, but without the clamp property. This keeps growing.
-      </p>
-    </div>
-    <p>This is font size in em size 16px based on default body</p>
 
-    <div class="emContainer">
-      <p>
-        This p is inside a div with font size as 20px and this p element size is
-        set to 1em results in 20px
-      </p>
-      <p>
-        This p is inside a div with font size as 20px and this p element size is
-        set to 1.5em results in 30px
-      </p>
-      <p>
-        This p is inside a div with font size as 20px and this p element size is
-        set to 2em results in 40px
-      </p>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Font Sizes</title>
+  <link rel="stylesheet" href="font-sizes.css" />
+</head>
 
-    <div class="remContainer">
-      <p>This p is font size 1rem: body font size = 16px. So this p is 16px.</p>
-      <p>
-        This p is font size 1.5rem: body font size = 16px. So this p is 24px.
-      </p>
-      <p>This p is font size 2rem: body font size = 16px. So this p is 32px.</p>
-    </div>
+<body>
+  <div class="responsiveText">
+    <h1>Font size shrink and grow</h1>
+    <p>
+      This is a paragraph and the above heading grow and shrink based on
+      viewport width.
+    </p>
+  </div>
+  <div class="responsiveTextIssue">
+    <h1>Responsive font size without clamp</h1>
+    <p>
+      This is a paragraph and the above heading grow and shrink based on
+      viewport width, but without the clamp property. This keeps growing.
+    </p>
+  </div>
+  <p>This is font size in em size 16px based on default body</p>
 
+  <div class="emContainer">
+    <p>
+      This p is inside a div with font size as 20px and this p element size is
+      set to 1em results in 20px
+    </p>
+    <p>
+      This p is inside a div with font size as 20px and this p element size is
+      set to 1.5em results in 30px
+    </p>
+    <p>
+      This p is inside a div with font size as 20px and this p element size is
+      set to 2em results in 40px
+    </p>
+  </div>
+
+  <div class="remContainer">
+    <p>This p is font size 1rem: body font size = 16px. So this p is 16px.</p>
+    <p>
+      This p is font size 1.5rem: body font size = 16px. So this p is 24px.
+    </p>
+    <p>This p is font size 2rem: body font size = 16px. So this p is 32px.</p>
+  </div>
+
+  <br />
+
+  <div style="font-size: 20px">
+    <h1 style="padding: 1em; border: 1px solid #efefef">
+      This is an h1 with Padding 1em inside div with font-size: 20px
+    </h1>
     <br />
+    <h2 style="padding: 1em; border: 1px solid #efefef">
+      This is an h2 with Padding 1em inside div with font-size: 20px
+    </h2>
+  </div>
+  <br />
+  <div style="font-size: 20px">
+    <h1 style="padding: 1rem; border: 1px solid #efefef">
+      This is an h1 with Padding 1rem inside div with font-size: 20px
+    </h1>
+    <br />
+    <h2 style="padding: 1rem; border: 1px solid #efefef">
+      This is an h2 with Padding 1rem inside div with font-size: 20px
+    </h2>
+  </div>
+  <br />
+  <p style="font-size: 1rem; margin-bottom: 2rem; color: red;">Note : It is extremely critical that you set the
+    font-family of
+    form
+    elements like buttons to
+    inherit. By default they
+    dont inherit these properties.</p>
+  <div class="buttonContainer">
+    <button class="button-em button1-em">1em Button 1</button>
+    <button class="button-em button1-2em">2em Button 1</button>
+    <button class="button-em button2-em">1em Button 2</button>
+    <button class="button-em button3-em">1em Button 3</button>
+    <button class="button-em button3-2em">2em Button 3</button>
+    <button class="button-em button4-em">1em Button 4</button>
+  </div>
+  <div class="buttonContainer">
+    <button class="button-rem button1-rem">1rem Button 1</button>
+    <button class="button-rem button2-rem">1rem Button 2</button>
+    <button class="button-rem button3-rem">1rem Button 3</button>
+    <button class="button-rem button4-rem">1rem Button 4</button>
+  </div>
 
-    <div style="font-size: 20px">
-      <h1 style="padding: 1em; border: 1px solid #efefef">
-        This is an h1 with Padding 1em inside div with font-size: 20px
-      </h1>
-      <br />
-      <h2 style="padding: 1em; border: 1px solid #efefef">
-        This is an h2 with Padding 1em inside div with font-size: 20px
-      </h2>
-    </div>
-    <br />
-    <div style="font-size: 20px">
-      <h1 style="padding: 1rem; border: 1px solid #efefef">
-        This is an h1 with Padding 1rem inside div with font-size: 20px
-      </h1>
-      <br />
-      <h2 style="padding: 1rem; border: 1px solid #efefef">
-        This is an h2 with Padding 1rem inside div with font-size: 20px
-      </h2>
-    </div>
-    <br />
-    <div class="buttonContainer">
-      <button class="button-em button1-em">1em Button 1</button>
-      <button class="button-em button1-2em">2em Button 1</button>
-      <button class="button-em button2-em">1em Button 2</button>
-      <button class="button-em button3-em">1em Button 3</button>
-      <button class="button-em button3-2em">2em Button 3</button>
-      <button class="button-em button4-em">1em Button 4</button>
-    </div>
-    <div class="buttonContainer">
-      <button class="button-rem button1-rem">1rem Button 1</button>
-      <button class="button-rem button2-rem">1rem Button 2</button>
-      <button class="button-rem button3-rem">1rem Button 3</button>
-      <button class="button-rem button4-rem">1rem Button 4</button>
-    </div>
-  </body>
+</body>
+
 </html>
