@@ -5,21 +5,168 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="style.css">
     <title>HTML CSS Tips and Tricks</title>
     <style>
-        code {
-            color: #0067b3;
-        }
+
     </style>
 </head>
 
 <body>
     <h1>HTML CSS Best Practises ~ Do's Dont's ~ Tips &amp; Tricks</h1>
+
+    <div class="flexHolder">
+        <img src="files/cascading-style-sheets.png" alt="The cascading" class="img">
+        <img src="files/css-is-awesome.jpg" alt="CSS is awesome" class="img">
+        <img src="files/Anatomy-CSS-Rule.png" alt="Anatomy of a CSS rule" class="img">
+        <img src="files/Anatomy-CSS-Rule-2.png" alt="Anatomy of a CSS rule" class="img">
+    </div>
     <ul>
-        <li>Never use fixed width in terms of px, unless desperately required. Try giving widths in %.</li>
-        <li>Try not using height as much unless required</li>
-        <li>Use responsive units em and rem over px</li>
-        <li>When using css variables, always mention defaults "margin: var(--margin, 10px);""
+        <li>Never use <b>fixed width</b> in terms of px, unless desperately required. Try giving widths in %.
+            Do not give width 100% to all elements. This will cause overflow issues. Stick to width : auto which is
+            default.</li>
+        <li>Try <b>not using height</b> as much unless required. Instead go with min-height. CSS works best when we
+            don’t define height and width at the same time</li>
+        <li>Use responsive units <b>em and rem</b> over px</li>
+        <li>Never use px for font sizing. It will cause issues to the users who prefer larger font size. + It causes
+            issues in accessibility</li>
+        <li>When using css variables, always mention defaults <b><em>"margin: var(--margin, 10px);""</em></b>
+        </li>
+        <li>The Box model
+            <ul>
+                <li>Border-box (includes border, padding and content width)</li>
+                <li>Does not include margin</li>
+                <li>Intrinsic and extrinsic sizing</li>
+            </ul>
+        </li>
+        <li>Properties Inheritance
+            <ul>
+                <li>Only font properties are inherited.</li>
+                <li>Not everything is inherited</li>
+                <li>Not inherited : margin, padding, height, width, position</li>
+                <li>Not inherited :Button, input, optgroup, select, textarea</li>
+                <li>Solution to form elements inheritance. (add this to your css reset).<br />
+                    <code>
+                <pre>
+            button,
+            input,
+            optgroup,
+            select,
+            textarea{
+                font-family: inherit;
+            }
+                </pre>
+            </code>
+                </li>
+                <li>Take advantage of Inheritance and write better CSS.
+                    <ul>
+                        <li>Example : In a banner if everything is centered, then the property 'text-align: center' must
+                            be give only once to the parent, instead of giving it to each child.</li>
+                        <li>Fontsize fontfamily etch typography is inherited. That why if you want to write DRY code,
+                            just write the font size, font family, line height just once in the html tag.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Class Inheritance
+            <ul>
+                <li>Origin and importance
+                    <ul>
+                        <li>Order of origin
+                            <ul>
+                                <li>Important user declarations</li>
+                                <li>Important author declarations</li>
+                                <li>Author declarations</li>
+                                <li>User Declarations</li>
+                                <li>User agent declarations</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Specificity
+                    <ul>
+                        <li>Specificity check : <a
+                                href="https://specificity.keegan.st/">https://specificity.keegan.st/</a></li>
+                        <li>!important</li>
+                        <li>Inline styling</li>
+                        <li>Id selector</li>
+                        <li>Class selector</li>
+                        <li>Element selector</li>
+                        <li>How specificity works
+                            <ul>
+                                <li>/*0 0 0 0 */</li>
+                                <li>First 0 is !important</li>
+                                <li>Second is id</li>
+                                <li>3rd is class</li>
+                                <li>4th is element</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Order of appearance
+                    <ul>
+                        <li>Order of classes in HTML doesn't matter. The order of classes in CSS file matters
+                            <ul>
+                                <li>Inline styles</li>
+                                <li>Linked stylesheet</li>
+                                <li>Embedded styles</li>
+                            </ul>
+                        </li>
+                        <li>User declarations : The user imposes</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            Em vs Rem :
+            <ul>
+                <li>Em is based on the elements parent, Rem is based on root element</li>
+                <li>Us em for giving padding for even scale up (example : buttons)</li>
+            </ul>
+        </li>
+        <li>General rule of thumb for line-height
+            <ul>
+                <li>Body : 1.6</li>
+                <li>Headings: 0.9 - 1.1-1.3ish</li>
+            </ul>
+        </li>
+        <li>Pseudo Classes : State selectors
+            <ul>
+                <li>:hover</li>
+                <li>:focus : tab and click</li>
+                <li>:disabled</li>
+                <li>:required</li>
+                <li>:active</li>
+            </ul>
+        </li>
+        <li>Structural Pseudo classes
+            <ul>
+                <li>:first-child</li>
+                <li>:last-child</li>
+                <li>:first-of-type</li>
+                <li>:last-of-type</li>
+                <li>:nth-child(2)</li>
+                <li>:nth-child(even)</li>
+                <li>:nth-child(odd)</li>
+                <li>:nth-child(2n)</li>
+                <li>:nth-child(2n + 1)</li>
+                <li>:last-child(2n+1)</li>
+                <li>:nth-last-of-type(2)</li>
+            </ul>
+        </li>
+        <li>CSS Reset tips :
+            <ul>
+                <li>Images : img { max-width: 0; display : block; height: auto}</li>
+                <li>h1, h1, h3, p { margin: 0; padding:0 } </li>
+                <li>ul[class], ol[class]{list-style: none; margin:0; padding:0}</li>
+                <li>button, input, optgroup, select, textarea { font-family : inherit}</li>
+                <li><a
+                        href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">https://necolas.github.io/normalize.css/8.0.1/normalize.css</a>
+                </li>
+                <li><a href="https://meyerweb.com/eric/tools/css/reset/">https://meyerweb.com/eric/tools/css/reset/</a>
+                </li>
+            </ul>
         </li>
         <li>Save code repeat for flex and grid by targeting in the below way <br />
             <code>
@@ -118,8 +265,39 @@
 <pre>@media print (min-width: 768px) and (max-width: 1440px){...}</pre>
 </code>
         </li>
-        <li></li>
-        <li></li>
+        <li>CSS Games learning
+            <ul>
+                <li>Flexbox Groggy</li>
+                <li>CSS Diner</li>
+                <li>CSS Speedrum</li>
+                <li>Grid Attack</li>
+                <li>Flexbox Zombies</li>
+            </ul>
+        </li>
+        <li>CSS Frameworks
+            <ul>
+                <li>Bootstrap</li>
+                <li>Foundation</li>
+                <li>Bulma</li>
+                <li>Tailwind CSS</li>
+            </ul>
+        </li>
+        <li>Static site generator
+            <ul>
+                <li>Eleventy</li>
+                <li>Hugo</li>
+                <li>Jekyll</li>
+                <li>Gatsby</li>
+            </ul>
+        </li>
+        <li>CSS preprocessors
+            <ul>
+                <li>Less</li>
+                <li>Stylus</li>
+                <li>PostCSS</li>
+                <li>SCSS</li>
+            </ul>
+        </li>
     </ul>
 </body>
 

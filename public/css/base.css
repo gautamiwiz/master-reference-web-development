@@ -9,9 +9,7 @@ not minimized for other developers
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
-  /* margin: 0;
-  padding: 0; */
+  box-sizing: border-box;
 }
 
 /* body {
@@ -19,71 +17,6 @@ not minimized for other developers
   padding: 0;
 } */
 
-/*Give preference to user's preference*/
-html {
-  color-scheme: dark light;
-}
-
-img,
-picture,
-svg,
-video {
-  display: block; /*ensures the 1px issue below image (font descender)*/
-  max-width: 100%; /*takes care of responsiveness*/
-  border-style: none; /*IE 10 image border link inside an a*/
-}
-
-/*to normalise forms*/
-input,
-textarea,
-button,
-select {
-  font: inherit;
-  font-size: 100%;
-  margin: 0;
-  /*
-  line-height: 1.15;
-  */
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 1rem; /* HTML font size to 10px (62.5% of 16px). */
-  /*
-  This is done to calculate other font sizes easily. 
-  Ex: for font size 18px, you will write 1.8rem. 
-  And for font size 24px, you will write font size 2.4rem
-  */
-  /* height: 100%; */
-  /*This property is added for a links to add a smooth scroll effect within the document or other documents*/
-  scroll-behavior: smooth; /*you can also add scroll padding*/
-  /**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-  /* line-height: 1.15; */
-  /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
-
-/**
- * Render the `main` element consistently in IE.
- */
-
-main {
-  display: block;
-}
-
-/*background on active links in IE 10*/
-/* a{
-  background-color: transparent;
-} */
-
-a,
-button {
-  cursor: pointer;
-  text-decoration: none;
-}
 /*==============================
   Root
 ================================*/
@@ -137,19 +70,74 @@ button {
   }
 }
 
+html {
+  font-size: var(--base-font-size);
+  line-height: 1.6;
+  color: var(--text-color-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+
+  /*This property is added for a links to add a smooth scroll effect within the document or other documents*/
+  scroll-behavior: smooth; /*you can also add scroll padding*/
+
+  /*Correct the line height in all browsers.*/
+  /* line-height: 1.15; */
+
+  /*Prevent adjustments of font size after orientation changes in iOS.*/
+  -webkit-text-size-adjust: 100%;
+
+  /*Give preference to user's preference*/
+  color-scheme: dark light;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block; /*ensures the 1px issue below image (font descender)*/
+  max-width: 100%; /*takes care of responsiveness*/
+  border-style: none; /*IE 10 image border link inside an a*/
+}
+
+/*to normalise forms*/
+input,
+textarea,
+button,
+select {
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  /*
+  line-height: 1.15;
+  */
+}
+
+/*Render the `main` element consistently in IE.*/
+main {
+  display: block;
+}
+
+/*background on active links in IE 10*/
+/* a{
+  background-color: transparent;
+} */
+
+a,
+button {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 body {
   min-height: 100%;
   /*body min height 100% vs 100vh??*/
   /* min-height: 100vh; */
-  line-height: 1.6;
+
   margin: 0;
-  font-size: var(--base-font-size);
   background-color: var(--bg-color-primary);
-  color: var(--text-color-primary);
   padding: 0 10px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

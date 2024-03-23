@@ -1,0 +1,18 @@
+code {
+  color: #0067b3;
+}
+
+pre {
+  white-space: break-spaces;
+}
+
+.flexHolder {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+.flexHolder img {
+  max-width: 300px;
+}
