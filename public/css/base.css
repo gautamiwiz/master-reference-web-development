@@ -1,28 +1,21 @@
 @charset 'utf-8';
-/*
-not minimized for other developers
-*/
 
-/*==============================
-  Basic Reset for box sizing
-================================*/
+/*Basic Reset for box sizing*/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* body {
-  margin: 0;
-  padding: 0;
-} */
-
 /*==============================
   Root
 ================================*/
 :root {
   --base-font-size: 1rem;
+
+  /*Font Scaling*/
   --font-scale: 1.2;
+
   /*h1-h6 font sizes*/
   --h6-size: calc(var(--base-font-size) * var(--font-scale));
   --h5-size: calc(var(--h6-size) * var(--font-scale));
@@ -32,19 +25,20 @@ not minimized for other developers
   --h1-size: calc(var(--h2-size) * var(--font-scale));
   --h0-size: calc(var(--h1-size) * var(--font-scale));
 
+  /*Device Widths*/
   --mobile-device: 750px;
 
+  /*Color Palette*/
   --text-color-primary: #000;
   --bg-color-primary: #fff;
   --heading-color-primary: #0067b3;
   --heading-color-secondary: #0095da;
   --card-bg: #d5edf8;
   --card-text: #000;
+
+  --spacer: 1rem;
 }
 
-/*==============================
-  Font Scaling
-================================*/
 @media screen and (min-width: var(--mobile-device)) {
   :root {
     --font-scale: 1.25;
@@ -91,6 +85,13 @@ html {
   color-scheme: dark light;
 }
 
+ul[class],
+ol[class] {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 img,
 picture,
 svg,
@@ -108,9 +109,6 @@ select {
   font: inherit;
   font-size: 100%;
   margin: 0;
-  /*
-  line-height: 1.15;
-  */
 }
 
 /*Render the `main` element consistently in IE.*/
@@ -135,17 +133,77 @@ body {
   /* min-height: 100vh; */
 
   margin: 0;
+  padding: 0;
   background-color: var(--bg-color-primary);
-  padding: 0 10px;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/*====================
+Control margins
+======================*/
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/*====================
+Utility Classes
+======================*/
+
+/*To tackle the vertical margin collapse and give equal and consistent spacing betewen elements*/
+
+section {
+  padding: calc(2 * var(--spacer)) 0;
+}
+
+.container {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 var(--spacer);
+}
+
+.flow-content > * {
+  margin-bottom: calc(2 * var(--spacer));
+}
+.flow-content > *:last-child {
+  margin-bottom: 0;
+}
+
+/*or*/
+/* .flow-content > * + * {
+  margin-top: 2rem;
+} */
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.light {
+  opacity: 0.7;
+}
+
 /*==============================
   Set sizes for all Headings h1 - h6
-  also create classes like .h1 etc just for size purposes to user on other elements
+  also create classes like .h1 etc just for size purposes to use on other elements
 ================================*/
+
+.h0,
+.display {
+  font-size: var(--h0-size);
+}
 
 h1,
 .h1 {
@@ -201,22 +259,6 @@ blockquote {
   .caption {
     font-size: 1.2rem;
   }
-}
-
-.center {
-  text-align: center;
-}
-
-.right {
-  text-align: right;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.light {
-  opacity: 0.7;
 }
 
 hr {

@@ -15,6 +15,7 @@
 
 <body>
     <h1>HTML CSS Best Practises ~ Do's Dont's ~ Tips &amp; Tricks</h1>
+    <h1 class="h0">Test</h1>
 
     <div class="flexHolder">
         <img src="files/cascading-style-sheets.png" alt="The cascading" class="img">
@@ -23,6 +24,9 @@
         <img src="files/Anatomy-CSS-Rule-2.png" alt="Anatomy of a CSS rule" class="img">
     </div>
     <ul>
+        <li>Always use semantic HTML</li>
+        <li>With component based approach, a lot of times the same CSS is being repeated over and over. Its best to
+            think of the big picture to write DRY CSS.</li>
         <li>Never use <b>fixed width</b> in terms of px, unless desperately required. Try giving widths in %.
             Do not give width 100% to all elements. This will cause overflow issues. Stick to width : auto which is
             default.</li>
@@ -155,6 +159,13 @@
                 <li>:nth-last-of-type(2)</li>
             </ul>
         </li>
+        <li>selectors
+            <ul>
+                <li>&gt; : Direct child combinator</li>
+                <li>+ : Adjacent sibling</li>
+                <li>* : all elements</li>
+            </ul>
+        </li>
         <li>CSS Reset tips :
             <ul>
                 <li>Images : img { max-width: 0; display : block; height: auto}</li>
@@ -166,6 +177,13 @@
                 </li>
                 <li><a href="https://meyerweb.com/eric/tools/css/reset/">https://meyerweb.com/eric/tools/css/reset/</a>
                 </li>
+            </ul>
+        </li>
+        <li>
+            BEM
+            <ul>
+                <li>__ : Lives inside a parent</li>
+                <li>-- : modifier</li>
             </ul>
         </li>
         <li>Save code repeat for flex and grid by targeting in the below way <br />
