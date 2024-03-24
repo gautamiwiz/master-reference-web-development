@@ -168,7 +168,7 @@ section {
 }
 
 .flow-content > * {
-  margin-bottom: calc(2 * var(--spacer));
+  margin-bottom: calc(1.3 * var(--spacer));
 }
 .flow-content > *:last-child {
   margin-bottom: 0;
