@@ -1,0 +1,34 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.table-container {
+  width: 100%;
+  height: 400px; /* Set a fixed height for the container to enable scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border: 1px solid #ccc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  background-color: #0095da;
+  color: white;
+  z-index: 1;
+}
+
+th,
+td {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

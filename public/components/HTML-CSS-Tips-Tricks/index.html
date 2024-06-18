@@ -14,8 +14,9 @@
 </head>
 
 <body>
-    <h1>HTML CSS Best Practises ~ Do's Dont's ~ Tips &amp; Tricks</h1>
-    <h1 class="h0">Test</h1>
+    <h1 class="center">HTML CSS</h1>
+    <h2 class="h4 center">Best Practises ~ Do's Dont's ~ Tips &amp; Tricks</h2>
+
 
     <div class="flexHolder">
         <img src="files/cascading-style-sheets.png" alt="The cascading" class="img">
@@ -37,6 +38,8 @@
             issues in accessibility</li>
         <li>When using css variables, always mention defaults <b><em>"margin: var(--margin, 10px);""</em></b>
         </li>
+        <li>Inline elements dont get vertical margin and padding.</li>
+        <li>Containing elements : Height/padding/margin given in % is based on its parent's width, not height!</li>
         <li>The Box model
             <ul>
                 <li>Border-box (includes border, padding and content width)</li>
@@ -166,6 +169,8 @@
                 <li>* : all elements</li>
             </ul>
         </li>
+        <li>CSS Debug : Use outline property instead of border and background to debug CSS. Outline doesnt not interfere
+            with the box model.</li>
         <li>CSS Reset tips :
             <ul>
                 <li>Images : img { max-width: 0; display : block; height: auto}</li>
@@ -315,6 +320,16 @@
                 <li>PostCSS</li>
                 <li>SCSS</li>
             </ul>
+        </li>
+        <li>Stacking context : any element that has position, opacity, transfor etc + many more.. creates a new stacking
+            context. (this is related to the frustrating z-index. <br>
+            There are a lot of properties that create a new stacking context. When we create a new stacking context, it
+            pulls that element onto that "new plane", putting it "above" the other elements on the page that are part of
+            the normal flow. <br>
+
+            While they are pulled up, this does not mean you can use a z-index on them. So, for example, if you declare
+            opacity: .5 on an element, and then try to give it a z-index, that z-index would have no effect.
+            To use z-index, the element either needs a position other than static, or it must be a flex or grid child.
         </li>
     </ul>
 </body>
