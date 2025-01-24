@@ -1,0 +1,221 @@
+/*============= RESETS =============*/
+
+/*-- iPhone X Remove Gutters --*/
+html {
+   padding: env(safe-area-inset);
+}
+/*-- Body Font --*/
+body {
+   font-family: 'Lato', sans-serif;
+   color: #505962;
+}
+
+/*============= NAVIGATION =============*/
+
+.navbar-brand img {
+   height: 2rem;
+}
+.navbar {
+   padding: .6rem 1rem;
+   font-size: .9rem;
+   letter-spacing: .1rem;
+   background-color: rgba(57, 63, 70, .9);
+   font-weight: 700;
+   text-transform: uppercase;
+}
+.navbar-nav li {
+   padding-right: .8rem;
+}
+.navbar-nav .nav-link {
+   padding-top: .8rem;
+   color: white;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+   color: #00b3ff;
+}
+.svg-inline--fa.fa-bars {
+   color: white;
+   font-size: 1.6rem;
+}
+/*-- Remove Button Outline --*/
+button:active, button:focus {
+   outline: 0;
+}
+
+/*============= LANDING PAGE =============*/
+
+/*-- Fixed Landing Page Section --*/
+.landing {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   display: table;
+   background: #0b1419;
+   z-index: -1;
+}
+.home-wrap {
+   clip: rect(0, auto, auto, 0);
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+.home-inner {
+   background-image: url('../img/landing.jpg');
+   position: fixed;
+   display: table;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center center;
+   transform: translateZ(0);
+   -webkit-transform: translateZ(0);
+   will-change: transform;
+}
+/*-- Landing Page Content --*/
+.caption {
+   z-index: 1;
+   top: 40%;
+   position: absolute;
+   text-align: center;
+}
+.btn {
+   border-width: medium;
+   padding: .5rem 1.2rem;
+   text-transform: uppercase;
+   border-radius: 0;
+}
+
+/*============= ABOUT SECTION =============*/
+
+/*-- Scrollspy Offset --*/
+.offset:before {
+   content: "";
+   height: 62px;
+   margin-top: -62px;
+   display: block;
+}
+
+.heading {
+   text-transform: uppercase;
+   font-weight: 700;
+}
+.heading-underline {
+   width: 3rem;
+   height: .25rem;
+   background-color: #00b3ff;
+   margin: 1.5rem auto;
+}
+.about .svg-inline--fa {
+   color: #00b3ff;
+}
+
+/*============= PORTFOLIO SECTION =============*/
+
+.portfolio-item {
+   overflow: hidden;
+}
+.portfolio-item img {
+   transition: transform .4s ease;
+}
+.portfolio-item img:hover {
+   cursor: zoom-in;
+   transform: scale(1.1);
+}
+.example-image {
+   width: 100%;
+}
+
+/*============= TESTIMONIALS SECTION =============*/
+
+.card h5 {
+   color: #00b3ff;
+}
+.card p, .footer p {
+   font-size: 1.1rem;
+}
+
+/*============= CONTACT SECTION =============*/
+
+.footer {
+   background-color: #565b61;
+}
+.footer img {
+   height: 2rem;
+}
+.footer a {
+   color: white;
+}
+.footer .svg-inline--fa {
+   font-size: 1.6rem;
+}
+.footer .svg-inline--fa:hover {
+   color: #00b3ff;
+}
+ul.social {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
+ul.social li {
+   display: inline;
+   padding-right: .8rem;
+}
+/*-- Contact Form --*/
+.form-group {
+   margin-bottom: 1.3rem;
+}
+.form-control {
+   background: #53595f;
+   border-radius: 0;
+   border: .15rem solid #666b71;
+   color: white!important;
+   font-size: 1.1rem;
+}
+.form-control:focus {
+   background: #53595f;
+   border: .15rem solid #666b71;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+   color: #b2b5b8;
+}
+hr.socket {
+   border-top: .2rem solid #666b71;
+}
+
+/*============= MEDIA QUERIES =============*/
+
+/* Medium (md) devices (tablets, 768px and under) */
+@media (max-width: 767px) {
+   .caption {
+      top:35%;
+   }
+   .caption h1 {
+      font-size: 1.8rem;
+   }
+}
+
+
+/*============ BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/

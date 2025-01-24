@@ -1,0 +1,11 @@
+/*============
+Variables & body
+=============*/
+body {
+  background-color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+  color: #000;
+  margin: 0;
+  padding: 2cm 2cm;
+  border: 1px solid red;
+}

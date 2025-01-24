@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .table-container {
+            overflow-x: auto;
+            display: flex;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            min-width: 100px;
+        }
+
+        th.sticky,
+        td.sticky {
+            position: -webkit-sticky;
+            /* for Safari */
+            position: sticky;
+            background: #f1f1f1;
+        }
+
+        th.sticky:first-child,
+        td.sticky:first-child {
+            left: 0;
+            z-index: 3;
+            box-shadow: 2px 0 5px -2px rgba(0, 0, 0, 0.3);
+            /* Shadow on right */
+        }
+
+        th.sticky:last-child,
+        td.sticky:last-child {
+            right: 0;
+            z-index: 3;
+            box-shadow: -2px 0 5px -2px rgba(225, 7, 7, 0.3);
+            /* Shadow on left */
+        }
+
+        th.sticky {
+            top: 0;
+            z-index: 2;
+        }
+    </style>
+    <title>Sticky Table</title>
+</head>
+
+<body>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th class="sticky">Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                    <th>Header 4</th>
+                    <th>Header 5</th>
+                    <th>Header 6</th>
+                    <th>Header 7</th>
+                    <th>Header 8</th>
+                    <th>Header 9</th>
+                    <th class="sticky">Header 10</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="sticky">Row 1, Col 1</td>
+                    <td>Row 1, Col 2 : some data comes here</td>
+                    <td style="min-width: 100px;">Row 1, Col 3</td>
+                    <td>Row 1, Col 4</td>
+                    <td style="min-width: 200px;">Row 1, Col 5</td>
+                    <td>Row 1, Col 6</td>
+                    <td>Row 1, Col 7</td>
+                    <td style="min-width: 200px;">Row 1, Col 8</td>
+                    <td>Row 1, Col 9 : some data comes here</td>
+                    <td class="sticky">Row 1, Col 10</td>
+                </tr>
+                <tr>
+                    <td class="sticky">Row 2, Col 1</td>
+                    <td>Row 2, Col 2 : some data comes here</td>
+                    <td>Row 2, Col 3</td>
+                    <td>Row 2, Col 4</td>
+                    <td>Row 2, Col 5</td>
+                    <td>Row 2, Col 6</td>
+                    <td>Row 2, Col 7</td>
+                    <td>Row 2, Col 8</td>
+                    <td>Row 2, Col 9 : some data comes here</td>
+                    <td class="sticky">Row 2, Col 10</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

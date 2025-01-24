@@ -1,0 +1,95 @@
+body {
+  border: 2px solid blue;
+  margin: 0;
+  padding: 0;
+}
+
+@page {
+  margin: 4cm 2cm;
+  @top-left-corner {
+    background-color: red;
+    content: 'test top left corner';
+  }
+  @top-left {
+    background-color: yellow;
+    content: 'test top left';
+  }
+  @top-center {
+    background-color: peachpuff;
+    content: 'test top center';
+  }
+  @top-right {
+    background-color: yellow;
+    content: 'test top right';
+  }
+  @top-right-corner {
+    background-color: red;
+    content: 'test top right corner';
+  }
+  @left-top {
+    background-color: pink;
+    content: 'test left top';
+  }
+  @left-middle {
+    background-color: peachpuff;
+    content: 'test left middle';
+  }
+  @left-bottom {
+    background-color: pink;
+    content: 'test left bottom';
+  }
+  @right-top {
+    background-color: pink;
+    content: 'test right top';
+  }
+  @right-middle {
+    background-color: peachpuff;
+    content: 'test right middle';
+  }
+  @right-bottom {
+    background-color: pink;
+    content: 'test right bottom';
+  }
+  @bottom-left-corner {
+    background-color: red;
+    content: 'test bottom left corner';
+  }
+  @bottom-left {
+    background-color: yellow;
+    content: 'test bottom left';
+  }
+  @bottom-center {
+    background-color: peachpuff;
+    content: 'test bottom center';
+  }
+  @bottom-right {
+    background-color: yellow;
+    content: counter(page) '/' counter(pages);
+  }
+  @bottom-right-corner {
+    background-color: red;
+    content: 'test bottom right corner';
+  }
+}
+
+/*
+@page:left {
+  @left-middle {
+    transform: rotate(90deg);
+    content: 'left middle';
+  }
+};
+
+
+@page:right {
+  @right-middle {
+    transform: rotate(90deg);
+    content: 'right middle';
+  }
+};
+*/
+
+div {
+  page-break-before: always;
+  break-before: always;
+}

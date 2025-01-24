@@ -209,6 +209,8 @@ h1,
   font-size: var(--h1-size);
   line-height: 1.1;
   margin: 0;
+  margin-bottom: 0.5em;
+  margin-top: 0.2em;
 }
 h2,
 .h2 {
