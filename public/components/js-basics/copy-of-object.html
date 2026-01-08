@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy of an object</title>
+</head>
+
+<body>
+    <h1>Copy of a Javascript Object</h1>
+    <p>Check console...</p>
+
+    <script>
+        let gautamObject1 = {
+            name: "Gautam",
+            surname: "Sharma",
+            age: 43,
+            height: "175cms"
+        }
+
+        console.log("Object 1 :", gautamObject1);
+        console.log("");
+
+        console.log("========== Copy of an object Method 1 =========");
+        let gautamObject2 = Object.assign({}, gautamObject1);
+        console.log("Method 1 : Object.assign({}, gautamObject1 ) ", gautamObject1)
+        console.log("");
+
+        console.log("========== Copy of an object Method 2 =========");
+        let gautamObject3 = { ...gautamObject1 };
+        console.log("Method 2 : { ...gautamObject1 } ", gautamObject3);
+        console.log("");
+
+        console.log("========== Copy of an object Method 3 =========");
+        let gautamObject4 = JSON.parse(JSON.stringify(gautamObject1));
+        console.log("Method 3 : JSON.parse(JSON.stringify(gautamObject1))", gautamObject4)
+        console.log("");
+
+    </script>
+</body>
+
+</html>
