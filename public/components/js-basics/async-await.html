@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript : Async | Await </title>
+</head>
+
+<body>
+    <h1>Javascript : Async | Await</h1>
+    <script>
+        console.log("JS Loaded");
+
+
+        /*========================
+            Async await : promised typical example
+        =================*/
+
+        function makeRequest(location) {
+            return new Promise((resolve, reject) => {
+                console.log(`Making a request to ${location}`);
+                if (location == "Google") {
+                    resolve("Google says hi");
+                } else {
+                    reject("We can only talk to google")
+                }
+            })
+        }
+
+        function processRequest(response) {
+            return new Promise((resolve, reject) => {
+                console.log("Processing response");
+                resolve(`Extra info : ${response}`);
+            })
+        }
+
+        // makeRequest("Google").then(response => {
+        //     console.log("Response received");
+        //     return processRequest(response)
+        // }).then(processedResponse => {
+        //     console.log(processedResponse);
+        // }).catch(error => console.error(error))
+
+
+        console.log("");
+        console.log("");
+        console.log("===== Async await=======");
+        /*========================
+            Async await
+        =================*/
+
+        async function doWork() {
+            try {
+                const response = await makeRequest("Google");
+                console.log("Async : Response received");
+                const processedResponse = await processRequest(response);
+                console.log("Async responce : ", processedResponse);
+            } catch (err) {
+                console.error(err);
+            }
+        }
+        doWork();
+    </script>
+</body>
+
+</html>

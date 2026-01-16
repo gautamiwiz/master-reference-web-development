@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Fetch</title>
+</head>
+
+<body>
+    <h1>Javascript Fetch</h1>
+</body>
+<script>
+    console.log("g JS Loaded");
+    let userData = fetch("https://reqres.in/api/users", {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            name: "User 1"
+        })
+    }).then(res => {
+        if (res.ok) {
+            console.log("Success")
+            res.json()
+        } else {
+            console.log("Error")
+        }
+    })
+        .then(data => console.log(data))
+        .catch(error => console.log(error));
+
+    //let userData2 = fetch("https://reqres.in/api/users").then(res => res.json()).then(data => console.log(data));
+</script>
+
+</html>

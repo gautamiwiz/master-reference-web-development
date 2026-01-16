@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Promises</title>
+</head>
+
+<body>
+    <h1>Javascript Promises</h1>
+    <script>
+        console.log("JS Loaded");
+        /*========================
+        Example 1 : Promise basic
+        =================*/
+        //a promise is a commit to something
+        //promise is resolved or rejected
+
+        let p = new Promise((resolve, reject) => {
+
+            let a = 1 + 1;
+
+            if (a == 2) {
+                resolve("Success")
+            } else {
+                reject("Failed")
+            }
+
+        })
+
+        p.then((message) => {
+            console.log("This is in the then : " + message);
+        }).catch((message) => {
+            console.log("This is in catch : " + message)
+        })
+
+        /*========================
+        Example 2 : Promise All
+        =================*/
+
+        let recordingVideo1 = new Promise((resolve, reject) => {
+            resolve("Video 1 is recorded");
+        });
+        let recordingVideo2 = new Promise((resolve, reject) => {
+            resolve("Video 2 is recorded");
+        })
+        let recordingVideo3 = new Promise((resolve, reject) => {
+            resolve("Video 3 is recorded");
+        })
+
+        Promise.all([recordingVideo1, recordingVideo2, recordingVideo3]).then((messages) => {
+            messages.forEach(message => console.log(message))
+            console.log(messages);
+        })
+
+        /*========================
+        Example 3 : Promise Race
+        =================*/
+
+        //promise.race will return if anyone is completed... unlike above where it waits for everything to finish   
+        Promise.race([recordingVideo1, recordingVideo2, recordingVideo3]).then((message) => {
+            console.log(message);
+        })
+    </script>
+</body>
+
+</html>
