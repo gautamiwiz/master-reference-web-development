@@ -42,10 +42,11 @@ html {
   :root {
     --bg-color-primary: #000;
 
-    --text-color-primary: #6e6e6e;
+    --text-color-primary: #efefef;
   }
   .darkModdeIndicator {
     display: block;
+    color: red;
   }
 }
 
