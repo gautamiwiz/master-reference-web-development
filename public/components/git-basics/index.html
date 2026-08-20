@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIT Basics</title>
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/home.css" />
+    <link rel="stylesheet" href="git.css" />
+    <script src="git.js" defer></script>
+
+    <meta name="theme-color" content="#0095da" />
+  </head>
+  <body>
+    <main class="tutorial">
+      <header class="tutorial__header">
+        <p class="tutorial__eyebrow">Distributed Version Control</p>
+        <h1>GIT</h1>
+        <p class="tutorial__intro">
+          <a href="https://git-scm.com">https://git-scm.com</a>
+        </p>
+      </header>
+      <section class="command-group" aria-labelledby="inspect-repository">
+        <header class="command-group__header">
+          <span class="command-group__number" aria-hidden="true"></span>
+          <div>
+            <p class="command-group__label">GIT</p>
+            <h2 id="inspect-repository">Basics</h2>
+          </div>
+        </header>
+
+        <article class="command-item">
+          <p>Advantages of GIT</p>
+          <ul>
+            <li>No need to communicate with central server</li>
+            <li>Faster</li>
+            <li>No network access required</li>
+            <li>No single failure point</li>
+            <li>Encourages participation and forking</li>
+            <li>Devs can work independently</li>
+          </ul>
+        </article>
+
+        <article class="command-item">
+          <p>Basics about GIT</p>
+          <ul>
+            <li>Head is the time machine</li>
+            <li>Head points to the latest working branch</li>
+            <li>Point the head to any branch</li>
+            <li>Staged is an alias for cached</li>
+            <li>
+              GIT Three tree: Working directory - Staging area - Repository
+            </li>
+            <li>git doesn't track empty folders</li>
+            <li>Exclude any file or folder by adding to</li>
+            <li>File name = ".gitignore"</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="command-group" aria-labelledby="inspect-repository">
+        <header class="command-group__header">
+          <span class="command-group__number" aria-hidden="true"></span>
+          <div>
+            <p class="command-group__label">New</p>
+            <h2 id="inspect-repository">GIT Project</h2>
+          </div>
+        </header>
+
+        <article class="command-item">
+          <code class="command-item__code"
+            >Git init<br />
+            Git add README.md<br />
+            Git commit -m "first commit"<br />
+            Git branch -M main<br />
+            Git remote add origin https://github.com/cccc<br />
+            Git push -u origin main</code
+          >
+          <p>Setup your new GIT project like the above.</p>
+        </article>
+      </section>
+
+      <section class="command-group" aria-labelledby="fresh-template">
+        <header class="command-group__header">
+          <span class="command-group__number" aria-hidden="true"></span>
+          <div>
+            <p class="command-group__label">GIT</p>
+            <h2 id="fresh-template">Configuration</h2>
+          </div>
+        </header>
+
+        <article class="command-item">
+          <code class="command-item__code">git config --list</code>
+          <p>Lists all Git configuration values currently in effect.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git config user.name</code>
+          <p>Shows the user name configured for the current repository.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git config user.email</code>
+          <p>Shows the email address configured for the current repository.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code"
+            >git config --global user.name "Gautam"</code
+          >
+          <p>Sets Gautam as the default author name for all repositories.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code"
+            >git config --global user.email "gautam@iwiz.in"</code
+          >
+          <p>Sets the default author email address for all repositories.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code"
+            >git config --global core.editor "vscode.exe"</code
+          >
+          <p>Sets Visual Studio Code as Git's default text editor.</p>
+        </article>
+      </section>
+
+      <section class="command-group" aria-labelledby="staging">
+        <header class="command-group__header">
+          <span class="command-group__number" aria-hidden="true"></span>
+          <div>
+            <p class="command-group__label">GIT</p>
+            <h2 id="staging">Staging</h2>
+          </div>
+        </header>
+
+        <article class="command-item">
+          <code class="command-item__code">git add .</code>
+          <p>Stages all new and modified files in the current directory.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git add "file name"</code>
+          <p>Stages only the named file.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git add -A</code>
+          <p>
+            Stages all changes in the repository, including new, modified, and
+            deleted files.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git add --all</code>
+          <p>Long-form equivalent of <code>git add -A</code>.</p>
+        </article>
+      </section>
+
+      <section class="command-group" aria-labelledby="amending-commits">
+        <header class="command-group__header">
+          <span class="command-group__number" aria-hidden="true"></span>
+          <div>
+            <p class="command-group__label">GIT</p>
+            <h2 id="amending-commits">Add a new change to the previous commit</h2>
+          </div>
+        </header>
+
+        <article class="command-item">
+          <code class="command-item__code">git commit --amend</code>
+          <p>
+            Adds currently staged changes to the previous commit and opens the
+            editor so you can update its commit message.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git commit --amend --no-edit</code>
+          <p>
+            Adds currently staged changes to the previous commit while keeping
+            its existing message.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git commit --amend -m "new commit message"</code>
+          <p>Amends only the previous commit message when nothing new is staged.</p>
+        </article>
+
+        <article class="command-item">
+          <p>
+            Amending replaces the previous commit with a new commit containing
+            its original changes plus any newly staged changes. This creates a
+            new commit hash, so avoid amending commits already shared with
+            others.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git reset</code>
+          <p>
+            Moves the current branch or changes the staging index, depending on
+            the options used.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git checkout</code>
+          <p>
+            Switches branches or restores files in the working directory. For
+            newer workflows, Git also provides <code>git switch</code> and
+            <code>git restore</code>.
+          </p>
+        </article>
+      </section>
+
+      <section class="command-group" aria-labelledby="commit-history">
+        <header class="command-group__header">
+          <span class="command-group__number" aria-hidden="true"></span>
+          <div>
+            <p class="command-group__label">GIT</p>
+            <h2 id="commit-history">Log of all commits</h2>
+          </div>
+        </header>
+
+        <article class="command-item">
+          <code class="command-item__code">git log</code>
+          <p>Shows the repository's commit history with full details.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git log --oneline</code>
+          <p>Shows each commit in a compact, single-line format.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git log -n 5</code>
+          <p>Shows only the five most recent commits.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git log --since=2019-01-01</code>
+          <p>Shows commits made on or after the specified date.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git log --until=2019-01-01</code>
+          <p>Shows commits made on or before the specified date.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git log --author="kevin"</code>
+          <p>Shows commits whose author matches the supplied name.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git log --grep="bug fixes"</code>
+          <p>
+            Shows commits whose messages match the supplied regular expression.
+          </p>
+        </article>
+      </section>
+
+      <section class="command-group" aria-labelledby="misc-resources">
+        <header class="command-group__header">
+          <span class="command-group__number" aria-hidden="true"></span>
+          <div>
+            <p class="command-group__label">Resources</p>
+            <h2 id="misc-resources">Misc</h2>
+          </div>
+        </header>
+
+        <article class="command-item">
+          <a
+            class="command-item__code"
+            href="https://github.com/ohmyzsh/ohmyzsh"
+            target="_blank"
+            rel="noopener noreferrer"
+            >https://github.com/ohmyzsh/ohmyzsh</a
+          >
+          <p>
+            Oh My Zsh is an open-source framework for managing Zsh
+            configuration, with plugins and themes that improve Git workflows in
+            the command line.
+          </p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

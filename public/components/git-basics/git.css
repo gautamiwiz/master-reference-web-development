@@ -1,0 +1,143 @@
+:root {
+  --paper: #f4f1ea;
+  --ink: #202124;
+  --muted: #65615b;
+  --git-orange: #f05133;
+  --git-orange-dark: #c9361d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  background:
+    linear-gradient(rgba(32, 33, 36, 0.035) 1px, transparent 1px), var(--paper);
+  background-size: 100% 32px;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+body::before {
+  position: fixed;
+  inset: 0 auto 0 clamp(20px, 7vw, 110px);
+  width: 1px;
+  content: '';
+  background: rgba(240, 81, 51, 0.24);
+  pointer-events: none;
+}
+
+.tutorial {
+  width: min(1080px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: clamp(56px, 9vw, 112px) 0 80px;
+}
+
+.tutorial__header {
+  max-width: 720px;
+  margin-bottom: clamp(40px, 7vw, 72px);
+}
+
+.tutorial__eyebrow,
+.command-group__label {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.tutorial__eyebrow,
+.command-group__label {
+  color: var(--git-orange-dark);
+}
+
+h1 {
+  margin: 10px 0 14px;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-weight: 600;
+  line-height: 0.95;
+}
+
+.tutorial__intro {
+  max-width: 620px;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  line-height: 1.6;
+}
+
+.command-group {
+  padding-top: 32px;
+  border-top: 3px solid var(--ink);
+}
+
+.command-group + .command-group {
+  margin-top: clamp(48px, 8vw, 68px);
+}
+
+.command-group__header {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.command-group__number {
+  color: var(--git-orange);
+  font:
+    700 0.9rem/1 'Courier New',
+    monospace;
+}
+
+.command-group h2 {
+  margin: 7px 0 16px;
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.command-item {
+  padding: 24px 0 24px 60px;
+  border-top: 1px solid #cbc5ba;
+}
+
+.command-item__code {
+  display: block;
+  width: 100%;
+  padding: 15px 18px;
+  color: #f4f1ea;
+  background: var(--ink);
+  border-left: 4px solid var(--git-orange);
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 1.05rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.command-item p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+  .tutorial {
+    width: min(100% - 30px, 620px);
+    padding-top: 48px;
+  }
+
+  .command-group__header {
+    grid-template-columns: 32px 1fr;
+    gap: 10px;
+  }
+
+  .command-item {
+    padding-left: 42px;
+  }
+}
