@@ -164,7 +164,9 @@
           <span class="command-group__number" aria-hidden="true"></span>
           <div>
             <p class="command-group__label">GIT</p>
-            <h2 id="amending-commits">Add a new change to the previous commit</h2>
+            <h2 id="amending-commits">
+              Add a new change to the previous commit
+            </h2>
           </div>
         </header>
 
@@ -185,8 +187,12 @@
         </article>
 
         <article class="command-item">
-          <code class="command-item__code">git commit --amend -m "new commit message"</code>
-          <p>Amends only the previous commit message when nothing new is staged.</p>
+          <code class="command-item__code"
+            >git commit --amend -m "new commit message"</code
+          >
+          <p>
+            Amends only the previous commit message when nothing new is staged.
+          </p>
         </article>
 
         <article class="command-item">
@@ -213,6 +219,55 @@
             newer workflows, Git also provides <code>git switch</code> and
             <code>git restore</code>.
           </p>
+        </article>
+      </section>
+
+      <section class="command-group" aria-labelledby="git-editor-commands">
+        <header class="command-group__header">
+          <span class="command-group__number" aria-hidden="true"></span>
+          <div>
+            <p class="command-group__label">Editor</p>
+            <h2 id="git-editor-commands">Commit message editor</h2>
+          </div>
+        </header>
+
+        <article class="command-item">
+          <code class="command-item__code">Vim: Esc, then :wq, then Enter</code>
+          <p>Saves the commit message, closes Vim, and completes the commit.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">Vim: Esc, then ZZ</code>
+          <p>Another way to save the commit message and close Vim.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">Vim: Esc, then :q!, then Enter</code>
+          <p>Closes Vim without saving changes to the commit message.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">Vim: Esc, then :cq, then Enter</code>
+          <p>Closes Vim with an error so Git cancels the commit operation.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code"
+            >Nano: Ctrl+O, Enter, then Ctrl+X</code
+          >
+          <p>Saves the commit message and exits Nano.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">Nano: Ctrl+X, then N</code>
+          <p>Exits Nano without saving the edited commit message.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code"
+            >VS Code: Ctrl+S, then close the commit message tab</code
+          >
+          <p>Saves the message and allows Git to complete the commit.</p>
         </article>
       </section>
 
