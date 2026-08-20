@@ -159,6 +159,165 @@
         </article>
       </section>
 
+      <section class="command-group" aria-labelledby="repository-status">
+        <header class="command-group__header">
+          <span class="command-group__number" aria-hidden="true"></span>
+          <div>
+            <p class="command-group__label">Inspect</p>
+            <h2 id="repository-status">Repository status</h2>
+          </div>
+        </header>
+
+        <article class="command-item">
+          <code class="command-item__code">git status</code>
+          <p>
+            Shows changes that are staged, changes that are not staged, and
+            untracked files.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git status --short</code>
+          <p>
+            Shows a compact status. <code>??</code> means untracked and
+            <code>M</code> means modified; the two columns distinguish staged
+            changes from unstaged changes.
+          </p>
+        </article>
+      </section>
+
+      <section class="command-group" aria-labelledby="restoring-changes">
+        <header class="command-group__header">
+          <span class="command-group__number" aria-hidden="true"></span>
+          <div>
+            <p class="command-group__label">Working tree</p>
+            <h2 id="restoring-changes">Restoring changes</h2>
+          </div>
+        </header>
+
+        <article class="command-item">
+          <code class="command-item__code">git restore .</code>
+          <p>
+            Discards unstaged changes to tracked files in the current directory.
+            It does not affect staged changes or untracked files.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git restore "file name"</code>
+          <p>
+            Discards unstaged changes to one tracked file. It does not affect a
+            staged version of the file or any untracked file.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git checkout -- .</code>
+          <p>
+            Legacy equivalent for discarding unstaged changes to tracked files
+            in the current directory.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code"
+            >git restore --staged "file name"</code
+          >
+          <p>Unstages one file while keeping its working-directory changes.</p>
+        </article>
+      </section>
+
+      <section class="command-group" aria-labelledby="committing">
+        <header class="command-group__header">
+          <span class="command-group__number" aria-hidden="true"></span>
+          <div>
+            <p class="command-group__label">GIT</p>
+            <h2 id="committing">Committing</h2>
+          </div>
+        </header>
+
+        <article class="command-item">
+          <code class="command-item__code">git commit -m "commit message"</code>
+          <p>Records a snapshot of the staged changes with a commit message.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git commit -am "message"</code>
+          <p>
+            Stages modified and deleted tracked files, then commits them. New,
+            untracked files are not included.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git commit -a</code>
+          <p>
+            Stages modified and deleted tracked files, then opens the editor for
+            a multiline commit message. New, untracked files are not included.
+          </p>
+        </article>
+      </section>
+
+      <section class="command-group" aria-labelledby="resetting-changes">
+        <header class="command-group__header">
+          <span class="command-group__number" aria-hidden="true"></span>
+          <div>
+            <p class="command-group__label">Index and working tree</p>
+            <h2 id="resetting-changes">Reset</h2>
+          </div>
+        </header>
+
+        <article class="command-item">
+          <code class="command-item__code">git reset</code>
+          <p>
+            Unstages all staged changes while preserving the files in the
+            working directory.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git reset .</code>
+          <p>
+            Unstages changes under the current directory while preserving the
+            working files.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git reset --hard</code>
+          <p>
+            Resets tracked files and the index to the current commit. This
+            permanently discards staged and unstaged changes to tracked files.
+          </p>
+        </article>
+      </section>
+
+      <section class="command-group" aria-labelledby="ignoring-files">
+        <header class="command-group__header">
+          <span class="command-group__number" aria-hidden="true"></span>
+          <div>
+            <p class="command-group__label">Configuration</p>
+            <h2 id="ignoring-files">Ignoring files</h2>
+          </div>
+        </header>
+
+        <article class="command-item">
+          <code class="command-item__code"
+            >git config --global core.excludesFile
+            "path/to/global.gitignore"</code
+          >
+          <p>Sets an ignore file that applies to every local repository.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git rm -r --cached .</code>
+          <p>
+            Removes tracked files from the index without deleting local copies.
+            Add the files again to apply current <code>.gitignore</code> rules.
+          </p>
+        </article>
+      </section>
+
       <section class="command-group" aria-labelledby="amending-commits">
         <header class="command-group__header">
           <span class="command-group__number" aria-hidden="true"></span>
@@ -205,19 +364,57 @@
         </article>
 
         <article class="command-item">
-          <code class="command-item__code">git reset</code>
-          <p>
-            Moves the current branch or changes the staging index, depending on
-            the options used.
-          </p>
-        </article>
-
-        <article class="command-item">
           <code class="command-item__code">git checkout</code>
           <p>
             Switches branches or restores files in the working directory. For
             newer workflows, Git also provides <code>git switch</code> and
             <code>git restore</code>.
+          </p>
+        </article>
+      </section>
+
+      <section class="command-group" aria-labelledby="stashing-code">
+        <header class="command-group__header">
+          <span class="command-group__number" aria-hidden="true"></span>
+          <div>
+            <p class="command-group__label">Working tree</p>
+            <h2 id="stashing-code">Stashing code</h2>
+          </div>
+        </header>
+
+        <article class="command-item">
+          <code class="command-item__code">git stash</code>
+          <p>
+            Temporarily stores staged and unstaged changes to tracked files and
+            restores a clean working tree.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git stash save "message"</code>
+          <p>
+            Saves a named stash using the older syntax. Prefer
+            <code>git stash push -m "message"</code> in new workflows.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git stash list</code>
+          <p>Lists all stashes and their identifiers.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git stash apply stash@{0}</code>
+          <p>
+            Applies the stash at index <code>0</code> without removing it from
+            the stash list.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git stash pop</code>
+          <p>
+            Applies the latest stash, at index <code>0</code>, then removes it.
           </p>
         </article>
       </section>
@@ -314,6 +511,204 @@
           <code class="command-item__code">git log --grep="bug fixes"</code>
           <p>
             Shows commits whose messages match the supplied regular expression.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code"
+            >Log pager: f = forward, b = backward, q = quit</code
+          >
+          <p>
+            Navigates the pager used for long Git output, including
+            <code>git log</code>.
+          </p>
+        </article>
+      </section>
+
+      <section class="command-group" aria-labelledby="branches">
+        <header class="command-group__header">
+          <span class="command-group__number" aria-hidden="true"></span>
+          <div>
+            <p class="command-group__label">GIT</p>
+            <h2 id="branches">Branches</h2>
+          </div>
+        </header>
+
+        <article class="command-item">
+          <code class="command-item__code">git branch</code>
+          <p>Lists local branches and marks the current branch.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git branch -a</code>
+          <p>Lists local and remote-tracking branches.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git branch BRANCH_NAME</code>
+          <p>Creates a branch without switching to it.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git switch -c BRANCH_NAME</code>
+          <p>Creates a branch and switches to it.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git checkout -b BRANCH_NAME</code>
+          <p>Legacy command that creates a branch and switches to it.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git switch BRANCH_NAME</code>
+          <p>Switches to an existing branch.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git checkout BRANCH_NAME</code>
+          <p>
+            Switches to an existing branch. Unlike <code>git switch</code>,
+            <code>git checkout</code> can also restore files.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git merge "branch name"</code>
+          <p>
+            Merges the named branch into the current branch. For example, to
+            merge <code>somebranch</code> into <code>main</code>, switch to
+            <code>main</code> first, then run <code>git merge somebranch</code>.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code"
+            >git branch --delete BRANCH_NAME</code
+          >
+          <p>Deletes a fully merged local branch.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git branch -d BRANCH_NAME</code>
+          <p>Short form of <code>git branch --delete</code>.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git branch -D BRANCH_NAME</code>
+          <p>Force-deletes a local branch, even when it is not fully merged.</p>
+        </article>
+      </section>
+
+      <section class="command-group" aria-labelledby="rebasing">
+        <header class="command-group__header">
+          <span class="command-group__number" aria-hidden="true"></span>
+          <div>
+            <p class="command-group__label">History</p>
+            <h2 id="rebasing">Rebasing</h2>
+          </div>
+        </header>
+
+        <article class="command-item">
+          <code class="command-item__code">git rebase</code>
+          <p>Rebases the current branch onto its configured upstream branch.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git rebase BRANCH_OR_COMMIT</code>
+          <p>Replays the current branch's commits onto a branch or commit.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git rebase -i HEAD~NUMBER</code>
+          <p>
+            Interactively edits, combines, reorders, or removes the specified
+            number of recent commits.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git rebase -i --root</code>
+          <p>Starts an interactive rebase that includes the first commit.</p>
+        </article>
+      </section>
+
+      <section class="command-group" aria-labelledby="git-remotes">
+        <header class="command-group__header">
+          <span class="command-group__number" aria-hidden="true"></span>
+          <div>
+            <p class="command-group__label">GIT</p>
+            <h2 id="git-remotes">Remotes</h2>
+          </div>
+        </header>
+
+        <article class="command-item">
+          <code class="command-item__code">git remote add NAME URL</code>
+          <p>Adds a remote repository with the specified name and URL.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git remote remove NAME</code>
+          <p>Removes a remote from the local repository configuration.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code"
+            >git remote rename OLD_NAME NEW_NAME</code
+          >
+          <p>Renames an existing remote.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git remote -v</code>
+          <p>Lists remotes and their fetch and push URLs.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code"
+            >git remote set-url origin https://url</code
+          >
+          <p>Changes the URL assigned to the <code>origin</code> remote.</p>
+        </article>
+      </section>
+
+      <section class="command-group" aria-labelledby="pushing">
+        <header class="command-group__header">
+          <span class="command-group__number" aria-hidden="true"></span>
+          <div>
+            <p class="command-group__label">Remote</p>
+            <h2 id="pushing">Pushing</h2>
+          </div>
+        </header>
+
+        <article class="command-item">
+          <code class="command-item__code">git push REMOTE BRANCH</code>
+          <p>Pushes the specified local branch to a remote.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code"
+            >git push --set-upstream origin main</code
+          >
+          <p>Pushes <code>main</code> and sets its upstream tracking branch.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git push -u origin main</code>
+          <p>Short form of the preceding set-upstream command.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git push --all origin</code>
+          <p>Pushes all local branches to <code>origin</code>.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code"
+            >git branch --set-upstream-to=origin/main main</code
+          >
+          <p>
+            Sets the local <code>main</code> branch to track
+            <code>origin/main</code> without pushing.
           </p>
         </article>
       </section>
