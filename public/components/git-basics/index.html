@@ -80,6 +80,76 @@
         </article>
       </section>
 
+      <section class="command-group" aria-labelledby="most-used-commands">
+        <header class="command-group__header">
+          <span class="command-group__number" aria-hidden="true"></span>
+          <div>
+            <p class="command-group__label">GIT</p>
+            <h2 id="most-used-commands">Most used commands</h2>
+          </div>
+        </header>
+
+        <article class="command-item">
+          <code class="command-item__code">git init</code>
+          <p>Creates a new Git repository in the current directory.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git status</code>
+          <p>Shows staged, unstaged, and untracked changes.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git log --oneline -n 10</code>
+          <p>Shows the 10 most recent commits in a compact format.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git branch</code>
+          <p>Lists local branches and marks the current branch.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git switch branchName</code>
+          <p>Switches to an existing branch named <code>branchName</code>.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git switch -c branchName</code>
+          <p>Creates <code>branchName</code> from HEAD and switches to it.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git checkout branchName</code>
+          <p>Switches to an existing branch using the older command.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git checkout -b branchName</code>
+          <p>
+            Creates a branch from HEAD and switches to it using the older
+            command.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git branch -d branchName</code>
+          <p>Deletes a fully merged local branch.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git add .</code>
+          <p>Stages changes in the current directory and its subdirectories.</p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code"
+            >git commit -m "your commit message here"</code
+          >
+          <p>Commits staged changes with the supplied message.</p>
+        </article>
+      </section>
+
       <section class="command-group" aria-labelledby="fresh-template">
         <header class="command-group__header">
           <span class="command-group__number" aria-hidden="true"></span>
