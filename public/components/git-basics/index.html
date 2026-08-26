@@ -679,6 +679,49 @@
         </article>
       </section>
 
+      <section class="command-group" aria-labelledby="rename-master-to-main">
+        <header class="command-group__header">
+          <span class="command-group__number" aria-hidden="true"></span>
+          <div>
+            <p class="command-group__label">Branches</p>
+            <h2 id="rename-master-to-main">Rename master to main</h2>
+          </div>
+        </header>
+
+        <article class="command-item">
+          <code class="command-item__code">git branch -m master main</code>
+          <p>
+            Renames the local <code>master</code> branch to <code>main</code>.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git branch -M main</code>
+          <p>
+            Renames the current branch to <code>main</code>, forcing the rename
+            if necessary.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code">git push -u origin main</code>
+          <p>
+            Pushes <code>main</code> and sets <code>origin/main</code> as its
+            upstream branch.
+          </p>
+        </article>
+
+        <article class="command-item">
+          <code class="command-item__code"
+            >git push origin --delete master</code
+          >
+          <p>
+            Deletes the old remote <code>master</code> branch after the remote's
+            default branch has been changed to <code>main</code>.
+          </p>
+        </article>
+      </section>
+
       <section class="command-group" aria-labelledby="rebasing">
         <header class="command-group__header">
           <span class="command-group__number" aria-hidden="true"></span>
