@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React simple UI</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="importmap">
+      {
+        "imports": {
+          "reactBlah": "https://esm.sh/react",
+          "react-dom/clientBlah": "https://esm.sh/react-dom/client"
+        }
+      }
+    </script>
+    <script type="module">
+      import React from 'reactBlah';
+      import {createRoot} from 'react-dom/clientBlah';
+
+      const retailer = React.createElement(
+        'div',
+        {id: 'retailerInfo'},
+        React.createElement('h1', null, 'Catlog'),
+        React.createElement(
+          'ul',
+          null,
+          React.createElement('li', null, 'Catlog item 1'),
+          React.createElement('li', null, 'Catlog item 2'),
+          React.createElement('li', null, 'Catlog item 3'),
+          React.createElement('li', null, 'Catlog item 4'),
+          React.createElement('li', null, 'Catlog item 5'),
+          React.createElement('li', null, 'Catlog item 6'),
+        ),
+        React.createElement('h1', null, 'Shopping list'),
+        React.createElement(
+          'ul',
+          null,
+          React.createElement('li', null, 'Shopping item 1'),
+          React.createElement('li', null, 'Shopping item 2'),
+          React.createElement('li', null, 'Shopping item 3'),
+          React.createElement('li', null, 'Shopping item 4'),
+          React.createElement('li', null, 'Shopping item 5'),
+        ),
+      );
+
+      const root = createRoot(document.getElementById('root'));
+      root.render(retailer);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Simple 1</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module">
+      import React from 'https://esm.sh/react';
+      import {createRoot} from 'https://esm.sh/react-dom/client';
+
+      const obj = React.createElement(
+        'h1',
+        {id: 'my-id', title: 'some title'},
+        'This is a heading',
+      );
+
+      const root = createRoot(document.getElementById('root'));
+      root.render(obj);
+    </script>
+  </body>
+</html>

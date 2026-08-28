@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React class component 1</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="importmap">
+      {
+        "imports": {
+          "reactBlah": "https://esm.sh/react",
+          "react-dom/clientBlah": "https://esm.sh/react-dom/client"
+        }
+      }
+    </script>
+    <script type="module">
+      import React from 'reactBlah';
+      import {createRoot} from 'react-dom/clientBlah';
+
+      class ProductsList extends React.Component {
+        render() {
+          return React.createElement('p', null, 'Products data list');
+        }
+      }
+
+      class ShopsList extends React.Component {
+        render() {
+          return React.createElement('p', null, 'Shops data list');
+        }
+      }
+
+      class App extends React.Component {
+        render() {
+          return React.createElement(
+            'div',
+            null,
+            React.createElement('h1', null, 'Catalog'),
+            React.createElement(ProductsList),
+            React.createElement('h1', null, 'Shops'),
+            React.createElement(ShopsList),
+          );
+        }
+      }
+
+      const app = React.createElement(App);
+
+      const root = createRoot(document.getElementById('root'));
+      root.render(app);
+    </script>
+  </body>
+</html>

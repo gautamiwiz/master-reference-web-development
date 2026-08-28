@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React simple UI 2</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="importmap">
+      {
+        "imports": {
+          "reactBlah": "https://esm.sh/react",
+          "react-dom/clientBlah": "https://esm.sh/react-dom/client"
+        }
+      }
+    </script>
+    <script type="module">
+      import React from 'reactBlah';
+      import {createRoot} from 'react-dom/clientBlah';
+
+      let products = ['Hemp Wallet', 'Hemp Backpack', 'Hemp Sling bag'];
+      let shops = ['Atrangi Store', 'GVK Mall', 'Pepperfry', 'Amazon'];
+
+      let productsList = React.createElement(
+        'ul',
+        null,
+        products.map((d, i) => React.createElement('li', {key: i}, d)),
+      );
+
+      let shopsList = React.createElement(
+        'ul',
+        null,
+        shops.map((d, i) => React.createElement('li', {key: i}, d)),
+      );
+
+      const finalList = React.createElement(
+        'div',
+        null,
+        React.createElement('h1', null, 'This is a list of product'),
+        productsList,
+        React.createElement('h1', null, 'This is a list of product'),
+        shopsList,
+      );
+
+      const root = createRoot(document.getElementById('root'));
+
+      root.render(finalList);
+    </script>
+  </body>
+</html>

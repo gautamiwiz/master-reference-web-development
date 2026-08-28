@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React simple UI 2</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="importmap">
+      {
+        "imports": {
+          "reactBlah": "https://esm.sh/react",
+          "react-dom/clientBlah": "https://esm.sh/react-dom/client"
+        }
+      }
+    </script>
+    <script type="module">
+      import React from 'reactBlah';
+      import {createRoot} from 'react-dom/clientBlah';
+
+      class Movie {
+        constructor(title, director) {
+          this.title = title;
+          this.director = director;
+        }
+
+        toString() {
+          return `${this.title}, by ${this.director}`;
+        }
+      }
+
+      class Business {
+        constructor(businessName, ownerName, startedIn) {
+          this.businessName = businessName;
+          this.ownerName = ownerName;
+          this.startedIn = startedIn;
+        }
+
+        toString() {
+          return `${this.businessName}, owned by ${this.ownerName}, started in ${this.startedIn}`;
+        }
+      }
+
+      let movies = [
+        new Movie('Avengers', 'Joe Russo'),
+        new Movie('Sarkar', 'Ram Gopal Varma'),
+      ];
+
+      let businesses = [
+        new Business('Reliance', 'Mukesh Ambani', '2009'),
+        new Business('Atrangi', 'Gautam Sharma', '2016'),
+      ];
+
+      let moviesList = React.createElement(
+        'ul',
+        null,
+        movies.map((d, i) =>
+          React.createElement('li', {key: i, title: d.toString()}, d.title),
+        ),
+      );
+
+      let businessesList = React.createElement(
+        'ul',
+        null,
+        businesses.map((d, i) =>
+          React.createElement(
+            'li',
+            {key: i, title: d.toString()},
+            d.businessName,
+          ),
+        ),
+      );
+
+      const finalList = React.createElement(
+        'div',
+        null,
+        React.createElement('h1', null, 'This is a list of Movies'),
+        moviesList,
+        React.createElement('h1', null, 'This is a list of businesses'),
+        businessesList,
+      );
+
+      const root = createRoot(document.getElementById('root'));
+
+      root.render(finalList);
+    </script>
+  </body>
+</html>

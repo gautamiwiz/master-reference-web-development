@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Script map</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "reactBlah": "https://esm.sh/react",
+          "react-dom/clientBlah": "https://esm.sh/react-dom/client"
+        }
+      }
+    </script>
+    <script type="module">
+      import React from 'reactBlah';
+      import {createRoot} from 'react-dom/clientBlah';
+      const obj = React.createElement(
+        'h1',
+        {id: 'my-id', title: 'some title'},
+        'This is a heading via react imports',
+      );
+
+      const root = createRoot(document.getElementById('root'));
+      root.render(obj);
+    </script>
+  </body>
+</html>

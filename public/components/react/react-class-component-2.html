@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React class component 1</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="importmap">
+      {
+        "imports": {
+          "reactBlah": "https://esm.sh/react",
+          "react-dom/clientBlah": "https://esm.sh/react-dom/client"
+        }
+      }
+    </script>
+    <script type="module">
+      import React from 'reactBlah';
+      import {createRoot} from 'react-dom/clientBlah';
+
+      class ItemsList extends React.Component {
+        render() {
+          let whichTag = this.props.isSorted ? 'ol' : 'ul';
+          return React.createElement(
+            whichTag,
+            null,
+            this.props.items.map((d, i) =>
+              React.createElement('li', {key: i}, d),
+            ),
+          );
+        }
+      }
+
+      let groceryList = ['Grocery item 1', 'Grocery item 2'];
+
+      let toDoList = ['Todo 1', 'Todo 2', 'Todo 3', 'Todo 4'];
+
+      class App extends React.Component {
+        render() {
+          return React.createElement(
+            'div',
+            null,
+            React.createElement('h1', null, 'Grocery List'),
+            React.createElement(ItemsList, {
+              items: groceryList,
+              isSorted: false,
+            }),
+            React.createElement('h1', null, 'Todo List'),
+            React.createElement(ItemsList, {
+              items: toDoList,
+              isSorted: true,
+            }),
+          );
+        }
+      }
+
+      const app = React.createElement(App);
+
+      const root = createRoot(document.getElementById('root'));
+      root.render(app);
+    </script>
+  </body>
+</html>
