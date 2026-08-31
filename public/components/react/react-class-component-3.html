@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Class Component 3</title>
+    <link rel="stylesheet" href="someStyle.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="importmap">
+      {
+        "imports": {
+          "x": "https://esm.sh/react",
+          "y": "https://esm.sh/react-dom/client"
+        }
+      }
+    </script>
+    <script type="module">
+      import React from 'x';
+      import {createRoot} from 'y';
+
+      class Book {
+        constructor(title, author) {
+          this.title = title;
+          this.author = author;
+        }
+        toString() {
+          return `${this.title}, by ${this.author}`;
+        }
+      }
+
+      class Film {
+        constructor(name, genre, blurb) {
+          this.name = name;
+          this.genre = genre;
+          this.blurb = blurb;
+        }
+        toString() {
+          return `${this.name} [${this.genre}], ${this.blurb}`;
+        }
+      }
+
+      const books = [
+        new Book('Pride and Prejudice', 'Jane Austen'),
+        new Book('The Great Gatsby', 'F. Scott Fitzgerald'),
+        new Book('Frankenstein', 'Mary Shelley'),
+        new Book('The Hobbit', 'J.R.R. Tolkien'),
+      ];
+
+      const films = [
+        new Film(
+          'The Godfather',
+          'Crime',
+          'A reluctant son inherits a family empire.',
+        ),
+        new Film(
+          'Spirited Away',
+          'Animation',
+          'A girl enters a mysterious spirit world.',
+        ),
+        new Film(
+          'The Matrix',
+          'Science fiction',
+          'A hacker discovers the truth about reality.',
+        ),
+        new Film(
+          'Parasite',
+          'Thriller',
+          'Two families become entangled across class lines.',
+        ),
+      ];
+
+      class ItemsList extends React.Component {
+        render() {
+          return React.createElement(
+            'ul',
+            null,
+            this.props.data.map((item, i) =>
+              React.createElement('li', {key: i}, item.toString()),
+            ),
+          );
+        }
+      }
+
+      class Table extends React.Component {
+        render() {
+          return React.createElement(
+            'table',
+            null,
+            React.createElement(TableHead, {data: this.props.data[0]}),
+            React.createElement(TableBody, {data: this.props.data}),
+          );
+        }
+      }
+
+      class TableHead extends React.Component {
+        render() {
+          return React.createElement(
+            'thead',
+            null,
+            React.createElement(TableRow, {
+              data: Object.keys(this.props.data),
+              head: true,
+            }),
+          );
+        }
+      }
+
+      class TableBody extends React.Component {
+        render() {
+          return React.createElement(
+            'tbody',
+            null,
+            this.props.data.map((d, i) =>
+              React.createElement(TableRow, {
+                key: i,
+                data: Object.values(d),
+                head: false,
+              }),
+            ),
+          );
+        }
+      }
+
+      class TableRow extends React.Component {
+        render() {
+          let elem = this.props.head ? 'th' : 'td';
+          return React.createElement(
+            'tr',
+            null,
+            this.props.data.map((d, i) =>
+              React.createElement(elem, {key: i}, d),
+            ),
+          );
+        }
+      }
+
+      const library = React.createElement(
+        'div',
+        null,
+        React.createElement('h1', null, 'My library'),
+        React.createElement('h2', null, 'Books list'),
+        React.createElement(ItemsList, {data: books}),
+        React.createElement('h2', null, 'Films list'),
+        React.createElement(ItemsList, {data: films}),
+
+        React.createElement('h2', null, 'Books table'),
+        React.createElement(Table, {data: books}),
+
+        React.createElement('h2', null, 'Films table'),
+        React.createElement(Table, {data: films}),
+      );
+
+      const root = createRoot(document.getElementById('root'));
+      root.render(library);
+    </script>
+  </body>
+</html>
