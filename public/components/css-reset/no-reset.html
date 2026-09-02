@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>No CSS Reset Comparison</title>
+  </head>
+  <body>
+    <header>
+      <h1>No CSS Reset</h1>
+      <p>
+        A baseline showing the browser's default styles without any reset CSS.
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Heading level 2</h2>
+        <h3>Heading level 3</h3>
+        <h4>Heading level 4</h4>
+        <h5>Heading level 5</h5>
+        <h6>Heading level 6</h6>
+        <p>
+          This paragraph contains <strong>strong text</strong>,
+          <em>emphasized text</em>, and a <a href="#form">link</a>.
+        </p>
+        <div>A generic div used to expose default box behavior.</div>
+        <ul>
+          <li>Unordered list item one</li>
+          <li>Unordered list item two</li>
+        </ul>
+      </section>
+
+      <section id="form">
+        <h2>Form elements</h2>
+        <form>
+          <fieldset>
+            <legend>Example form</legend>
+            <p>
+              <label for="name">Text input</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Your name"
+              />
+            </p>
+            <p>
+              <label for="email">Email input</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+              />
+            </p>
+            <p>
+              <label for="password">Password</label>
+              <input id="password" name="password" type="password" />
+            </p>
+            <p>
+              <label for="choice">Select</label>
+              <select id="choice" name="choice">
+                <option>First option</option>
+                <option>Second option</option>
+              </select>
+            </p>
+            <p>
+              <label for="message">Textarea</label>
+              <textarea id="message" name="message" rows="4">
+Sample text</textarea
+              >
+            </p>
+            <p>
+              <label><input type="checkbox" checked /> Checkbox</label>
+              <label><input type="radio" name="radio" checked /> Radio</label>
+            </p>
+            <p>
+              <label for="range">Range</label>
+              <input id="range" name="range" type="range" />
+            </p>
+            <button type="button">Button</button>
+            <input type="submit" value="Submit input" />
+          </fieldset>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
