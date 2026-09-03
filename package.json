@@ -1,0 +1,25 @@
+{
+  "name": "Master Reference Web Project",
+  "version": "1.0.0",
+  "description": "A collection of css and javascript concepts for a quick reference and reuse.",
+  "homepage": "https://github.com/gautamiwiz/master-reference-web-development#readme",
+  "bugs": {
+    "url": "https://github.com/gautamiwiz/master-reference-web-development/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gautamiwiz/master-reference-web-development.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "~2.8.1",
+    "express": "^4.21.2"
+  }
+}
