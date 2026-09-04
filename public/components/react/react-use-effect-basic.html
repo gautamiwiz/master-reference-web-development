@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <title>React Use Effect Basic</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "xx": "https://esm.sh/react",
+          "yy": "https://esm.sh/react-dom/client"
+        }
+      }
+    </script>
+
+    <script data-type="module" type="text/babel">
+      import React from 'xx';
+      import {createRoot} from 'yy';
+
+      function App({title, url, baseAddress}) {
+        function fetchDataV1() {
+          console.log('Function fetch data v1 entered');
+          const promise1 = window.fetch(url);
+          promise1.then((response) => {
+            const promise2 = response.json();
+
+            promise2.then((data) => {
+              console.log(data);
+            });
+          });
+        }
+
+        async function fetchDataV2() {
+          await console.log('Function fetch data v2 entered');
+          let response = await fetch(url);
+          let data = await response.json();
+          console.log(data);
+        }
+        return (
+          <>
+            <h1>{title}</h1>
+            <div style={{display: 'flex', gap: '10px'}}>
+              <button
+                onClick={() => {
+                  console.log('button 1 clicked');
+                  fetchDataV1();
+                }}
+              >
+                Button 1
+              </button>
+              <button
+                onClick={() => {
+                  console.log('button 2 clicked');
+                  fetchDataV2();
+                }}
+              >
+                Button 2
+              </button>
+            </div>
+          </>
+        );
+      }
+
+      const root = createRoot(document.getElementById('root'));
+
+      root.render(
+        <App
+          title="React Use Effect Basics"
+          url="http://localhost:3000/api/thumbnailUrls"
+        />,
+      );
+    </script>
+  </body>
+</html>

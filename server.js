@@ -30,7 +30,7 @@ var urls = [
 router.get('/thumbnailUrls', function (req, res) {
   setTimeout(function () {
     res.status(200).json(urls);
-  }, 1000);
+  }, 0);
   return;
 });
 

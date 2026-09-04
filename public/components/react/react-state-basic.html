@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <title>React State</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "xx": "https://esm.sh/react",
+          "yy": "https://esm.sh/react-dom/client"
+        }
+      }
+    </script>
+
+    <script data-type="module" type="text/babel">
+      import React from 'xx';
+      import {createRoot} from 'yy';
+
+      function App({title}) {
+        // let [time, setTime] = React.useState(new Date());
+        // let [count, setCount] = React.useState(0);
+
+        let [state, setState] = React.useState({
+          count: 0,
+          clickTime: new Date(),
+        });
+
+        function countSetter() {
+          //   setCount((c) => c + 1);
+          //   setTime(new Date());
+          setState({
+            count: state.count + 1,
+            clickTime: new Date(),
+          });
+        }
+
+        return (
+          <>
+            <h1>{title}</h1>
+            <div>
+              <button onClick={countSetter}>Click me</button>{' '}
+            </div>
+
+            <p>Hit count: {state.count}</p>
+            <p>Local date and time: {state.clickTime.toLocaleString()}</p>
+            <p>Date only: {state.clickTime.toLocaleDateString()}</p>
+            <p>Time only: {state.clickTime.toLocaleTimeString()}</p>
+            <p>
+              Weekday and date:{' '}
+              {state.clickTime.toLocaleDateString(undefined, {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+              })}
+            </p>
+            <p>
+              Long date:{' '}
+              {state.clickTime.toLocaleDateString(undefined, {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              })}
+            </p>
+            <p>
+              24-hour time:{' '}
+              {state.clickTime.toLocaleTimeString(undefined, {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false,
+              })}
+            </p>
+            <p>ISO format: {state.clickTime.toISOString()}</p>
+          </>
+        );
+      }
+
+      const root = createRoot(document.getElementById('root'));
+
+      root.render(<App title="React State Management Basic" />);
+    </script>
+  </body>
+</html>

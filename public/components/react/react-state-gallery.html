@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <title>React State Management Gallery</title>
+    <link rel="stylesheet" href="galleryStyle.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "xx": "https://esm.sh/react",
+          "yy": "https://esm.sh/react-dom/client"
+        }
+      }
+    </script>
+
+    <script data-type="module" type="text/babel">
+      import React from 'xx';
+      import {createRoot} from 'yy';
+
+      const urls = [
+        'alesung.jpg',
+        'bronnoysund.jpt',
+        'budapest.jpg',
+        'capetown.jpg',
+        'cork.jpg',
+        'joburghadeda.jpg',
+        'oslo.jpg',
+        'singapore.jpg',
+      ];
+
+      function App({title, urls, baseAddress}) {
+        const [mainImageUrl, setMainImageUrl] = React.useState(undefined);
+
+        const mainImageContent = mainImageUrl ? (
+          <img src={`${baseAddress}/${mainImageUrl}`} />
+        ) : (
+          'No image selected'
+        );
+
+        return (
+          <>
+            <h1>{title}</h1>
+            <div className="galleryGrid">
+              {urls.map((image, i) => (
+                <div>
+                  <img
+                    src={`${baseAddress}/${image}`}
+                    key={i}
+                    onClick={() => setMainImageUrl(image)}
+                    className="smallImage"
+                  />
+                </div>
+              ))}
+              <div className="bigImage">{mainImageContent}</div>
+            </div>
+          </>
+        );
+      }
+
+      const root = createRoot(document.getElementById('root'));
+
+      root.render(
+        <App
+          title="React State Management Gallery"
+          urls={urls}
+          baseAddress="https://olsensoft.com/thumbnails"
+        />,
+      );
+    </script>
+  </body>
+</html>

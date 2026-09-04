@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <title>React Use Effect Gallery</title>
+    <link rel="stylesheet" href="galleryStyle.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "xx": "https://esm.sh/react",
+          "yy": "https://esm.sh/react-dom/client"
+        }
+      }
+    </script>
+
+    <script data-type="module" type="text/babel">
+      import React from 'xx';
+      import {createRoot} from 'yy';
+
+      function App({title, apiUrl}) {
+        const [mainImageUrl, setMainImageUrl] = React.useState(undefined);
+        const [isLoading, setIsLoading] = React.useState(true);
+        let [imageUrls, setImageUrls] = React.useState([]);
+
+        React.useEffect(() => {
+          async function getImagesArray() {
+            //console.log('use effect triggered');
+            let response = await fetch(apiUrl);
+            let data = await response.json();
+            setImageUrls(data);
+
+            console.log(imageUrls);
+          }
+          getImagesArray();
+        }, []);
+
+        const mainImageContent = mainImageUrl ? (
+          <img src={`https://olsensoft.com/thumbnails/${mainImageUrl}`} />
+        ) : (
+          'No image selected'
+        );
+
+        return (
+          <>
+            <h1>{title}</h1>
+            <div className="galleryGrid">
+              {imageUrls.map((image, i) => (
+                <div>
+                  <img
+                    src={`https://olsensoft.com/thumbnails/${image}`}
+                    key={i}
+                    onClick={() => setMainImageUrl(image)}
+                    className="smallImage"
+                  />
+                </div>
+              ))}
+              <div className="bigImage">{mainImageContent}</div>
+            </div>
+          </>
+        );
+      }
+
+      const root = createRoot(document.getElementById('root'));
+
+      root.render(
+        <App
+          title="React State Management Gallery"
+          apiUrl="http://localhost:3000/api/thumbnailUrls"
+        />,
+      );
+    </script>
+  </body>
+</html>
