@@ -6,7 +6,7 @@
 }
 
 .smallImage {
-  max-width: 100px;
+  /* max-width: 100px; */
   object-fit: cover;
   display: block;
   width: 100%;

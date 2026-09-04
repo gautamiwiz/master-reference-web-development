@@ -24,17 +24,25 @@
 
       function App({title, apiUrl}) {
         const [mainImageUrl, setMainImageUrl] = React.useState(undefined);
-        const [isLoading, setIsLoading] = React.useState(true);
+        const [isLoading, setIsLoading] = React.useState(false);
         let [imageUrls, setImageUrls] = React.useState([]);
 
         React.useEffect(() => {
           async function getImagesArray() {
-            //console.log('use effect triggered');
-            let response = await fetch(apiUrl);
-            let data = await response.json();
-            setImageUrls(data);
+            setIsLoading(true);
+            try {
+              let response = await fetch(apiUrl);
+              if (!response.ok) {
+                throw Error(response.statusText);
+              }
+              let data = await response.json();
+              setImageUrls(data);
+              setIsLoading(false);
 
-            console.log(imageUrls);
+              console.log(imageUrls);
+            } catch (e) {
+              console.log(e);
+            }
           }
           getImagesArray();
         }, []);
@@ -47,20 +55,27 @@
 
         return (
           <>
-            <h1>{title}</h1>
-            <div className="galleryGrid">
-              {imageUrls.map((image, i) => (
-                <div>
-                  <img
-                    src={`https://olsensoft.com/thumbnails/${image}`}
-                    key={i}
-                    onClick={() => setMainImageUrl(image)}
-                    className="smallImage"
-                  />
+            {isLoading ? (
+              <span> Loading gallery... </span>
+            ) : (
+              <>
+                <h1>{title}</h1>
+
+                <div className="galleryGrid">
+                  {imageUrls.map((image, i) => (
+                    <div>
+                      <img
+                        src={`https://olsensoft.com/thumbnails/${image}`}
+                        key={i}
+                        onClick={() => setMainImageUrl(image)}
+                        className="smallImage"
+                      />
+                    </div>
+                  ))}
+                  <div className="bigImage">{mainImageContent}</div>
                 </div>
-              ))}
-              <div className="bigImage">{mainImageContent}</div>
-            </div>
+              </>
+            )}
           </>
         );
       }
