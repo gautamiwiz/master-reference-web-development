@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrollbar Gutter Comparison</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      :root {
+        color: #17212b;
+        font-family: Georgia, 'Times New Roman', serif;
+        background: #e8f4f8;
+      }
+
+      body {
+        width: min(100% - 2rem, 1100px);
+        margin: 0 auto;
+        padding: 3rem 0;
+      }
+
+      header {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      h1,
+      h2,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 0.35rem;
+        font-size: clamp(2rem, 6vw, 4rem);
+        line-height: 0.95;
+      }
+
+      header p {
+        max-width: 42rem;
+        margin-bottom: 0;
+        color: #4b5d69;
+      }
+
+      button {
+        flex: 0 0 auto;
+        border: 0;
+        padding: 0.75rem 1rem;
+        color: white;
+        font:
+          700 0.9rem Georgia,
+          'Times New Roman',
+          serif;
+        background: #b43b2f;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #8f2e25;
+      }
+
+      button:focus-visible {
+        outline: 3px solid #17212b;
+        outline-offset: 3px;
+      }
+
+      .examples {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      article {
+        min-width: 0;
+        border-top: 5px solid #147d92;
+        padding: 1rem;
+        background: white;
+        box-shadow: 0 12px 30px rgb(23 33 43 / 10%);
+      }
+
+      h2 {
+        margin-bottom: 0.25rem;
+        font-size: 1.15rem;
+      }
+
+      code {
+        display: block;
+        min-height: 2.5rem;
+        color: #b43b2f;
+        font-size: 0.8rem;
+      }
+
+      .scroll-box {
+        height: 160px;
+        margin-top: 1rem;
+        overflow-y: auto;
+        border: 1px solid #8aa7b2;
+        background: #f5fafb;
+      }
+
+      .scroll-box-inner {
+        padding: 1rem;
+      }
+
+      .scroll-box h3 {
+        margin: 0 0 0.75rem;
+        text-align: center;
+      }
+
+      .scroll-box p {
+        line-height: 1.5;
+      }
+
+      .stable {
+        scrollbar-gutter: stable;
+      }
+
+      .both-edges {
+        scrollbar-gutter: stable both-edges;
+      }
+
+      .is-compact .extra-content {
+        display: none;
+      }
+
+      @media (max-width: 760px) {
+        header {
+          align-items: stretch;
+          flex-direction: column;
+        }
+
+        .examples {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Scrollbar gutters</h1>
+        <p>
+          Compare how each value affects alignment when the content stops
+          overflowing.
+        </p>
+      </div>
+      <button type="button" id="content-toggle" aria-pressed="false">
+        Show compact content
+      </button>
+    </header>
+
+    <main class="examples">
+      <article>
+        <h2>Default behavior</h2>
+        <code>scrollbar-gutter: auto;</code>
+        <div class="scroll-box">
+          <div class="scroll-box-inner">
+            <h3>Centered heading</h3>
+            <p>The scrollbar takes space only while it is needed.</p>
+            <div class="extra-content">
+              <p>
+                When this extra content is hidden, the scrollbar disappears and
+                the heading shifts as that space is reclaimed.
+              </p>
+              <p>Scroll down to see all of the overflowing content.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <h2>Reserved gutter</h2>
+        <code>scrollbar-gutter: stable;</code>
+        <div class="scroll-box stable">
+          <div class="scroll-box-inner">
+            <h3>Centered heading</h3>
+            <p>The scrollbar takes space only while it is needed.</p>
+            <div class="extra-content">
+              <p>
+                When this extra content is hidden, the scrollbar disappears and
+                the heading shifts as that space is reclaimed.
+              </p>
+              <p>Scroll down to see all of the overflowing content.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <h2>Balanced gutters</h2>
+        <code>scrollbar-gutter: stable both-edges;</code>
+        <div class="scroll-box both-edges">
+          <div class="scroll-box-inner">
+            <h3>Centered heading</h3>
+            <p>The scrollbar takes space only while it is needed.</p>
+            <div class="extra-content">
+              <p>
+                When this extra content is hidden, the scrollbar disappears and
+                the heading shifts as that space is reclaimed.
+              </p>
+              <p>Scroll down to see all of the overflowing content.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <script>
+      const contentToggle = document.querySelector('#content-toggle');
+      const examples = document.querySelector('.examples');
+
+      contentToggle.addEventListener('click', () => {
+        const isCompact = examples.classList.toggle('is-compact');
+
+        contentToggle.setAttribute('aria-pressed', isCompact);
+        contentToggle.textContent = isCompact
+          ? 'Show overflowing content'
+          : 'Show compact content';
+      });
+    </script>
+  </body>
+</html>
