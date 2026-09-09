@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dot animation</title>
+    <style>
+      body {
+        /* background-color: yellow; */
+        padding: 20px;
+      }
+      .dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #22c55e;
+        animation: pulse 1.8s cubic-bezier(0, 0, 0.35, 1) infinite;
+      }
+
+      @keyframes pulse {
+        from {
+          box-shadow: 0 0 0 14px #22c55eb3;
+        }
+
+        to {
+          box-shadow: 0 0 0 14px #22c55e00;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dot animation</h1>
+    <div>
+      <span class="dot"></span>
+    </div>
+  </body>
+</html>
