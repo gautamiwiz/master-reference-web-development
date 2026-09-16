@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Headline animaiton</title>
+    <style>
+      h1 {
+        animation: type 2.5s steps(18) forwards;
+        width: 18ch;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      @keyframes type {
+        from {
+          width: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Headline animation</h1>
+  </body>
+</html>
