@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A practical reference to common laws, principles, and mental models."
+    />
+    <title>Useful Laws &amp; Principles</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600&display=swap');
+
+      :root {
+        color-scheme: light;
+        --ink: #17211d;
+        --muted: #5f6c65;
+        --paper: #f5f2e9;
+        --surface: #fffdf8;
+        --line: #d8d7cc;
+        --accent: #176b57;
+        --accent-soft: #dcebe5;
+        --highlight: #e3a72f;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          linear-gradient(rgba(23, 33, 29, 0.035) 1px, transparent 1px),
+          var(--paper);
+        background-size: 100% 32px;
+        font-family: 'DM Sans', sans-serif;
+        line-height: 1.6;
+      }
+
+      main {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 72px 0 80px;
+      }
+
+      header {
+        max-width: 760px;
+        margin-bottom: 40px;
+      }
+
+      .eyebrow {
+        margin: 0 0 8px;
+        color: var(--accent);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+        font-family: 'Newsreader', serif;
+        line-height: 1.08;
+      }
+
+      h1 {
+        font-size: clamp(2.65rem, 7vw, 5.6rem);
+      }
+
+      header p:last-child {
+        max-width: 640px;
+        margin: 18px 0 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      .table-wrap {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        box-shadow: 0 18px 45px rgba(23, 33, 29, 0.08);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 20px 22px;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        color: #fff;
+        background: var(--ink);
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      th:first-child {
+        width: 6%;
+      }
+
+      th:nth-child(2) {
+        width: 21%;
+      }
+
+      th:nth-child(3) {
+        width: 31%;
+      }
+
+      tbody tr:not(:last-child) {
+        border-bottom: 1px solid var(--line);
+      }
+
+      tbody tr:nth-child(even) {
+        background: #f8faf7;
+      }
+
+      tbody tr:hover {
+        background: var(--accent-soft);
+      }
+
+      td {
+        color: #34423b;
+      }
+
+      td:first-child {
+        color: var(--accent);
+        font-size: 0.85rem;
+        font-weight: 700;
+        font-variant-numeric: tabular-nums;
+      }
+
+      td:nth-child(2) {
+        color: var(--ink);
+        font-weight: 700;
+      }
+
+      .memory-section {
+        margin-top: 56px;
+      }
+
+      .memory-section h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+      }
+
+      .memory-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        margin-top: 24px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--line);
+      }
+
+      .memory-item {
+        min-height: 128px;
+        padding: 22px;
+        background: var(--surface);
+      }
+
+      .memory-item strong {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--accent);
+        font-size: 1.08rem;
+      }
+
+      .memory-item p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .memory-item--not-equal {
+        position: relative;
+      }
+
+      .memory-item--not-equal::after {
+        position: absolute;
+        right: 18px;
+        bottom: 10px;
+        color: var(--highlight);
+        content: '≠';
+        font-family: 'Newsreader', serif;
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+
+      @media (max-width: 820px) {
+        main {
+          padding-top: 48px;
+        }
+
+        .memory-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        thead {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+          clip: rect(0 0 0 0);
+          clip-path: inset(50%);
+          white-space: nowrap;
+        }
+
+        tbody,
+        tr,
+        td {
+          display: block;
+        }
+
+        tbody tr {
+          padding: 20px;
+        }
+
+        tbody tr:not(:last-child) {
+          border-bottom: 1px solid var(--line);
+        }
+
+        td {
+          padding: 0;
+        }
+
+        td::before {
+          display: block;
+          margin: 14px 0 3px;
+          color: var(--accent);
+          content: attr(data-label);
+          font-size: 0.7rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+
+        td:nth-child(2) {
+          font-family: 'Newsreader', serif;
+          font-size: 1.45rem;
+        }
+
+        td:first-child::before {
+          margin-top: 0;
+        }
+
+        td:nth-child(2)::before {
+          font-family: 'DM Sans', sans-serif;
+          font-size: 0.7rem;
+        }
+      }
+
+      @media (max-width: 540px) {
+        main {
+          width: min(100% - 20px, 1180px);
+        }
+
+        .memory-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .memory-item {
+          min-height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">Mental models for work and life</p>
+        <h1>Useful Laws &amp; Principles</h1>
+        <p>
+          Twenty memorable ideas for planning better, thinking clearly, and
+          avoiding common mistakes in teams, products, and everyday decisions.
+        </p>
+      </header>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Principle</th>
+              <th scope="col">Meaning</th>
+              <th scope="col">Memorable example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Number">1</td>
+              <td data-label="Principle">Murphy's Law</td>
+              <td data-label="Meaning">
+                Anything that can go wrong eventually will, so plan for failure.
+              </td>
+              <td data-label="Memorable example">
+                You have an important presentation tomorrow. The laptop could
+                fail, the internet could go down, or the file could become
+                corrupted. So you keep a local copy and a PDF backup.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Number">2</td>
+              <td data-label="Principle">Parkinson's Law</td>
+              <td data-label="Meaning">
+                Work expands to fill the time available.
+              </td>
+              <td data-label="Memorable example">
+                You give yourself 2 weeks to make a presentation. You spend the
+                first week tweaking things, adding unnecessary details, and
+                changing slides. Give yourself 2 days and you may produce
+                essentially the same presentation.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Number">3</td>
+              <td data-label="Principle">Hofstadter's Law</td>
+              <td data-label="Meaning">
+                Things take longer than expected&mdash;even when you account for
+                that.
+              </td>
+              <td data-label="Memorable example">
+                You estimate a project will take 2 weeks, so you add a one-week
+                buffer. Unexpected bugs, dependencies and revisions appear, and
+                it takes 4 weeks anyway.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Number">4</td>
+              <td data-label="Principle">Pareto Principle (80/20)</td>
+              <td data-label="Meaning">
+                A small number of causes often produce most of the results.
+              </td>
+              <td data-label="Memorable example">
+                An e-commerce company discovers that roughly 20% of its products
+                generate most of its sales. Instead of treating every product
+                equally, it focuses attention on those products and customers.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Number">5</td>
+              <td data-label="Principle">Hick's Law</td>
+              <td data-label="Meaning">
+                More choices generally mean more time and effort to make a
+                decision.
+              </td>
+              <td data-label="Memorable example">
+                A restaurant gives you 6 well-organized choices and ordering is
+                easy. Another gives you 150 dishes with no structure. You spend
+                several minutes just deciding what to order.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Number">6</td>
+              <td data-label="Principle">Occam's Razor</td>
+              <td data-label="Meaning">
+                When several explanations fit the facts, start with the simplest
+                one.
+              </td>
+              <td data-label="Memorable example">
+                Your phone suddenly won't charge. Before assuming the charging
+                port has failed, you check the cable and discover it was faulty.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Number">7</td>
+              <td data-label="Principle">Hanlon's Razor</td>
+              <td data-label="Meaning">
+                Don't assume bad intentions when a mistake is a sufficient
+                explanation.
+              </td>
+              <td data-label="Memorable example">
+                Your colleague doesn't reply to an important message. You
+                initially think they're deliberately ignoring you. Later you
+                discover the email went into their spam folder.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Number">8</td>
+              <td data-label="Principle">Chesterton's Fence</td>
+              <td data-label="Meaning">
+                Don't remove something until you understand why it exists.
+              </td>
+              <td data-label="Memorable example">
+                You find an apparently unnecessary approval step in a company's
+                process and remove it. Later you discover it existed because an
+                earlier project had a serious compliance problem.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Number">9</td>
+              <td data-label="Principle">Goodhart's Law</td>
+              <td data-label="Meaning">
+                When a measurement becomes a target, people may optimize the
+                measurement rather than the real goal.
+              </td>
+              <td data-label="Memorable example">
+                A support team is judged by how many tickets they close. Soon,
+                agents start closing easy tickets quickly while difficult
+                customer problems remain unresolved.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Number">10</td>
+              <td data-label="Principle">Cobra Effect</td>
+              <td data-label="Meaning">
+                A well-intentioned incentive can make the original problem
+                worse.
+              </td>
+              <td data-label="Memorable example">
+                The government pays people for dead cobras. People start
+                breeding cobras to collect the rewards. When the program ends,
+                they release the snakes, potentially leaving the city with even
+                more cobras than before.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Number">11</td>
+              <td data-label="Principle">Kidlin's Law</td>
+              <td data-label="Meaning">
+                Clearly defining and writing down a problem can reveal much of
+                the solution.
+              </td>
+              <td data-label="Memorable example">
+                A team says, &ldquo;Our checkout is terrible.&rdquo; They write
+                the problem down and discover: &ldquo;42% of users abandon
+                checkout because the shipping cost isn't shown until the final
+                step.&rdquo; Now they have a specific problem to solve.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Number">12</td>
+              <td data-label="Principle">Peter Principle</td>
+              <td data-label="Meaning">
+                People tend to be promoted until they reach a role where their
+                existing skills aren't sufficient.
+              </td>
+              <td data-label="Memorable example">
+                A developer is excellent at coding, so the company promotes them
+                to engineering manager. But managing people, hiring and
+                resolving conflicts require a completely different skill set.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Number">13</td>
+              <td data-label="Principle">Brooks's Law</td>
+              <td data-label="Meaning">
+                Adding people to a late software project can make it later.
+              </td>
+              <td data-label="Memorable example">
+                A project is already behind schedule, so management adds five
+                developers. The existing team now has to train them, explain the
+                architecture and coordinate with them. Development slows down
+                further.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Number">14</td>
+              <td data-label="Principle">Dunning-Kruger Effect</td>
+              <td data-label="Meaning">
+                People with limited knowledge can overestimate their ability
+                because they don't yet know what they don't know.
+              </td>
+              <td data-label="Memorable example">
+                Someone learns basic JavaScript and successfully builds a small
+                website. They conclude they can easily build a large production
+                application&mdash;until architecture, security, testing,
+                performance and deployment become problems.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Number">15</td>
+              <td data-label="Principle">Sunk Cost Fallacy</td>
+              <td data-label="Meaning">
+                Money, time or effort already spent shouldn't determine whether
+                you continue.
+              </td>
+              <td data-label="Memorable example">
+                You've spent &#8377;10 lakh building an app, but user research
+                shows nobody wants it. You keep investing because &ldquo;we've
+                already spent &#8377;10 lakh,&rdquo; rather than asking whether
+                another &#8377;10 lakh is worthwhile.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Number">16</td>
+              <td data-label="Principle">Survivorship Bias</td>
+              <td data-label="Meaning">
+                We focus on things that survived or succeeded while ignoring the
+                failures that disappeared.
+              </td>
+              <td data-label="Memorable example">
+                You study successful entrepreneurs and notice many dropped out
+                of college. You conclude dropping out leads to success&mdash;but
+                you haven't studied the thousands of people who dropped out and
+                never became successful entrepreneurs.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Number">17</td>
+              <td data-label="Principle">Conway's Law</td>
+              <td data-label="Meaning">
+                The structure of a product often reflects the structure and
+                communication patterns of the organization that built it.
+              </td>
+              <td data-label="Memorable example">
+                Four teams work independently on different parts of a product
+                and rarely communicate. The resulting software ends up with four
+                separate components that are difficult to integrate.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Number">18</td>
+              <td data-label="Principle">Campbell's Law</td>
+              <td data-label="Meaning">
+                The more heavily a metric is used to make decisions, the more
+                likely people are to distort their behavior around it.
+              </td>
+              <td data-label="Memorable example">
+                A company measures salespeople purely by number of calls made.
+                Soon, employees make hundreds of meaningless calls simply to hit
+                the target, while actual sales don't improve.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Number">19</td>
+              <td data-label="Principle">Regression to the Mean</td>
+              <td data-label="Meaning">
+                Extremely unusual results are often followed by results closer
+                to normal.
+              </td>
+              <td data-label="Memorable example">
+                A football player scores five goals in one match. Everyone
+                expects another extraordinary performance next week, but they
+                return to their usual scoring level. That doesn't necessarily
+                mean they suddenly became worse.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Number">20</td>
+              <td data-label="Principle">Wirth's Law</td>
+              <td data-label="Meaning">
+                Software tends to become more resource-hungry faster than
+                hardware becomes faster.
+              </td>
+              <td data-label="Memorable example">
+                Your new computer has a much faster processor and more RAM than
+                your old one, yet some modern applications still feel just as
+                slow&mdash;or slower&mdash;because the software has become much
+                more complex and bloated.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <section class="memory-section" aria-labelledby="memory-title">
+        <p class="eyebrow">The short version</p>
+        <h2 id="memory-title">A quick way to remember them</h2>
+        <div class="memory-grid">
+          <article class="memory-item">
+            <strong>Murphy</strong>
+            <p>Plan for what can go wrong.</p>
+          </article>
+          <article class="memory-item">
+            <strong>Parkinson</strong>
+            <p>Work fills the time you give it.</p>
+          </article>
+          <article class="memory-item">
+            <strong>Hofstadter</strong>
+            <p>It'll take longer than you think.</p>
+          </article>
+          <article class="memory-item">
+            <strong>Pareto</strong>
+            <p>A few causes drive most results.</p>
+          </article>
+          <article class="memory-item">
+            <strong>Hick</strong>
+            <p>More choices mean slower decisions.</p>
+          </article>
+          <article class="memory-item">
+            <strong>Occam</strong>
+            <p>Prefer the simplest fitting explanation.</p>
+          </article>
+          <article class="memory-item">
+            <strong>Hanlon</strong>
+            <p>Don't assume malice.</p>
+          </article>
+          <article class="memory-item">
+            <strong>Chesterton</strong>
+            <p>Understand the fence before removing it.</p>
+          </article>
+          <article class="memory-item">
+            <strong>Goodhart</strong>
+            <p>A targeted metric loses its value.</p>
+          </article>
+          <article class="memory-item">
+            <strong>Cobra</strong>
+            <p>Incentives can worsen the problem.</p>
+          </article>
+          <article class="memory-item">
+            <strong>Kidlin</strong>
+            <p>Write the problem clearly.</p>
+          </article>
+          <article class="memory-item">
+            <strong>Peter</strong>
+            <p>Promotion can exceed competence.</p>
+          </article>
+          <article class="memory-item memory-item--not-equal">
+            <strong>Brooks</strong>
+            <p>More people can make a late project later.</p>
+          </article>
+          <article class="memory-item">
+            <strong>Dunning-Kruger</strong>
+            <p>Little knowledge can inflate confidence.</p>
+          </article>
+          <article class="memory-item">
+            <strong>Sunk Cost</strong>
+            <p>Past spending shouldn't decide the future.</p>
+          </article>
+          <article class="memory-item">
+            <strong>Survivorship</strong>
+            <p>Visible winners hide many failures.</p>
+          </article>
+          <article class="memory-item">
+            <strong>Conway</strong>
+            <p>Systems mirror team communication.</p>
+          </article>
+          <article class="memory-item">
+            <strong>Campbell</strong>
+            <p>High-stakes metrics invite manipulation.</p>
+          </article>
+          <article class="memory-item">
+            <strong>Regression to the Mean</strong>
+            <p>Extreme results tend toward average.</p>
+          </article>
+          <article class="memory-item">
+            <strong>Wirth</strong>
+            <p>Software slows as hardware speeds up.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
