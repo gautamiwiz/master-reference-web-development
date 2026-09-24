@@ -144,6 +144,16 @@
         font-weight: 700;
       }
 
+      .cell-stack p {
+        margin: 0;
+      }
+
+      .cell-stack p + p {
+        margin-top: 14px;
+        padding-top: 14px;
+        border-top: 1px solid var(--line);
+      }
+
       .memory-section {
         margin-top: 56px;
       }
@@ -299,264 +309,829 @@
             <tr>
               <td data-label="Number">1</td>
               <td data-label="Principle">Murphy's Law</td>
-              <td data-label="Meaning">
-                Anything that can go wrong eventually will, so plan for failure.
+              <td data-label="Meaning" class="cell-stack">
+                <p>
+                  Anything that can go wrong eventually will, so plan for
+                  failure.
+                </p>
+                <p>
+                  Murphy's Law doesn't literally mean &ldquo;bad things will
+                  definitely happen.&rdquo; It's more useful as a reminder: if a
+                  failure is possible, eventually you'll encounter it, so don't
+                  build a system that depends on everything going perfectly.
+                </p>
               </td>
-              <td data-label="Memorable example">
-                You have an important presentation tomorrow. The laptop could
-                fail, the internet could go down, or the file could become
-                corrupted. So you keep a local copy and a PDF backup.
+              <td data-label="Memorable example" class="cell-stack">
+                <p>
+                  You spend weeks preparing for a product demo. Everything works
+                  perfectly in testing. Five minutes before the client joins,
+                  the demo environment goes down. You had assumed it was too
+                  unlikely to prepare for, so now the entire demo is at risk.
+                </p>
+                <p>
+                  You leave home 10 minutes early because you have an important
+                  meeting. You normally arrive in 20 minutes. That particular
+                  day, you encounter a traffic jam, your phone battery dies, and
+                  the elevator stops at every floor.
+                </p>
               </td>
             </tr>
             <tr>
               <td data-label="Number">2</td>
               <td data-label="Principle">Parkinson's Law</td>
-              <td data-label="Meaning">
-                Work expands to fill the time available.
+              <td data-label="Meaning" class="cell-stack">
+                <p>Work expands to fill the time available.</p>
+                <p>
+                  <strong>The key idea:</strong> More time doesn't necessarily
+                  mean more productivity. It often creates room for unnecessary
+                  work.
+                </p>
               </td>
-              <td data-label="Memorable example">
-                You give yourself 2 weeks to make a presentation. You spend the
-                first week tweaking things, adding unnecessary details, and
-                changing slides. Give yourself 2 days and you may produce
-                essentially the same presentation.
+              <td data-label="Memorable example" class="cell-stack">
+                <p>
+                  Your manager asks for a report by <strong>Friday</strong>. You
+                  start Monday, spend days tweaking the formatting, rewriting
+                  sentences, checking tiny details, and thinking of things to
+                  add. By Friday, it's finally done. The next time, you're asked
+                  for the same report <strong>by tomorrow</strong>&mdash;and you
+                  manage to produce a perfectly acceptable version in a few
+                  hours.
+                </p>
+                <p>
+                  <strong>A more memorable everyday version:</strong> You have a
+                  flight at 8 PM, so you plan to leave home at 6 PM. Somehow,
+                  you're still getting ready at 5:50 PM. Give yourself only 30
+                  minutes, and suddenly you can get ready surprisingly quickly.
+                </p>
               </td>
             </tr>
             <tr>
               <td data-label="Number">3</td>
               <td data-label="Principle">Hofstadter's Law</td>
-              <td data-label="Meaning">
-                Things take longer than expected&mdash;even when you account for
-                that.
+              <td data-label="Meaning" class="cell-stack">
+                <p>
+                  Things take longer than expected&mdash;even when you account
+                  for that.
+                </p>
+                <p>
+                  <strong>Easy way to remember it:</strong> &ldquo;It's going to
+                  take longer than you think&mdash;even after you've allowed for
+                  it taking longer.&rdquo;
+                </p>
               </td>
-              <td data-label="Memorable example">
-                You estimate a project will take 2 weeks, so you add a one-week
-                buffer. Unexpected bugs, dependencies and revisions appear, and
-                it takes 4 weeks anyway.
+              <td data-label="Memorable example" class="cell-stack">
+                <p>
+                  You plan to renovate your kitchen in <strong>3 weeks</strong>,
+                  so you add a 1-week buffer and tell yourself it will take
+                  <strong>4 weeks</strong>. Then you discover old plumbing needs
+                  replacing, a cabinet doesn't fit, the countertop is delayed,
+                  and the electrician finds another issue. Even though you
+                  deliberately allowed extra time, the renovation takes
+                  <strong>7 weeks</strong>.
+                </p>
               </td>
             </tr>
             <tr>
               <td data-label="Number">4</td>
               <td data-label="Principle">Pareto Principle (80/20)</td>
-              <td data-label="Meaning">
-                A small number of causes often produce most of the results.
+              <td data-label="Meaning" class="cell-stack">
+                <p>
+                  A small number of causes often produce most of the results.
+                </p>
+                <p>
+                  <strong>The key idea:</strong> Don't treat everything as
+                  equally important. Find the small number of things producing
+                  the biggest impact.
+                </p>
+                <p>
+                  Importantly, <strong>80/20 isn't a mathematical rule</strong>
+                  that must literally be 80% and 20%. It means the distribution
+                  is often highly uneven&mdash;for example, 10% of causes might
+                  produce 70% of the results, or 30% might produce 90%.
+                </p>
               </td>
-              <td data-label="Memorable example">
-                An e-commerce company discovers that roughly 20% of its products
-                generate most of its sales. Instead of treating every product
-                equally, it focuses attention on those products and customers.
+              <td data-label="Memorable example" class="cell-stack">
+                <p>
+                  A software company analyzes
+                  <strong>10,000 customer support tickets</strong> and discovers
+                  that just
+                  <strong
+                    >20% of the recurring issues account for 80% of all
+                    complaints</strong
+                  >. Instead of trying to fix everything at once, the team
+                  focuses on those few issues and eliminates most of the
+                  customer frustration.
+                </p>
+                <p>
+                  <strong>Another very relatable example:</strong> You have 100
+                  apps on your phone, but you probably spend most of your time
+                  using just 10&ndash;20 of them. A small number of apps
+                  generate most of your usage.
+                </p>
               </td>
             </tr>
             <tr>
               <td data-label="Number">5</td>
               <td data-label="Principle">Hick's Law</td>
-              <td data-label="Meaning">
-                More choices generally mean more time and effort to make a
-                decision.
+              <td data-label="Meaning" class="cell-stack">
+                <p>
+                  The more choices people have, the longer and harder it becomes
+                  to make a decision.
+                </p>
+                <p>
+                  <strong>The key UX idea:</strong> Don't give users every
+                  possible choice at once. Reduce, group, prioritize, or
+                  progressively reveal choices.
+                </p>
+                <p>
+                  One important nuance: Hick's Law doesn't mean
+                  <strong
+                    >&ldquo;fewer choices are always better.&rdquo;</strong
+                  >
+                  If users genuinely need many choices, good categorization,
+                  search, filtering, and progressive disclosure can reduce the
+                  decision burden.
+                </p>
               </td>
-              <td data-label="Memorable example">
-                A restaurant gives you 6 well-organized choices and ordering is
-                easy. Another gives you 150 dishes with no structure. You spend
-                several minutes just deciding what to order.
+              <td data-label="Memorable example" class="cell-stack">
+                <p>
+                  You're designing a <strong>checkout page</strong>. If you show
+                  users 3 clearly labeled payment options&mdash;<strong
+                    >UPI, Card, Net Banking</strong
+                  >&mdash;they can choose quickly. If you show 15 payment
+                  methods with equal visual emphasis, users have to scan and
+                  compare them, slowing down the decision.
+                </p>
+                <p>
+                  <strong>A more everyday example:</strong> Imagine buying ice
+                  cream. The shop has <strong>5 flavors</strong> &rarr; you pick
+                  one almost immediately. It has <strong>50 flavors</strong>
+                  &rarr; you start comparing, second-guessing yourself, and may
+                  even leave without deciding.
+                </p>
               </td>
             </tr>
             <tr>
               <td data-label="Number">6</td>
               <td data-label="Principle">Occam's Razor</td>
-              <td data-label="Meaning">
-                When several explanations fit the facts, start with the simplest
-                one.
+              <td data-label="Meaning" class="cell-stack">
+                <p>
+                  When several explanations fit the facts, start with the
+                  simplest one that explains the evidence.
+                </p>
+                <p>
+                  <strong>The key idea:</strong> Don't jump to a complicated
+                  explanation when a simple explanation fits the evidence.
+                </p>
+                <p>
+                  <strong>The important caveat:</strong> Occam's Razor doesn't
+                  say the simplest explanation is always correct. It says it's
+                  generally sensible to investigate the simpler explanation
+                  first when multiple explanations are consistent with what you
+                  know.
+                </p>
               </td>
-              <td data-label="Memorable example">
-                Your phone suddenly won't charge. Before assuming the charging
-                port has failed, you check the cable and discover it was faulty.
+              <td data-label="Memorable example" class="cell-stack">
+                <p>
+                  Your website suddenly becomes very slow. You could suspect a
+                  database failure, a server problem, or a major security issue.
+                  Before investigating all of those, you check the latest
+                  deployment&mdash;and discover someone accidentally uploaded a
+                  <strong>10 MB image</strong> to the homepage.
+                </p>
+                <p>
+                  <strong>A more memorable everyday example:</strong> You walk
+                  into your house and find the lights aren't working. Possible
+                  explanations include a wiring failure, a damaged electrical
+                  panel, or a city-wide power problem. Before calling an
+                  electrician, you look outside and realize
+                  <strong>the entire neighborhood has lost power.</strong>
+                </p>
               </td>
             </tr>
             <tr>
               <td data-label="Number">7</td>
               <td data-label="Principle">Hanlon's Razor</td>
-              <td data-label="Meaning">
-                Don't assume bad intentions when a mistake is a sufficient
-                explanation.
+              <td data-label="Meaning" class="cell-stack">
+                <p>
+                  Don't assume bad intentions when a mistake, oversight, or
+                  incompetence can explain what happened.
+                </p>
+                <p>
+                  <strong>The key idea:</strong> Don't assign malicious intent
+                  when an ordinary mistake or misunderstanding explains the
+                  behavior.
+                </p>
+                <p>
+                  Importantly, Hanlon's Razor doesn't mean
+                  <strong>&ldquo;never assume bad intentions.&rdquo;</strong> If
+                  there is evidence of deliberate behavior, you should consider
+                  it. The principle is about
+                  <strong
+                    >not jumping to that conclusion without evidence.</strong
+                  >
+                </p>
               </td>
-              <td data-label="Memorable example">
-                Your colleague doesn't reply to an important message. You
-                initially think they're deliberately ignoring you. Later you
-                discover the email went into their spam folder.
+              <td data-label="Memorable example" class="cell-stack">
+                <p>
+                  You arrive at a meeting and discover that a colleague
+                  <strong
+                    >didn't include you in an important presentation</strong
+                  >. Your first thought is that they deliberately left you out.
+                  Later, you discover they were working from an
+                  <strong>old version of the attendee list</strong> and simply
+                  missed your name.
+                </p>
+                <p>
+                  <strong>A more memorable everyday example:</strong> Someone
+                  cuts in front of you in traffic. You immediately think,
+                  <em>&ldquo;What an arrogant person.&rdquo;</em> Then you
+                  notice they're trying to get into a hospital emergency
+                  entrance.
+                </p>
               </td>
             </tr>
             <tr>
               <td data-label="Number">8</td>
               <td data-label="Principle">Chesterton's Fence</td>
-              <td data-label="Meaning">
-                Don't remove something until you understand why it exists.
+              <td data-label="Meaning" class="cell-stack">
+                <p>
+                  Don't remove or change something until you understand why it
+                  exists.
+                </p>
+                <p>
+                  <strong>The key idea:</strong> If you don't understand why
+                  something exists, you don't yet know whether it's safe to
+                  remove it.
+                </p>
+                <p>
+                  This is particularly useful when
+                  <strong>redesigning existing products or processes</strong>.
+                  Before asking &ldquo;How can we remove this?&rdquo; ask
+                  <strong
+                    >&ldquo;Why was this introduced in the first
+                    place?&rdquo;</strong
+                  >
+                </p>
               </td>
-              <td data-label="Memorable example">
-                You find an apparently unnecessary approval step in a company's
-                process and remove it. Later you discover it existed because an
-                earlier project had a serious compliance problem.
+              <td data-label="Memorable example" class="cell-stack">
+                <p>
+                  You are walking through a village and see a
+                  <strong>fence built across an otherwise open field</strong>.
+                  It looks pointless, so you remove it. Later, you discover the
+                  fence was there to stop
+                  <strong>livestock from wandering onto the road</strong>. What
+                  looked unnecessary actually had a purpose.
+                </p>
+                <p>
+                  <strong>A great UX/product version:</strong> You redesign a
+                  form and remove a seemingly unnecessary confirmation step
+                  because it adds friction. Later, you discover that the
+                  confirmation was deliberately added because users were
+                  frequently submitting
+                  <strong>expensive orders by mistake</strong>.
+                </p>
               </td>
             </tr>
             <tr>
               <td data-label="Number">9</td>
               <td data-label="Principle">Goodhart's Law</td>
-              <td data-label="Meaning">
-                When a measurement becomes a target, people may optimize the
-                measurement rather than the real goal.
+              <td data-label="Meaning" class="cell-stack">
+                <p>
+                  When a measurement becomes a target, people may optimize the
+                  measurement instead of the real goal.
+                </p>
+                <p>
+                  <strong>The key idea:</strong> When the metric becomes the
+                  goal, people learn to game the metric.
+                </p>
+                <p>
+                  That's the heart of Goodhart's Law:
+                  <strong
+                    >what you measure &ne; necessarily what you actually care
+                    about.</strong
+                  >
+                </p>
               </td>
-              <td data-label="Memorable example">
-                A support team is judged by how many tickets they close. Soon,
-                agents start closing easy tickets quickly while difficult
-                customer problems remain unresolved.
+              <td data-label="Memorable example" class="cell-stack">
+                <p>
+                  A customer-support team wants to
+                  <strong>improve customer service</strong>, so management sets
+                  a target of resolving each ticket within
+                  <strong>5 minutes</strong>. Initially, resolution time is just
+                  a useful measurement. But once agents are judged on it, they
+                  start rushing customers, closing tickets quickly, or avoiding
+                  complicated cases. The average resolution time
+                  improves&mdash;but
+                  <strong>customer service gets worse</strong>.
+                </p>
+                <p>
+                  <strong>A very simple example:</strong> A school wants
+                  students to <strong>learn more</strong>, so it measures
+                  success through test scores. Once test scores become the main
+                  target, teachers may start
+                  <strong>teaching students how to pass the test</strong> rather
+                  than helping them understand the subject.
+                </p>
               </td>
             </tr>
             <tr>
               <td data-label="Number">10</td>
               <td data-label="Principle">Cobra Effect</td>
-              <td data-label="Meaning">
-                A well-intentioned incentive can make the original problem
-                worse.
+              <td data-label="Meaning" class="cell-stack">
+                <p>
+                  A well-intentioned incentive can create unintended behavior
+                  that makes the original problem worse.
+                </p>
+                <p>
+                  <strong>The key idea:</strong> When you create an incentive,
+                  people will optimize for the reward&mdash;not necessarily for
+                  the outcome you intended.
+                </p>
+                <p>
+                  <strong
+                    >Cobra Effect = Good intention + wrong incentive &rarr;
+                    unexpected behavior &rarr; worse outcome.</strong
+                  >
+                </p>
               </td>
-              <td data-label="Memorable example">
-                The government pays people for dead cobras. People start
-                breeding cobras to collect the rewards. When the program ends,
-                they release the snakes, potentially leaving the city with even
-                more cobras than before.
+              <td data-label="Memorable example" class="cell-stack">
+                <p>
+                  During British rule in India, the government wanted to
+                  <strong>reduce the number of cobras in Delhi</strong>, so it
+                  offered people a reward for every dead cobra they brought in.
+                  At first, people killed cobras to collect the reward. But some
+                  realized they could
+                  <strong>breed cobras and then kill them for the reward</strong
+                  >. When the government discovered this and cancelled the
+                  program, the breeders released the cobras they had been
+                  keeping. The policy intended to reduce the cobra population
+                  but may have ultimately
+                  <strong>increased the number of cobras</strong>.
+                </p>
+                <p>
+                  <strong>A simple modern example:</strong> A company wants
+                  employees to work more, so it gives a
+                  <strong>bonus for every feature shipped</strong>. Developers
+                  start splitting large features into many tiny features just to
+                  increase their bonus.
+                </p>
               </td>
             </tr>
             <tr>
               <td data-label="Number">11</td>
               <td data-label="Principle">Kidlin's Law</td>
-              <td data-label="Meaning">
-                Clearly defining and writing down a problem can reveal much of
-                the solution.
+              <td data-label="Meaning" class="cell-stack">
+                <p>
+                  Clearly defining and writing down a problem can reveal much of
+                  the solution.
+                </p>
+                <p>
+                  <strong>The key idea:</strong> A vague problem leads to vague
+                  solutions. A clearly written problem gives you something
+                  specific to solve.
+                </p>
+                <p>
+                  <strong>One caveat:</strong> Kidlin's Law isn't a formal
+                  scientific law like a law of physics. It's a popular
+                  problem-solving principle, and its exact attribution and
+                  wording are uncertain. The underlying idea&mdash;<strong
+                    >problem definition is a critical part of problem
+                    solving</strong
+                  >&mdash;is much more established.
+                </p>
               </td>
-              <td data-label="Memorable example">
-                A team says, &ldquo;Our checkout is terrible.&rdquo; They write
-                the problem down and discover: &ldquo;42% of users abandon
-                checkout because the shipping cost isn't shown until the final
-                step.&rdquo; Now they have a specific problem to solve.
+              <td data-label="Memorable example" class="cell-stack">
+                <p>
+                  A product team says,
+                  <strong>&ldquo;Users don't like our app.&rdquo;</strong>
+                  Instead of immediately redesigning it, they write down what is
+                  actually happening:
+                  <strong
+                    >&ldquo;40% of new users abandon the signup process because
+                    they don't understand why we need their phone
+                    number.&rdquo;</strong
+                  >
+                  The problem is now specific&mdash;and the team can investigate
+                  whether explaining the reason or changing the requirement
+                  improves signup.
+                </p>
+                <p>
+                  <strong>A simple everyday example:</strong> &ldquo;I'm always
+                  late for work.&rdquo; Write it down properly:
+                  <strong
+                    >&ldquo;I leave home at 9:05, but my commute takes 45
+                    minutes and I need to arrive by 9:30.&rdquo;</strong
+                  >
+                  Suddenly, the problem isn't
+                  <em>&ldquo;I'm bad at being punctual.&rdquo;</em> It's
+                  <strong>&ldquo;I need to leave by 8:45.&rdquo;</strong>
+                </p>
               </td>
             </tr>
             <tr>
               <td data-label="Number">12</td>
               <td data-label="Principle">Peter Principle</td>
-              <td data-label="Meaning">
-                People tend to be promoted until they reach a role where their
-                existing skills aren't sufficient.
+              <td data-label="Meaning" class="cell-stack">
+                <p>
+                  People tend to be promoted based on success in their current
+                  role until they reach a role that requires skills they haven't
+                  demonstrated.
+                </p>
+                <p>
+                  <strong>The key idea:</strong> Being good at your current job
+                  doesn't necessarily mean you'll be good at the job you're
+                  promoted into.
+                </p>
+                <p>
+                  <strong>One important nuance:</strong> The Peter Principle
+                  doesn't mean
+                  <strong
+                    >&ldquo;people become incompetent after every
+                    promotion.&rdquo;</strong
+                  >
+                  It's a tendency or hypothesis about how promotion based
+                  primarily on current-role performance can place people into
+                  roles requiring different competencies.
+                </p>
               </td>
-              <td data-label="Memorable example">
-                A developer is excellent at coding, so the company promotes them
-                to engineering manager. But managing people, hiring and
-                resolving conflicts require a completely different skill set.
+              <td data-label="Memorable example" class="cell-stack">
+                <p>
+                  A <strong>great salesperson</strong> consistently exceeds
+                  targets, so the company promotes them to
+                  <strong>sales manager</strong>. But the new job is less about
+                  selling and more about coaching people, hiring, planning
+                  territories, and managing performance. Being an excellent
+                  salesperson doesn't automatically make them an excellent
+                  manager.
+                </p>
+                <p>
+                  <strong>A particularly good tech example:</strong> A developer
+                  becomes a tech lead because they're the strongest coder on the
+                  team. As tech lead, however, they spend less time coding and
+                  more time making architectural decisions, communicating with
+                  stakeholders, mentoring developers, and resolving conflicts.
+                  Their success now depends on a
+                  <strong>different set of skills</strong>.
+                </p>
               </td>
             </tr>
             <tr>
               <td data-label="Number">13</td>
               <td data-label="Principle">Brooks's Law</td>
-              <td data-label="Meaning">
-                Adding people to a late software project can make it later.
+              <td data-label="Meaning" class="cell-stack">
+                <p>
+                  Adding people to a late software project can make it even
+                  later.
+                </p>
+                <p>
+                  <strong>The key idea:</strong> Adding people doesn't instantly
+                  add productivity&mdash;especially when the project is already
+                  late.
+                </p>
+                <p>
+                  <strong>An important nuance:</strong> Brooks's Law doesn't
+                  mean
+                  <strong>&ldquo;never add people to a project.&rdquo;</strong>
+                  It applies particularly when the project is
+                  <strong>already late</strong>, the work requires significant
+                  coordination, and new people need substantial onboarding.
+                </p>
               </td>
-              <td data-label="Memorable example">
-                A project is already behind schedule, so management adds five
-                developers. The existing team now has to train them, explain the
-                architecture and coordinate with them. Development slows down
-                further.
+              <td data-label="Memorable example" class="cell-stack">
+                <p>
+                  A team of <strong>5 developers</strong> is building a product
+                  that is already two months behind schedule. Management adds
+                  <strong>5 more developers</strong> hoping to catch up. But the
+                  original developers now have to explain the architecture,
+                  review the new developers' work, answer questions, and
+                  coordinate across a much larger team. For a while,
+                  <strong
+                    >the team spends more time communicating than
+                    building</strong
+                  >, pushing the deadline even further away.
+                </p>
+                <p>
+                  <strong>A memorable analogy:</strong> Imagine
+                  <strong>5 people cooking dinner in a small kitchen</strong>.
+                  Adding 5 more people doesn't necessarily make dinner twice as
+                  fast. Now everyone is bumping into each other, asking what to
+                  do, and getting in each other's way.
+                </p>
               </td>
             </tr>
             <tr>
               <td data-label="Number">14</td>
               <td data-label="Principle">Dunning-Kruger Effect</td>
-              <td data-label="Meaning">
-                People with limited knowledge can overestimate their ability
-                because they don't yet know what they don't know.
+              <td data-label="Meaning" class="cell-stack">
+                <p>
+                  People with limited knowledge can sometimes overestimate their
+                  ability because they don't yet recognize what they don't know.
+                </p>
+                <p>
+                  <strong>The key idea:</strong> The less you know about a
+                  subject, the harder it can be to recognize the limits of your
+                  own knowledge.
+                </p>
+                <p>
+                  <strong>One important nuance:</strong> The Dunning-Kruger
+                  effect is not simply
+                  <strong
+                    >&ldquo;stupid people think they're smart.&rdquo;</strong
+                  >
+                  The underlying research concerns how accurately people assess
+                  their own performance, particularly when limited knowledge
+                  also limits their ability to recognize mistakes and gaps in
+                  understanding.
+                </p>
               </td>
-              <td data-label="Memorable example">
-                Someone learns basic JavaScript and successfully builds a small
-                website. They conclude they can easily build a large production
-                application&mdash;until architecture, security, testing,
-                performance and deployment become problems.
+              <td data-label="Memorable example" class="cell-stack">
+                <p>
+                  Someone watches a few videos about
+                  <strong>investing</strong>, makes a couple of profitable
+                  trades, and concludes they've figured out the stock market.
+                  They start taking much larger risks. Only after experiencing
+                  different market conditions do they discover how much they
+                  didn't understand about risk, valuation, diversification, and
+                  market behavior.
+                </p>
+                <p>
+                  <strong>A simple everyday example:</strong> Someone learns the
+                  rules of chess in an afternoon and thinks,
+                  <strong>&ldquo;I know how to play chess.&rdquo;</strong> Then
+                  they play an experienced player and realize that knowing the
+                  rules and <strong>understanding the game</strong> are very
+                  different things.
+                </p>
               </td>
             </tr>
             <tr>
               <td data-label="Number">15</td>
               <td data-label="Principle">Sunk Cost Fallacy</td>
-              <td data-label="Meaning">
-                Money, time or effort already spent shouldn't determine whether
-                you continue.
+              <td data-label="Meaning" class="cell-stack">
+                <p>
+                  We continue investing in something because of what we've
+                  already spent, even when future investment may not be
+                  worthwhile.
+                </p>
+                <p>
+                  <strong>The key idea:</strong> Money, time, or effort you've
+                  already spent is gone. The decision should be based on what
+                  happens from this point forward.
+                </p>
+                <p>
+                  That's the essence of the
+                  <strong>sunk cost fallacy</strong>: letting the
+                  <strong
+                    >past influence a decision that should be based on the
+                    future</strong
+                  >.
+                </p>
               </td>
-              <td data-label="Memorable example">
-                You've spent &#8377;10 lakh building an app, but user research
-                shows nobody wants it. You keep investing because &ldquo;we've
-                already spent &#8377;10 lakh,&rdquo; rather than asking whether
-                another &#8377;10 lakh is worthwhile.
+              <td data-label="Memorable example" class="cell-stack">
+                <p>
+                  You buy an expensive movie ticket, but
+                  <strong
+                    >20 minutes into the movie you realize you're not enjoying
+                    it at all</strong
+                  >. You stay until the end because you think,
+                  <em>&ldquo;I've already paid for the ticket.&rdquo;</em> But
+                  the money is already gone&mdash;you could instead spend the
+                  next two hours doing something you actually enjoy.
+                </p>
+                <p>
+                  <strong>A great business example:</strong> A company spends
+                  <strong>&#8377;50 lakh developing a product</strong>. After
+                  launch, customers show almost no interest. Management says,
+                  <em
+                    >&ldquo;We can't abandon it now&mdash;we've already spent
+                    &#8377;50 lakh.&rdquo;</em
+                  >
+                  The better question is:
+                  <strong
+                    >&ldquo;If we hadn't spent that &#8377;50 lakh already,
+                    would we invest &#8377;10 lakh more today?&rdquo;</strong
+                  >
+                </p>
               </td>
             </tr>
             <tr>
               <td data-label="Number">16</td>
               <td data-label="Principle">Survivorship Bias</td>
-              <td data-label="Meaning">
-                We focus on things that survived or succeeded while ignoring the
-                failures that disappeared.
+              <td data-label="Meaning" class="cell-stack">
+                <p>
+                  We focus on the things that survived or succeeded while
+                  overlooking the ones that failed or disappeared.
+                </p>
+                <p>
+                  <strong>The key idea:</strong> Don't just study the winners
+                  you can see. Ask:
+                  <strong
+                    >&ldquo;Who or what is missing from the data?&rdquo;</strong
+                  >
+                </p>
+                <p>
+                  Survivorship bias is especially important when looking at
+                  <strong
+                    >success stories, case studies, investment returns, careers,
+                    and product success</strong
+                  >.
+                </p>
               </td>
-              <td data-label="Memorable example">
-                You study successful entrepreneurs and notice many dropped out
-                of college. You conclude dropping out leads to success&mdash;but
-                you haven't studied the thousands of people who dropped out and
-                never became successful entrepreneurs.
+              <td data-label="Memorable example" class="cell-stack">
+                <p>
+                  During WWII, engineers studied returning bombers and noticed
+                  <strong
+                    >bullet holes concentrated on the wings and fuselage</strong
+                  >. They initially considered adding armor there. Statistician
+                  <strong>Abraham Wald</strong> pointed out the missing
+                  information: these were the planes that
+                  <strong>survived and returned</strong>. The planes hit in
+                  critical areas&mdash;such as the engines&mdash;often never
+                  came back. So the armor needed to go where the
+                  <strong>returning planes had no bullet holes</strong>.
+                </p>
+                <p>
+                  <strong>A modern example:</strong> You read stories about
+                  successful entrepreneurs who say,
+                  <strong
+                    >&ldquo;I took a huge risk and succeeded.&rdquo;</strong
+                  >
+                  You don't see the thousands of people who took similar risks,
+                  failed, and therefore
+                  <strong>don't have a success story to tell</strong>.
+                </p>
               </td>
             </tr>
             <tr>
               <td data-label="Number">17</td>
               <td data-label="Principle">Conway's Law</td>
-              <td data-label="Meaning">
-                The structure of a product often reflects the structure and
-                communication patterns of the organization that built it.
+              <td data-label="Meaning" class="cell-stack">
+                <p>
+                  The architecture of a product tends to reflect the way the
+                  organization and its teams communicate.
+                </p>
+                <p>
+                  <strong>The key idea:</strong> Your organization structure can
+                  become your software architecture.
+                </p>
               </td>
-              <td data-label="Memorable example">
-                Four teams work independently on different parts of a product
-                and rarely communicate. The resulting software ends up with four
-                separate components that are difficult to integrate.
+              <td data-label="Memorable example" class="cell-stack">
+                <p>
+                  An e-commerce company has separate teams for
+                  <strong>Catalog, Cart, Payments, and Delivery</strong>. Each
+                  team works independently and rarely coordinates with the
+                  others. Over time, the product develops four separate systems
+                  with complicated handoffs&mdash;<strong
+                    >the software ends up mirroring the way the teams are
+                    organized.</strong
+                  >
+                </p>
+                <p>
+                  <strong>A memorable way to think about it:</strong> If four
+                  teams don't talk to each other, don't be surprised when the
+                  four parts of the product don't talk to each other either.
+                </p>
               </td>
             </tr>
             <tr>
               <td data-label="Number">18</td>
               <td data-label="Principle">Campbell's Law</td>
-              <td data-label="Meaning">
-                The more heavily a metric is used to make decisions, the more
-                likely people are to distort their behavior around it.
+              <td data-label="Meaning" class="cell-stack">
+                <p>
+                  The more important a metric becomes for making decisions, the
+                  more likely people are to manipulate or distort the metric
+                  itself.
+                </p>
+                <p>
+                  <strong>The key idea:</strong> When a measurement becomes
+                  high-stakes, people change their behavior&mdash;and eventually
+                  the measurement itself can become unreliable.
+                </p>
+                <p>
+                  <strong>Goodhart vs. Campbell:</strong> Goodhart's Law is
+                  about people optimizing the target instead of the real goal:
+                  <em
+                    >&ldquo;Hit 100 calls &rarr; make lots of calls.&rdquo;</em
+                  >
+                  Campbell's Law is about high-stakes use corrupting the
+                  measurement itself:
+                  <em
+                    >&ldquo;Waiting time determines performance &rarr;
+                    manipulate how waiting time is recorded.&rdquo;</em
+                  >
+                </p>
+                <p>
+                  <strong>A useful shortcut:</strong> Goodhart &rarr; game the
+                  target. Campbell &rarr; corrupt the measurement.
+                </p>
               </td>
-              <td data-label="Memorable example">
-                A company measures salespeople purely by number of calls made.
-                Soon, employees make hundreds of meaningless calls simply to hit
-                the target, while actual sales don't improve.
+              <td data-label="Memorable example" class="cell-stack">
+                <p>
+                  A hospital uses <strong>patient waiting time</strong> as a
+                  major measure of staff performance. Staff are rewarded for
+                  keeping the average below 10 minutes. Over time, some
+                  hospitals may start
+                  <strong
+                    >changing when the waiting-time clock starts or ends, moving
+                    patients between queues, or recording them
+                    differently</strong
+                  >
+                  to improve the reported number&mdash;even though patients
+                  aren't necessarily being served faster.
+                </p>
               </td>
             </tr>
             <tr>
               <td data-label="Number">19</td>
               <td data-label="Principle">Regression to the Mean</td>
-              <td data-label="Meaning">
-                Extremely unusual results are often followed by results closer
-                to normal.
+              <td data-label="Meaning" class="cell-stack">
+                <p>
+                  When something produces an unusually extreme result, the next
+                  result is often closer to its normal level.
+                </p>
+                <p>
+                  <strong>The key idea:</strong> After an unusually good or bad
+                  result, the next result often moves closer to the person's or
+                  system's normal performance.
+                </p>
+                <p>
+                  <strong>One important warning:</strong> Regression to the mean
+                  doesn't mean extreme results automatically cause the next
+                  result to be average. It's a statistical effect that occurs
+                  when results contain some combination of
+                  <strong>underlying ability + random variation</strong>.
+                </p>
               </td>
-              <td data-label="Memorable example">
-                A football player scores five goals in one match. Everyone
-                expects another extraordinary performance next week, but they
-                return to their usual scoring level. That doesn't necessarily
-                mean they suddenly became worse.
+              <td data-label="Memorable example" class="cell-stack">
+                <p>
+                  A student normally scores around <strong>70%</strong> on tests
+                  but gets <strong>95%</strong> on one unusually easy test. On
+                  the next test, they score <strong>72%</strong>. It doesn't
+                  necessarily mean they suddenly became worse&mdash;the 95% was
+                  an unusually high result, partly influenced by circumstances
+                  that didn't repeat.
+                </p>
+                <p>
+                  <strong>A classic everyday example:</strong> A golfer normally
+                  shoots around <strong>90</strong>. One day they shoot
+                  <strong>75</strong>&mdash;an unusually brilliant round. The
+                  next week they shoot <strong>88</strong>. You might think,
+                  <em>&ldquo;They suddenly got worse.&rdquo;</em> But they may
+                  simply have returned to their normal performance.
+                </p>
+                <p>
+                  Be careful about conclusions like:
+                  <strong
+                    >&ldquo;The treatment worked because the patient was
+                    extremely sick and then got better.&rdquo;</strong
+                  >
+                  If the patient's condition naturally fluctuates, some
+                  improvement may have happened simply because an unusually bad
+                  measurement was likely to be followed by something closer to
+                  normal.
+                </p>
               </td>
             </tr>
             <tr>
               <td data-label="Number">20</td>
               <td data-label="Principle">Wirth's Law</td>
-              <td data-label="Meaning">
-                Software tends to become more resource-hungry faster than
-                hardware becomes faster.
+              <td data-label="Meaning" class="cell-stack">
+                <p>
+                  Software tends to become slower and more resource-hungry
+                  faster than hardware becomes faster.
+                </p>
+                <p>
+                  <strong>The key idea:</strong> Hardware gets faster, but
+                  software gets heavier to take advantage of it.
+                </p>
+                <p>
+                  <strong>Easy way to remember it:</strong>
+                  &ldquo;Computers get faster. Software gets fatter.&rdquo;
+                </p>
               </td>
-              <td data-label="Memorable example">
-                Your new computer has a much faster processor and more RAM than
-                your old one, yet some modern applications still feel just as
-                slow&mdash;or slower&mdash;because the software has become much
-                more complex and bloated.
+              <td data-label="Memorable example" class="cell-stack">
+                <p>
+                  Your
+                  <strong>new laptop is several times more powerful</strong>
+                  than the computer you used 10 years ago. Yet a simple task
+                  like opening a text editor or loading a webpage can still feel
+                  surprisingly slow. Modern software has gained features,
+                  frameworks, background processes, animations, and larger
+                  resource requirements&mdash;so much of the hardware
+                  improvement gets consumed by increasingly complex software.
+                </p>
+                <p>
+                  <strong>A very relatable example:</strong>
+                  <strong>Microsoft Word in the past</strong> could open a
+                  document almost instantly and did relatively little in the
+                  background. Modern productivity apps may constantly sync
+                  files, check spelling, load extensions, connect to cloud
+                  services, track collaboration, render complex interfaces, and
+                  run background processes. So despite having a computer that's
+                  <strong>dramatically more powerful</strong>, the simple
+                  experience isn't necessarily dramatically faster.
+                </p>
               </td>
             </tr>
           </tbody>
@@ -569,83 +1144,83 @@
         <div class="memory-grid">
           <article class="memory-item">
             <strong>Murphy</strong>
-            <p>Plan for what can go wrong.</p>
+            <p>If failure is possible, design for it.</p>
           </article>
           <article class="memory-item">
             <strong>Parkinson</strong>
-            <p>Work fills the time you give it.</p>
+            <p>Work expands to fill its deadline.</p>
           </article>
           <article class="memory-item">
             <strong>Hofstadter</strong>
-            <p>It'll take longer than you think.</p>
+            <p>It takes longer, even after you plan for longer.</p>
           </article>
           <article class="memory-item">
             <strong>Pareto</strong>
-            <p>A few causes drive most results.</p>
+            <p>Find the vital few that create most of the impact.</p>
           </article>
           <article class="memory-item">
             <strong>Hick</strong>
-            <p>More choices mean slower decisions.</p>
+            <p>More choices create more decision effort.</p>
           </article>
           <article class="memory-item">
             <strong>Occam</strong>
-            <p>Prefer the simplest fitting explanation.</p>
+            <p>Investigate the simplest explanation that fits first.</p>
           </article>
           <article class="memory-item">
             <strong>Hanlon</strong>
-            <p>Don't assume malice.</p>
+            <p>Don't assume malice when a mistake explains it.</p>
           </article>
           <article class="memory-item">
             <strong>Chesterton</strong>
-            <p>Understand the fence before removing it.</p>
+            <p>Understand why it exists before changing it.</p>
           </article>
           <article class="memory-item">
             <strong>Goodhart</strong>
-            <p>A targeted metric loses its value.</p>
+            <p>When the metric becomes the goal, people game the target.</p>
           </article>
           <article class="memory-item">
             <strong>Cobra</strong>
-            <p>Incentives can worsen the problem.</p>
+            <p>A bad incentive can make a good intention backfire.</p>
           </article>
           <article class="memory-item">
             <strong>Kidlin</strong>
-            <p>Write the problem clearly.</p>
+            <p>A clearly written problem reveals what to solve.</p>
           </article>
           <article class="memory-item">
             <strong>Peter</strong>
-            <p>Promotion can exceed competence.</p>
+            <p>Success in one role doesn't guarantee success in the next.</p>
           </article>
           <article class="memory-item memory-item--not-equal">
             <strong>Brooks</strong>
-            <p>More people can make a late project later.</p>
+            <p>Adding people to a late project can delay it further.</p>
           </article>
           <article class="memory-item">
             <strong>Dunning-Kruger</strong>
-            <p>Little knowledge can inflate confidence.</p>
+            <p>Knowing less can hide the limits of what you know.</p>
           </article>
           <article class="memory-item">
             <strong>Sunk Cost</strong>
-            <p>Past spending shouldn't decide the future.</p>
+            <p>Decide by future value, not past investment.</p>
           </article>
           <article class="memory-item">
             <strong>Survivorship</strong>
-            <p>Visible winners hide many failures.</p>
+            <p>Ask which failures are missing from the evidence.</p>
           </article>
           <article class="memory-item">
             <strong>Conway</strong>
-            <p>Systems mirror team communication.</p>
+            <p>Your team structure becomes your system structure.</p>
           </article>
           <article class="memory-item">
             <strong>Campbell</strong>
-            <p>High-stakes metrics invite manipulation.</p>
+            <p>High-stakes metrics invite corruption of the measurement.</p>
           </article>
           <article class="memory-item">
             <strong>Regression to the Mean</strong>
-            <p>Extreme results tend toward average.</p>
+            <p>Extreme results are often followed by more typical ones.</p>
           </article>
           <article class="memory-item">
             <strong>Wirth</strong>
-            <p>Software slows as hardware speeds up.</p>
+            <p>Computers get faster; software gets fatter.</p>
           </article>
         </div>
       </section>
