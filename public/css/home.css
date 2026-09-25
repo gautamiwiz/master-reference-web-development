@@ -31,7 +31,7 @@ a:focus {
   --index-rule: #d6deea;
   --index-blue: #1769aa;
   --index-coral: #d8573c;
-  --index-yellow: #f4c95d;
+  --index-accent: #38bdf8;
 }
 
 body {
@@ -48,8 +48,8 @@ body {
   color: #f9faf7;
   background-color: #102a43;
   background-image:
-    linear-gradient(90deg, rgba(244, 201, 93, 0.1) 1px, transparent 1px),
-    linear-gradient(rgba(244, 201, 93, 0.08) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(56, 189, 248, 0.12) 1px, transparent 1px),
+    linear-gradient(rgba(56, 189, 248, 0.1) 1px, transparent 1px);
   background-size: 3rem 3rem;
 }
 
@@ -72,7 +72,7 @@ body {
 .banner p:nth-of-type(3) {
   display: inline-block;
   margin-right: 0.35rem;
-  color: var(--index-yellow);
+  color: var(--index-accent);
   font-family: 'Courier New', monospace;
   font-size: 0.85rem;
 }
@@ -104,8 +104,8 @@ body {
 .category-nav a:hover,
 .category-nav a:focus-visible {
   color: #102a43;
-  background: var(--index-yellow);
-  border-color: var(--index-yellow);
+  background: var(--index-accent);
+  border-color: var(--index-accent);
 }
 
 .reference-index {
@@ -202,7 +202,7 @@ ul.section:not(.flex) li {
   padding: 0.9rem 1rem;
   color: var(--index-muted);
   background: var(--index-surface);
-  border-left: 3px solid var(--index-yellow);
+  border-left: 3px solid var(--index-accent);
 }
 
 ul.section:not(.flex) a {
@@ -221,7 +221,7 @@ ul.section:not(.flex) a {
     --index-rule: #344258;
     --index-blue: #63b3ed;
     --index-coral: #ff8066;
-    --index-yellow: #f4c95d;
+    --index-accent: #7dd3fc;
   }
 }
 
