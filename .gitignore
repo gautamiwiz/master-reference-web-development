@@ -13,8 +13,6 @@ firebase-debug.*.log*
 # VS Code
 .vscode/
 
-# Firebase config
-firebase.json
 
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)

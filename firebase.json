@@ -1,0 +1,7 @@
+{
+  "hosting": {
+    "target": "master-reference-website",
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}
