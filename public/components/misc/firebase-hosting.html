@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A practical reference for setting up, configuring, and deploying websites with Firebase Hosting."
+    />
+    <title>Firebase Hosting</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,600&family=Work+Sans:wght@400;500;600;700&display=swap');
+
+      :root {
+        color-scheme: light dark;
+        --ink: #17211d;
+        --muted: #5e6a64;
+        --paper: #f4f6f1;
+        --surface: #fffefa;
+        --line: #d6ddd7;
+        --accent: #087f5b;
+        --accent-dark: #075f46;
+        --accent-soft: #dff3e9;
+        --code-bg: #17211d;
+        --code-ink: #edf8f1;
+        --warning: #9a5b00;
+        --warning-bg: #fff4d6;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          linear-gradient(rgba(23, 33, 29, 0.045) 1px, transparent 1px),
+          var(--paper);
+        background-size: 100% 32px;
+        font-family: 'Work Sans', sans-serif;
+        line-height: 1.65;
+      }
+
+      a {
+        color: var(--accent-dark);
+        text-underline-offset: 0.2em;
+      }
+
+      a:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 4px;
+      }
+
+      .page-shell {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 32px 0 80px;
+      }
+
+      .back-link {
+        display: inline-block;
+        margin-bottom: 48px;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      header {
+        max-width: 780px;
+        padding-bottom: 56px;
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        color: var(--accent);
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: 'Newsreader', serif;
+        line-height: 1.1;
+      }
+
+      h1 {
+        font-size: clamp(2.8rem, 8vw, 6rem);
+      }
+
+      header p:last-child {
+        max-width: 670px;
+        margin: 20px 0 0;
+        color: var(--muted);
+        font-size: 1.08rem;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
+        gap: clamp(40px, 7vw, 88px);
+        align-items: start;
+      }
+
+      nav {
+        position: sticky;
+        top: 24px;
+        padding-top: 18px;
+        border-top: 3px solid var(--accent);
+      }
+
+      nav strong {
+        display: block;
+        margin-bottom: 12px;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+      }
+
+      nav ol {
+        margin: 0;
+        padding-left: 1.25rem;
+      }
+
+      nav li + li {
+        margin-top: 8px;
+      }
+
+      nav a {
+        color: var(--muted);
+        font-size: 0.9rem;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        color: var(--accent-dark);
+        text-decoration: underline;
+      }
+
+      article {
+        min-width: 0;
+      }
+
+      section {
+        padding: 0 0 56px;
+        scroll-margin-top: 24px;
+      }
+
+      section + section {
+        padding-top: 48px;
+        border-top: 1px solid var(--line);
+      }
+
+      h2 {
+        margin-bottom: 18px;
+        font-size: clamp(2rem, 5vw, 3.2rem);
+      }
+
+      h3 {
+        margin: 32px 0 10px;
+        font-size: 1.45rem;
+      }
+
+      p,
+      ol,
+      ul {
+        margin-top: 0;
+      }
+
+      .steps {
+        padding-left: 1.4rem;
+      }
+
+      .steps > li {
+        padding: 0 0 28px 12px;
+      }
+
+      .steps > li::marker {
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      code,
+      pre {
+        font-family: 'DM Mono', monospace;
+      }
+
+      code {
+        padding: 0.12em 0.35em;
+        border-radius: 3px;
+        background: var(--accent-soft);
+        font-size: 0.88em;
+      }
+
+      pre {
+        margin: 12px 0 0;
+        padding: 20px;
+        overflow-x: auto;
+        border-radius: 6px;
+        color: var(--code-ink);
+        background: var(--code-bg);
+        font-size: 0.88rem;
+        line-height: 1.6;
+      }
+
+      pre code {
+        padding: 0;
+        color: inherit;
+        background: transparent;
+        font-size: inherit;
+      }
+
+      .note {
+        margin: 24px 0;
+        padding: 18px 20px;
+        border-left: 4px solid var(--warning);
+        color: #573600;
+        background: var(--warning-bg);
+      }
+
+      .note strong {
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      .term-list {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        gap: 12px 20px;
+        margin: 24px 0;
+      }
+
+      .term-list dt {
+        color: var(--accent-dark);
+        font-weight: 700;
+      }
+
+      .term-list dd {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      footer {
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 760px) {
+        .back-link {
+          margin-bottom: 32px;
+        }
+
+        header {
+          padding-bottom: 40px;
+        }
+
+        .layout {
+          grid-template-columns: 1fr;
+          gap: 48px;
+        }
+
+        nav {
+          position: static;
+        }
+
+        .term-list {
+          grid-template-columns: 1fr;
+          gap: 4px;
+        }
+
+        .term-list dd + dt {
+          margin-top: 12px;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --ink: #edf4ef;
+          --muted: #afbeb6;
+          --paper: #101613;
+          --surface: #17211d;
+          --line: #34433b;
+          --accent: #65d6ad;
+          --accent-dark: #82e5c0;
+          --accent-soft: #233c32;
+          --code-bg: #050806;
+          --warning: #efb95b;
+          --warning-bg: #352b18;
+        }
+
+        .note {
+          color: #f7dca9;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page-shell">
+      <a class="back-link" href="../../index.html">&larr; Reference index</a>
+
+      <header>
+        <p class="eyebrow">Deployment reference</p>
+        <h1>Firebase Hosting</h1>
+        <p>
+          Install the Firebase CLI, connect a local project, configure the
+          hosting directory, and deploy one or more static websites.
+        </p>
+      </header>
+
+      <div class="layout">
+        <nav aria-label="On this page">
+          <strong>On this page</strong>
+          <ol>
+            <li><a href="#first-deploy">First deployment</a></li>
+            <li><a href="#configuration">Hosting configuration</a></li>
+            <li><a href="#targets">Hosting targets</a></li>
+            <li><a href="#multiple-sites">Multiple sites</a></li>
+            <li><a href="#projects">Projects and folders</a></li>
+          </ol>
+        </nav>
+
+        <article>
+          <section id="first-deploy">
+            <h2>First deployment</h2>
+            <ol class="steps">
+              <li>
+                <strong>Open a terminal in the project folder.</strong>
+                <p>
+                  Firebase creates its configuration files in the current
+                  folder, so run the following commands from the project root.
+                </p>
+              </li>
+              <li>
+                <strong>Install the Firebase CLI.</strong>
+                <pre><code>npm install -g firebase-tools</code></pre>
+              </li>
+              <li>
+                <strong>Sign in and confirm access.</strong>
+                <pre><code>firebase login
+firebase projects:list</code></pre>
+              </li>
+              <li>
+                <strong>Initialize Firebase Hosting.</strong>
+                <pre><code>firebase init hosting</code></pre>
+                <p>
+                  Select the Firebase project, choose the public directory, and
+                  answer the remaining Hosting prompts. This creates or updates
+                  <code>firebase.json</code> and <code>.firebaserc</code>.
+                </p>
+              </li>
+              <li>
+                <strong>Deploy the site.</strong>
+                <pre><code>firebase deploy --only hosting</code></pre>
+              </li>
+            </ol>
+          </section>
+
+          <section id="configuration">
+            <h2>Hosting configuration</h2>
+            <p>
+              The <code>public</code> value controls which local folder Firebase
+              uploads. This project deploys the <code>public</code> folder:
+            </p>
+            <pre><code>{
+  "hosting": {
+    "target": "{choose any name}",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}</code></pre>
+            <aside class="note">
+              <strong>Changing the hosting folder</strong>
+              Edit the <code>public</code> value in <code>firebase.json</code>.
+              The command <code>firebase use --add</code> changes the Firebase
+              project alias, not the folder being deployed.
+            </aside>
+          </section>
+
+          <section id="targets">
+            <h2>To change the target</h2>
+            <p>
+              Run the command from the project root. The first value is any
+              target name you choose. The second value is the actual Hosting
+              site ID shown in Firebase.
+            </p>
+            <pre><code>firebase target:apply hosting gautam-resume-website gautamsharma</code></pre>
+            <pre><code>firebase target:apply hosting {choose any name} {actual name of the website in Firebase}</code></pre>
+            <p>
+              Add the same name you chose as the <code>target</code> in
+              <code>firebase.json</code>:
+            </p>
+            <pre><code>{
+  "hosting": {
+    "target": "{choose any name}",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}</code></pre>
+            <p>
+              Firebase stores the target-to-site mapping in
+              <code>.firebaserc</code>.
+            </p>
+          </section>
+
+          <section id="multiple-sites">
+            <h2>Multiple Hosting sites</h2>
+            <p>
+              To deploy multiple sites from one Firebase project, create a
+              target for each site and change <code>hosting</code> to an array
+              in <code>firebase.json</code>:
+            </p>
+            <pre><code>{
+  "hosting": [
+    {
+      "target": "main-site",
+      "public": "public",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    },
+    {
+      "target": "resume-site",
+      "public": "resume",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    }
+  ]
+}</code></pre>
+
+            <h3>Deploy every configured Hosting site</h3>
+            <pre><code>firebase deploy --only hosting</code></pre>
+
+            <h3>Deploy one Hosting target</h3>
+            <pre><code>firebase deploy --only hosting:TARGET_NAME</code></pre>
+
+            <p>
+              There is no <code>--all</code> flag required for Hosting. The
+              <code>--only hosting</code> option deploys every Hosting entry in
+              the configuration.
+            </p>
+          </section>
+
+          <section id="projects">
+            <h2>Projects and folders</h2>
+            <h3>Add another Firebase project</h3>
+            <p>
+              Associate another Firebase project with the same local folder and
+              give it an alias:
+            </p>
+            <pre><code>firebase use --add</code></pre>
+
+            <h3>Switch the active project</h3>
+            <pre><code>firebase use PROJECT_ID_OR_ALIAS</code></pre>
+
+            <h3>Deploy to an alias without switching</h3>
+            <pre><code>firebase deploy --only hosting --project PROJECT_ALIAS</code></pre>
+
+            <aside class="note">
+              <strong
+                >Project aliases and Hosting targets are different.</strong
+              >
+              A project alias selects a Firebase project. A Hosting target
+              selects a site inside that project.
+            </aside>
+          </section>
+        </article>
+      </div>
+
+      <footer>
+        Reference:
+        <a href="https://firebase.google.com/docs/hosting" rel="noreferrer"
+          >Firebase Hosting documentation</a
+        >
+      </footer>
+    </main>
+  </body>
+</html>
