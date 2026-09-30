@@ -212,6 +212,35 @@ ul.section:not(.flex) a {
   text-underline-offset: 0.2em;
 }
 
+.go-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 3;
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  padding: 0;
+  color: var(--index-ink);
+  background: var(--index-accent);
+  border: 1px solid var(--index-accent);
+  border-radius: 50%;
+  box-shadow: 0 0.25rem 0.75rem rgba(23, 32, 51, 0.25);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.go-to-top:hover,
+.go-to-top:focus-visible {
+  color: #ffffff;
+  background: var(--index-blue);
+  border-color: var(--index-blue);
+  outline: 2px solid var(--index-ink);
+  outline-offset: 2px;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --index-bg: #101827;
